@@ -1,0 +1,20 @@
+PODS:
+  - CardSlider (0.1.0)
+  - Shuffle-iOS (0.5.0)
+
+DEPENDENCIES:
+  - CardSlider
+  - Shuffle-iOS
+
+SPEC REPOS:
+  trunk:
+    - CardSlider
+    - Shuffle-iOS
+
+SPEC CHECKSUMS:
+  CardSlider: 0a8f5f17f5a76701771794b07fdaeddc512358c8
+  Shuffle-iOS: ff33658fb1e5eebd6a4724c156473e63754be9cb
+
+PODFILE CHECKSUM: caa0efb005dc1dfbf9749e7995d63ad6d4599f2a
+
+COCOAPODS: 1.11.3

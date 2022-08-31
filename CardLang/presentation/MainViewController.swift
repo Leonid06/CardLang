@@ -1,0 +1,101 @@
+//
+//  ViewController.swift
+//  CardLang
+//
+//  Created by Leonid on 30.08.2022.
+//
+
+import UIKit
+import CardSlider
+import Shuffle_iOS
+
+class MainViewController: UIViewController {
+    
+    private var translations = [Translation]()
+    
+    private let cardRepository = CardRepository()
+    
+    
+    private let cardStack = SwipeCardStack()
+    
+    
+    private let words = [
+        "circle",
+        "galaxy",
+        "fragile"
+    ]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateTranslations()
+        layoutCardStackView()
+        cardStack.dataSource = self
+    }
+    
+    private func layoutCardStackView() {
+        view.addSubview(cardStack)
+        
+        cardStack.translatesAutoresizingMaskIntoConstraints = false
+        
+//        cardStack.frame.size.width = 300
+//        cardStack.frame.size.height = 450
+        
+        NSLayoutConstraint.activate([
+            cardStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            cardStack.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            cardStack.widthAnchor.constraint(equalToConstant: 300),
+            cardStack.heightAnchor.constraint(equalToConstant: 450),
+        ])
+        
+//        let constraints = [
+//            cardStack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+//            cardStack.trailingAnchor.constraint(equalTo:
+//                view.safeAreaLayoutGuide.trailingAnchor),
+//            cardStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+//            cardStack.bottomAnchor.constraint(equalTo:
+//                view.safeAreaLayoutGuide.bottomAnchor)
+//        ]
+//        
+//        NSLayoutConstraint.activate(constraints)
+      }
+    
+    private func updateTranslations(){
+        cardRepository.fetchTranslations(words: words, completion: translationsDidFetch)
+    }
+}
+
+extension MainViewController : SwipeCardStackDataSource {
+    func cardStack(_ cardStack: SwipeCardStack, cardForIndexAt index: Int) -> SwipeCard {
+        let card = SwipeCard()
+        let translation = translations[index]
+        
+        card.swipeDirections = [.left, .right]
+        
+//        let content = CardView.instantiate(text:  translation.word)
+//        let content = CardView()
+        let content = UINib(nibName: PresentationConstants.NibNames.CardViewNibName, bundle: nil).instantiate(withOwner: self).first as! CardView
+        
+        content.wordLabel.text = translation.word
+        card.content = content
+        
+        return card
+    }
+
+    func numberOfCards(in cardStack: SwipeCardStack) -> Int {
+          print("Number of translations : \(translations.count)")
+          return translations.count
+    }
+}
+//callbacks
+extension MainViewController {
+    private func translationsDidFetch(translations : [Translation]){
+        DispatchQueue.main.async {
+            self.translations = translations
+            self.cardStack.reloadData()
+            print("group did notify main thread")
+            print("data reloaded")
+        }
+    }
+}
+
+
