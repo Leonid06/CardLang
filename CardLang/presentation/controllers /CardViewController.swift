@@ -73,7 +73,7 @@ extension CardViewController : SwipeCardStackDataSource {
         
 //        let content = CardView.instantiate(text:  translation.word)
 //        let content = CardView()
-        let content = UINib(nibName: PresentationConstants.NibNames.CardViewNibName, bundle: nil).instantiate(withOwner: self).first as! CardView
+        let content = UINib(nibName: NibNames.CardViewNibName, bundle: nil).instantiate(withOwner: self).first as! CardView
         
         content.wordLabel.text = translation.word
         card.content = content

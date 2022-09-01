@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B307876728BF8FB000C88404 /* PresentationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876628BF8FB000C88404 /* PresentationConstants.swift */; };
+		B307876728BF8FB000C88404 /* NibNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876628BF8FB000C88404 /* NibNames.swift */; };
 		B307876928BF9D8400C88404 /* Extensions .swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876828BF9D8400C88404 /* Extensions .swift */; };
 		B307876B28C0969500C88404 /* TranslationSwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876A28C0969500C88404 /* TranslationSwipeCard.swift */; };
 		B307877028C0EF7200C88404 /* SetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876F28C0EF7200C88404 /* SetsViewController.swift */; };
@@ -32,12 +32,13 @@
 		B3EFDFB928C0FF4200FA1183 /* SingleSetCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFB828C0FF4200FA1183 /* SingleSetCollectionViewController.swift */; };
 		B3EFDFBC28C0FF9700FA1183 /* WordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */; };
 		B3EFDFBD28C0FF9700FA1183 /* WordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3EFDFBB28C0FF9700FA1183 /* WordCollectionViewCell.xib */; };
+		B3EFDFC028C1104E00FA1183 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFBF28C1104E00FA1183 /* Identifiers.swift */; };
 		E913A273BEB7079A406F3C15 /* Pods_CardLang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31B3C68FF3F0A25ECBF2047 /* Pods_CardLang.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2BDAF96B76BAB8416B81EE39 /* Pods-CardLang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.release.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.release.xcconfig"; sourceTree = "<group>"; };
-		B307876628BF8FB000C88404 /* PresentationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationConstants.swift; sourceTree = "<group>"; };
+		B307876628BF8FB000C88404 /* NibNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibNames.swift; sourceTree = "<group>"; };
 		B307876828BF9D8400C88404 /* Extensions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions .swift"; sourceTree = "<group>"; };
 		B307876A28C0969500C88404 /* TranslationSwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationSwipeCard.swift; sourceTree = "<group>"; };
 		B307876F28C0EF7200C88404 /* SetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +66,7 @@
 		B3EFDFB828C0FF4200FA1183 /* SingleSetCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSetCollectionViewController.swift; sourceTree = "<group>"; };
 		B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3EFDFBB28C0FF9700FA1183 /* WordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordCollectionViewCell.xib; sourceTree = "<group>"; };
+		B3EFDFBF28C1104E00FA1183 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		F59CB0B7918D882B85314AC3 /* Pods-CardLang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.debug.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,7 +171,6 @@
 			children = (
 				B307876C28C0EF0900C88404 /* controllers  */,
 				B33B211728BE754E00E66FCC /* views */,
-				B307876628BF8FB000C88404 /* PresentationConstants.swift */,
 				B307876828BF9D8400C88404 /* Extensions .swift */,
 			);
 			path = presentation;
@@ -178,6 +179,7 @@
 		B33B211728BE754E00E66FCC /* views */ = {
 			isa = PBXGroup;
 			children = (
+				B3EFDFBE28C1101100FA1183 /* Constants */,
 				B307877628C0F0D300C88404 /* xib */,
 				B335BAF228BF466100B9A29F /* CardView.swift */,
 				B307876A28C0969500C88404 /* TranslationSwipeCard.swift */,
@@ -185,6 +187,15 @@
 				B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		B3EFDFBE28C1101100FA1183 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B307876628BF8FB000C88404 /* NibNames.swift */,
+				B3EFDFBF28C1104E00FA1183 /* Identifiers.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		BA32EB235D1151C0D0E43E0F /* Frameworks */ = {
@@ -330,6 +341,7 @@
 				B33B210E28BE4F2100E66FCC /* CardService.swift in Sources */,
 				B33B20F828BE281000E66FCC /* CardLang.xcdatamodeld in Sources */,
 				B33B211628BE646200E66FCC /* Translation .swift in Sources */,
+				B3EFDFC028C1104E00FA1183 /* Identifiers.swift in Sources */,
 				B335BAF328BF466100B9A29F /* CardView.swift in Sources */,
 				B33B20EE28BE281000E66FCC /* AppDelegate.swift in Sources */,
 				B3EFDFB228C0FCA800FA1183 /* SetsTableViewCell.swift in Sources */,
@@ -340,7 +352,7 @@
 				B33B20F028BE281000E66FCC /* SceneDelegate.swift in Sources */,
 				B33B211428BE611D00E66FCC /* WordData.swift in Sources */,
 				B307877028C0EF7200C88404 /* SetsViewController.swift in Sources */,
-				B307876728BF8FB000C88404 /* PresentationConstants.swift in Sources */,
+				B307876728BF8FB000C88404 /* NibNames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

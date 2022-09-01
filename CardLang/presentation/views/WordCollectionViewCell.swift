@@ -8,10 +8,9 @@
 import UIKit
 
 class WordCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet weak var wordLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
 }
