@@ -13,9 +13,13 @@
             <rect key="frame" x="0.0" y="0.0" width="286" height="412"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKh-nN-cSy">
-                    <rect key="frame" x="108.5" y="188" width="69" height="36"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKh-nN-cSy">
+                    <rect key="frame" x="18" y="181" width="250" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5U2-Wn-O2B"/>
+                        <constraint firstAttribute="width" constant="250" id="Nt8-3H-w1I"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>

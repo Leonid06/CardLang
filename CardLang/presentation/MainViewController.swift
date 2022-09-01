@@ -66,7 +66,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController : SwipeCardStackDataSource {
     func cardStack(_ cardStack: SwipeCardStack, cardForIndexAt index: Int) -> SwipeCard {
-        let card = SwipeCard()
+        let card = TranslationSwipeCard()
         let translation = translations[index]
         
         card.swipeDirections = [.left, .right]
@@ -77,6 +77,7 @@ extension MainViewController : SwipeCardStackDataSource {
         
         content.wordLabel.text = translation.word
         card.content = content
+        card.translation = translation
         
         return card
     }
@@ -97,5 +98,7 @@ extension MainViewController {
         }
     }
 }
+
+
 
 

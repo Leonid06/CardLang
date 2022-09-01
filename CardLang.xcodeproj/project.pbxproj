@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B307876728BF8FB000C88404 /* PresentationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876628BF8FB000C88404 /* PresentationConstants.swift */; };
 		B307876928BF9D8400C88404 /* Extensions .swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876828BF9D8400C88404 /* Extensions .swift */; };
+		B307876B28C0969500C88404 /* TranslationSwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876A28C0969500C88404 /* TranslationSwipeCard.swift */; };
 		B335BAF328BF466100B9A29F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B335BAF228BF466100B9A29F /* CardView.swift */; };
 		B335BAF528BF467C00B9A29F /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B335BAF428BF467C00B9A29F /* CardView.xib */; };
 		B335BAF728BF4B7700B9A29F /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B335BAF628BF4B7700B9A29F /* CardRepository.swift */; };
@@ -31,6 +32,7 @@
 		2BDAF96B76BAB8416B81EE39 /* Pods-CardLang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.release.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.release.xcconfig"; sourceTree = "<group>"; };
 		B307876628BF8FB000C88404 /* PresentationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationConstants.swift; sourceTree = "<group>"; };
 		B307876828BF9D8400C88404 /* Extensions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions .swift"; sourceTree = "<group>"; };
+		B307876A28C0969500C88404 /* TranslationSwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationSwipeCard.swift; sourceTree = "<group>"; };
 		B31B3C68FF3F0A25ECBF2047 /* Pods_CardLang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardLang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B335BAF228BF466100B9A29F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B335BAF428BF467C00B9A29F /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				B335BAF228BF466100B9A29F /* CardView.swift */,
 				B335BAF428BF467C00B9A29F /* CardView.xib */,
+				B307876A28C0969500C88404 /* TranslationSwipeCard.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B33B20F228BE281000E66FCC /* MainViewController.swift in Sources */,
+				B307876B28C0969500C88404 /* TranslationSwipeCard.swift in Sources */,
 				B307876928BF9D8400C88404 /* Extensions .swift in Sources */,
 				B33B210E28BE4F2100E66FCC /* CardService.swift in Sources */,
 				B33B20F828BE281000E66FCC /* CardLang.xcdatamodeld in Sources */,
