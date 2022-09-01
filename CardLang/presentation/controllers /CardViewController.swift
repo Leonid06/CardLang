@@ -9,7 +9,7 @@ import UIKit
 import CardSlider
 import Shuffle_iOS
 
-class MainViewController: UIViewController {
+class CardViewController: UIViewController {
     
     private var translations = [Translation]()
     
@@ -64,7 +64,7 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController : SwipeCardStackDataSource {
+extension CardViewController : SwipeCardStackDataSource {
     func cardStack(_ cardStack: SwipeCardStack, cardForIndexAt index: Int) -> SwipeCard {
         let card = TranslationSwipeCard()
         let translation = translations[index]
@@ -88,7 +88,7 @@ extension MainViewController : SwipeCardStackDataSource {
     }
 }
 //callbacks
-extension MainViewController {
+extension CardViewController {
     private func translationsDidFetch(translations : [Translation]){
         DispatchQueue.main.async {
             self.translations = translations

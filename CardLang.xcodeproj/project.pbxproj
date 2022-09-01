@@ -10,12 +10,15 @@
 		B307876728BF8FB000C88404 /* PresentationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876628BF8FB000C88404 /* PresentationConstants.swift */; };
 		B307876928BF9D8400C88404 /* Extensions .swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876828BF9D8400C88404 /* Extensions .swift */; };
 		B307876B28C0969500C88404 /* TranslationSwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876A28C0969500C88404 /* TranslationSwipeCard.swift */; };
+		B307877028C0EF7200C88404 /* SetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876F28C0EF7200C88404 /* SetsViewController.swift */; };
+		B307877228C0EF8C00C88404 /* SingleSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307877128C0EF8C00C88404 /* SingleSetViewController.swift */; };
+		B307877528C0F0BA00C88404 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B307877428C0F0BA00C88404 /* CardViewController.xib */; };
 		B335BAF328BF466100B9A29F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B335BAF228BF466100B9A29F /* CardView.swift */; };
 		B335BAF528BF467C00B9A29F /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B335BAF428BF467C00B9A29F /* CardView.xib */; };
 		B335BAF728BF4B7700B9A29F /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B335BAF628BF4B7700B9A29F /* CardRepository.swift */; };
 		B33B20EE28BE281000E66FCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B20ED28BE281000E66FCC /* AppDelegate.swift */; };
 		B33B20F028BE281000E66FCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B20EF28BE281000E66FCC /* SceneDelegate.swift */; };
-		B33B20F228BE281000E66FCC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B20F128BE281000E66FCC /* MainViewController.swift */; };
+		B33B20F228BE281000E66FCC /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B20F128BE281000E66FCC /* CardViewController.swift */; };
 		B33B20F528BE281000E66FCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33B20F328BE281000E66FCC /* Main.storyboard */; };
 		B33B20F828BE281000E66FCC /* CardLang.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B33B20F628BE281000E66FCC /* CardLang.xcdatamodeld */; };
 		B33B20FA28BE281100E66FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33B20F928BE281100E66FCC /* Assets.xcassets */; };
@@ -33,6 +36,9 @@
 		B307876628BF8FB000C88404 /* PresentationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationConstants.swift; sourceTree = "<group>"; };
 		B307876828BF9D8400C88404 /* Extensions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions .swift"; sourceTree = "<group>"; };
 		B307876A28C0969500C88404 /* TranslationSwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationSwipeCard.swift; sourceTree = "<group>"; };
+		B307876F28C0EF7200C88404 /* SetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewController.swift; sourceTree = "<group>"; };
+		B307877128C0EF8C00C88404 /* SingleSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSetViewController.swift; sourceTree = "<group>"; };
+		B307877428C0F0BA00C88404 /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		B31B3C68FF3F0A25ECBF2047 /* Pods_CardLang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardLang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B335BAF228BF466100B9A29F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B335BAF428BF467C00B9A29F /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
@@ -40,7 +46,7 @@
 		B33B20EA28BE281000E66FCC /* CardLang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardLang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33B20ED28BE281000E66FCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B33B20EF28BE281000E66FCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B33B20F128BE281000E66FCC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B33B20F128BE281000E66FCC /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		B33B20F428BE281000E66FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B33B20F728BE281000E66FCC /* CardLang.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardLang.xcdatamodel; sourceTree = "<group>"; };
 		B33B20F928BE281100E66FCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +72,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B307876C28C0EF0900C88404 /* controllers  */ = {
+			isa = PBXGroup;
+			children = (
+				B307877328C0F08A00C88404 /* xib */,
+				B33B20F128BE281000E66FCC /* CardViewController.swift */,
+				B307876F28C0EF7200C88404 /* SetsViewController.swift */,
+				B307877128C0EF8C00C88404 /* SingleSetViewController.swift */,
+			);
+			path = "controllers ";
+			sourceTree = "<group>";
+		};
+		B307877328C0F08A00C88404 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				B307877428C0F0BA00C88404 /* CardViewController.xib */,
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
+		B307877628C0F0D300C88404 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				B335BAF428BF467C00B9A29F /* CardView.xib */,
+			);
+			path = xib;
+			sourceTree = "<group>";
+		};
 		B33B20E128BE281000E66FCC = {
 			isa = PBXGroup;
 			children = (
@@ -124,8 +157,8 @@
 		B33B210728BE297000E66FCC /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B307876C28C0EF0900C88404 /* controllers  */,
 				B33B211728BE754E00E66FCC /* views */,
-				B33B20F128BE281000E66FCC /* MainViewController.swift */,
 				B307876628BF8FB000C88404 /* PresentationConstants.swift */,
 				B307876828BF9D8400C88404 /* Extensions .swift */,
 			);
@@ -135,8 +168,8 @@
 		B33B211728BE754E00E66FCC /* views */ = {
 			isa = PBXGroup;
 			children = (
+				B307877628C0F0D300C88404 /* xib */,
 				B335BAF228BF466100B9A29F /* CardView.swift */,
-				B335BAF428BF467C00B9A29F /* CardView.xib */,
 				B307876A28C0969500C88404 /* TranslationSwipeCard.swift */,
 			);
 			path = views;
@@ -222,6 +255,7 @@
 				B33B20FD28BE281100E66FCC /* LaunchScreen.storyboard in Resources */,
 				B33B20FA28BE281100E66FCC /* Assets.xcassets in Resources */,
 				B335BAF528BF467C00B9A29F /* CardView.xib in Resources */,
+				B307877528C0F0BA00C88404 /* CardViewController.xib in Resources */,
 				B33B20F528BE281000E66FCC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,11 +309,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B33B20F228BE281000E66FCC /* MainViewController.swift in Sources */,
+				B33B20F228BE281000E66FCC /* CardViewController.swift in Sources */,
 				B307876B28C0969500C88404 /* TranslationSwipeCard.swift in Sources */,
 				B307876928BF9D8400C88404 /* Extensions .swift in Sources */,
 				B33B210E28BE4F2100E66FCC /* CardService.swift in Sources */,
 				B33B20F828BE281000E66FCC /* CardLang.xcdatamodeld in Sources */,
+				B307877228C0EF8C00C88404 /* SingleSetViewController.swift in Sources */,
 				B33B211628BE646200E66FCC /* Translation .swift in Sources */,
 				B335BAF328BF466100B9A29F /* CardView.swift in Sources */,
 				B33B20EE28BE281000E66FCC /* AppDelegate.swift in Sources */,
@@ -288,6 +323,7 @@
 				B335BAF728BF4B7700B9A29F /* CardRepository.swift in Sources */,
 				B33B20F028BE281000E66FCC /* SceneDelegate.swift in Sources */,
 				B33B211428BE611D00E66FCC /* WordData.swift in Sources */,
+				B307877028C0EF7200C88404 /* SetsViewController.swift in Sources */,
 				B307876728BF8FB000C88404 /* PresentationConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
