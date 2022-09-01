@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +18,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="s4a-WX-my1" kind="relationship" relationship="viewControllers" id="aCz-8N-JeH"/>
                         <segue destination="aio-Ij-ocT" kind="relationship" relationship="viewControllers" id="iEN-el-k5H"/>
                     </connections>
                 </tabBarController>
@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-1683" y="-214"/>
         </scene>
-        <!--Item-->
+        <!--Sets-->
         <scene sceneID="IJD-Op-xi1">
             <objects>
-                <tableViewController id="aio-Ij-ocT" sceneMemberID="viewController">
+                <tableViewController id="aio-Ij-ocT" customClass="SetsViewController" customModule="CardLang" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="4O9-DE-3D0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,43 +48,49 @@
                             <outlet property="delegate" destination="aio-Ij-ocT" id="rGO-Hw-HC3"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="WJ3-6K-V6t"/>
+                    <tabBarItem key="tabBarItem" title="Sets" image="list.dash.header.rectangle" catalog="system" id="WJ3-6K-V6t"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNz-lM-c1f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-751" y="534"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="cqC-VB-xvd">
+        <!--Single Set Collection View Controller-->
+        <scene sceneID="CRn-z1-Yj6">
             <objects>
-                <tableViewController id="s4a-WX-my1" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Jv2-eY-3OX">
+                <collectionViewController id="18m-pb-1VY" customClass="SingleSetCollectionViewController" customModule="CardLang" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3fI-uZ-3eN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jr5-7U-5AL">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jr5-7U-5AL" id="B3m-xd-jGa">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Us2-OZ-3fL">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Lg8-1G-NAV">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vhK-3C-8Sb">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
                         <connections>
-                            <outlet property="dataSource" destination="s4a-WX-my1" id="D8o-fD-Cgm"/>
-                            <outlet property="delegate" destination="s4a-WX-my1" id="3an-jB-LE8"/>
+                            <outlet property="dataSource" destination="18m-pb-1VY" id="DFX-FU-hlG"/>
+                            <outlet property="delegate" destination="18m-pb-1VY" id="olY-Zw-l6M"/>
                         </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="A6S-jM-14L"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QL4-vE-G0x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AB9-Ga-EWT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-371" y="-174"/>
+            <point key="canvasLocation" x="-549" y="-281"/>
         </scene>
     </scenes>
     <resources>
+        <image name="list.dash.header.rectangle" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -11,7 +11,6 @@
 		B307876928BF9D8400C88404 /* Extensions .swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876828BF9D8400C88404 /* Extensions .swift */; };
 		B307876B28C0969500C88404 /* TranslationSwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876A28C0969500C88404 /* TranslationSwipeCard.swift */; };
 		B307877028C0EF7200C88404 /* SetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876F28C0EF7200C88404 /* SetsViewController.swift */; };
-		B307877228C0EF8C00C88404 /* SingleSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307877128C0EF8C00C88404 /* SingleSetViewController.swift */; };
 		B307877528C0F0BA00C88404 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B307877428C0F0BA00C88404 /* CardViewController.xib */; };
 		B335BAF328BF466100B9A29F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B335BAF228BF466100B9A29F /* CardView.swift */; };
 		B335BAF528BF467C00B9A29F /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B335BAF428BF467C00B9A29F /* CardView.xib */; };
@@ -28,6 +27,11 @@
 		B33B211028BE515F00E66FCC /* Constants .swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B210F28BE515F00E66FCC /* Constants .swift */; };
 		B33B211428BE611D00E66FCC /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B211328BE611D00E66FCC /* WordData.swift */; };
 		B33B211628BE646200E66FCC /* Translation .swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B211528BE646200E66FCC /* Translation .swift */; };
+		B3EFDFB228C0FCA800FA1183 /* SetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFB028C0FCA800FA1183 /* SetsTableViewCell.swift */; };
+		B3EFDFB328C0FCA800FA1183 /* SetsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3EFDFB128C0FCA800FA1183 /* SetsTableViewCell.xib */; };
+		B3EFDFB928C0FF4200FA1183 /* SingleSetCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFB828C0FF4200FA1183 /* SingleSetCollectionViewController.swift */; };
+		B3EFDFBC28C0FF9700FA1183 /* WordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */; };
+		B3EFDFBD28C0FF9700FA1183 /* WordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3EFDFBB28C0FF9700FA1183 /* WordCollectionViewCell.xib */; };
 		E913A273BEB7079A406F3C15 /* Pods_CardLang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31B3C68FF3F0A25ECBF2047 /* Pods_CardLang.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +41,6 @@
 		B307876828BF9D8400C88404 /* Extensions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions .swift"; sourceTree = "<group>"; };
 		B307876A28C0969500C88404 /* TranslationSwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationSwipeCard.swift; sourceTree = "<group>"; };
 		B307876F28C0EF7200C88404 /* SetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsViewController.swift; sourceTree = "<group>"; };
-		B307877128C0EF8C00C88404 /* SingleSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSetViewController.swift; sourceTree = "<group>"; };
 		B307877428C0F0BA00C88404 /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		B31B3C68FF3F0A25ECBF2047 /* Pods_CardLang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardLang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B335BAF228BF466100B9A29F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -57,6 +60,11 @@
 		B33B210F28BE515F00E66FCC /* Constants .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants .swift"; sourceTree = "<group>"; };
 		B33B211328BE611D00E66FCC /* WordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
 		B33B211528BE646200E66FCC /* Translation .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Translation .swift"; sourceTree = "<group>"; };
+		B3EFDFB028C0FCA800FA1183 /* SetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsTableViewCell.swift; sourceTree = "<group>"; };
+		B3EFDFB128C0FCA800FA1183 /* SetsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetsTableViewCell.xib; sourceTree = "<group>"; };
+		B3EFDFB828C0FF4200FA1183 /* SingleSetCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSetCollectionViewController.swift; sourceTree = "<group>"; };
+		B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCollectionViewCell.swift; sourceTree = "<group>"; };
+		B3EFDFBB28C0FF9700FA1183 /* WordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordCollectionViewCell.xib; sourceTree = "<group>"; };
 		F59CB0B7918D882B85314AC3 /* Pods-CardLang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.debug.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +86,7 @@
 				B307877328C0F08A00C88404 /* xib */,
 				B33B20F128BE281000E66FCC /* CardViewController.swift */,
 				B307876F28C0EF7200C88404 /* SetsViewController.swift */,
-				B307877128C0EF8C00C88404 /* SingleSetViewController.swift */,
+				B3EFDFB828C0FF4200FA1183 /* SingleSetCollectionViewController.swift */,
 			);
 			path = "controllers ";
 			sourceTree = "<group>";
@@ -94,6 +102,8 @@
 		B307877628C0F0D300C88404 /* xib */ = {
 			isa = PBXGroup;
 			children = (
+				B3EFDFBB28C0FF9700FA1183 /* WordCollectionViewCell.xib */,
+				B3EFDFB128C0FCA800FA1183 /* SetsTableViewCell.xib */,
 				B335BAF428BF467C00B9A29F /* CardView.xib */,
 			);
 			path = xib;
@@ -171,6 +181,8 @@
 				B307877628C0F0D300C88404 /* xib */,
 				B335BAF228BF466100B9A29F /* CardView.swift */,
 				B307876A28C0969500C88404 /* TranslationSwipeCard.swift */,
+				B3EFDFB028C0FCA800FA1183 /* SetsTableViewCell.swift */,
+				B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -254,9 +266,11 @@
 			files = (
 				B33B20FD28BE281100E66FCC /* LaunchScreen.storyboard in Resources */,
 				B33B20FA28BE281100E66FCC /* Assets.xcassets in Resources */,
+				B3EFDFB328C0FCA800FA1183 /* SetsTableViewCell.xib in Resources */,
 				B335BAF528BF467C00B9A29F /* CardView.xib in Resources */,
 				B307877528C0F0BA00C88404 /* CardViewController.xib in Resources */,
 				B33B20F528BE281000E66FCC /* Main.storyboard in Resources */,
+				B3EFDFBD28C0FF9700FA1183 /* WordCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,15 +325,17 @@
 			files = (
 				B33B20F228BE281000E66FCC /* CardViewController.swift in Sources */,
 				B307876B28C0969500C88404 /* TranslationSwipeCard.swift in Sources */,
+				B3EFDFB928C0FF4200FA1183 /* SingleSetCollectionViewController.swift in Sources */,
 				B307876928BF9D8400C88404 /* Extensions .swift in Sources */,
 				B33B210E28BE4F2100E66FCC /* CardService.swift in Sources */,
 				B33B20F828BE281000E66FCC /* CardLang.xcdatamodeld in Sources */,
-				B307877228C0EF8C00C88404 /* SingleSetViewController.swift in Sources */,
 				B33B211628BE646200E66FCC /* Translation .swift in Sources */,
 				B335BAF328BF466100B9A29F /* CardView.swift in Sources */,
 				B33B20EE28BE281000E66FCC /* AppDelegate.swift in Sources */,
+				B3EFDFB228C0FCA800FA1183 /* SetsTableViewCell.swift in Sources */,
 				B33B211028BE515F00E66FCC /* Constants .swift in Sources */,
 				B33B210928BE2B7400E66FCC /* SliderItem.swift in Sources */,
+				B3EFDFBC28C0FF9700FA1183 /* WordCollectionViewCell.swift in Sources */,
 				B335BAF728BF4B7700B9A29F /* CardRepository.swift in Sources */,
 				B33B20F028BE281000E66FCC /* SceneDelegate.swift in Sources */,
 				B33B211428BE611D00E66FCC /* WordData.swift in Sources */,
