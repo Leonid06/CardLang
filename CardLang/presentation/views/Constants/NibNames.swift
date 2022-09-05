@@ -11,4 +11,6 @@ import Foundation
 
 struct NibNames {
     static let CardViewNibName = "CardView"
+    static let SetsTableViewCellNibName = "SetsTableViewCell"
+    static let WordCollectionViewCellNibName = "WordCollectionViewCell"
 }

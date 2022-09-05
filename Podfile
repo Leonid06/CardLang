@@ -7,4 +7,5 @@ target 'CardLang' do
   # Pods for CardLang
   pod 'CardSlider'
   pod 'Shuffle-iOS'
+  pod 'RealmSwift', '~>10'
 end

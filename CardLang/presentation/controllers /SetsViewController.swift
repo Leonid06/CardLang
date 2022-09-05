@@ -8,33 +8,89 @@
 import UIKit
 
 class SetsViewController: UITableViewController {
-
+    
+    private var sets = [WordSet]()
+    
+    private let setRepository = SetRepository.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UINib(nibName: NibNames.SetsTableViewCellNibName, bundle: nil), forCellReuseIdentifier: Identifies.SetsTableViewCellIdentifier)
+        updateSets()
         
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    private func updateSets(){
+        sets = setRepository.getAllSets()
+        tableView.reloadData()
     }
-
+    
+    @IBAction func addSetButtonPressed(_ sender: UIBarButtonItem) {
+        showAlert()
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return sets.count
     }
 
-    /*
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        return sets.count
+//    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let set = sets[indexPath.row]
+        let singleSetViewController = SingleSetCollectionViewController()
+        
+        singleSetViewController.set = set
+        navigationController?.pushViewController(singleSetViewController, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 77
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Identifies.SetsTableViewCellIdentifier, for: indexPath) as! SetsTableViewCell
+        
+        let set = sets[indexPath.row]
 
-        // Configure the cell...
+        cell.nameLabel.text = set.name
+        cell.wordCountLabel.text = String(set.translations.count)
 
         return cell
     }
-    */
+    
+    private func showAlert() {
+       let alert = UIAlertController(title: "Add new set", message: nil, preferredStyle: .alert)
+       
+       alert.addTextField {
+           textField in
+           textField.placeholder = "Enter the name"
+       }
+       
+       
+       let addAction = UIAlertAction(title: "Add", style: .default){
+           action in
+           if let textFields = alert.textFields {
+               if let name = textFields[0].text {
+                   self.setRepository.addWordSet(name: name)
+               }
+               
+               self.updateSets()
+           }
+       }
+       let deleteAction =  UIAlertAction(title: "Cancel", style: .cancel){
+           action in
+           alert.dismiss(animated: true)
+       }
+       alert.addAction(addAction)
+       alert.addAction(deleteAction)
+       
+       present(alert, animated: true)
+   }
+
 
     /*
     // Override to support conditional editing of the table view.

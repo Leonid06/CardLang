@@ -6,21 +6,29 @@
 //
 
 import UIKit
-
-private let reuseIdentifier = "Cell"
+import RealmSwift
 
 class SingleSetCollectionViewController: UICollectionViewController {
-
+    
+    private var translations = List<Translation>()
+    
+    private let setRepository = SetRepository.shared
+    
+    var set :  WordSet? {
+        didSet {
+            if let translations = set?.translations {
+                self.translations = translations
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        
+        collectionView!.register(WordCollectionViewCell.self, forCellWithReuseIdentifier: Identifies.WordCollectionViewCellIdentifier)
+        
+        collectionView.reloadData()
+        
     }
 
     /*
@@ -36,32 +44,31 @@ class SingleSetCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 0
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        
+        return translations.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.WordCollectionViewCellIdentifier, for: indexPath) as! WordCollectionViewCell
     
-        // Configure the cell
+        cell.translation = translations[indexPath.row]
     
         return cell
     }
 
     // MARK: UICollectionViewDelegate
 
-    /*
+    
     // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
+//    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
+    
 
     /*
     // Uncomment this method to specify if the specified item should be selected
