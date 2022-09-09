@@ -19,6 +19,10 @@ class SetsViewController: UITableViewController {
         updateSets()
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updateSets()
+    }
 
     // MARK: - Table view data source
     
@@ -41,7 +45,9 @@ class SetsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let set = sets[indexPath.row]
-        let singleSetViewController = SingleSetCollectionViewController()
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let singleSetViewController = SingleSetViewController(collectionViewLayout: layout)
         
         singleSetViewController.set = set
         navigationController?.pushViewController(singleSetViewController, animated: true)

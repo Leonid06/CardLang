@@ -17,7 +17,6 @@ class WordCollectionViewCell: UICollectionViewCell {
     var translation : Translation  {
         set {
             _translation = newValue
-            wordLabel.text = newValue.word
         }
         get {
             return _translation ?? Translation(word: "", translation: "")
@@ -26,9 +25,13 @@ class WordCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+//        wordLabel.translatesAutoresizingMaskIntoConstraints = false
+        
         let gestureRecognizer = UITapGestureRecognizer(target: self , action: #selector(flip))
         gestureRecognizer.numberOfTapsRequired = 1
         self.addGestureRecognizer(gestureRecognizer)
+        
+        wordLabel.text = _translation?.word
     }
     
     @objc private func flip(_ sender: UIGestureRecognizer){
