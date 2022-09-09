@@ -18,8 +18,7 @@ class SetRepository {
         do {
             let set = WordSet(name: name)
             try realm.write {
-//                realm.add(set, update: Realm.UpdatePolicy.modified)
-                realm.add(set)
+                realm.add(set, update: Realm.UpdatePolicy.modified)
             }
         }catch {
             print(error)
@@ -37,8 +36,6 @@ class SetRepository {
     }
     
     func getAllSets() ->  [WordSet] {
-        print("sets returned:")
-        print(Array(realm.objects(WordSet.self)))
         return Array(realm.objects(WordSet.self)).reversed()
     }
 }

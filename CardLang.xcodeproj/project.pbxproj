@@ -30,7 +30,7 @@
 		B39D5D1628C4E0710088C101 /* SetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D5D1528C4E0710088C101 /* SetRepository.swift */; };
 		B3EFDFB228C0FCA800FA1183 /* SetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFB028C0FCA800FA1183 /* SetsTableViewCell.swift */; };
 		B3EFDFB328C0FCA800FA1183 /* SetsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3EFDFB128C0FCA800FA1183 /* SetsTableViewCell.xib */; };
-		B3EFDFB928C0FF4200FA1183 /* SingleSetCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFB828C0FF4200FA1183 /* SingleSetCollectionViewController.swift */; };
+		B3EFDFB928C0FF4200FA1183 /* SingleSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFB828C0FF4200FA1183 /* SingleSetViewController.swift */; };
 		B3EFDFBC28C0FF9700FA1183 /* WordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */; };
 		B3EFDFBD28C0FF9700FA1183 /* WordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3EFDFBB28C0FF9700FA1183 /* WordCollectionViewCell.xib */; };
 		B3EFDFC028C1104E00FA1183 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFBF28C1104E00FA1183 /* Identifiers.swift */; };
@@ -65,7 +65,7 @@
 		B39D5D1528C4E0710088C101 /* SetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepository.swift; sourceTree = "<group>"; };
 		B3EFDFB028C0FCA800FA1183 /* SetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsTableViewCell.swift; sourceTree = "<group>"; };
 		B3EFDFB128C0FCA800FA1183 /* SetsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetsTableViewCell.xib; sourceTree = "<group>"; };
-		B3EFDFB828C0FF4200FA1183 /* SingleSetCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSetCollectionViewController.swift; sourceTree = "<group>"; };
+		B3EFDFB828C0FF4200FA1183 /* SingleSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSetViewController.swift; sourceTree = "<group>"; };
 		B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3EFDFBB28C0FF9700FA1183 /* WordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordCollectionViewCell.xib; sourceTree = "<group>"; };
 		B3EFDFBF28C1104E00FA1183 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 				B307877328C0F08A00C88404 /* xib */,
 				B33B20F128BE281000E66FCC /* CardViewController.swift */,
 				B307876F28C0EF7200C88404 /* SetsViewController.swift */,
-				B3EFDFB828C0FF4200FA1183 /* SingleSetCollectionViewController.swift */,
+				B3EFDFB828C0FF4200FA1183 /* SingleSetViewController.swift */,
 			);
 			path = "controllers ";
 			sourceTree = "<group>";
@@ -348,7 +348,7 @@
 				B33B20F228BE281000E66FCC /* CardViewController.swift in Sources */,
 				B307876B28C0969500C88404 /* TranslationSwipeCard.swift in Sources */,
 				B39D5D1628C4E0710088C101 /* SetRepository.swift in Sources */,
-				B3EFDFB928C0FF4200FA1183 /* SingleSetCollectionViewController.swift in Sources */,
+				B3EFDFB928C0FF4200FA1183 /* SingleSetViewController.swift in Sources */,
 				B307876928BF9D8400C88404 /* Extensions .swift in Sources */,
 				B33B210E28BE4F2100E66FCC /* CardService.swift in Sources */,
 				B33B20F828BE281000E66FCC /* CardLang.xcdatamodeld in Sources */,

@@ -16,8 +16,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="138" height="129"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UT9-fG-N6d">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UT9-fG-N6d">
                         <rect key="frame" x="50" y="54" width="38" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="lUx-SJ-opC"/>
+                            <constraint firstAttribute="width" constant="38" id="si1-Zd-hwe"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -25,12 +29,12 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="UT9-fG-N6d" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="m7B-7B-KbS"/>
-                <constraint firstItem="UT9-fG-N6d" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="pOM-gk-h0n"/>
+                <constraint firstAttribute="trailing" secondItem="UT9-fG-N6d" secondAttribute="trailing" constant="50" id="2hK-Xt-fug"/>
+                <constraint firstItem="UT9-fG-N6d" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="50" id="ssy-VD-rcG"/>
             </constraints>
             <size key="customSize" width="138" height="129"/>
             <connections>
-                <outlet property="wordLabel" destination="UT9-fG-N6d" id="wXA-4P-JR1"/>
+                <outlet property="wordLabel" destination="UT9-fG-N6d" id="WWq-l2-qbv"/>
             </connections>
             <point key="canvasLocation" x="200.00000000000003" y="170.42410714285714"/>
         </collectionViewCell>

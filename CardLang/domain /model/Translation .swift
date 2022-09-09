@@ -10,6 +10,7 @@ import RealmSwift
 
 
 class Translation : Object {
+    @Persisted(primaryKey: true) var id : ObjectId
     @Persisted var word : String
     @Persisted var translation : String
     
