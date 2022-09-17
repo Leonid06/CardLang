@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,10 +14,9 @@
             <rect key="frame" x="0.0" y="0.0" width="286" height="412"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKh-nN-cSy">
-                    <rect key="frame" x="18" y="181" width="250" height="50"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Word" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKh-nN-cSy">
+                    <rect key="frame" x="18" y="17" width="250" height="364"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="5U2-Wn-O2B"/>
                         <constraint firstAttribute="width" constant="250" id="Nt8-3H-w1I"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -28,7 +28,8 @@
             <color key="backgroundColor" red="1" green="0.93990509423783453" blue="0.87885361274199458" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="bKh-nN-cSy" firstAttribute="centerX" secondItem="htu-dA-7U2" secondAttribute="centerX" id="At7-kU-D8c"/>
-                <constraint firstItem="bKh-nN-cSy" firstAttribute="centerY" secondItem="htu-dA-7U2" secondAttribute="centerY" id="WH8-LI-kCt"/>
+                <constraint firstItem="V96-5y-jYm" firstAttribute="bottom" secondItem="bKh-nN-cSy" secondAttribute="bottom" id="oO6-Mw-JGf"/>
+                <constraint firstItem="bKh-nN-cSy" firstAttribute="top" secondItem="V96-5y-jYm" secondAttribute="top" id="szW-RV-f19"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

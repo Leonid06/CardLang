@@ -90,6 +90,17 @@ extension CardViewController : SwipeCardStackDataSource {
           return translations.count
     }
 }
+
+extension CardViewController :  SwipeCardStackDelegate {
+    func cardStack(_ cardStack: SwipeCardStack, didSwipeCardAt index: Int, with direction: SwipeDirection) {
+        if(direction == SwipeDirection.right){
+            translations.remove(at: index)
+        }
+    }
+    func didSwipeAllCards(_ cardStack: SwipeCardStack) {
+        updateTranslations()
+    }
+}
 //callbacks
 
 
