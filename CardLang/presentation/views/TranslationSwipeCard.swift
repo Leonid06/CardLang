@@ -13,7 +13,7 @@ class TranslationSwipeCard : SwipeCard {
     
     var translation : Translation?
     
-    private var showsWord = false
+    private var showsWord = true
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,8 +36,8 @@ class TranslationSwipeCard : SwipeCard {
         UIView.transition(with: self, duration: 0.5, options: options){
             if let translation = self.translation {
                 if let content = self.content as? CardView {
-                    content.wordLabel.text = self.showsWord ? translation.translation : translation.word
                     self.showsWord = !self.showsWord
+                    content.wordLabel.text = self.showsWord ? translation.word : translation.translation
                 }
             }
         }
