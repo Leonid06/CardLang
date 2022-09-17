@@ -57,6 +57,16 @@ class SetsViewController: UITableViewController {
         return 77
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if(editingStyle == .delete){
+            
+            let set = sets[indexPath.row]
+            setRepository.deleteWordSet(set: set)
+            
+            updateSets()
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Identifies.SetsTableViewCellIdentifier, for: indexPath) as! SetsTableViewCell
         

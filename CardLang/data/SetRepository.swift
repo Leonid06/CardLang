@@ -25,6 +25,17 @@ class SetRepository {
         }
     }
     
+    
+    func deleteWordSet(set : WordSet){
+        do {
+            try realm.write {
+                realm.delete(set)
+            }
+        } catch{
+            
+        }
+    }
+    
     func addTranslationToSet(set : WordSet, translation : Translation){
         do  {
             try realm.write {
