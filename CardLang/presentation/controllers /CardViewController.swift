@@ -12,7 +12,9 @@ import RealmSwift
 
 class CardViewController: UIViewController {
     
-    private var translations = List<Translation>()
+    private var translations = [Translation]()
+    
+    private var skippedTranslations = [Translation]()
     
     private let cardRepository = CardRepository()
     
@@ -22,7 +24,7 @@ class CardViewController: UIViewController {
     var set :  WordSet? {
         didSet {
             if let translations = set?.translations {
-                self.translations = translations
+                self.translations = Array(translations)
             }
         }
     }
@@ -33,6 +35,7 @@ class CardViewController: UIViewController {
         updateTranslations()
         layoutCardStackView()
         cardStack.dataSource = self
+        cardStack.delegate = self
     }
     
     private func layoutCardStackView() {
@@ -93,11 +96,16 @@ extension CardViewController : SwipeCardStackDataSource {
 
 extension CardViewController :  SwipeCardStackDelegate {
     func cardStack(_ cardStack: SwipeCardStack, didSwipeCardAt index: Int, with direction: SwipeDirection) {
-        if(direction == SwipeDirection.right){
-            translations.remove(at: index)
+        if(direction == SwipeDirection.left){
+            skippedTranslations.append(translations[index])
         }
     }
     func didSwipeAllCards(_ cardStack: SwipeCardStack) {
+        translations = skippedTranslations
+        if(skippedTranslations.isEmpty){
+            navigationController?.popViewController(animated: true)
+        }
+        skippedTranslations.removeAll()
         updateTranslations()
     }
 }
