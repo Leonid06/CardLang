@@ -13,34 +13,34 @@ class WordCollectionViewCell: UICollectionViewCell {
     private var showsWord = true
     
     
-    private var _translation : Translation?
-    var translation : Translation  {
-        set {
-            _translation = newValue
-        }
-        get {
-            return _translation ?? Translation(word: "", translation: "")
-        }
-    }
+    private var translation : Translation?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//        wordLabel.translatesAutoresizingMaskIntoConstraints = false
+        layer.cornerRadius = 10
         
         let gestureRecognizer = UITapGestureRecognizer(target: self , action: #selector(flip))
         gestureRecognizer.numberOfTapsRequired = 1
         self.addGestureRecognizer(gestureRecognizer)
-        
-        wordLabel.text = _translation?.word
     }
     
     @objc private func flip(_ sender: UIGestureRecognizer){
         let options : UIView.AnimationOptions = [.transitionFlipFromRight]
         UIView.transition(with: self, duration: 0.5, options: options){
-            if let translation = self._translation {
+            if let translation = self.translation {
                     self.wordLabel.text = self.showsWord ? translation.translation : translation.word
                     self.showsWord = !self.showsWord
             }
         }
     }
+    
+    static func nib() -> UINib {
+        return UINib(nibName: NibNames.WordCollectionViewCellNibName, bundle: nil)
+    }
+    
+    func configure(_ translation:Translation) {
+        self.translation = translation
+        wordLabel.text = self.translation?.word
+     }
 }

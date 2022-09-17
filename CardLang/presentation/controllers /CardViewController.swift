@@ -8,22 +8,25 @@
 import UIKit
 import CardSlider
 import Shuffle_iOS
+import RealmSwift
 
 class CardViewController: UIViewController {
     
-    private var translations = [Translation]()
+    private var translations = List<Translation>()
     
     private let cardRepository = CardRepository()
     
     
     private let cardStack = SwipeCardStack()
     
+    var set :  WordSet? {
+        didSet {
+            if let translations = set?.translations {
+                self.translations = translations
+            }
+        }
+    }
     
-    private let words = [
-        "circle",
-        "galaxy",
-        "fragile"
-    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +63,7 @@ class CardViewController: UIViewController {
       }
     
     private func updateTranslations(){
-        cardRepository.fetchTranslations(words: words, completion: translationsDidFetch)
+        cardStack.reloadData()
     }
 }
 
@@ -88,16 +91,7 @@ extension CardViewController : SwipeCardStackDataSource {
     }
 }
 //callbacks
-extension CardViewController {
-    private func translationsDidFetch(translations : [Translation]){
-        DispatchQueue.main.async {
-            self.translations = translations
-            self.cardStack.reloadData()
-            print("group did notify main thread")
-            print("data reloaded")
-        }
-    }
-}
+
 
 
 

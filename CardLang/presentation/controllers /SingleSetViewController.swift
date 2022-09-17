@@ -8,7 +8,10 @@
 import UIKit
 import RealmSwift
 
-class SingleSetViewController: UICollectionViewController {
+class SingleSetViewController: UIViewController {
+    
+
+    @IBOutlet weak var collectionView: UICollectionView!
     
     private var translations = List<Translation>()
     
@@ -31,26 +34,29 @@ class SingleSetViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
         title = set?.name
         
-        collectionView!.register(UINib(nibName: NibNames.WordCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.WordCollectionViewCellIdentifier)
+        collectionView!.register(WordCollectionViewCell.nib(), forCellWithReuseIdentifier: Identifies.WordCollectionViewCellIdentifier)
+        
         
         let buttonItem  = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
+
+        let playItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(playButtonPressed))
         
         
-        navigationItem.rightBarButtonItem = buttonItem
+//        navigationItem.rightBarButtonItem = buttonItem
+        navigationItem.rightBarButtonItems = [buttonItem, playItem]
         updateTranslations()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    
+    @objc func playButtonPressed(_ sender: Any) {
+        let playController = CardViewController(nibName: NibNames.CardViewControllerNibName, bundle: nil )
+        playController.set = set
+        navigationController?.pushViewController(playController, animated: true)
     }
-    */
 
     
     
@@ -99,58 +105,46 @@ class SingleSetViewController: UICollectionViewController {
     private func updateTranslations(){
         collectionView.reloadData()
     }
-    
-    
-    // MARK: UICollectionViewDelegate
-
-    
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-//    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-//        return true
-//    }
-    
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
 
 }
 
 
-extension SingleSetViewController : UICollectionViewDelegateFlowLayout {
+extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDataSource  {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width / 2.5, height: collectionView.frame.width / 2)
-    }
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print(translations.count)
         return translations.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.WordCollectionViewCellIdentifier, for: indexPath) as! WordCollectionViewCell
         
     
-        cell.translation = translations[indexPath.row]
+        cell.configure(translations[indexPath.row])
     
         return cell
     }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1 
+    }
 }
+
+
+extension SingleSetViewController : UICollectionViewDelegateFlowLayout  {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 138, height: 129)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
+    }
+}
+
+

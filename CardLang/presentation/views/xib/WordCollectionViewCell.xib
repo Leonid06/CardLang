@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WordCollectionViewCell" customModule="CardLang" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="gTV-IL-0wX" customClass="WordCollectionViewCell" customModule="CardLang" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="138" height="129"/>
-            <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="138" height="129"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UT9-fG-N6d">
-                        <rect key="frame" x="50" y="54" width="38" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="lUx-SJ-opC"/>
-                            <constraint firstAttribute="width" constant="38" id="si1-Zd-hwe"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="word" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UT9-fG-N6d">
+                        <rect key="frame" x="23" y="54.5" width="92" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" red="1" green="0.93990509420000001" blue="0.87885361269999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="UT9-fG-N6d" secondAttribute="trailing" constant="50" id="2hK-Xt-fug"/>
-                <constraint firstItem="UT9-fG-N6d" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="50" id="ssy-VD-rcG"/>
+                <constraint firstItem="UT9-fG-N6d" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="10C-yu-rSI"/>
+                <constraint firstAttribute="width" constant="138" id="Au9-qv-s5B"/>
+                <constraint firstAttribute="height" constant="129" id="OeN-v9-UG4"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UT9-fG-N6d" secondAttribute="bottom" constant="5" id="amn-pz-kSx"/>
+                <constraint firstItem="UT9-fG-N6d" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="23" id="g6r-Rq-Y8m"/>
+                <constraint firstAttribute="trailing" secondItem="UT9-fG-N6d" secondAttribute="trailing" constant="23" id="qhs-cO-apn"/>
+                <constraint firstItem="UT9-fG-N6d" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="vQI-lT-bq2"/>
             </constraints>
             <size key="customSize" width="138" height="129"/>
             <connections>

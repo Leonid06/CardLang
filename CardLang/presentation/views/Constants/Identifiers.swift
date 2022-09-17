@@ -12,4 +12,7 @@ struct Identifies {
     static let WordCollectionViewCellIdentifier = "wordCollectionViewCellIdentifier"
     static let SetsTableViewCellIdentifier =  "setsTableViewCellIdentifier"
     static let SingleSetViewControllerSegueIdentifier = "SingleSetViewControllerSegue"
+    static let SingleSetViewControllerIdentifier = "SingleSetViewController"
+    
+    static let DefaultCollectioViewCellIdentifier = "defaultCollectionViewCellIdentifier"
 }

@@ -47,8 +47,8 @@ class SetsViewController: UITableViewController {
         let set = sets[indexPath.row]
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        let singleSetViewController = SingleSetViewController(collectionViewLayout: layout)
         
+        let singleSetViewController = self.storyboard?.instantiateViewController(withIdentifier: Identifies.SingleSetViewControllerIdentifier) as! SingleSetViewController
         singleSetViewController.set = set
         navigationController?.pushViewController(singleSetViewController, animated: true)
     }
