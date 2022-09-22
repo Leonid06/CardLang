@@ -6,11 +6,13 @@ PODS:
   - RealmSwift (10.28.2):
     - Realm (= 10.28.2)
   - Shuffle-iOS (0.5.0)
+  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - CardSlider
   - RealmSwift (~> 10)
   - Shuffle-iOS
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
@@ -18,13 +20,15 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - Shuffle-iOS
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   CardSlider: 0a8f5f17f5a76701771794b07fdaeddc512358c8
   Realm: e617c54ad0f566b3d0f6a2abae7010de05f252ac
   RealmSwift: 8a516a8759d80d52ebcec1ff1076f5f5159f98b2
   Shuffle-iOS: ff33658fb1e5eebd6a4724c156473e63754be9cb
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: fd164bc2627976b76e1cb9f56781fad4d0ee8a31
+PODFILE CHECKSUM: a5e491c6f78b6e7ed98748d96428fd8cb16c410a
 
 COCOAPODS: 1.11.3
