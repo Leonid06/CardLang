@@ -90,28 +90,35 @@ class CardService {
             
             let decodedData =  try JSON(data: data ?? Data())
             
+            var word = decodedData[0]["meta"]["id"].stringValue
+            
+            word.removeAll {
+                !$0.isLetter
+            }
+            
             print(decodedData)
             
+            var translations = [Translation]()
             
+            let definitions = decodedData[0]["def"][0]["sseq"].arrayValue
             
-//            var word = decodedData[0]["meta"]["id"].stringValue
-//            var translation = decodedData[0]["def"][0]["sseq"][0][0][1]["dt"][0][1].stringValue
-//
-//            word.removeAll {
-//                !$0.isLetter
-//            }
-//
-//            let index = translation.index(translation.startIndex, offsetBy: 4)
-//
-//            translation.removeSubrange(translation.startIndex ..< index)
+            for definition in definitions {
+                var translation = definition[0][0][1]["dt"][0][1].stringValue
+                
+                if(translation.count > 4){
+                    let index = translation.index(translation.startIndex, offsetBy: 4)
+                    
+                    translation.removeSubrange(translation.startIndex ..< index)
+                }
+                
+                translations.append(Translation(word: word, translation: translation))
+            }
             
-//            return Translation(word: word, translation: translation)
+            return translations
         } catch {
             print(error)
             return nil
         }
-        
-        return [Translation]()
     }
     
     private func parseToSingleTranslation(data: Data?) -> Translation? {

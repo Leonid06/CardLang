@@ -13,6 +13,8 @@ class SearchViewController: UIViewController {
     
     private let setRepository = SetRepository.shared
     
+    private let cardRepository = CardRepository.shared
+    
     private var set : WordSet?
     
     private var translations  = [Translation]()
@@ -29,11 +31,22 @@ class SearchViewController: UIViewController {
         
         let searchController = UISearchController()
         
-        searchController.searchResultsUpdater = self
+//        searchController.searchResultsUpdater = self
+//        searchController.delegate = self
+        searchController.searchBar.delegate = self
         
         navigationItem.searchController = searchController
 
         // Do any additional setup after loading the view.
+    }
+    
+    private func updateData(){
+        tableView.reloadData()
+    }
+    
+    private func onDefinitionsFetched(translations : [Translation]){
+        self.translations = translations
+        updateData()
     }
     
     func configure(_ set : WordSet){
@@ -41,11 +54,11 @@ class SearchViewController: UIViewController {
     }
 }
 
-extension SearchViewController : UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        
-    }
-}
+//extension SearchViewController : UISearchResultsUpdating {
+//    func updateSearchResults(for searchController: UISearchController) {
+//
+//    }
+//}
 
 extension SearchViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,6 +82,14 @@ extension SearchViewController : UITableViewDelegate , UITableViewDataSource {
         }
         navigationController?.dismiss(animated: true)
     }
-    
-    
+}
+
+extension SearchViewController : UISearchBarDelegate {
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        if let word = searchBar.text {
+            cardRepository.fetchMultipleTranslationsForWord(word, completion: onDefinitionsFetched)
+        }
+        
+    }
+  
 }

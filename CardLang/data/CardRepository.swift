@@ -34,6 +34,20 @@ class CardRepository {
         
     }
     
+    func fetchMultipleTranslationsForWord(_ word : String, completion: @escaping ([Translation]) -> Void){
+        cardService.getAllTranslationForWord(word, completion: onMultipleTranslationsFetched)
+        completion(self.translations)
+    }
+    
+    private func onMultipleTranslationsFetched(translations : [Translation]? , error: Error?){
+        if let error = error {
+            print(error)
+        }
+        if let translations = translations {
+            self.translations = translations
+        }
+    }
+    
     private func onTranslationFetched(translation : Translation?, error : Error?){
             if let error = error {
                 group.leave()
