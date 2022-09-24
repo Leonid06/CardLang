@@ -11,6 +11,7 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     private let setRepository = SetRepository.shared
     
     private let cardRepository = CardRepository.shared
@@ -29,13 +30,8 @@ class SearchViewController: UIViewController {
         
         title = "Search"
         
-        let searchController = UISearchController()
+        searchBar.delegate = self
         
-//        searchController.searchResultsUpdater = self
-//        searchController.delegate = self
-        searchController.searchBar.delegate = self
-        
-        navigationItem.searchController = searchController
 
         // Do any additional setup after loading the view.
     }
@@ -46,6 +42,7 @@ class SearchViewController: UIViewController {
     
     private func onDefinitionsFetched(translations : [Translation]){
         self.translations = translations
+        print(translations.count)
         updateData()
     }
     
@@ -77,19 +74,31 @@ extension SearchViewController : UITableViewDelegate , UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let translation = translations[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated: true)
         if let set = self.set {
             setRepository.addTranslationToSet(set: set, translation: translation)
         }
-        navigationController?.dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 77
+    }
+    
 }
 
 extension SearchViewController : UISearchBarDelegate {
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
         if let word = searchBar.text {
             cardRepository.fetchMultipleTranslationsForWord(word, completion: onDefinitionsFetched)
         }
-        
     }
-  
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if let isEmpty = searchBar.text?.isEmpty {
+            if(isEmpty){
+                translations.removeAll()
+                updateData()
+            }
+        }
+    }
 }

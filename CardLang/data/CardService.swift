@@ -96,23 +96,36 @@ class CardService {
                 !$0.isLetter
             }
             
-            print(decodedData)
+//            print(decodedData)
             
             var translations = [Translation]()
             
             let definitions = decodedData[0]["def"][0]["sseq"].arrayValue
             
+//            print(definitions.count)
+            
+//            print(definitions)
+            
             for definition in definitions {
-                var translation = definition[0][0][1]["dt"][0][1].stringValue
+
+                print(definition)
+                var translation : String 
                 
+                if (definition.count == 1){
+                    translation = definition[0][1]["dt"][0][1].stringValue
+                }else {
+                    translation = definition[1][1]["dt"][0][1].stringValue
+                }
+
                 if(translation.count > 4){
                     let index = translation.index(translation.startIndex, offsetBy: 4)
-                    
+
                     translation.removeSubrange(translation.startIndex ..< index)
                 }
                 
                 translations.append(Translation(word: word, translation: translation))
             }
+            print(translations)
             
             return translations
         } catch {

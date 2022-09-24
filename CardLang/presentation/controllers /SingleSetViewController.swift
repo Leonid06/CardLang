@@ -61,7 +61,14 @@ class SingleSetViewController: UIViewController {
     
     
     @objc func addButtonPressed(_ sender: Any) {
-        showAlert()
+//        showAlert()
+        let searchViewController = SearchViewController(nibName: NibNames.SearchViewControllerNibName , bundle: nil)
+        
+        if let set = set {
+            searchViewController.configure(set)
+        }
+        
+        navigationController?.pushViewController(searchViewController, animated: true)
     }
     
     private func showAlert() {

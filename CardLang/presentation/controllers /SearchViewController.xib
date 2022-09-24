@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="CardLang" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="Ge1-Tw-osX" id="2Vf-Az-3PF"/>
                 <outlet property="tableView" destination="n6g-tv-Sby" id="qnh-9f-nvC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,14 +22,27 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="n6g-tv-Sby">
-                    <rect key="frame" x="0.0" y="83" width="390" height="687"/>
+                    <rect key="frame" x="0.0" y="107" width="390" height="663"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Ge1-Tw-osX">
+                    <rect key="frame" x="0.0" y="55" width="390" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="2iv-Qj-0Rb"/>
+                        <constraint firstAttribute="width" constant="390" id="y9L-aR-JhR"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="ehZ-ma-FX9"/>
+                    </connections>
+                </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="n6g-tv-Sby" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="36" id="XO6-UE-Qry"/>
+                <constraint firstItem="Ge1-Tw-osX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ans-3D-0Bb"/>
+                <constraint firstItem="Ge1-Tw-osX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="HD8-Qf-966"/>
+                <constraint firstItem="n6g-tv-Sby" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="XO6-UE-Qry"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="n6g-tv-Sby" secondAttribute="bottom" constant="40" id="dfD-Gd-4Np"/>
                 <constraint firstItem="n6g-tv-Sby" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="fLw-r5-DA1"/>
                 <constraint firstItem="n6g-tv-Sby" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tt6-Nz-b8J"/>
