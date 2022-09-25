@@ -123,7 +123,9 @@ class CardService {
                     translation.removeSubrange(translation.startIndex ..< index)
                 }
                 
-                translations.append(Translation(word: word, translation: translation))
+                if(!translation.isEmpty){
+                    translations.append(Translation(word: word, translation: translation))
+                }
             }
             print(translations)
             
