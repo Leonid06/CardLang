@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,12 +20,13 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="word" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UT9-fG-N6d">
                         <rect key="frame" x="23" y="54.5" width="92" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="wordLabelColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" red="1" green="0.93990509420000001" blue="0.87885361269999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" name="wordBackgroundColor"/>
             <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
             <constraints>
                 <constraint firstItem="UT9-fG-N6d" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="10C-yu-rSI"/>
@@ -42,4 +44,12 @@
             <point key="canvasLocation" x="200.00000000000003" y="170.42410714285714"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <namedColor name="wordBackgroundColor">
+            <color red="1" green="0.94117647058823528" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="wordLabelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
