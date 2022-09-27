@@ -9,4 +9,5 @@ target 'CardLang' do
   pod 'Shuffle-iOS'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'RealmSwift', '~>10'
+  pod 'IQKeyboardManagerSwift'
 end

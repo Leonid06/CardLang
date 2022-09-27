@@ -121,7 +121,10 @@ class CardService {
                     let index = translation.index(translation.startIndex, offsetBy: 4)
 
                     translation.removeSubrange(translation.startIndex ..< index)
+                    
                 }
+//                translation = String.removeTokens(string: translation)
+//                word = String.removeTokens(string: word)
                 
                 if(!translation.isEmpty){
                     translations.append(Translation(word: word, translation: translation))
