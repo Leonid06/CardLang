@@ -79,7 +79,18 @@ extension CardViewController : SwipeCardStackDataSource {
         
 //        let content = CardView.instantiate(text:  translation.word)
 //        let content = CardView()
-        let content = UINib(nibName: NibNames.CardViewNibName, bundle: nil).instantiate(withOwner: self).first as! CardView
+        let content = UINib(nibName: NibNames.CardViewNibName, bundle: nil).instantiate(withOwner: nil).first as! CardView
+        
+        let leftOverlay = UINib(nibName: NibNames.LeftOverlayViewNibName, bundle: nil).instantiate(withOwner: nil).first as! UIView
+        
+        let rightOverlay = UINib(nibName: NibNames.RightOverlayViewNibName, bundle: nil).instantiate(withOwner: nil).first as! UIView
+        
+//        leftOverlay.text = "Don't remember"
+//        leftOverlay.font = leftOverlay.font.withSize(30)
+//        leftOverlay.textColor = UIColor.systemRed
+        
+        
+        card.setOverlays([.left: leftOverlay, .right: rightOverlay])
         
         content.wordLabel.text = translation.word
         card.content = content
