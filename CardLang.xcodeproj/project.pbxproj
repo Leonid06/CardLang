@@ -28,6 +28,7 @@
 		B33B211028BE515F00E66FCC /* Constants .swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B210F28BE515F00E66FCC /* Constants .swift */; };
 		B33B211428BE611D00E66FCC /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B211328BE611D00E66FCC /* WordData.swift */; };
 		B33B211628BE646200E66FCC /* Translation .swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B211528BE646200E66FCC /* Translation .swift */; };
+		B385B88028E4611200F86C53 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385B87F28E4611200F86C53 /* Colors.swift */; };
 		B39D5D1428C4DE8C0088C101 /* WordSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D5D1328C4DE8C0088C101 /* WordSet.swift */; };
 		B39D5D1628C4E0710088C101 /* SetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D5D1528C4E0710088C101 /* SetRepository.swift */; };
 		B3DFAB8828DDBD9A00B84EEC /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */; };
@@ -69,6 +70,7 @@
 		B33B210F28BE515F00E66FCC /* Constants .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants .swift"; sourceTree = "<group>"; };
 		B33B211328BE611D00E66FCC /* WordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
 		B33B211528BE646200E66FCC /* Translation .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Translation .swift"; sourceTree = "<group>"; };
+		B385B87F28E4611200F86C53 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B39D5D1328C4DE8C0088C101 /* WordSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSet.swift; sourceTree = "<group>"; };
 		B39D5D1528C4E0710088C101 /* SetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepository.swift; sourceTree = "<group>"; };
 		B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			children = (
 				B307876628BF8FB000C88404 /* NibNames.swift */,
 				B3EFDFBF28C1104E00FA1183 /* Identifiers.swift */,
+				B385B87F28E4611200F86C53 /* Colors.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				B33B20EE28BE281000E66FCC /* AppDelegate.swift in Sources */,
 				B3EFDFB228C0FCA800FA1183 /* SetsTableViewCell.swift in Sources */,
 				B33B211028BE515F00E66FCC /* Constants .swift in Sources */,
+				B385B88028E4611200F86C53 /* Colors.swift in Sources */,
 				B3EFDFBC28C0FF9700FA1183 /* WordCollectionViewCell.swift in Sources */,
 				B335BAF728BF4B7700B9A29F /* CardRepository.swift in Sources */,
 				B3DFAB8828DDBD9A00B84EEC /* SearchTableViewCell.swift in Sources */,

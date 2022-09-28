@@ -43,11 +43,11 @@ class SingleSetViewController: UIViewController {
         
         
         let buttonItem  = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
+//        buttonItem.tintColor = UIColor(named: Colors.buttonColor)
 
         let playItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(playButtonPressed))
+//        playItem.tintColor = UIColor(named: Colors.buttonColor)
         
-        
-//        navigationItem.rightBarButtonItem = buttonItem
         navigationItem.rightBarButtonItems = [buttonItem, playItem]
         updateTranslations()
     }
