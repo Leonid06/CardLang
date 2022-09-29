@@ -127,7 +127,7 @@ extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDa
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.WordCollectionViewCellIdentifier, for: indexPath) as! WordCollectionViewCell
         
     
-        cell.configure(translations[indexPath.row])
+        cell.configure(translations[translations.count - 1 - indexPath.row])
     
         return cell
     }
