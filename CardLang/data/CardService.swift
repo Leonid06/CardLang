@@ -15,13 +15,13 @@ class CardService {
     
     func getTranslationForWord(_ word : String, completion: @escaping (Translation?, Error?) -> Void){
 //        let url = CardService.HEAD_URL + "en/" + word.lowercased()
-        let url = CardService.HEAD_URL + word.lowercased() + "?key=" + Constants.API_KEY
+        let url = CardService.HEAD_URL + word.lowercased() + "?key=" + Constants.API_KEY!
         performRequest(url: url, completion: completion)
 //        print("request was performed")
     }
     
     func getAllTranslationForWord(_ word : String, completion: @escaping ([Translation]?, Error?) -> Void) {
-        let url = CardService.HEAD_URL + word.lowercased() + "?key=" + Constants.API_KEY
+        let url = CardService.HEAD_URL + word.lowercased() + "?key=" + Constants.API_KEY!
         performRequest(url: url, completion: completion)
     }
     
