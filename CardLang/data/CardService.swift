@@ -116,12 +116,18 @@ class CardService {
                 }else {
                     translation = definition[1][1]["dt"][0][1].stringValue
                 }
+                
 
-                if(translation.count > 4){
-                    let index = translation.index(translation.startIndex, offsetBy: 4)
-
-                    translation.removeSubrange(translation.startIndex ..< index)
-                    
+//                if(translation.count > 4){
+//                    let index = translation.index(translation.startIndex, offsetBy: 4)
+//
+//                    translation.removeSubrange(translation.startIndex ..< index)
+//
+//                }
+                while let firstIndex = translation.firstIndex(of: "{"){
+                    if let secondIndex = translation.firstIndex(of: "}"){
+                        translation.removeSubrange(firstIndex ... secondIndex)
+                    }
                 }
 //                translation = String.removeTokens(string: translation)
 //                word = String.removeTokens(string: word)
