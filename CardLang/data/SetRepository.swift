@@ -32,7 +32,7 @@ class SetRepository {
                 realm.delete(set)
             }
         } catch{
-            
+            print(error)
         }
     }
     

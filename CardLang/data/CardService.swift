@@ -27,7 +27,7 @@ class CardService {
     
     private func performRequest(url : String, completion : @escaping ([Translation]?, Error?) -> Void){
         if let url = URL(string: url){
-            var request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalCacheData, timeoutInterval: 60)
+            let request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalCacheData, timeoutInterval: 60)
             
 //            request.addValue(Constants.APP_ID, forHTTPHeaderField: "app_id")
 //            request.addValue(Constants.AUTH_KEY, forHTTPHeaderField: "app_key")
