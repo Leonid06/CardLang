@@ -37,6 +37,9 @@ class SingleSetViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
+//        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongGesture))
+//        collectionView.addGestureRecognizer(longPressGestureRecognizer)
+        
         title = set?.name
         
         collectionView!.register(WordCollectionViewCell.nib(), forCellWithReuseIdentifier: Identifies.WordCollectionViewCellIdentifier)
@@ -153,5 +156,27 @@ extension SingleSetViewController : UICollectionViewDelegateFlowLayout  {
         return 20
     }
 }
+
+
+//gestures
+//extension  SingleSetViewController {
+//    private func handleLongGesture(gesture: UILongPressGestureRecognizer) {
+//
+//        switch(gesture.state) {
+//
+//        case UIGestureRecognizer.State.began:
+//            guard let selectedIndexPath = self.collectionView?.indexPathForItem(at: gesture.location(in: self.collectionView)) else {
+//                break
+//            }
+//            collectionView?.beginInteractiveMovementForItem(at: selectedIndexPath)
+//        case UIGestureRecognizer.State.changed:
+//            collectionView?.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
+//        case UIGestureRecognizer.State.ended:
+//            collectionView?.endInteractiveMovement()
+//        default:
+//            collectionView?.cancelInteractiveMovement()
+//        }
+//    }
+//}
 
 
