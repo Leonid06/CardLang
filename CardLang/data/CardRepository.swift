@@ -31,7 +31,6 @@ class CardRepository {
             print("group did notify main thread")
             completion(self.translations)
         }
-        
     }
     
     func  fetchMultipleTranslationsForWord(_ word : String, completion: @escaping ([Translation]) -> Void) {
