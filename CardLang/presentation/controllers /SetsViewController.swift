@@ -16,19 +16,27 @@ class SetsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: NibNames.SetsTableViewCellNibName, bundle: nil), forCellReuseIdentifier: Identifies.SetsTableViewCellIdentifier)
-        updateSets()
+//        updateSets()
+        
+        setRepository.instansiateRealm {
+            self.updateSets()
+        }
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        updateSets()
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        updateSets()
+//    }
 
     // MARK: - Table view data source
     
     private func updateSets(){
-        sets = setRepository.getAllSets()
-        tableView.reloadData()
+        
+        DispatchQueue.main.async {
+            self.sets = self.setRepository.getAllSets()
+            self.tableView.reloadData()
+        }
+        
     }
     
     @IBAction func addSetButtonPressed(_ sender: UIBarButtonItem) {
@@ -63,7 +71,7 @@ class SetsViewController: UITableViewController {
             let set = sets[indexPath.row]
             setRepository.deleteWordSet(set: set)
             
-            updateSets()
+//            updateSets()
         }
     }
     
@@ -94,7 +102,7 @@ class SetsViewController: UITableViewController {
                    self.setRepository.addWordSet(name: name)
                }
                
-               self.updateSets()
+//               self.updateSets()
            }
        }
        let deleteAction =  UIAlertAction(title: "Cancel", style: .cancel){

@@ -12,7 +12,8 @@ import RealmSwift
 class WordSet : Object {
     
     @Persisted var name : String
-    @Persisted(primaryKey: true) var id : ObjectId
+    @Persisted(primaryKey: true) var _id : ObjectId
+    @Persisted var ownerId : String 
     @Persisted var translations : List<Translation> 
     
     convenience init(name : String){
