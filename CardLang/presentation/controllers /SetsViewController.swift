@@ -16,7 +16,13 @@ class SetsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: NibNames.SetsTableViewCellNibName, bundle: nil), forCellReuseIdentifier: Identifies.SetsTableViewCellIdentifier)
-        updateSets()
+        
+        
+        setRepository.subscribeToUpdates {
+            self.updateSets()
+        }
+        
+//        updateSets()
         
     }
     

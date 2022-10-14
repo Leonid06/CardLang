@@ -52,7 +52,12 @@ class SingleSetViewController: UIViewController {
 //        playItem.tintColor = UIColor(named: Colors.buttonColor)
         
         navigationItem.rightBarButtonItems = [buttonItem, playItem]
-        updateTranslations()
+        
+        
+        setRepository.subscribeToUpdates {
+            self.updateTranslations()
+        }
+//        updateTranslations()
     }
     
     @objc func playButtonPressed(_ sender: Any) {

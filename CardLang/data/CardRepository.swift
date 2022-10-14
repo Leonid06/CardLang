@@ -11,6 +11,8 @@ import Foundation
 class CardRepository {
     static let shared = CardRepository()
     
+    private let realmService = RealmService.shared
+    
     private let group = DispatchGroup()
     
     private let cardService = CardService()
@@ -69,5 +71,4 @@ class CardRepository {
                 group.leave()
             }
     }
-    
 }

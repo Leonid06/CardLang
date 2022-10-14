@@ -12,7 +12,7 @@ import RealmSwift
 class RealmService {
 
     
-    private var notificationToken =  NotificationToken()
+    private var notificationTokens = [NotificationToken]()
     
     private let app = App(id: "cardlang-gyuck")
     
@@ -20,12 +20,30 @@ class RealmService {
     
     private init(){}
     
+    deinit {
+        for token in notificationTokens {
+            token.invalidate()
+        }
+    }
+    
     func getCurrentUser() -> User? {
         if let user = app.currentUser {
             return user
         } else {
             return nil
         }
+    }
+    
+    @MainActor
+    func addObserver(block: @escaping  () -> Void) async throws {
+        let user =  try! await self.login()
+        let realm = try await openSyncedRealm(user: user)
+        
+        let token = realm.observe { notification,realm in
+            block()
+        }
+        
+        notificationTokens.append(token)
     }
     
     func getRealm() async throws -> Realm {

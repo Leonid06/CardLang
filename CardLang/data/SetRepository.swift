@@ -77,4 +77,15 @@ class SetRepository {
         }
         return try await task.result.get()
     }
+    
+    func subscribeToUpdates(block : @escaping () -> Void){
+        Task {
+            do {
+                try await realmService.addObserver(block: block)
+            }catch {
+                print(error)
+            }
+            
+        }
+    }
 }
