@@ -78,10 +78,26 @@ class SetRepository {
         return try await task.result.get()
     }
     
-    func subscribeToUpdates(block : @escaping () -> Void){
+    
+    func subscribeToUpdatesOnSets(block : @escaping () -> Void){
         Task {
             do {
-                try await realmService.addObserver(block: block)
+                try await realmService.addObserverOnSets {
+                    block()
+                }
+            }catch {
+                print(error)
+            }
+            
+        }
+    }
+    
+    func subscribeToUpdatesOnTranslations(block : @escaping () -> Void){
+        Task {
+            do {
+                try await realmService.addObserverOnTranslations {
+                    block()
+                }
             }catch {
                 print(error)
             }

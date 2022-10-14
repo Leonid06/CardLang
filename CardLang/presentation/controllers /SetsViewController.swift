@@ -18,7 +18,7 @@ class SetsViewController: UITableViewController {
         tableView.register(UINib(nibName: NibNames.SetsTableViewCellNibName, bundle: nil), forCellReuseIdentifier: Identifies.SetsTableViewCellIdentifier)
         
         
-        setRepository.subscribeToUpdates {
+        setRepository.subscribeToUpdatesOnSets {
             self.updateSets()
         }
         

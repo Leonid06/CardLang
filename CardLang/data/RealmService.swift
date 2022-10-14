@@ -35,12 +35,46 @@ class RealmService {
     }
     
     @MainActor
-    func addObserver(block: @escaping  () -> Void) async throws {
+    func addObserverOnSets(block: @escaping  () -> Void) async throws {
         let user =  try! await self.login()
         let realm = try await openSyncedRealm(user: user)
         
-        let token = realm.observe { notification,realm in
-            block()
+        let sets = realm.objects(WordSet.self)
+        
+        let token = sets.observe {
+            changes in
+            
+            switch changes {
+            case .initial:
+                block()
+            case .update:
+                block()
+            case .error(let error):
+                print(error)
+            }
+        }
+        
+        notificationTokens.append(token)
+    }
+    
+    @MainActor
+    func addObserverOnTranslations(block: @escaping  () -> Void) async throws {
+        let user =  try! await self.login()
+        let realm = try await openSyncedRealm(user: user)
+        
+        let sets = realm.objects(Translation.self)
+        
+        let token = sets.observe {
+            changes in
+            
+            switch changes {
+            case .initial:
+                block()
+            case .update:
+                block()
+            case .error(let error):
+                print(error)
+            }
         }
         
         notificationTokens.append(token)

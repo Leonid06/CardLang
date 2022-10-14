@@ -54,7 +54,7 @@ class SingleSetViewController: UIViewController {
         navigationItem.rightBarButtonItems = [buttonItem, playItem]
         
         
-        setRepository.subscribeToUpdates {
+        setRepository.subscribeToUpdatesOnTranslations {
             self.updateTranslations()
         }
 //        updateTranslations()
