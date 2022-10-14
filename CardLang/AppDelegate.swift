@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
-        let app = App(id: "cardlang-gyuck")
+        
         return true
     }
     

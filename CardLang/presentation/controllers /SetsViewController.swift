@@ -16,25 +16,28 @@ class SetsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: NibNames.SetsTableViewCellNibName, bundle: nil), forCellReuseIdentifier: Identifies.SetsTableViewCellIdentifier)
-//        updateSets()
-        
-        setRepository.instansiateRealm {
-            self.updateSets()
-        }
+        updateSets()
         
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        updateSets()
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        updateSets()
+    }
 
     // MARK: - Table view data source
     
     private func updateSets(){
         
         DispatchQueue.main.async {
-            self.sets = self.setRepository.getAllSets()
-            self.tableView.reloadData()
+            Task {
+                do {
+                    self.sets = try await self.setRepository.getAllSets()
+                    self.tableView.reloadData()
+                }catch {
+                    print(error)
+                }
+                
+            }
         }
         
     }
@@ -56,6 +59,8 @@ class SetsViewController: UITableViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         let singleSetViewController = self.storyboard?.instantiateViewController(withIdentifier: Identifies.SingleSetViewControllerIdentifier) as! SingleSetViewController
         singleSetViewController.set = set
         navigationController?.pushViewController(singleSetViewController, animated: true)
@@ -71,7 +76,7 @@ class SetsViewController: UITableViewController {
             let set = sets[indexPath.row]
             setRepository.deleteWordSet(set: set)
             
-//            updateSets()
+            updateSets()
         }
     }
     
@@ -102,7 +107,7 @@ class SetsViewController: UITableViewController {
                    self.setRepository.addWordSet(name: name)
                }
                
-//               self.updateSets()
+               self.updateSets()
            }
        }
        let deleteAction =  UIAlertAction(title: "Cancel", style: .cancel){

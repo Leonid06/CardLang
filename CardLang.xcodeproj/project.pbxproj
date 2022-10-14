@@ -28,6 +28,7 @@
 		B33B211028BE515F00E66FCC /* Constants .swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B210F28BE515F00E66FCC /* Constants .swift */; };
 		B33B211428BE611D00E66FCC /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B211328BE611D00E66FCC /* WordData.swift */; };
 		B33B211628BE646200E66FCC /* Translation .swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B211528BE646200E66FCC /* Translation .swift */; };
+		B3483C0628F95D900065648C /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3483C0528F95D900065648C /* RealmService.swift */; };
 		B35F629228E6E99F00C5F250 /* CardLangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F629128E6E99F00C5F250 /* CardLangTests.swift */; };
 		B35F629928E6EA3800C5F250 /* CardServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F629828E6EA3800C5F250 /* CardServiceTest.swift */; };
 		B385B88028E4611200F86C53 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385B87F28E4611200F86C53 /* Colors.swift */; };
@@ -43,7 +44,7 @@
 		B3EFDFBC28C0FF9700FA1183 /* WordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */; };
 		B3EFDFBD28C0FF9700FA1183 /* WordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3EFDFBB28C0FF9700FA1183 /* WordCollectionViewCell.xib */; };
 		B3EFDFC028C1104E00FA1183 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFBF28C1104E00FA1183 /* Identifiers.swift */; };
-		D144205AAC854D6D87DE3BB9 /* Pods_CardLang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F095E23971A324CF3E1AE637 /* Pods_CardLang.framework */; };
+		F26A4881D181E53098F13649 /* Pods_CardLang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3489D0B7F42CF5CE06D0D617 /* Pods_CardLang.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +58,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07DD7C8F9FB482DD749FEA99 /* Pods-CardLang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.release.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.release.xcconfig"; sourceTree = "<group>"; };
-		0B6A23A9103AFDA44C199681 /* Pods-CardLang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.debug.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.debug.xcconfig"; sourceTree = "<group>"; };
+		3489D0B7F42CF5CE06D0D617 /* Pods_CardLang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardLang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50D091FDAB469BAB18CA3033 /* Pods-CardLang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.release.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.release.xcconfig"; sourceTree = "<group>"; };
+		8D09ED985491E3A84B4B7FA5 /* Pods-CardLang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.debug.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.debug.xcconfig"; sourceTree = "<group>"; };
 		B307876628BF8FB000C88404 /* NibNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibNames.swift; sourceTree = "<group>"; };
 		B307876828BF9D8400C88404 /* Extensions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions .swift"; sourceTree = "<group>"; };
 		B307876A28C0969500C88404 /* TranslationSwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationSwipeCard.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		B33B210F28BE515F00E66FCC /* Constants .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants .swift"; sourceTree = "<group>"; };
 		B33B211328BE611D00E66FCC /* WordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
 		B33B211528BE646200E66FCC /* Translation .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Translation .swift"; sourceTree = "<group>"; };
+		B3483C0528F95D900065648C /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		B35F628F28E6E99F00C5F250 /* CardLangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardLangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35F629128E6E99F00C5F250 /* CardLangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLangTests.swift; sourceTree = "<group>"; };
 		B35F629828E6EA3800C5F250 /* CardServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardServiceTest.swift; sourceTree = "<group>"; };
@@ -99,7 +102,6 @@
 		B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3EFDFBB28C0FF9700FA1183 /* WordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordCollectionViewCell.xib; sourceTree = "<group>"; };
 		B3EFDFBF28C1104E00FA1183 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
-		F095E23971A324CF3E1AE637 /* Pods_CardLang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardLang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D144205AAC854D6D87DE3BB9 /* Pods_CardLang.framework in Frameworks */,
+				F26A4881D181E53098F13649 /* Pods_CardLang.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		385C22756E5CC5B99871A94B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3489D0B7F42CF5CE06D0D617 /* Pods_CardLang.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B307876C28C0EF0900C88404 /* controllers  */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +172,7 @@
 				B35F629028E6E99F00C5F250 /* CardLangTests */,
 				B33B20EB28BE281000E66FCC /* Products */,
 				D0629796EC7F89B198126D6F /* Pods */,
-				E32E30293CBF014538DC78E2 /* Frameworks */,
+				385C22756E5CC5B99871A94B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,6 +210,7 @@
 				B335BAF628BF4B7700B9A29F /* CardRepository.swift */,
 				B39D5D1528C4E0710088C101 /* SetRepository.swift */,
 				B312A56228E610B100E274C2 /* Keys.xcconfig */,
+				B3483C0528F95D900065648C /* RealmService.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -268,18 +279,10 @@
 		D0629796EC7F89B198126D6F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0B6A23A9103AFDA44C199681 /* Pods-CardLang.debug.xcconfig */,
-				07DD7C8F9FB482DD749FEA99 /* Pods-CardLang.release.xcconfig */,
+				8D09ED985491E3A84B4B7FA5 /* Pods-CardLang.debug.xcconfig */,
+				50D091FDAB469BAB18CA3033 /* Pods-CardLang.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		E32E30293CBF014538DC78E2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F095E23971A324CF3E1AE637 /* Pods_CardLang.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,11 +292,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B33B210128BE281100E66FCC /* Build configuration list for PBXNativeTarget "CardLang" */;
 			buildPhases = (
-				599CD5551E2F538AA75EAF7D /* [CP] Check Pods Manifest.lock */,
+				A7BE9B6B6892D88D525CE2B3 /* [CP] Check Pods Manifest.lock */,
 				B33B20E628BE281000E66FCC /* Sources */,
 				B33B20E728BE281000E66FCC /* Frameworks */,
 				B33B20E828BE281000E66FCC /* Resources */,
-				FC3F92B1F1E7792AD5B59948 /* [CP] Embed Pods Frameworks */,
+				B0DE48AB3A8267041375147B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -389,7 +392,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		599CD5551E2F538AA75EAF7D /* [CP] Check Pods Manifest.lock */ = {
+		A7BE9B6B6892D88D525CE2B3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -411,7 +414,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FC3F92B1F1E7792AD5B59948 /* [CP] Embed Pods Frameworks */ = {
+		B0DE48AB3A8267041375147B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -442,6 +445,7 @@
 				B307876928BF9D8400C88404 /* Extensions .swift in Sources */,
 				B33B210E28BE4F2100E66FCC /* CardService.swift in Sources */,
 				B33B20F828BE281000E66FCC /* CardLang.xcdatamodeld in Sources */,
+				B3483C0628F95D900065648C /* RealmService.swift in Sources */,
 				B33B211628BE646200E66FCC /* Translation .swift in Sources */,
 				B3EFDFC028C1104E00FA1183 /* Identifiers.swift in Sources */,
 				B335BAF328BF466100B9A29F /* CardView.swift in Sources */,
@@ -618,7 +622,7 @@
 		};
 		B33B210228BE281100E66FCC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B6A23A9103AFDA44C199681 /* Pods-CardLang.debug.xcconfig */;
+			baseConfigurationReference = 8D09ED985491E3A84B4B7FA5 /* Pods-CardLang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -647,7 +651,7 @@
 		};
 		B33B210328BE281100E66FCC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07DD7C8F9FB482DD749FEA99 /* Pods-CardLang.release.xcconfig */;
+			baseConfigurationReference = 50D091FDAB469BAB18CA3033 /* Pods-CardLang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -12,110 +12,69 @@ class SetRepository {
     
     static let shared = SetRepository()
     
-    private var realm = try! Realm()
+    private let realmService = RealmService.shared
     
     private var notificationToken =  NotificationToken()
-    
-    private let app = App(id: "cardlang-gyuck")
-    
-    
-    deinit {
-        notificationToken.invalidate()
-    }
-    
-    func instansiateRealm(block: @escaping () -> Void) {
-        Task.init {
-            let user =  try! await self.login()
-            try await openSyncedRealm(user: user, block: block)
+
+    @MainActor
+    func addWordSet(name : String){
+        Task {
+            do {
+                let realm = try await realmService.getRealm()
+                
+                let user = realmService.getCurrentUser()
+                let set = WordSet(name: name, ownerId: user?.id ?? "")
+                try realm.write {
+                    realm.add(set, update: Realm.UpdatePolicy.modified)
+                }
+            }catch {
+                print(error)
+            }
+            
         }
-    }
-    
-    private func login() async throws -> User {
-        // Authenticate with the instance of the app that points
-        // to your backend. Here, we're using anonymous login.
-        let user = try await app.login(credentials: Credentials.anonymous)
-        print("Successfully logged in user: \(user)")
-        return user
     }
     
     @MainActor
-    private func openSyncedRealm(user: User, block: @escaping ()-> Void) async throws {
-        let config = user.flexibleSyncConfiguration()
-        // Pass object types to the Flexible Sync configuration
-        // as a temporary workaround for not being able to add a
-        // complete schema for a Flexible Sync app.
-//        config.objectTypes = [Translation.self, WordSet.self]
-        
-        
-        
-        realm = try! await Realm(configuration: config, downloadBeforeOpen: .never)
-        
-        let subscriptions = realm.subscriptions
-        
-        try await subscriptions.update {
-                if let _ = subscriptions.first(named : "all-sets") {
-                    return
-                }else {
-                    subscriptions.append(QuerySubscription<WordSet>(name: "all-sets"))
-                    subscriptions.append(QuerySubscription<Translation>(name: "all-tranlations"))
+    func deleteWordSet(set : WordSet){
+        Task {
+            do {
+                let realm = try await realmService.getRealm()
+                try realm.write {
+                    realm.delete(set)
                 }
-        }
-        let sets = realm.objects(WordSet.self)
-
-        self.notificationToken = sets.observe { changes in
-            switch changes {
-            case .initial :
-                print("called at initial state")
-                block()
-            case .update :
-                block()
-            case .error(let error):
+            } catch{
                 print(error)
             }
         }
-    }
-    
-    func subscribeToUpdates(completion:  @escaping () -> Void){
-        let sets = realm.objects(WordSet.self)
         
-        _ = sets.observe { changes in
-            completion()
-        }
     }
     
-    func addWordSet(name : String){
-        do {
-            let set = WordSet(name: name)
-            try realm.write {
-                realm.add(set, update: Realm.UpdatePolicy.modified)
+    @MainActor
+    func addTranslationToSet(set : WordSet, translation : Translation, completion: @escaping () -> Void){
+        Task {
+            do  {
+                let realm = try await realmService.getRealm()
+                try realm.write {
+                    set.translations.append(translation)
+                }
+                completion()
+            }catch {
+                print(error)
             }
-        }catch {
-            print(error)
         }
+        
     }
-    
-    
-    func deleteWordSet(set : WordSet){
-        do {
-            try realm.write {
-                realm.delete(set)
+    @MainActor
+    func getAllSets() async throws ->  [WordSet] {
+        let task = Task { () -> [WordSet] in
+            do {
+                let realm = try await realmService.getRealm()
+                return Array(realm.objects(WordSet.self)).reversed()
+            }catch {
+                print(error)
             }
-        } catch{
-            print(error)
+            return [WordSet]()
         }
-    }
-    
-    func addTranslationToSet(set : WordSet, translation : Translation){
-        do  {
-            try realm.write {
-                set.translations.append(translation)
-            }
-        }catch {
-            print(error)
-        }
-    }
-    
-    func getAllSets() ->  [WordSet] {
-        return Array(realm.objects(WordSet.self)).reversed()
+        return try await task.result.get()
     }
 }
