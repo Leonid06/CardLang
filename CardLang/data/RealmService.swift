@@ -105,7 +105,7 @@ class RealmService {
         
         
         
-        let realm = try! await Realm(configuration: config, downloadBeforeOpen: .once)
+        let realm = try! await Realm(configuration: config, downloadBeforeOpen: .never)
         
         let subscriptions = realm.subscriptions
         
