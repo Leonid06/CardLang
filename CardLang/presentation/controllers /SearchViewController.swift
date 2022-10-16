@@ -92,6 +92,7 @@ extension SearchViewController : UISearchBarDelegate {
         if let word = searchBar.text {
             cardRepository.fetchMultipleTranslationsForWord(word, completion: onDefinitionsFetched)
         }
+        searchBar.endEditing(false)
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if let isEmpty = searchBar.text?.isEmpty {
