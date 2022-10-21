@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import IceCream
 import IQKeyboardManagerSwift
 
 @main
@@ -18,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        
+        let syncEngine = SyncEngine(objects: [
+            SyncObject(type: WordSet.self),
+            SyncObject(type: Translation.self)
+        ])
         return true
     }
 

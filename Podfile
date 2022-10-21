@@ -8,6 +8,7 @@ target 'CardLang' do
   pod 'CardSlider'
   pod 'Shuffle-iOS'
   pod 'SwiftyJSON', '~> 4.0'
-  pod 'RealmSwift', '~>10'
+  pod 'RealmSwift', '<10.8.0'
   pod 'IQKeyboardManagerSwift'
+  pod 'IceCream', '2.0.4'
 end

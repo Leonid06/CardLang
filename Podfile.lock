@@ -1,24 +1,28 @@
 PODS:
   - CardSlider (0.1.0)
+  - IceCream (2.0.4):
+    - RealmSwift (< 10.8.0)
   - IQKeyboardManagerSwift (6.5.10)
-  - Realm (10.28.2):
-    - Realm/Headers (= 10.28.2)
-  - Realm/Headers (10.28.2)
-  - RealmSwift (10.28.2):
-    - Realm (= 10.28.2)
+  - Realm (10.7.7):
+    - Realm/Headers (= 10.7.7)
+  - Realm/Headers (10.7.7)
+  - RealmSwift (10.7.7):
+    - Realm (= 10.7.7)
   - Shuffle-iOS (0.5.0)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
   - CardSlider
+  - IceCream (= 2.0.4)
   - IQKeyboardManagerSwift
-  - RealmSwift (~> 10)
+  - RealmSwift (< 10.8.0)
   - Shuffle-iOS
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
     - CardSlider
+    - IceCream
     - IQKeyboardManagerSwift
     - Realm
     - RealmSwift
@@ -27,12 +31,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   CardSlider: 0a8f5f17f5a76701771794b07fdaeddc512358c8
+  IceCream: 717d516a1c634eba8eaa8ce7d3d7bc5f7e40c2fa
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
-  Realm: e617c54ad0f566b3d0f6a2abae7010de05f252ac
-  RealmSwift: 8a516a8759d80d52ebcec1ff1076f5f5159f98b2
+  Realm: 8010af8b7a576ba501729bcbc54a3cd1f1f7dca3
+  RealmSwift: dc17e6d649c12a8996f9e962c3fe6cef356885c4
   Shuffle-iOS: ff33658fb1e5eebd6a4724c156473e63754be9cb
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 0d79cee653ee91876a4782953472cca20bfd0e81
+PODFILE CHECKSUM: d3d6602103304f72d26c1452f553a9a61801fc92
 
 COCOAPODS: 1.11.3
