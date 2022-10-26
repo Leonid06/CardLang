@@ -16,7 +16,13 @@ class SetsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: NibNames.SetsTableViewCellNibName, bundle: nil), forCellReuseIdentifier: Identifies.SetsTableViewCellIdentifier)
-        updateSets()
+        
+        
+        setRepository.subscribeToUpdatesOnSets {
+            self.updateSets()
+        }
+        
+//        updateSets()
         
     }
     
@@ -27,8 +33,19 @@ class SetsViewController: UITableViewController {
     // MARK: - Table view data source
     
     private func updateSets(){
-        sets = setRepository.getAllSets()
-        tableView.reloadData()
+        
+        DispatchQueue.main.async {
+            Task {
+                do {
+                    self.sets = try await self.setRepository.getAllSets()
+                    self.tableView.reloadData()
+                }catch {
+                    print(error)
+                }
+                
+            }
+        }
+        
     }
     
     @IBAction func addSetButtonPressed(_ sender: UIBarButtonItem) {
@@ -47,6 +64,8 @@ class SetsViewController: UITableViewController {
         let set = sets[indexPath.row]
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
+        
+        tableView.deselectRow(at: indexPath, animated: true)
         
         let singleSetViewController = self.storyboard?.instantiateViewController(withIdentifier: Identifies.SingleSetViewControllerIdentifier) as! SingleSetViewController
         singleSetViewController.set = set

@@ -11,6 +11,8 @@ import Foundation
 class CardRepository {
     static let shared = CardRepository()
     
+    private let realmService = RealmService.shared
+    
     private let group = DispatchGroup()
     
     private let cardService = CardService()
@@ -31,7 +33,6 @@ class CardRepository {
             print("group did notify main thread")
             completion(self.translations)
         }
-        
     }
     
     func  fetchMultipleTranslationsForWord(_ word : String, completion: @escaping ([Translation]) -> Void) {
@@ -70,5 +71,4 @@ class CardRepository {
                 group.leave()
             }
     }
-    
 }

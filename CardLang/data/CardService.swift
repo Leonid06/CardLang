@@ -13,6 +13,8 @@ class CardService {
     
     static let shared = CardService()
     
+    private let realmService  = RealmService.shared
+    
     func getTranslationForWord(_ word : String, completion: @escaping (Translation?, Error?) -> Void){
 //        let url = CardService.HEAD_URL + "en/" + word.lowercased()
         let url = CardService.HEAD_URL + word.lowercased() + "?key=" + Constants.API_KEY!
@@ -133,7 +135,8 @@ class CardService {
 //                word = String.removeTokens(string: word)
                 
                 if(!translation.isEmpty){
-                    translations.append(Translation(word: word, translation: translation))
+                    let user = realmService.getCurrentUser()
+                    translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? ""))
                 }
             }
             print(translations)
@@ -169,9 +172,10 @@ class CardService {
                 
                 translation.removeSubrange(translation.startIndex ..< index)
             }
-           
             
-            return Translation(word: word, translation: translation)
+            let user = realmService.getCurrentUser()
+            
+            return Translation(word: word, translation: translation, ownerId: user?.id ?? "")
         } catch {
             print(error)
             return nil

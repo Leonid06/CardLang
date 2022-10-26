@@ -76,7 +76,7 @@ extension SearchViewController : UITableViewDelegate , UITableViewDataSource {
         let translation = translations[indexPath.row]
         tableView.deselectRow(at: indexPath, animated: true)
         if let set = self.set {
-            setRepository.addTranslationToSet(set: set, translation: translation)
+            setRepository.addTranslationToSet(set: set, translation: translation, completion: {})
         }
         navigationController?.popViewController(animated: true)
     }
@@ -92,6 +92,7 @@ extension SearchViewController : UISearchBarDelegate {
         if let word = searchBar.text {
             cardRepository.fetchMultipleTranslationsForWord(word, completion: onDefinitionsFetched)
         }
+        searchBar.endEditing(false)
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if let isEmpty = searchBar.text?.isEmpty {

@@ -52,7 +52,12 @@ class SingleSetViewController: UIViewController {
 //        playItem.tintColor = UIColor(named: Colors.buttonColor)
         
         navigationItem.rightBarButtonItems = [buttonItem, playItem]
-        updateTranslations()
+        
+        
+        setRepository.subscribeToUpdatesOnTranslations {
+            self.updateTranslations()
+        }
+//        updateTranslations()
     }
     
     @objc func playButtonPressed(_ sender: Any) {
@@ -105,14 +110,13 @@ class SingleSetViewController: UIViewController {
     private func onTranslationsFetched(translations : [Translation]){
         print("got \(translations.count) translations")
         if let set = self.set {
-            self.setRepository.addTranslationToSet(set: set, translation: translations[0])
-            self.translations = set.translations
-            print(set.translations.count)
-            self.updateTranslations()
+            self.setRepository.addTranslationToSet(set: set, translation: translations[0],completion: self.updateTranslations)
+            
         }
     }
     
     private func updateTranslations(){
+        self.translations = set?.translations ?? List<Translation>()
         collectionView.reloadData()
     }
 
