@@ -90,7 +90,7 @@ extension SearchViewController : UITableViewDelegate , UITableViewDataSource {
         navigationController?.popViewController(animated: true)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 77
+        return 90
     }
     
 }
