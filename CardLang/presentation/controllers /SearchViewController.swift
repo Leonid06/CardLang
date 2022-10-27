@@ -20,6 +20,14 @@ class SearchViewController: UIViewController {
     
     private var translations  = [Translation]()
     
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let primaryColor = UIColor(named: Colors.buttonColor)
+        
+//        searchBar.setIconColor(primaryColor ?? UIColor())
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +39,7 @@ class SearchViewController: UIViewController {
         title = "Search"
         
         searchBar.delegate = self
+      
         
 
         // Do any additional setup after loading the view.

@@ -590,8 +590,8 @@
             filePath = "CardLang/presentation/controllers /SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "searchBarSearchButtonClicked(_:)"
             landmarkType = "7">
             <Locations>
@@ -654,8 +654,8 @@
             filePath = "CardLang/presentation/controllers /SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "onDefinitionsFetched(translations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -909,7 +909,7 @@
                </Location>
                <Location
                   uuid = "0DAD6A62-6BA3-4084-829C-1AC4A61B9993 - 15e880f27279d38a"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(2) await resume partial function for CardLang.RealmService.openSyncedRealm(user: __C.RLMUser) async throws -&gt; ()"
@@ -924,7 +924,7 @@
                </Location>
                <Location
                   uuid = "0DAD6A62-6BA3-4084-829C-1AC4A61B9993 - e26b164419075099"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(3) suspend resume partial function for CardLang.RealmService.openSyncedRealm(user: __C.RLMUser) async throws -&gt; ()"
@@ -1068,7 +1068,7 @@
             <Locations>
                <Location
                   uuid = "D7FB77EF-2FD2-4FE0-81A5-A6A075978A70 - e3dc7e77c043bcf4"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in CardLang.SetRepository.subscribeToUpdatesOnSets(block: () -&gt; ()) -&gt; ()"
@@ -1083,7 +1083,7 @@
                </Location>
                <Location
                   uuid = "D7FB77EF-2FD2-4FE0-81A5-A6A075978A70 - 8386070737532fe1"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in CardLang.SetRepository.subscribeToUpdatesOnSets(block: () -&gt; ()) -&gt; ()"
@@ -1098,7 +1098,7 @@
                </Location>
                <Location
                   uuid = "D7FB77EF-2FD2-4FE0-81A5-A6A075978A70 - 60ce98ff08e9d2f1"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in CardLang.SetRepository.subscribeToUpdatesOnSets(block: () -&gt; ()) -&gt; ()"
@@ -1113,7 +1113,7 @@
                </Location>
                <Location
                   uuid = "D7FB77EF-2FD2-4FE0-81A5-A6A075978A70 - a606c6f1c1b1bb1f"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 () -&gt; () in closure #1 @Sendable () async -&gt; () in CardLang.SetRepository.subscribeToUpdatesOnSets(block: () -&gt; ()) -&gt; ()"
@@ -1146,7 +1146,7 @@
             <Locations>
                <Location
                   uuid = "AC79C77A-20D8-484D-AA5A-62BAC90A1E58 - c33ceb6a8de92055"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(1) suspend resume partial function for CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
@@ -1161,7 +1161,7 @@
                </Location>
                <Location
                   uuid = "AC79C77A-20D8-484D-AA5A-62BAC90A1E58 - c33ceb6a8de92055"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(1) suspend resume partial function for CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
@@ -1210,7 +1210,7 @@
             <Locations>
                <Location
                   uuid = "E32A8851-070F-4435-9DE0-A12F0C50C3DD - bb20dd208f214259"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
@@ -1225,7 +1225,7 @@
                </Location>
                <Location
                   uuid = "E32A8851-070F-4435-9DE0-A12F0C50C3DD - c33ceb6a8de92093"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(1) suspend resume partial function for CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
@@ -1258,7 +1258,7 @@
             <Locations>
                <Location
                   uuid = "F3196FFB-AC41-4822-BD38-59745635D777 - bb20dd208f214c4e"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
@@ -1273,7 +1273,7 @@
                </Location>
                <Location
                   uuid = "F3196FFB-AC41-4822-BD38-59745635D777 - c33ceb6a8de92e84"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(1) suspend resume partial function for CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
@@ -1341,7 +1341,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7A465F9C-A28E-4657-9CE2-2304CB5BD2EA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CardLang/data/RealmService.swift"
@@ -1354,7 +1354,7 @@
             <Locations>
                <Location
                   uuid = "7A465F9C-A28E-4657-9CE2-2304CB5BD2EA - b6f89851cdd4afb2"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(2) await resume partial function for CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
@@ -1369,7 +1369,7 @@
                </Location>
                <Location
                   uuid = "7A465F9C-A28E-4657-9CE2-2304CB5BD2EA - a640a0167a2141b1"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(3) await resume partial function for CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
@@ -1384,7 +1384,7 @@
                </Location>
                <Location
                   uuid = "7A465F9C-A28E-4657-9CE2-2304CB5BD2EA - b1525774d4370598"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(4) suspend resume partial function for CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
@@ -1399,7 +1399,7 @@
                </Location>
                <Location
                   uuid = "7A465F9C-A28E-4657-9CE2-2304CB5BD2EA - bbb66a0d927e5866"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(6) suspend resume partial function for CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
@@ -1432,7 +1432,7 @@
             <Locations>
                <Location
                   uuid = "1231A64F-22DF-420F-8D22-C3368F9D40E8 - 4ab112c5c760dd97"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(1) suspend resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
@@ -1447,7 +1447,7 @@
                </Location>
                <Location
                   uuid = "1231A64F-22DF-420F-8D22-C3368F9D40E8 - 2a3ec27215579995"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(3) suspend resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
@@ -1462,7 +1462,7 @@
                </Location>
                <Location
                   uuid = "1231A64F-22DF-420F-8D22-C3368F9D40E8 - fb1655dbd197b390"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(6) suspend resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
@@ -1495,7 +1495,7 @@
             <Locations>
                <Location
                   uuid = "C0C39455-A3F0-4426-B0F0-2CB2CC6DF88E - 4ab112c5c760dc32"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(1) suspend resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
@@ -1510,7 +1510,7 @@
                </Location>
                <Location
                   uuid = "C0C39455-A3F0-4426-B0F0-2CB2CC6DF88E - 1c64f1bcdb9baf0d"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(2) await resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
@@ -1525,7 +1525,7 @@
                </Location>
                <Location
                   uuid = "C0C39455-A3F0-4426-B0F0-2CB2CC6DF88E - 2a3ec27215579811"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(3) suspend resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
@@ -1540,7 +1540,7 @@
                </Location>
                <Location
                   uuid = "C0C39455-A3F0-4426-B0F0-2CB2CC6DF88E - 2a3ec27215579830"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(3) suspend resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
@@ -1555,7 +1555,7 @@
                </Location>
                <Location
                   uuid = "C0C39455-A3F0-4426-B0F0-2CB2CC6DF88E - fb1655dbd197b214"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(6) suspend resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
@@ -1570,7 +1570,7 @@
                </Location>
                <Location
                   uuid = "C0C39455-A3F0-4426-B0F0-2CB2CC6DF88E - fb1655dbd197b235"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "(6) suspend resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
