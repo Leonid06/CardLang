@@ -94,8 +94,8 @@
             filePath = "CardLang/presentation/controllers /SingleSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "SingleSetViewController"
             landmarkType = "21">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "CardLang/presentation/controllers /SingleSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "onTranslationsFetched(translations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "CardLang/presentation/controllers /SingleSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "onTranslationsFetched(translations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "CardLang/presentation/controllers /SingleSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "updateTranslations()"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,8 +158,8 @@
             filePath = "CardLang/presentation/controllers /SingleSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "updateTranslations()"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,8 +174,8 @@
             filePath = "CardLang/presentation/controllers /SingleSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "showAlert()"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "CardLang/presentation/controllers /SingleSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "showAlert()"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,8 +206,8 @@
             filePath = "CardLang/presentation/controllers /SingleSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -222,8 +222,8 @@
             filePath = "CardLang/presentation/controllers /SingleSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -238,8 +238,8 @@
             filePath = "CardLang/presentation/controllers /SingleSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -254,8 +254,8 @@
             filePath = "CardLang/presentation/controllers /SingleSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -270,8 +270,8 @@
             filePath = "CardLang/presentation/controllers /SingleSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "SingleSetViewController"
             landmarkType = "21">
          </BreakpointContent>
@@ -286,8 +286,8 @@
             filePath = "CardLang/presentation/controllers /SingleSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "updateTranslations()"
             landmarkType = "7">
          </BreakpointContent>
@@ -334,8 +334,8 @@
             filePath = "CardLang/presentation/controllers /SingleSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -350,8 +350,8 @@
             filePath = "CardLang/presentation/controllers /SingleSetViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -718,8 +718,8 @@
             filePath = "CardLang/data/SetRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "deleteWordSet(set:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -734,8 +734,8 @@
             filePath = "CardLang/data/SetRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "deleteWordSet(set:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -775,8 +775,8 @@
             filePath = "CardLang/data/SetRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "getAllSets()"
             landmarkType = "7">
          </BreakpointContent>
@@ -791,8 +791,8 @@
             filePath = "CardLang/data/SetRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "SetRepository"
             landmarkType = "3">
          </BreakpointContent>
@@ -839,8 +839,8 @@
             filePath = "CardLang/presentation/controllers /SetsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -871,8 +871,8 @@
             filePath = "CardLang/data/SetRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "addWordSet(name:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -887,8 +887,8 @@
             filePath = "CardLang/data/RealmService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "openSyncedRealm(user:)"
             landmarkType = "7">
             <Locations>
@@ -972,7 +972,7 @@
             <Locations>
                <Location
                   uuid = "BD836BDC-7232-4498-AC38-59DF5425B43F - 7f3b1cb2771da73f"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "CardLang.SetsViewController.viewDidLoad() -&gt; ()"
@@ -987,7 +987,7 @@
                </Location>
                <Location
                   uuid = "BD836BDC-7232-4498-AC38-59DF5425B43F - e156b1646d765268"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 () -&gt; () in CardLang.SetsViewController.viewDidLoad() -&gt; ()"
@@ -1007,7 +1007,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "FBB2348E-B121-44F4-824C-6031247E7C59"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CardLang/data/CardRepository.swift"
@@ -1017,6 +1017,573 @@
             endingLineNumber = "50"
             landmarkName = "onMultipleTranslationsFetched(translations:error:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96F63CE1-3F9B-4DD3-B192-4A8C6987264F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardLang/presentation/controllers /SingleSetViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E89A0388-4B45-4D87-9C3E-7A4DDF3F5D78"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardLang/data/SetRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "subscribeToUpdatesOnSets(block:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D7FB77EF-2FD2-4FE0-81A5-A6A075978A70"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardLang/data/SetRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "subscribeToUpdatesOnSets(block:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D7FB77EF-2FD2-4FE0-81A5-A6A075978A70 - e3dc7e77c043bcf4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in CardLang.SetRepository.subscribeToUpdatesOnSets(block: () -&gt; ()) -&gt; ()"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/SetRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "D7FB77EF-2FD2-4FE0-81A5-A6A075978A70 - 8386070737532fe1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in CardLang.SetRepository.subscribeToUpdatesOnSets(block: () -&gt; ()) -&gt; ()"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/SetRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "D7FB77EF-2FD2-4FE0-81A5-A6A075978A70 - 60ce98ff08e9d2f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in CardLang.SetRepository.subscribeToUpdatesOnSets(block: () -&gt; ()) -&gt; ()"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/SetRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "D7FB77EF-2FD2-4FE0-81A5-A6A075978A70 - a606c6f1c1b1bb1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 @Sendable () async -&gt; () in CardLang.SetRepository.subscribeToUpdatesOnSets(block: () -&gt; ()) -&gt; ()"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/SetRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC79C77A-20D8-484D-AA5A-62BAC90A1E58"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardLang/data/RealmService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "addObserverOnSets(block:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AC79C77A-20D8-484D-AA5A-62BAC90A1E58 - c33ceb6a8de92055"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "AC79C77A-20D8-484D-AA5A-62BAC90A1E58 - c33ceb6a8de92055"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "576">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11D53B8E-58C4-4FB0-B5EC-1C6210647DCC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardLang/data/RealmService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "addObserverOnSets(block:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E32A8851-070F-4435-9DE0-A12F0C50C3DD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardLang/data/RealmService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "addObserverOnSets(block:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E32A8851-070F-4435-9DE0-A12F0C50C3DD - bb20dd208f214259"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "E32A8851-070F-4435-9DE0-A12F0C50C3DD - c33ceb6a8de92093"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3196FFB-AC41-4822-BD38-59745635D777"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardLang/data/RealmService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "addObserverOnSets(block:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F3196FFB-AC41-4822-BD38-59745635D777 - bb20dd208f214c4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "F3196FFB-AC41-4822-BD38-59745635D777 - c33ceb6a8de92e84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A83D523-E5F6-4669-AB95-49B20D2A42F4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardLang/presentation/controllers /SetsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4C42223-E44A-4B95-9AB0-3BE58A109045"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardLang/data/RealmService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "addObserverOnTranslations(block:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3E4EDFB-012E-478D-8A7B-41D667551184"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardLang/data/RealmService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "addObserverOnSets(block:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A465F9C-A28E-4657-9CE2-2304CB5BD2EA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardLang/data/RealmService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "addObserverOnSets(block:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7A465F9C-A28E-4657-9CE2-2304CB5BD2EA - b6f89851cdd4afb2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "7A465F9C-A28E-4657-9CE2-2304CB5BD2EA - a640a0167a2141b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) await resume partial function for CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "7A465F9C-A28E-4657-9CE2-2304CB5BD2EA - b1525774d4370598"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "7A465F9C-A28E-4657-9CE2-2304CB5BD2EA - bbb66a0d927e5866"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for CardLang.RealmService.addObserverOnSets(block: () -&gt; ()) async throws -&gt; ()"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1231A64F-22DF-420F-8D22-C3368F9D40E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardLang/data/RealmService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "instantiateRealm()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1231A64F-22DF-420F-8D22-C3368F9D40E8 - 4ab112c5c760dd97"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "1231A64F-22DF-420F-8D22-C3368F9D40E8 - 2a3ec27215579995"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "1231A64F-22DF-420F-8D22-C3368F9D40E8 - fb1655dbd197b390"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0C39455-A3F0-4426-B0F0-2CB2CC6DF88E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CardLang/data/RealmService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "instantiateRealm()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C0C39455-A3F0-4426-B0F0-2CB2CC6DF88E - 4ab112c5c760dc32"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "C0C39455-A3F0-4426-B0F0-2CB2CC6DF88E - 1c64f1bcdb9baf0d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "C0C39455-A3F0-4426-B0F0-2CB2CC6DF88E - 2a3ec27215579811"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "C0C39455-A3F0-4426-B0F0-2CB2CC6DF88E - 2a3ec27215579830"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "C0C39455-A3F0-4426-B0F0-2CB2CC6DF88E - fb1655dbd197b214"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "C0C39455-A3F0-4426-B0F0-2CB2CC6DF88E - fb1655dbd197b235"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for CardLang.RealmService.instantiateRealm() async throws -&gt; RealmSwift.Realm"
+                  moduleName = "CardLang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leonid/Applications/CardLang/CardLang/data/RealmService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

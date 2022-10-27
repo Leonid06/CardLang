@@ -29,6 +29,7 @@ class SingleSetViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         updateTranslations()
+        
     }
     
     override func viewDidLoad() {
@@ -118,6 +119,9 @@ class SingleSetViewController: UIViewController {
     private func updateTranslations(){
         self.translations = set?.translations ?? List<Translation>()
         collectionView.reloadData()
+        
+        navigationItem.rightBarButtonItems?[1].isHidden = translations.count == 0 ? true : false
+
     }
 
 }

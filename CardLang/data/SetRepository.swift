@@ -14,15 +14,8 @@ class SetRepository {
     
     private let realmService = RealmService.shared
     
-    private var realm : Realm?
-    
     private var notificationToken =  NotificationToken()
-    
-    init(){
-        Task {
-            realm = try await realmService.getRealm()
-        }
-    }
+
 
     @MainActor
     func addWordSet(name : String){
@@ -30,7 +23,7 @@ class SetRepository {
             do {
 //                let realm = try await realmService.getRealm()
                 
-                if let realm = self.realm {
+                if let realm = realmService.getRealm() {
                     let user = realmService.getCurrentUser()
                     let set = WordSet(name: name, ownerId: user?.id ?? "")
 
@@ -52,7 +45,7 @@ class SetRepository {
         Task {
             do {
 //                let realm = try await realmService.getRealm()
-                if let realm = self.realm {
+                if let realm = realmService.getRealm() {
                     try realm.write {
                         realm.delete(set)
                     }
@@ -70,7 +63,7 @@ class SetRepository {
         Task {
             do  {
 //                let realm = try await realmService.getRealm()
-                if let realm = self.realm {
+                if let realm = realmService.getRealm() {
                     try realm.write {
                         set.translations.append(translation)
                     }
@@ -86,7 +79,7 @@ class SetRepository {
     func getAllSets() async throws ->  [WordSet] {
         let task = Task { () -> [WordSet] in
             
-            if let realm = self.realm {
+            if let realm =  realmService.getRealm() {
 //                do {
     //                let realm = try await realmService.getRealm()
                     return Array(realm.objects(WordSet.self)).reversed()

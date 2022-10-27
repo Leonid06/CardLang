@@ -16,14 +16,21 @@ class RealmService {
     
     private let app = App(id: "cardlang-gyuck")
     
-    static let shared = RealmService()
+    private var realm : Realm?
     
-    private init(){}
+    static let shared = RealmService()
     
     deinit {
         for token in notificationTokens {
             token.invalidate()
         }
+    }
+    
+    func getRealm() -> Realm? {
+        if let realm = self.realm {
+            return realm
+        }
+        return nil 
     }
     
     func getCurrentUser() -> User? {
@@ -36,73 +43,102 @@ class RealmService {
     
     @MainActor
     func addObserverOnSets(block: @escaping  () -> Void) async throws {
-        let user =  try! await self.login()
-        let realm = try await openSyncedRealm(user: user)
         
-        let sets = realm.objects(WordSet.self)
+        if let _ = self.realm {
+            
+        }else {
+                do {
+                    try await login()
+                    try await self.realm = instantiateRealm()
+                    
+                    print("instantiated realm")
+                    
+                }catch {
+                    print(error)
+                }
+            }
         
-        let token = sets.observe {
+        
+        let sets = realm?.objects(WordSet.self)
+        
+        let token = sets?.observe {
             changes in
             
             switch changes {
             case .initial:
+                print("notified initial")
                 block()
             case .update:
+                print("notified")
                 block()
             case .error(let error):
                 print(error)
             }
         }
+        if let token = token {
+            notificationTokens.append(token)
+        }
         
-        notificationTokens.append(token)
+            
+            
+        
     }
     
     @MainActor
     func addObserverOnTranslations(block: @escaping  () -> Void) async throws {
-        let user =  try! await self.login()
-        let realm = try await openSyncedRealm(user: user)
         
-        let sets = realm.objects(Translation.self)
+        if let _ = self.realm {
+            
+        }else {
+            do {
+                try await login()
+                try await self.realm = instantiateRealm()
+                
+            }catch {
+                print(error)
+            }
+        }
         
-        let token = sets.observe {
+        
+        let sets = realm?.objects(Translation.self)
+        
+        let token = sets?.observe {
             changes in
             
             switch changes {
             case .initial:
                 block()
+                print("notified")
             case .update:
                 block()
+                print("notified")
             case .error(let error):
                 print(error)
             }
         }
+        if let token = token {
+            notificationTokens.append(token)
+        }
         
-        notificationTokens.append(token)
+        
     }
     
-    func getRealm() async throws -> Realm {
-        let user =  try! await self.login()
-        let realm = try await openSyncedRealm(user: user)
-        
-        return realm 
+    private func instantiateRealm() async throws -> Realm {
+        if let user =  getCurrentUser() {
+            let realm = try await openSyncedRealm(user: user)
+            
+            return realm
+        }
+        return try await Realm()
     }
     
-    private func login() async throws -> User {
-        // Authenticate with the instance of the app that points
-        // to your backend. Here, we're using anonymous login.
-        let user = try await app.login(credentials: Credentials.anonymous)
-        print("Successfully logged in user: \(user)")
-        return user
+    private func login() async throws {
+        try await app.login(credentials: Credentials.anonymous)
     }
     
     @MainActor
     private func openSyncedRealm(user: User) async throws -> Realm {
         let config = user.flexibleSyncConfiguration()
-        // Pass object types to the Flexible Sync configuration
-        // as a temporary workaround for not being able to add a
-        // complete schema for a Flexible Sync app.
-//        config.objectTypes = [Translation.self, WordSet.self]
-        
         
         
         let realm = try! await Realm(configuration: config, downloadBeforeOpen: .never)
@@ -119,18 +155,5 @@ class RealmService {
         }
         
         return realm
-//        let sets = realm.objects(WordSet.self)
-
-//        self.notificationToken = sets.observe { changes in
-//            switch changes {
-//            case .initial :
-//                print("called at initial state")
-//                block()
-//            case .update :
-//                block()
-//            case .error(let error):
-//                print(error)
-//            }
-//        }
     }
 }
