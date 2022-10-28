@@ -119,6 +119,8 @@ class CardService {
                         translation = definition[0][1]["dt"][0][1][0][0][1].stringValue
                     }
                     
+                    translation = translation.trimmingCharacters(in: .whitespaces)
+                    
                     while let firstIndex = translation.firstIndex(of: "{"){
                         if let secondIndex = translation.firstIndex(of: "}"){
                             translation.removeSubrange(firstIndex ... secondIndex)
