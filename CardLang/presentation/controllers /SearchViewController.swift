@@ -39,10 +39,6 @@ class SearchViewController: UIViewController {
         title = "Search"
         
         searchBar.delegate = self
-      
-        
-
-        // Do any additional setup after loading the view.
     }
     
     private func updateData(){
@@ -59,12 +55,6 @@ class SearchViewController: UIViewController {
         self.set = set
     }
 }
-
-//extension SearchViewController : UISearchResultsUpdating {
-//    func updateSearchResults(for searchController: UISearchController) {
-//
-//    }
-//}
 
 extension SearchViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

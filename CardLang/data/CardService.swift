@@ -37,7 +37,7 @@ class CardService {
             let task = session.dataTask(with: request ) { data, response, error in
                 if error != nil {
                     completion(nil, error)
-//                    print(error)
+                    print(error)
                     return
                 } else {
 //                    print(response)
@@ -69,7 +69,7 @@ class CardService {
                     print(error)
                     return
                 } else {
-//                    print(response)
+                    print(response)
 //                    print(data)
                 }
                 
