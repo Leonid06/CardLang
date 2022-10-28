@@ -12,14 +12,14 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SearchTableViewCell" customModule="CardLang" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="390" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="390" height="90"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dsdsdsdsdsds" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSG-EB-cGS">
-                        <rect key="frame" x="0.0" y="3" width="390" height="80"/>
+                        <rect key="frame" x="40" y="3" width="340" height="70"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="80" id="Evu-vr-nZd"/>
+                            <constraint firstAttribute="height" constant="70" id="Evu-vr-nZd"/>
                             <constraint firstAttribute="width" constant="340" id="XkF-sq-vLm"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -28,7 +28,7 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BSG-EB-cGS" secondAttribute="bottom" constant="3" id="H7b-1x-wfS"/>
+                    <constraint firstAttribute="bottom" secondItem="BSG-EB-cGS" secondAttribute="bottom" constant="10" id="H7b-1x-wfS"/>
                     <constraint firstItem="BSG-EB-cGS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="M53-bu-XC2"/>
                     <constraint firstItem="BSG-EB-cGS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="Nu2-rE-Trr"/>
                 </constraints>
@@ -41,7 +41,7 @@
             <connections>
                 <outlet property="translationLabel" destination="BSG-EB-cGS" id="Xo1-x8-t0d"/>
             </connections>
-            <point key="canvasLocation" x="89.230769230769226" y="20.971563981042653"/>
+            <point key="canvasLocation" x="89.230769230769226" y="20.616113744075829"/>
         </tableViewCell>
     </objects>
 </document>
