@@ -31,6 +31,8 @@
 		B3483C0628F95D900065648C /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3483C0528F95D900065648C /* RealmService.swift */; };
 		B35F629228E6E99F00C5F250 /* CardLangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F629128E6E99F00C5F250 /* CardLangTests.swift */; };
 		B35F629928E6EA3800C5F250 /* CardServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F629828E6EA3800C5F250 /* CardServiceTest.swift */; };
+		B374DC24290D7DEE0091546A /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374DC22290D7DEE0091546A /* TranslationViewController.swift */; };
+		B374DC25290D7DEE0091546A /* TranslationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B374DC23290D7DEE0091546A /* TranslationViewController.xib */; };
 		B385B88028E4611200F86C53 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385B87F28E4611200F86C53 /* Colors.swift */; };
 		B39D5D1428C4DE8C0088C101 /* WordSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D5D1328C4DE8C0088C101 /* WordSet.swift */; };
 		B39D5D1628C4E0710088C101 /* SetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D5D1528C4E0710088C101 /* SetRepository.swift */; };
@@ -89,6 +91,8 @@
 		B35F628F28E6E99F00C5F250 /* CardLangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardLangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35F629128E6E99F00C5F250 /* CardLangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLangTests.swift; sourceTree = "<group>"; };
 		B35F629828E6EA3800C5F250 /* CardServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardServiceTest.swift; sourceTree = "<group>"; };
+		B374DC22290D7DEE0091546A /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
+		B374DC23290D7DEE0091546A /* TranslationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranslationViewController.xib; sourceTree = "<group>"; };
 		B385B87F28E4611200F86C53 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B39D5D1328C4DE8C0088C101 /* WordSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSet.swift; sourceTree = "<group>"; };
 		B39D5D1528C4E0710088C101 /* SetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepository.swift; sourceTree = "<group>"; };
@@ -146,8 +150,10 @@
 		B307877328C0F08A00C88404 /* xib */ = {
 			isa = PBXGroup;
 			children = (
+				B374DC23290D7DEE0091546A /* TranslationViewController.xib */,
 				B30787E728DDBA0B0080EFE4 /* SearchViewController.xib */,
 				B307877428C0F0BA00C88404 /* CardViewController.xib */,
+				B374DC22290D7DEE0091546A /* TranslationViewController.swift */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -368,6 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B374DC25290D7DEE0091546A /* TranslationViewController.xib in Resources */,
 				B33B20FD28BE281100E66FCC /* LaunchScreen.storyboard in Resources */,
 				B33B20FA28BE281100E66FCC /* Assets.xcassets in Resources */,
 				B3DFAB8928DDBD9A00B84EEC /* SearchTableViewCell.xib in Resources */,
@@ -452,6 +459,7 @@
 				B33B20EE28BE281000E66FCC /* AppDelegate.swift in Sources */,
 				B3EFDFB228C0FCA800FA1183 /* SetsTableViewCell.swift in Sources */,
 				B33B211028BE515F00E66FCC /* Constants .swift in Sources */,
+				B374DC24290D7DEE0091546A /* TranslationViewController.swift in Sources */,
 				B385B88028E4611200F86C53 /* Colors.swift in Sources */,
 				B3EFDFBC28C0FF9700FA1183 /* WordCollectionViewCell.swift in Sources */,
 				B335BAF728BF4B7700B9A29F /* CardRepository.swift in Sources */,
