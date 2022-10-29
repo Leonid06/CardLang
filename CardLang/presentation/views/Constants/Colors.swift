@@ -9,4 +9,5 @@ import Foundation
 
 struct Colors {
     static let buttonColor = "buttonColor"
+    static let labelColor = "labelColor"
 }
