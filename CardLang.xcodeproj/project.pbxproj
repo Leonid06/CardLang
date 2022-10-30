@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3061A04290ECEA000C1C6FB /* AddModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3061A02290ECEA000C1C6FB /* AddModeViewController.swift */; };
+		B3061A05290ECEA000C1C6FB /* AddModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3061A03290ECEA000C1C6FB /* AddModeViewController.xib */; };
 		B307876728BF8FB000C88404 /* NibNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876628BF8FB000C88404 /* NibNames.swift */; };
 		B307876928BF9D8400C88404 /* Extensions .swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876828BF9D8400C88404 /* Extensions .swift */; };
 		B307876B28C0969500C88404 /* TranslationSwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876A28C0969500C88404 /* TranslationSwipeCard.swift */; };
@@ -64,6 +66,8 @@
 		3489D0B7F42CF5CE06D0D617 /* Pods_CardLang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardLang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D091FDAB469BAB18CA3033 /* Pods-CardLang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.release.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.release.xcconfig"; sourceTree = "<group>"; };
 		8D09ED985491E3A84B4B7FA5 /* Pods-CardLang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.debug.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.debug.xcconfig"; sourceTree = "<group>"; };
+		B3061A02290ECEA000C1C6FB /* AddModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModeViewController.swift; sourceTree = "<group>"; };
+		B3061A03290ECEA000C1C6FB /* AddModeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddModeViewController.xib; sourceTree = "<group>"; };
 		B307876628BF8FB000C88404 /* NibNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibNames.swift; sourceTree = "<group>"; };
 		B307876828BF9D8400C88404 /* Extensions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions .swift"; sourceTree = "<group>"; };
 		B307876A28C0969500C88404 /* TranslationSwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationSwipeCard.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 				B307876F28C0EF7200C88404 /* SetsViewController.swift */,
 				B3EFDFB828C0FF4200FA1183 /* SingleSetViewController.swift */,
 				B30787E628DDBA0B0080EFE4 /* SearchViewController.swift */,
+				B3061A02290ECEA000C1C6FB /* AddModeViewController.swift */,
+				B3061A03290ECEA000C1C6FB /* AddModeViewController.xib */,
 			);
 			path = "controllers ";
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 				B374DC25290D7DEE0091546A /* TranslationViewController.xib in Resources */,
 				B33B20FD28BE281100E66FCC /* LaunchScreen.storyboard in Resources */,
 				B33B20FA28BE281100E66FCC /* Assets.xcassets in Resources */,
+				B3061A05290ECEA000C1C6FB /* AddModeViewController.xib in Resources */,
 				B3DFAB8928DDBD9A00B84EEC /* SearchTableViewCell.xib in Resources */,
 				B3EFDFB328C0FCA800FA1183 /* SetsTableViewCell.xib in Resources */,
 				B335BAF528BF467C00B9A29F /* CardView.xib in Resources */,
@@ -460,6 +467,7 @@
 				B307876B28C0969500C88404 /* TranslationSwipeCard.swift in Sources */,
 				B39D5D1628C4E0710088C101 /* SetRepository.swift in Sources */,
 				B3EFDFB928C0FF4200FA1183 /* SingleSetViewController.swift in Sources */,
+				B3061A04290ECEA000C1C6FB /* AddModeViewController.swift in Sources */,
 				B307876928BF9D8400C88404 /* Extensions .swift in Sources */,
 				B33B210E28BE4F2100E66FCC /* CardService.swift in Sources */,
 				B33B20F828BE281000E66FCC /* CardLang.xcdatamodeld in Sources */,
