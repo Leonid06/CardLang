@@ -141,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				B307877328C0F08A00C88404 /* xib */,
+				B374DC22290D7DEE0091546A /* TranslationViewController.swift */,
 				B33B20F128BE281000E66FCC /* CardViewController.swift */,
 				B307876F28C0EF7200C88404 /* SetsViewController.swift */,
 				B3EFDFB828C0FF4200FA1183 /* SingleSetViewController.swift */,
@@ -155,7 +156,6 @@
 				B374DC23290D7DEE0091546A /* TranslationViewController.xib */,
 				B30787E728DDBA0B0080EFE4 /* SearchViewController.xib */,
 				B307877428C0F0BA00C88404 /* CardViewController.xib */,
-				B374DC22290D7DEE0091546A /* TranslationViewController.swift */,
 			);
 			path = xib;
 			sourceTree = "<group>";

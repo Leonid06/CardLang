@@ -75,6 +75,27 @@ class SetRepository {
         }
         
     }
+    
+    @MainActor
+    func addTranslationToSet(set : WordSet, term : String, meaning : String, completion: @escaping () -> Void){
+        Task {
+            do  {
+//                let realm = try await realmService.getRealm()
+                if let realm = realmService.getRealm() {
+                    let user = realmService.getCurrentUser()
+                    let translation = Translation(word: term, translation: meaning, ownerId: user?.id ?? "")
+                    try realm.write {
+                        set.translations.append(translation)
+                    }
+                    completion()
+                }
+            }catch {
+                print(error)
+            }
+        }
+        
+    }
+    
     @MainActor
     func getAllSets() async throws ->  [WordSet] {
         let task = Task { () -> [WordSet] in

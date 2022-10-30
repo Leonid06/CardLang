@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TranslationViewController" customModule="CardLang" customModuleProvider="target">
             <connections>
+                <outlet property="meaningTextField" destination="LJI-gE-pak" id="IE8-9D-maf"/>
+                <outlet property="termTextField" destination="EJZ-r7-YPF" id="MAL-wc-VJR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -79,6 +81,9 @@
                         <color key="baseForegroundColor" systemColor="systemBrownColor"/>
                         <color key="baseBackgroundColor" name="buttonColor"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="addTermButtonClicked:" destination="-1" eventType="touchUpInside" id="XPm-Yx-GYa"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
