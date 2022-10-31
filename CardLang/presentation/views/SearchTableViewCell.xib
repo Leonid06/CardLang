@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dsdsdsdsdsds" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSG-EB-cGS">
-                        <rect key="frame" x="40" y="3" width="340" height="70"/>
+                        <rect key="frame" x="25" y="3" width="340" height="70"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="70" id="Evu-vr-nZd"/>
                             <constraint firstAttribute="width" constant="340" id="XkF-sq-vLm"/>
@@ -29,7 +29,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="BSG-EB-cGS" secondAttribute="bottom" constant="10" id="H7b-1x-wfS"/>
-                    <constraint firstItem="BSG-EB-cGS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="M53-bu-XC2"/>
+                    <constraint firstItem="BSG-EB-cGS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="M53-bu-XC2"/>
                     <constraint firstItem="BSG-EB-cGS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="Nu2-rE-Trr"/>
                 </constraints>
             </tableViewCellContentView>
