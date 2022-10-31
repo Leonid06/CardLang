@@ -606,8 +606,8 @@
             filePath = "CardLang/presentation/controllers /SearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "onDefinitionsFetched(translations:)"
             landmarkType = "7">
          </BreakpointContent>

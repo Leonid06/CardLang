@@ -32,7 +32,16 @@ class AddModeViewController: UIViewController {
             searchViewController.configure(set)
         }
         
-        navigationController?.pushViewController(searchViewController, animated: true)
+        if let sheet = searchViewController.sheetPresentationController {
+            sheet.detents = [.large(), .medium()]
+            sheet.preferredCornerRadius = 24
+        }
+        
+        searchViewController.delegate = self 
+        
+        self.present(searchViewController, animated: true)
+        
+//        navigationController?.pushViewController(searchViewController, animated: true)
     }
     
     @IBAction func addOwnTermbuttonClicked(_ sender: Any) {
@@ -42,19 +51,22 @@ class AddModeViewController: UIViewController {
             addOwnTranslationViewController.configure(set)
         }
         
-        navigationController?.pushViewController(addOwnTranslationViewController, animated: true)
+        if let sheet = addOwnTranslationViewController.sheetPresentationController {
+            sheet.detents = [.large(), .medium()]
+            sheet.preferredCornerRadius = 24
+        }
+        
+        addOwnTranslationViewController.delegate = self 
+        
+        
+        self.present(addOwnTranslationViewController, animated: true)
+        
+//        navigationController?.pushViewController(addOwnTranslationViewController, animated: true)
     }
-    
+}
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension AddModeViewController : PopUpControllerDelegate {
+    func onDismissed() {
+        navigationController?.popViewController(animated: true)
     }
-    */
-
 }

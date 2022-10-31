@@ -20,13 +20,8 @@ class SearchViewController: UIViewController {
     
     private var translations  = [Translation]()
     
+    var delegate : PopUpControllerDelegate?
     
-    
-    override func viewDidAppear(_ animated: Bool) {
-        let primaryColor = UIColor(named: Colors.buttonColor)
-        
-//        searchBar.setIconColor(primaryColor ?? UIColor())
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,11 +72,9 @@ extension SearchViewController : UITableViewDelegate , UITableViewDataSource {
         if let set = self.set {
             setRepository.addTranslationToSet(set: set, translation: translation, completion: {})
         }
-//        navigationController?.popViewController(animated: true)
-        
-        if let viewController = navigationController?.viewControllers.first(where: {$0 is SingleSetViewController}) {
-            navigationController?.popToViewController(viewController, animated: true)
-        }
+        dismiss(animated: true)
+        delegate?.onDismissed()
+
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90

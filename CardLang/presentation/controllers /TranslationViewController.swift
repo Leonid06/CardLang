@@ -7,10 +7,17 @@
 
 import UIKit
 
+
+protocol PopUpControllerDelegate {
+    func onDismissed()
+}
+
 class TranslationViewController: UIViewController {
     
     
     private let setRepository = SetRepository.shared
+    
+    var delegate : PopUpControllerDelegate?
 
     @IBOutlet weak var meaningTextField: AddTranslationTextField!
     @IBOutlet weak var termTextField: AddTranslationTextField!
@@ -23,18 +30,17 @@ class TranslationViewController: UIViewController {
     func configure(_ set : WordSet){
         self.set = set
     }
-    override func viewWillAppear(_ animated: Bool) {
-        self.modalPresentationStyle =  .pageSheet
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     private func onTermAdded(){
-        if let viewController = navigationController?.viewControllers.first(where: {$0 is SingleSetViewController}) {
-            navigationController?.popToViewController(viewController, animated: true)
-        }
+//        if let viewController = navigationController?.viewControllers.first(where: {$0 is SingleSetViewController}) {
+//            navigationController?.popToViewController(viewController, animated: true)
+//        }
+        dismiss(animated: true)
+        delegate?.onDismissed()
     }
 
 

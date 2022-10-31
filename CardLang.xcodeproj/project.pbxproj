@@ -67,7 +67,7 @@
 		50D091FDAB469BAB18CA3033 /* Pods-CardLang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.release.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.release.xcconfig"; sourceTree = "<group>"; };
 		8D09ED985491E3A84B4B7FA5 /* Pods-CardLang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.debug.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.debug.xcconfig"; sourceTree = "<group>"; };
 		B3061A02290ECEA000C1C6FB /* AddModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModeViewController.swift; sourceTree = "<group>"; };
-		B3061A03290ECEA000C1C6FB /* AddModeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddModeViewController.xib; sourceTree = "<group>"; };
+		B3061A03290ECEA000C1C6FB /* AddModeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddModeViewController.xib; path = ../AddModeViewController.xib; sourceTree = "<group>"; };
 		B307876628BF8FB000C88404 /* NibNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibNames.swift; sourceTree = "<group>"; };
 		B307876828BF9D8400C88404 /* Extensions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions .swift"; sourceTree = "<group>"; };
 		B307876A28C0969500C88404 /* TranslationSwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationSwipeCard.swift; sourceTree = "<group>"; };
@@ -151,7 +151,6 @@
 				B3EFDFB828C0FF4200FA1183 /* SingleSetViewController.swift */,
 				B30787E628DDBA0B0080EFE4 /* SearchViewController.swift */,
 				B3061A02290ECEA000C1C6FB /* AddModeViewController.swift */,
-				B3061A03290ECEA000C1C6FB /* AddModeViewController.xib */,
 			);
 			path = "controllers ";
 			sourceTree = "<group>";
@@ -162,6 +161,7 @@
 				B374DC23290D7DEE0091546A /* TranslationViewController.xib */,
 				B30787E728DDBA0B0080EFE4 /* SearchViewController.xib */,
 				B307877428C0F0BA00C88404 /* CardViewController.xib */,
+				B3061A03290ECEA000C1C6FB /* AddModeViewController.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
