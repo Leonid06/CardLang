@@ -37,7 +37,7 @@ class AddModeViewController: UIViewController {
             sheet.preferredCornerRadius = 24
         }
         
-        searchViewController.delegate = self 
+//        searchViewController.delegate = self 
         
         self.present(searchViewController, animated: true)
         
@@ -56,7 +56,7 @@ class AddModeViewController: UIViewController {
             sheet.preferredCornerRadius = 24
         }
         
-        addOwnTranslationViewController.delegate = self 
+//        addOwnTranslationViewController.delegate = self
         
         
         self.present(addOwnTranslationViewController, animated: true)
@@ -65,8 +65,8 @@ class AddModeViewController: UIViewController {
     }
 }
 
-extension AddModeViewController : PopUpControllerDelegate {
-    func onDismissed() {
-        navigationController?.popViewController(animated: true)
-    }
-}
+//extension AddModeViewController : PopUpControllerDelegate {
+//    func onDismissed() {
+//        navigationController?.popViewController(animated: true)
+//    }
+//}

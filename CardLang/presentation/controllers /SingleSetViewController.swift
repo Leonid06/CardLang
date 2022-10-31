@@ -38,31 +38,31 @@ class SingleSetViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-//        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleLongGesture))
-//        collectionView.addGestureRecognizer(longPressGestureRecognizer)
-        
         title = set?.name
         
         collectionView!.register(WordCollectionViewCell.nib(), forCellWithReuseIdentifier: Identifies.WordCollectionViewCellIdentifier)
         
         
-        let buttonItem  = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
-//        buttonItem.tintColor = UIColor(named: Colors.buttonColor)
+        let buttonItem  = UIBarButtonItem(barButtonSystemItem: .add, target: self,action: nil)
+        buttonItem.menu = getAddOptionsMenu()
 
         let playItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(playButtonPressed))
-//        playItem.tintColor = UIColor(named: Colors.buttonColor)
+        
+        
         
         navigationItem.rightBarButtonItems = [buttonItem, playItem]
+        
+        
+        
         
         
         setRepository.subscribeToUpdatesOnTranslations {
             self.updateTranslations()
         }
-//        updateTranslations()
     }
     
     @objc func playButtonPressed(_ sender: Any) {
-        let playController = CardViewController(nibName: NibNames.CardViewControllerNibName, bundle: nil )
+        let playController = CardViewController(nibName: NibNames.CardViewControllerNibName, bundle: nil)
         playController.set = set
         navigationController?.pushViewController(playController, animated: true)
     }
@@ -132,6 +132,7 @@ class SingleSetViewController: UIViewController {
 }
 
 
+
 extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDataSource  {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -171,25 +172,6 @@ extension SingleSetViewController : UICollectionViewDelegateFlowLayout  {
 }
 
 
-//gestures
-//extension  SingleSetViewController {
-//    private func handleLongGesture(gesture: UILongPressGestureRecognizer) {
-//
-//        switch(gesture.state) {
-//
-//        case UIGestureRecognizer.State.began:
-//            guard let selectedIndexPath = self.collectionView?.indexPathForItem(at: gesture.location(in: self.collectionView)) else {
-//                break
-//            }
-//            collectionView?.beginInteractiveMovementForItem(at: selectedIndexPath)
-//        case UIGestureRecognizer.State.changed:
-//            collectionView?.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
-//        case UIGestureRecognizer.State.ended:
-//            collectionView?.endInteractiveMovement()
-//        default:
-//            collectionView?.cancelInteractiveMovement()
-//        }
-//    }
-//}
+
 
 
