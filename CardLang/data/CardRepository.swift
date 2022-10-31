@@ -37,7 +37,15 @@ class CardRepository {
     
     func  fetchMultipleTranslationsForWord(_ word : String, completion: @escaping ([Translation]) -> Void) {
         group.enter()
-        cardService.getAllTranslationForWord(word, completion: onMultipleTranslationsFetched)
+        let components = word.components(separatedBy: .whitespacesAndNewlines)
+        let elements  = components.filter { !$0.isEmpty }
+        
+        if(elements.count == 1){
+            cardService.getAllTranslationForWord(word, completion: onMultipleTranslationsFetched)
+        }else {
+            group.leave()
+        }
+        
         
         group.notify(queue: .main){
             print("group did notify main thread")
@@ -53,8 +61,9 @@ class CardRepository {
         }
         if let translations = translations {
             self.translations = translations
-            group.leave()
         }
+        
+        group.leave()
     }
     
     private func onTranslationFetched(translation : Translation?, error : Error?){

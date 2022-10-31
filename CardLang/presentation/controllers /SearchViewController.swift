@@ -20,6 +20,9 @@ class SearchViewController: UIViewController {
     
     private var translations  = [Translation]()
     
+    var delegate : PopUpControllerDelegate?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,9 +34,6 @@ class SearchViewController: UIViewController {
         title = "Search"
         
         searchBar.delegate = self
-        
-
-        // Do any additional setup after loading the view.
     }
     
     private func updateData(){
@@ -50,12 +50,6 @@ class SearchViewController: UIViewController {
         self.set = set
     }
 }
-
-//extension SearchViewController : UISearchResultsUpdating {
-//    func updateSearchResults(for searchController: UISearchController) {
-//
-//    }
-//}
 
 extension SearchViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,10 +72,12 @@ extension SearchViewController : UITableViewDelegate , UITableViewDataSource {
         if let set = self.set {
             setRepository.addTranslationToSet(set: set, translation: translation, completion: {})
         }
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
+        delegate?.onDismissed()
+
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 77
+        return 90
     }
     
 }

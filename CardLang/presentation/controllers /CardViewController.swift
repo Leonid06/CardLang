@@ -24,7 +24,7 @@ class CardViewController: UIViewController {
     var set :  WordSet? {
         didSet {
             if let translations = set?.translations {
-                self.translations = Array(translations)
+                self.translations = Array(translations.shuffled())
             }
         }
     }

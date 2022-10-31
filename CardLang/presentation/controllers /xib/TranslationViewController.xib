@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TranslationViewController" customModule="CardLang" customModuleProvider="target">
+            <connections>
+                <outlet property="meaningTextField" destination="LJI-gE-pak" id="IE8-9D-maf"/>
+                <outlet property="termTextField" destination="EJZ-r7-YPF" id="MAL-wc-VJR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meaning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UN-II-ish">
+                    <rect key="frame" x="18" y="226" width="79" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a term.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJZ-r7-YPF" customClass="AddTranslationTextField" customModule="CardLang" customModuleProvider="target">
+                    <rect key="frame" x="18" y="162" width="356" height="44"/>
+                    <color key="tintColor" name="buttonColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="356" id="XGQ-E2-Crk"/>
+                        <constraint firstAttribute="height" constant="44" id="jHL-EP-GYo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="wordLabelColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Term" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zk2-4r-QV3">
+                    <rect key="frame" x="19" y="118" width="47" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a meaning.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LJI-gE-pak" customClass="AddTranslationTextField" customModule="CardLang" customModuleProvider="target">
+                    <rect key="frame" x="18" y="270" width="356" height="44"/>
+                    <color key="tintColor" name="buttonColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="356" id="INA-kh-DAW"/>
+                        <constraint firstAttribute="height" constant="44" id="w8b-aX-3Fv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="wordLabelColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tA9-1F-LVO">
+                    <rect key="frame" x="137" y="334" width="116" height="53"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="53" id="46F-QU-crh"/>
+                        <constraint firstAttribute="width" constant="116" id="giw-hX-mNq"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="tinted" title="Add term">
+                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <color key="baseForegroundColor" systemColor="systemBrownColor"/>
+                        <color key="baseBackgroundColor" name="buttonColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="addTermButtonClicked:" destination="-1" eventType="touchUpInside" id="XPm-Yx-GYa"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="6UN-II-ish" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="18" id="5Wh-5B-N4S"/>
+                <constraint firstItem="LJI-gE-pak" firstAttribute="top" secondItem="6UN-II-ish" secondAttribute="bottom" constant="20" id="6GK-fM-HeC"/>
+                <constraint firstItem="Zk2-4r-QV3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="19" id="8x5-Xe-Arp"/>
+                <constraint firstItem="tA9-1F-LVO" firstAttribute="top" secondItem="LJI-gE-pak" secondAttribute="bottom" constant="20" id="B0t-aq-1eC"/>
+                <constraint firstItem="EJZ-r7-YPF" firstAttribute="top" secondItem="Zk2-4r-QV3" secondAttribute="bottom" constant="20" id="GIo-cR-WL2"/>
+                <constraint firstItem="tA9-1F-LVO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TNl-Nj-TEU"/>
+                <constraint firstItem="EJZ-r7-YPF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="18" id="bMy-nj-mb5"/>
+                <constraint firstItem="Zk2-4r-QV3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="71" id="nRV-Oj-zIW"/>
+                <constraint firstItem="6UN-II-ish" firstAttribute="top" secondItem="EJZ-r7-YPF" secondAttribute="bottom" constant="20" id="rFD-iY-sH9"/>
+                <constraint firstItem="LJI-gE-pak" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="18" id="thT-FP-wHd"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="20.616113744075829"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="EJZ-r7-YPF">
+            <size key="intrinsicContentSize" width="92.666666666666671" height="19.666666666666668"/>
+        </designable>
+        <designable name="LJI-gE-pak">
+            <size key="intrinsicContentSize" width="119.33333333333333" height="19.666666666666668"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="buttonColor">
+            <color red="1" green="0.70588235294117652" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="wordLabelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

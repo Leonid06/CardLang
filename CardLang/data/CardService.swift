@@ -37,7 +37,7 @@ class CardService {
             let task = session.dataTask(with: request ) { data, response, error in
                 if error != nil {
                     completion(nil, error)
-//                    print(error)
+                    print(error)
                     return
                 } else {
 //                    print(response)
@@ -69,7 +69,7 @@ class CardService {
                     print(error)
                     return
                 } else {
-//                    print(response)
+                    print(response)
 //                    print(data)
                 }
                 
@@ -102,43 +102,46 @@ class CardService {
             
             var translations = [Translation]()
             
-            let definitions = decodedData[0]["def"][0]["sseq"].arrayValue
+            let meanings = decodedData.arrayValue
+            
+            for meaning in meanings {
+                let label = meaning["fl"].stringValue
+                let definitions = meaning["def"][0]["sseq"].arrayValue
+                
+                for definition in definitions {
+
+                    print(definition)
+                    var translation : String
+                    
+                    if (label != "adverb"){
+                        translation = definition[0][1]["dt"][0][1].stringValue
+                    }else {
+                        translation = definition[0][1]["dt"][0][1][0][0][1].stringValue
+                    }
+                    
+                    translation = translation.trimmingCharacters(in: .whitespaces)
+                    
+                    while let firstIndex = translation.firstIndex(of: "{"){
+                        if let secondIndex = translation.firstIndex(of: "}"){
+                            translation.removeSubrange(firstIndex ... secondIndex)
+                        }
+                    }
+                    
+                    if(!translation.isEmpty){
+                        let user = realmService.getCurrentUser()
+                        translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? ""))
+                    }
+                }
+            }
+            
+            
+            
             
 //            print(definitions.count)
             
 //            print(definitions)
             
-            for definition in definitions {
-
-                print(definition)
-                var translation : String 
-                
-                if (definition.count == 1){
-                    translation = definition[0][1]["dt"][0][1].stringValue
-                }else {
-                    translation = definition[1][1]["dt"][0][1].stringValue
-                }
-                
-
-//                if(translation.count > 4){
-//                    let index = translation.index(translation.startIndex, offsetBy: 4)
-//
-//                    translation.removeSubrange(translation.startIndex ..< index)
-//
-//                }
-                while let firstIndex = translation.firstIndex(of: "{"){
-                    if let secondIndex = translation.firstIndex(of: "}"){
-                        translation.removeSubrange(firstIndex ... secondIndex)
-                    }
-                }
-//                translation = String.removeTokens(string: translation)
-//                word = String.removeTokens(string: word)
-                
-                if(!translation.isEmpty){
-                    let user = realmService.getCurrentUser()
-                    translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? ""))
-                }
-            }
+            
             print(translations)
             
             return translations
