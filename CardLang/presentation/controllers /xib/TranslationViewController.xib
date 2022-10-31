@@ -28,7 +28,7 @@
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a term.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJZ-r7-YPF" customClass="AddTranslationTextField" customModule="CardLang" customModuleProvider="target">
                     <rect key="frame" x="18" y="162" width="356" height="44"/>
-                    <color key="tintColor" red="0.73333333329999995" green="0.76862745099999996" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="tintColor" name="buttonColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="356" id="XGQ-E2-Crk"/>
                         <constraint firstAttribute="height" constant="44" id="jHL-EP-GYo"/>
@@ -51,7 +51,7 @@
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a meaning.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LJI-gE-pak" customClass="AddTranslationTextField" customModule="CardLang" customModuleProvider="target">
                     <rect key="frame" x="18" y="270" width="356" height="44"/>
-                    <color key="tintColor" red="0.73333333329999995" green="0.76862745099999996" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="tintColor" name="buttonColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="356" id="INA-kh-DAW"/>
                         <constraint firstAttribute="height" constant="44" id="w8b-aX-3Fv"/>
