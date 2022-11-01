@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AACC816F3F117B533C76ED12 /* Pods_CardLang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DD832637CE2663FDF47B11 /* Pods_CardLang.framework */; };
 		B3061A04290ECEA000C1C6FB /* AddModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3061A02290ECEA000C1C6FB /* AddModeViewController.swift */; };
 		B3061A05290ECEA000C1C6FB /* AddModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3061A03290ECEA000C1C6FB /* AddModeViewController.xib */; };
 		B307876728BF8FB000C88404 /* NibNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876628BF8FB000C88404 /* NibNames.swift */; };
@@ -16,6 +17,8 @@
 		B307877528C0F0BA00C88404 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B307877428C0F0BA00C88404 /* CardViewController.xib */; };
 		B30787E828DDBA0B0080EFE4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30787E628DDBA0B0080EFE4 /* SearchViewController.swift */; };
 		B30787E928DDBA0B0080EFE4 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B30787E728DDBA0B0080EFE4 /* SearchViewController.xib */; };
+		B323F8322911434A003CBCD1 /* TermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B323F8302911434A003CBCD1 /* TermViewController.swift */; };
+		B323F8332911434A003CBCD1 /* TermViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B323F8312911434A003CBCD1 /* TermViewController.xib */; };
 		B335BAF328BF466100B9A29F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B335BAF228BF466100B9A29F /* CardView.swift */; };
 		B335BAF528BF467C00B9A29F /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B335BAF428BF467C00B9A29F /* CardView.xib */; };
 		B335BAF728BF4B7700B9A29F /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B335BAF628BF4B7700B9A29F /* CardRepository.swift */; };
@@ -50,7 +53,6 @@
 		B3EFDFBC28C0FF9700FA1183 /* WordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */; };
 		B3EFDFBD28C0FF9700FA1183 /* WordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3EFDFBB28C0FF9700FA1183 /* WordCollectionViewCell.xib */; };
 		B3EFDFC028C1104E00FA1183 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFBF28C1104E00FA1183 /* Identifiers.swift */; };
-		F26A4881D181E53098F13649 /* Pods_CardLang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3489D0B7F42CF5CE06D0D617 /* Pods_CardLang.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3489D0B7F42CF5CE06D0D617 /* Pods_CardLang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardLang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		50D091FDAB469BAB18CA3033 /* Pods-CardLang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.release.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.release.xcconfig"; sourceTree = "<group>"; };
-		8D09ED985491E3A84B4B7FA5 /* Pods-CardLang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.debug.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.debug.xcconfig"; sourceTree = "<group>"; };
+		3BEA2163998C3FD582A06EEC /* Pods-CardLang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.debug.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.debug.xcconfig"; sourceTree = "<group>"; };
+		3CF2CA0BDC1A75203C333B32 /* Pods-CardLang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.release.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.release.xcconfig"; sourceTree = "<group>"; };
 		B3061A02290ECEA000C1C6FB /* AddModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModeViewController.swift; sourceTree = "<group>"; };
 		B3061A03290ECEA000C1C6FB /* AddModeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddModeViewController.xib; path = ../AddModeViewController.xib; sourceTree = "<group>"; };
 		B307876628BF8FB000C88404 /* NibNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibNames.swift; sourceTree = "<group>"; };
@@ -77,6 +78,8 @@
 		B30787E628DDBA0B0080EFE4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B30787E728DDBA0B0080EFE4 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchViewController.xib; path = ../SearchViewController.xib; sourceTree = "<group>"; };
 		B312A56228E610B100E274C2 /* Keys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Keys.xcconfig; sourceTree = "<group>"; };
+		B323F8302911434A003CBCD1 /* TermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermViewController.swift; sourceTree = "<group>"; };
+		B323F8312911434A003CBCD1 /* TermViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermViewController.xib; sourceTree = "<group>"; };
 		B335BAF228BF466100B9A29F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B335BAF428BF467C00B9A29F /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		B335BAF628BF4B7700B9A29F /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 		B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3EFDFBB28C0FF9700FA1183 /* WordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordCollectionViewCell.xib; sourceTree = "<group>"; };
 		B3EFDFBF28C1104E00FA1183 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
+		D9DD832637CE2663FDF47B11 /* Pods_CardLang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardLang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F26A4881D181E53098F13649 /* Pods_CardLang.framework in Frameworks */,
+				AACC816F3F117B533C76ED12 /* Pods_CardLang.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,10 +139,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		385C22756E5CC5B99871A94B /* Frameworks */ = {
+		40AD9AD3C5E6FD1789AB6352 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3489D0B7F42CF5CE06D0D617 /* Pods_CardLang.framework */,
+				D9DD832637CE2663FDF47B11 /* Pods_CardLang.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -154,6 +158,8 @@
 				B30787E628DDBA0B0080EFE4 /* SearchViewController.swift */,
 				B3061A02290ECEA000C1C6FB /* AddModeViewController.swift */,
 				B3EEF0DD290FD79C00C9DCE7 /* Extensions.swift */,
+				B323F8302911434A003CBCD1 /* TermViewController.swift */,
+				B323F8312911434A003CBCD1 /* TermViewController.xib */,
 			);
 			path = "controllers ";
 			sourceTree = "<group>";
@@ -189,7 +195,7 @@
 				B35F629028E6E99F00C5F250 /* CardLangTests */,
 				B33B20EB28BE281000E66FCC /* Products */,
 				D0629796EC7F89B198126D6F /* Pods */,
-				385C22756E5CC5B99871A94B /* Frameworks */,
+				40AD9AD3C5E6FD1789AB6352 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -305,8 +311,8 @@
 		D0629796EC7F89B198126D6F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8D09ED985491E3A84B4B7FA5 /* Pods-CardLang.debug.xcconfig */,
-				50D091FDAB469BAB18CA3033 /* Pods-CardLang.release.xcconfig */,
+				3BEA2163998C3FD582A06EEC /* Pods-CardLang.debug.xcconfig */,
+				3CF2CA0BDC1A75203C333B32 /* Pods-CardLang.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -318,11 +324,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B33B210128BE281100E66FCC /* Build configuration list for PBXNativeTarget "CardLang" */;
 			buildPhases = (
-				A7BE9B6B6892D88D525CE2B3 /* [CP] Check Pods Manifest.lock */,
+				35F4A9427B8C42068781B859 /* [CP] Check Pods Manifest.lock */,
 				B33B20E628BE281000E66FCC /* Sources */,
 				B33B20E728BE281000E66FCC /* Frameworks */,
 				B33B20E828BE281000E66FCC /* Resources */,
-				B0DE48AB3A8267041375147B /* [CP] Embed Pods Frameworks */,
+				B17F9ECA0CB67422AFF6E0BB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -394,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B323F8332911434A003CBCD1 /* TermViewController.xib in Resources */,
 				B374DC25290D7DEE0091546A /* TranslationViewController.xib in Resources */,
 				B33B20FD28BE281100E66FCC /* LaunchScreen.storyboard in Resources */,
 				B33B20FA28BE281100E66FCC /* Assets.xcassets in Resources */,
@@ -420,7 +427,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A7BE9B6B6892D88D525CE2B3 /* [CP] Check Pods Manifest.lock */ = {
+		35F4A9427B8C42068781B859 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -442,7 +449,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B0DE48AB3A8267041375147B /* [CP] Embed Pods Frameworks */ = {
+		B17F9ECA0CB67422AFF6E0BB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -486,6 +493,7 @@
 				B385B88028E4611200F86C53 /* Colors.swift in Sources */,
 				B3EFDFBC28C0FF9700FA1183 /* WordCollectionViewCell.swift in Sources */,
 				B335BAF728BF4B7700B9A29F /* CardRepository.swift in Sources */,
+				B323F8322911434A003CBCD1 /* TermViewController.swift in Sources */,
 				B3DFAB8828DDBD9A00B84EEC /* SearchTableViewCell.swift in Sources */,
 				B30787E828DDBA0B0080EFE4 /* SearchViewController.swift in Sources */,
 				B39D5D1428C4DE8C0088C101 /* WordSet.swift in Sources */,
@@ -654,7 +662,7 @@
 		};
 		B33B210228BE281100E66FCC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D09ED985491E3A84B4B7FA5 /* Pods-CardLang.debug.xcconfig */;
+			baseConfigurationReference = 3BEA2163998C3FD582A06EEC /* Pods-CardLang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -686,7 +694,7 @@
 		};
 		B33B210328BE281100E66FCC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50D091FDAB469BAB18CA3033 /* Pods-CardLang.release.xcconfig */;
+			baseConfigurationReference = 3CF2CA0BDC1A75203C333B32 /* Pods-CardLang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -7,6 +7,9 @@
 
 import UIKit
 
+
+
+
 class WordCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var wordLabel: UILabel!
     
@@ -19,10 +22,9 @@ class WordCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         layer.cornerRadius = 10
-        
-        let gestureRecognizer = UITapGestureRecognizer(target: self , action: #selector(flip))
-//        gestureRecognizer.numberOfTapsRequired = 1
-        self.addGestureRecognizer(gestureRecognizer)
+//        
+//        let gestureRecognizer = UITapGestureRecognizer(target: self , action: #selector(flip))
+//        self.addGestureRecognizer(gestureRecognizer)
     }
     
     override func prepareForReuse() {

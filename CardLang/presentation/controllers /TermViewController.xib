@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TermViewController" customModule="CardLang" customModuleProvider="target">
+            <connections>
+                <outlet property="meaningTextView" destination="IUp-WA-WIa" id="M3d-Gt-EHR"/>
+                <outlet property="termTextView" destination="G31-ax-YWe" id="6WL-fb-6qQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IUp-WA-WIa" customClass="RSKPlaceholderTextView" customModule="RSKPlaceholderTextView">
+                    <rect key="frame" x="30" y="157" width="315" height="87.666666666666686"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="87.670000000000002" id="iSV-Kf-hNo"/>
+                        <constraint firstAttribute="width" constant="315" id="n6b-8w-FaW"/>
+                    </constraints>
+                    <string key="text">(in bookbinding) paste a single page, typically an illustration, to the neighbouring page of a book by a thin line of paste down its inner margin.</string>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter a meaning"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                            <color key="value" systemColor="placeholderTextColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzW-pw-oFP">
+                    <rect key="frame" x="283" y="267" width="48" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system">
+                        <color key="baseForegroundColor" systemColor="systemPinkColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="trashButtonClicked:" destination="-1" eventType="touchUpInside" id="vK0-j2-8nB"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tip" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G31-ax-YWe" customClass="RSKPlaceholderTextView" customModule="RSKPlaceholderTextView">
+                    <rect key="frame" x="30" y="102" width="287" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="287" id="aol-Jy-Y2u"/>
+                        <constraint firstAttribute="height" constant="40" id="xMp-ui-kWh"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter a term"/>
+                    </userDefinedRuntimeAttributes>
+                </textView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gzW-pw-oFP" secondAttribute="trailing" constant="44" id="3w8-kQ-L7k"/>
+                <constraint firstItem="gzW-pw-oFP" firstAttribute="top" secondItem="IUp-WA-WIa" secondAttribute="bottom" constant="22.329999999999998" id="7Pi-J4-vSx"/>
+                <constraint firstItem="IUp-WA-WIa" firstAttribute="top" secondItem="G31-ax-YWe" secondAttribute="bottom" constant="15" id="PFK-9S-BPQ"/>
+                <constraint firstItem="G31-ax-YWe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="55" id="ZCf-R2-RTi"/>
+                <constraint firstItem="IUp-WA-WIa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="uVj-Yp-fAS"/>
+                <constraint firstItem="G31-ax-YWe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="ugv-cc-ecH"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="20.616113744075829"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="trash" catalog="system" width="117" height="128"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

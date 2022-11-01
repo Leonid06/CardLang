@@ -10,4 +10,5 @@ target 'CardLang' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'RealmSwift', '~>10'
   pod 'IQKeyboardManagerSwift'
+  pod 'RSKPlaceholderTextView'
 end

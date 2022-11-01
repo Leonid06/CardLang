@@ -41,10 +41,47 @@ class SetRepository {
     }
     
     @MainActor
+    func updateTermTitle(_ translation: Translation, title: String){
+        Task {
+            do {
+                
+                if let realm = realmService.getRealm() {
+                    try realm.write {
+                        translation.word = title
+                    }
+                }
+                
+                
+            }catch {
+                print(error)
+            }
+            
+        }
+    }
+    
+    @MainActor
+    func updateTermMeaning(_ translation: Translation, meaning: String){
+        Task {
+            do {
+                
+                if let realm = realmService.getRealm() {
+                    try realm.write {
+                        translation.translation = meaning
+                    }
+                }
+                
+                
+            }catch {
+                print(error)
+            }
+            
+        }
+    }
+    
+    @MainActor
     func deleteWordSet(set : WordSet){
         Task {
             do {
-//                let realm = try await realmService.getRealm()
                 if let realm = realmService.getRealm() {
                     try realm.write {
                         realm.delete(set)
@@ -62,7 +99,6 @@ class SetRepository {
     func addTranslationToSet(set : WordSet, translation : Translation, completion: @escaping () -> Void){
         Task {
             do  {
-//                let realm = try await realmService.getRealm()
                 if let realm = realmService.getRealm() {
                     try realm.write {
                         set.translations.append(translation)
@@ -73,19 +109,38 @@ class SetRepository {
                 print(error)
             }
         }
-        
     }
     
     @MainActor
     func addTranslationToSet(set : WordSet, term : String, meaning : String, completion: @escaping () -> Void){
         Task {
             do  {
-//                let realm = try await realmService.getRealm()
                 if let realm = realmService.getRealm() {
                     let user = realmService.getCurrentUser()
                     let translation = Translation(word: term, translation: meaning, ownerId: user?.id ?? "")
                     try realm.write {
                         set.translations.append(translation)
+                    }
+                    completion()
+                }
+            }catch {
+                print(error)
+            }
+        }
+    }
+    
+    @MainActor
+    func deleteTranslationFromSet(set : WordSet, translation : Translation, completion: @escaping () -> Void){
+        Task {
+            do  {
+                if let realm = realmService.getRealm() {
+                    let index = set.translations.firstIndex{
+                        $0._id == translation._id
+                    }
+                    try realm.write {
+                        if let index = index {
+                            set.translations.remove(at: index)
+                        }
                     }
                     completion()
                 }
@@ -101,12 +156,7 @@ class SetRepository {
         let task = Task { () -> [WordSet] in
             
             if let realm =  realmService.getRealm() {
-//                do {
-    //                let realm = try await realmService.getRealm()
                     return Array(realm.objects(WordSet.self)).reversed()
-//                }catch {
-//                    print(error)
-//                }
             }
            
             return [WordSet]()
