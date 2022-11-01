@@ -140,6 +140,7 @@ class SetRepository {
                     try realm.write {
                         if let index = index {
                             set.translations.remove(at: index)
+                            print("set translations count after translation deletion: ", set.translations.count)
                         }
                     }
                     completion()
