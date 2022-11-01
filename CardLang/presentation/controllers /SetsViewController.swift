@@ -74,8 +74,6 @@ class SetsViewController: UITableViewController {
             
             let set = sets[indexPath.row]
             setRepository.deleteWordSet(set: set)
-            
-            updateSets()
         }
     }
     
@@ -105,8 +103,6 @@ class SetsViewController: UITableViewController {
                if let name = textFields[0].text {
                    self.setRepository.addWordSet(name: name)
                }
-               
-               self.updateSets()
            }
        }
        let deleteAction =  UIAlertAction(title: "Cancel", style: .cancel){
