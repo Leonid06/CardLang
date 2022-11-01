@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,11 +22,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IUp-WA-WIa" customClass="RSKPlaceholderTextView" customModule="RSKPlaceholderTextView">
-                    <rect key="frame" x="30" y="157" width="315" height="87.666666666666686"/>
+                    <rect key="frame" x="30" y="157" width="315" height="97.333333333333314"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="tintColor" name="buttonColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="87.670000000000002" id="iSV-Kf-hNo"/>
                         <constraint firstAttribute="width" constant="315" id="n6b-8w-FaW"/>
+                        <constraint firstAttribute="height" constant="97.329999999999998" id="yaJ-7X-2V6"/>
                     </constraints>
                     <string key="text">(in bookbinding) paste a single page, typically an illustration, to the neighbouring page of a book by a thin line of paste down its inner margin.</string>
                     <color key="textColor" systemColor="labelColor"/>
@@ -39,27 +41,31 @@
                     </userDefinedRuntimeAttributes>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzW-pw-oFP">
-                    <rect key="frame" x="283" y="267" width="48" height="35"/>
+                    <rect key="frame" x="283" y="276.66666666666669" width="48" height="35"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system">
-                        <color key="baseForegroundColor" systemColor="systemPinkColor"/>
+                        <color key="baseForegroundColor" systemColor="systemRedColor"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="trashButtonClicked:" destination="-1" eventType="touchUpInside" id="vK0-j2-8nB"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tip" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G31-ax-YWe" customClass="RSKPlaceholderTextView" customModule="RSKPlaceholderTextView">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Tip" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G31-ax-YWe" customClass="RSKPlaceholderTextView" customModule="RSKPlaceholderTextView">
                     <rect key="frame" x="30" y="102" width="287" height="40"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="tintColor" name="buttonColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="287" id="aol-Jy-Y2u"/>
-                        <constraint firstAttribute="height" constant="40" id="xMp-ui-kWh"/>
+                        <constraint firstAttribute="height" constant="40" id="pMz-kK-RrR"/>
                     </constraints>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter a term"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                            <color key="value" systemColor="placeholderTextColor"/>
+                        </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </textView>
             </subviews>
@@ -78,6 +84,9 @@
     </objects>
     <resources>
         <image name="trash" catalog="system" width="117" height="128"/>
+        <namedColor name="buttonColor">
+            <color red="1" green="0.70588235294117652" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -87,8 +96,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

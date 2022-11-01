@@ -47,22 +47,43 @@ class TermViewController: UIViewController {
         
         termTextView.delegate = self
         meaningTextView.delegate = self
+        
+        textViewDidChange(termTextView)
+        textViewDidChange(meaningTextView)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         if let translation = translation {
             if let term = term {
-                setRepository.updateTermTitle(translation, title: term)
+                if(!term.isEmpty){
+                    setRepository.updateTermTitle(translation, title: term)
+                }
+                
             }
             if let meaning = meaning {
-                setRepository.updateTermMeaning(translation, meaning: meaning)
+                if(!meaning.isEmpty){
+                    setRepository.updateTermMeaning(translation, meaning: meaning)
+                }
+                
             }
         }
+       
     }
 }
 
 extension TermViewController : UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
+        
+        let size = CGSize(width: textView.frame.width, height: .infinity)
+        
+        let estimatedSize = textView.sizeThatFits(size)
+        
+        textView.constraints.forEach {
+            constraint in
+            if(constraint.firstAttribute == .height){
+                constraint.constant = estimatedSize.height
+            }
+        }
         if(textView.isEqual(termTextView)){
             term = textView.text
         }else {

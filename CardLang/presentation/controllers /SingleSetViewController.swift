@@ -120,6 +120,12 @@ extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDa
             termViewController.configure(translation, set)
         }
         
+        if let sheet = termViewController.sheetPresentationController {
+            sheet.detents = [.large(), .medium()]
+            sheet.selectedDetentIdentifier = .large
+            sheet.preferredCornerRadius = 24
+        }
+        
         present(termViewController, animated: true, completion: nil)
     }
 }
