@@ -6,6 +6,7 @@ PODS:
   - Realm/Headers (10.28.2)
   - RealmSwift (10.28.2):
     - Realm (= 10.28.2)
+  - RSKPlaceholderTextView (6.1.0)
   - Shuffle-iOS (0.5.0)
   - SwiftyJSON (4.3.0)
 
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - CardSlider
   - IQKeyboardManagerSwift
   - RealmSwift (~> 10)
+  - RSKPlaceholderTextView
   - Shuffle-iOS
   - SwiftyJSON (~> 4.0)
 
@@ -22,6 +24,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - Realm
     - RealmSwift
+    - RSKPlaceholderTextView
     - Shuffle-iOS
     - SwiftyJSON
 
@@ -30,9 +33,10 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   Realm: e617c54ad0f566b3d0f6a2abae7010de05f252ac
   RealmSwift: 8a516a8759d80d52ebcec1ff1076f5f5159f98b2
+  RSKPlaceholderTextView: 52f26e643b6f9bbf16f45cd2bbe2181b6dfe090c
   Shuffle-iOS: ff33658fb1e5eebd6a4724c156473e63754be9cb
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 0d79cee653ee91876a4782953472cca20bfd0e81
+PODFILE CHECKSUM: c4d7fc5aaae61de49b3e539ee5fe3455810b8688
 
 COCOAPODS: 1.11.3

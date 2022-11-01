@@ -21,9 +21,6 @@ class SetsViewController: UITableViewController {
         setRepository.subscribeToUpdatesOnSets {
             self.updateSets()
         }
-        
-//        updateSets()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

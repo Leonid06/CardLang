@@ -29,7 +29,6 @@ class SingleSetViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         updateTranslations()
-        
     }
     
     override func viewDidLoad() {
@@ -59,6 +58,10 @@ class SingleSetViewController: UIViewController {
         setRepository.subscribeToUpdatesOnTranslations {
             self.updateTranslations()
         }
+        
+        setRepository.subscribeToUpdatesOnSets {
+            self.updateTranslations()
+        }
     }
     
     @objc func playButtonPressed(_ sender: Any) {
@@ -69,55 +72,10 @@ class SingleSetViewController: UIViewController {
 
     
     
-    @objc func addButtonPressed(_ sender: Any) {
-        
-        let addModeViewController = AddModeViewController(nibName: NibNames.AddModeViewControllerNibName, bundle: nil)
-        
-        if let set = set {
-            addModeViewController.configure(set)
-        }
-//        let searchViewController = SearchViewController(nibName: NibNames.SearchViewControllerNibName , bundle: nil)
-//        
-//        if let set = set {
-//            searchViewController.configure(set)
-//        }
-        
-        navigationController?.pushViewController(addModeViewController, animated: true)
-    }
-    
-    private func showAlert() {
-       let alert = UIAlertController(title: "Add new word", message: nil, preferredStyle: .alert)
-       
-       alert.addTextField {
-           textField in
-           textField.placeholder = "Enter the word"
-       }
-       
-       
-       let addAction = UIAlertAction(title: "Add", style: .default){
-           action in
-           if let textFields = alert.textFields {
-               if let name = textFields[0].text {
-                   self.cardRepository.fetchTranslations(words: [name], completion: self.onTranslationsFetched)
-               }
-           }
-       }
-       let deleteAction =  UIAlertAction(title: "Cancel", style: .cancel){
-           action in
-           alert.dismiss(animated: true)
-       }
-       alert.addAction(addAction)
-       alert.addAction(deleteAction)
-       
-       present(alert, animated: true)
-   }
-    
-    
     private func onTranslationsFetched(translations : [Translation]){
         print("got \(translations.count) translations")
         if let set = self.set {
-            self.setRepository.addTranslationToSet(set: set, translation: translations[0],completion: self.updateTranslations)
-            
+            self.setRepository.addTranslationToSet(set: set, translation: translations[0],completion: {})
         }
     }
     
@@ -151,6 +109,24 @@ extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDa
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1 
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let translation = translations[translations.count - 1 - indexPath.row]
+        
+        let termViewController = TermViewController(nibName: NibNames.TermViewControllerNibName, bundle: nil)
+        
+        if let set = self.set {
+            termViewController.configure(translation, set)
+        }
+        
+        if let sheet = termViewController.sheetPresentationController {
+            sheet.detents = [.large(), .medium()]
+            sheet.selectedDetentIdentifier = .large
+            sheet.preferredCornerRadius = 24
+        }
+        
+        present(termViewController, animated: true, completion: nil)
     }
 }
 
