@@ -31,16 +31,14 @@ class SetsViewController: UITableViewController {
     
     private func updateSets(){
         
-        DispatchQueue.main.async {
-            Task {
-                do {
-                    self.sets = try await self.setRepository.getAllSets()
-                    self.tableView.reloadData()
-                }catch {
-                    print(error)
-                }
-                
+        Task {
+            do {
+                self.sets = try await self.setRepository.getAllSets()
+                self.tableView.reloadData()
+            }catch {
+                print(error)
             }
+            
         }
         
     }
