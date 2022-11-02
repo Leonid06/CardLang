@@ -128,20 +128,13 @@ class SetRepository {
             }
         }
     }
-    
     @MainActor
     func deleteTranslationFromSet(set : WordSet, translation : Translation, completion: @escaping () -> Void){
         Task {
             do  {
                 if let realm = realmService.getRealm() {
-                    let index = set.translations.firstIndex{
-                        $0._id == translation._id
-                    }
                     try realm.write {
-                        if let index = index {
-                            set.translations.remove(at: index)
-                            print("set translations count after translation deletion: ", set.translations.count)
-                        }
+                        realm.delete(translation)
                     }
                     completion()
                 }

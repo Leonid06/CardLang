@@ -32,10 +32,10 @@ class TermViewController: UIViewController {
      }
 
     @IBAction func trashButtonClicked(_ sender: UIButton) {
-        if let translation = translation, let set = set {
-            setRepository.deleteTranslationFromSet(set: set, translation: translation, completion: {})
-        }
-        dismiss(animated: true)
+//        if let translation = translation, let set = set {
+//            setRepository.deleteTranslationFromSet(set: set, translation: translation, completion: {})
+//        }
+//        dismiss(animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

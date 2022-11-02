@@ -81,6 +81,7 @@ class SingleSetViewController: UIViewController {
     
     private func updateTranslations(){
         self.translations = set?.translations ?? List<Translation>()
+        print("translation count before reloading collection view: ", self.translations.count)
         collectionView.reloadData()
         
         navigationItem.rightBarButtonItems?[1].isHidden = translations.count == 0 ? true : false
