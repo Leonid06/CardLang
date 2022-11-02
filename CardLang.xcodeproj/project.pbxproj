@@ -79,7 +79,7 @@
 		B30787E728DDBA0B0080EFE4 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchViewController.xib; path = ../SearchViewController.xib; sourceTree = "<group>"; };
 		B323F8302911434A003CBCD1 /* TermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermViewController.swift; sourceTree = "<group>"; };
 		B323F8312911434A003CBCD1 /* TermViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermViewController.xib; sourceTree = "<group>"; };
-		B323F8382912C87E003CBCD1 /* Keys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Keys.xcconfig; sourceTree = "<group>"; };
+		B323F8392912C95B003CBCD1 /* Keys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Keys.xcconfig; sourceTree = "<group>"; };
 		B335BAF228BF466100B9A29F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B335BAF428BF467C00B9A29F /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		B335BAF628BF4B7700B9A29F /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 				B335BAF628BF4B7700B9A29F /* CardRepository.swift */,
 				B39D5D1528C4E0710088C101 /* SetRepository.swift */,
 				B3483C0528F95D900065648C /* RealmService.swift */,
-				B323F8382912C87E003CBCD1 /* Keys.xcconfig */,
+				B323F8392912C95B003CBCD1 /* Keys.xcconfig */,
 			);
 			path = data;
 			sourceTree = "<group>";
