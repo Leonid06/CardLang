@@ -13,7 +13,7 @@ class SingleSetViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private var translations = List<Translation>()
+    private var translations : List<Translation>?
     
     private let setRepository = SetRepository.shared
     
@@ -25,10 +25,6 @@ class SingleSetViewController: UIViewController {
                 self.translations = translations
             }
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        updateTranslations()
     }
     
     override func viewDidLoad() {
@@ -51,17 +47,18 @@ class SingleSetViewController: UIViewController {
         
         navigationItem.rightBarButtonItems = [buttonItem, playItem]
         
-        
-        
-        
-        
         setRepository.subscribeToUpdatesOnTranslations {
             self.updateTranslations()
+            if let translations = self.translations {
+                self.navigationItem.rightBarButtonItems?[1].isHidden = translations.count == 0 ? true : false
+            }
         }
         
         setRepository.subscribeToUpdatesOnSets {
             self.updateTranslations()
         }
+        
+        
     }
     
     @objc func playButtonPressed(_ sender: Any) {
@@ -75,16 +72,12 @@ class SingleSetViewController: UIViewController {
     private func onTranslationsFetched(translations : [Translation]){
         print("got \(translations.count) translations")
         if let set = self.set {
-            self.setRepository.addTranslationToSet(set: set, translation: translations[0],completion: {})
+            self.setRepository.addTranslationToSet(set: set, translation: translations[0], completion: {})
         }
     }
     
     private func updateTranslations(){
-        self.translations = set?.translations ?? List<Translation>()
-        print("translation count before reloading collection view: ", self.translations.count)
-        collectionView.reloadData()
-        
-        navigationItem.rightBarButtonItems?[1].isHidden = translations.count == 0 ? true : false
+
 
     }
 
@@ -95,16 +88,20 @@ class SingleSetViewController: UIViewController {
 extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDataSource  {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(translations.count)
-        return translations.count
+        if let translations = translations {
+            print(translations.count)
+            return translations.count
+        }
+        return 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.WordCollectionViewCellIdentifier, for: indexPath) as! WordCollectionViewCell
         
-    
-        cell.configure(translations[translations.count - 1 - indexPath.row])
-    
+        
+        if let translations = translations {
+            cell.configure(translations[translations.count - 1 - indexPath.row])
+        }
         return cell
     }
     
@@ -113,23 +110,30 @@ extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let translation = translations[translations.count - 1 - indexPath.row]
-        
-        let termViewController = TermViewController(nibName: NibNames.TermViewControllerNibName, bundle: nil)
-        
-        if let set = self.set {
-            termViewController.configure(translation, set)
+        if let translations = translations {
+            let translation = translations[translations.count - 1 - indexPath.row]
+            
+            let termViewController = TermViewController(nibName: NibNames.TermViewControllerNibName, bundle: nil)
+            
+            if let set = self.set {
+                termViewController.configure(translation, set)
+            }
+            
+            if let sheet = termViewController.sheetPresentationController {
+                sheet.detents = [.large(), .medium()]
+                sheet.selectedDetentIdentifier = .large
+                sheet.preferredCornerRadius = 24
+            }
+            
+            present(termViewController, animated: true, completion: nil)
         }
         
-        if let sheet = termViewController.sheetPresentationController {
-            sheet.detents = [.large(), .medium()]
-            sheet.selectedDetentIdentifier = .large
-            sheet.preferredCornerRadius = 24
-        }
-        
-        present(termViewController, animated: true, completion: nil)
     }
 }
+
+    
+    
+
 
 
 extension SingleSetViewController : UICollectionViewDelegateFlowLayout  {

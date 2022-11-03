@@ -82,6 +82,14 @@
             <point key="canvasLocation" x="140" y="20.616113744075829"/>
         </view>
     </objects>
+    <designables>
+        <designable name="G31-ax-YWe">
+            <size key="intrinsicContentSize" width="39" height="40"/>
+        </designable>
+        <designable name="IUp-WA-WIa">
+            <size key="intrinsicContentSize" width="1077" height="36.333333333333336"/>
+        </designable>
+    </designables>
     <resources>
         <image name="trash" catalog="system" width="117" height="128"/>
         <namedColor name="buttonColor">

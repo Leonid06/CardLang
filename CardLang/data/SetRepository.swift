@@ -146,18 +146,17 @@ class SetRepository {
     }
     
     @MainActor
-    func getAllSets() async throws ->  [WordSet] {
-        let task = Task { () -> [WordSet] in
+    func getAllSets() async throws ->  Results<WordSet>? {
+        let task = Task { () -> Results<WordSet>? in
             
             if let realm =  realmService.getRealm() {
-                    return Array(realm.objects(WordSet.self)).reversed()
+                    return realm.objects(WordSet.self)
             }
            
-            return [WordSet]()
+            return nil
         }
         return try await task.result.get()
     }
-    
     
     func subscribeToUpdatesOnSets(block : @escaping () -> Void){
         Task {
