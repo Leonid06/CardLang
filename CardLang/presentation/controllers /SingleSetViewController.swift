@@ -77,7 +77,10 @@ class SingleSetViewController: UIViewController {
     }
     
     private func updateTranslations(){
-
+        DispatchQueue.main.async {
+            self.translations = self.set?.translations ?? List<Translation>()
+            self.collectionView.reloadData()
+        }
 
     }
 
