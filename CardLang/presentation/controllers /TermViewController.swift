@@ -40,6 +40,7 @@ class TermViewController: UIViewController {
             
             isDeleted = true 
         }
+        
         dismiss(animated: true)
     }
     override func viewDidLoad() {
