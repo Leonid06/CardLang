@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SetsViewController: UITableViewController {
     
-    private var sets = [WordSet]()
+    private var sets : Results<WordSet>?
     
     private let setRepository = SetRepository.shared
     
@@ -27,18 +28,19 @@ class SetsViewController: UITableViewController {
         updateSets()
     }
 
-    // MARK: - Table view data source
     
     private func updateSets(){
         
-        Task {
-            do {
-                self.sets = try await self.setRepository.getAllSets()
-                self.tableView.reloadData()
-            }catch {
-                print(error)
+        DispatchQueue.main.async {
+            Task {
+                do {
+                    self.sets = try await self.setRepository.getAllSets()
+                    self.tableView.reloadData()
+                }catch {
+                    print(error)
+                }
+                
             }
-            
         }
         
     }
@@ -48,19 +50,26 @@ class SetsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sets.count
+        if let sets = sets {
+            return sets.count
+        }
+        return 0
+       
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let set = sets[indexPath.row]
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        let singleSetViewController = self.storyboard?.instantiateViewController(withIdentifier: Identifies.SingleSetViewControllerIdentifier) as! SingleSetViewController
-        singleSetViewController.set = set
-        navigationController?.pushViewController(singleSetViewController, animated: true)
+        if let sets = sets {
+            let set = sets[sets.count - 1 - indexPath.row]
+            let layout = UICollectionViewFlowLayout()
+            layout.scrollDirection = .horizontal
+            
+            tableView.deselectRow(at: indexPath, animated: true)
+            
+            let singleSetViewController = self.storyboard?.instantiateViewController(withIdentifier: Identifies.SingleSetViewControllerIdentifier) as! SingleSetViewController
+            singleSetViewController.set = set
+            navigationController?.pushViewController(singleSetViewController, animated: true)
+        }
+       
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -70,18 +79,25 @@ class SetsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if(editingStyle == .delete){
             
-            let set = sets[indexPath.row]
-            setRepository.deleteWordSet(set: set)
+            if let sets = sets {
+                let set = sets[sets.count - 1 - indexPath.row]
+                setRepository.deleteWordSet(set: set)
+                print("word set was deleted")
+            }
         }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Identifies.SetsTableViewCellIdentifier, for: indexPath) as! SetsTableViewCell
         
-        let set = sets[indexPath.row]
+        
+        if let sets = sets {
+            let set = sets[sets.count - 1 - indexPath.row]
+            cell.nameLabel.text = set.name
+            cell.wordCountLabel.text = String(set.translations.count)
+        }
 
-        cell.nameLabel.text = set.name
-        cell.wordCountLabel.text = String(set.translations.count)
+        
 
         return cell
     }

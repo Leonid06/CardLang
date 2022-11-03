@@ -17,6 +17,8 @@ class TermViewController: UIViewController {
     
     private var meaning : String?
     
+    private var isDeleted  = false
+    
     
     private var translation : Translation?
     
@@ -33,7 +35,10 @@ class TermViewController: UIViewController {
 
     @IBAction func trashButtonClicked(_ sender: UIButton) {
         if let translation = translation, let set = set {
+            updateTerm()
             setRepository.deleteTranslationFromSet(set: set, translation: translation, completion: {})
+            
+            isDeleted = true 
         }
         dismiss(animated: true)
     }
@@ -48,11 +53,18 @@ class TermViewController: UIViewController {
         termTextView.delegate = self
         meaningTextView.delegate = self
         
-        textViewDidChange(termTextView)
-        textViewDidChange(meaningTextView)
+        resizeTextView(termTextView)
+        resizeTextView(meaningTextView)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        if(!isDeleted){
+            updateTerm()
+        }
+       
+    }
+    
+    private func updateTerm(){
         if let translation = translation {
             if let term = term {
                 if(!term.isEmpty){
@@ -67,13 +79,12 @@ class TermViewController: UIViewController {
                 
             }
         }
-       
     }
 }
 
 extension TermViewController : UITextViewDelegate {
-    func textViewDidChange(_ textView: UITextView) {
-        
+    
+    func resizeTextView(_ textView : UITextView){
         let size = CGSize(width: textView.frame.width, height: .infinity)
         
         let estimatedSize = textView.sizeThatFits(size)
@@ -84,6 +95,9 @@ extension TermViewController : UITextViewDelegate {
                 constraint.constant = estimatedSize.height
             }
         }
+    }
+    func textViewDidChange(_ textView: UITextView) {
+        resizeTextView(textView)
         if(textView.isEqual(termTextView)){
             term = textView.text
         }else {
