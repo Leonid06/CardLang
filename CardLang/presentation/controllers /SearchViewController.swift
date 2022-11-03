@@ -70,10 +70,11 @@ extension SearchViewController : UITableViewDelegate , UITableViewDataSource {
         let translation = translations[indexPath.row]
         tableView.deselectRow(at: indexPath, animated: true)
         if let set = self.set {
-            setRepository.addTranslationToSet(set: set, translation: translation, completion: {})
+            setRepository.addTranslationToSet(set: set, translation: translation){
+                self.delegate?.onDismissed()
+            }
         }
         dismiss(animated: true)
-        delegate?.onDismissed()
 
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

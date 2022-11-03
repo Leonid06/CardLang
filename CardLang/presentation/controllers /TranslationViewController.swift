@@ -8,9 +8,7 @@
 import UIKit
 
 
-protocol PopUpControllerDelegate {
-    func onDismissed()
-}
+
 
 class TranslationViewController: UIViewController {
     
@@ -36,9 +34,6 @@ class TranslationViewController: UIViewController {
     }
     
     private func onTermAdded(){
-//        if let viewController = navigationController?.viewControllers.first(where: {$0 is SingleSetViewController}) {
-//            navigationController?.popToViewController(viewController, animated: true)
-//        }
         dismiss(animated: true)
         delegate?.onDismissed()
     }

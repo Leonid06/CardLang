@@ -12,6 +12,8 @@ class TermViewController: UIViewController {
     
     private let setRepository = SetRepository.shared
     
+    var delegate : PopUpControllerDelegate?
+    
     
     private var term : String?
     
@@ -36,12 +38,15 @@ class TermViewController: UIViewController {
     @IBAction func trashButtonClicked(_ sender: UIButton) {
         if let translation = translation, let set = set {
             updateTerm()
-            setRepository.deleteTranslationFromSet(set: set, translation: translation, completion: {})
+            setRepository.deleteTranslationFromSet(set: set, translation: translation){
+                self.delegate?.onDismissed()
+            }
             
             isDeleted = true 
         }
         
         dismiss(animated: true)
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,3 +110,6 @@ extension TermViewController : UITextViewDelegate {
         }
     }
 }
+
+
+

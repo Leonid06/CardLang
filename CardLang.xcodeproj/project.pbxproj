@@ -36,6 +36,7 @@
 		B3483C0628F95D900065648C /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3483C0528F95D900065648C /* RealmService.swift */; };
 		B35F629228E6E99F00C5F250 /* CardLangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F629128E6E99F00C5F250 /* CardLangTests.swift */; };
 		B35F629928E6EA3800C5F250 /* CardServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F629828E6EA3800C5F250 /* CardServiceTest.swift */; };
+		B366FA71291406A8005BECA2 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B366FA70291406A8005BECA2 /* Protocols.swift */; };
 		B374DC24290D7DEE0091546A /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374DC22290D7DEE0091546A /* TranslationViewController.swift */; };
 		B374DC25290D7DEE0091546A /* TranslationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B374DC23290D7DEE0091546A /* TranslationViewController.xib */; };
 		B374DC28290DA2830091546A /* AddTranslationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374DC27290DA2830091546A /* AddTranslationTextField.swift */; };
@@ -100,6 +101,7 @@
 		B35F628F28E6E99F00C5F250 /* CardLangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardLangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35F629128E6E99F00C5F250 /* CardLangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLangTests.swift; sourceTree = "<group>"; };
 		B35F629828E6EA3800C5F250 /* CardServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardServiceTest.swift; sourceTree = "<group>"; };
+		B366FA70291406A8005BECA2 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		B374DC22290D7DEE0091546A /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
 		B374DC23290D7DEE0091546A /* TranslationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranslationViewController.xib; sourceTree = "<group>"; };
 		B374DC27290DA2830091546A /* AddTranslationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTranslationTextField.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				B3EEF0DD290FD79C00C9DCE7 /* Extensions.swift */,
 				B323F8302911434A003CBCD1 /* TermViewController.swift */,
 				B323F8312911434A003CBCD1 /* TermViewController.xib */,
+				B366FA70291406A8005BECA2 /* Protocols.swift */,
 			);
 			path = "controllers ";
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				B33B20EE28BE281000E66FCC /* AppDelegate.swift in Sources */,
 				B3EFDFB228C0FCA800FA1183 /* SetsTableViewCell.swift in Sources */,
 				B33B211028BE515F00E66FCC /* Constants .swift in Sources */,
+				B366FA71291406A8005BECA2 /* Protocols.swift in Sources */,
 				B374DC24290D7DEE0091546A /* TranslationViewController.swift in Sources */,
 				B374DC28290DA2830091546A /* AddTranslationTextField.swift in Sources */,
 				B385B88028E4611200F86C53 /* Colors.swift in Sources */,

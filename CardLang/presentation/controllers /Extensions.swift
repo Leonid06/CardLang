@@ -33,6 +33,8 @@ extension SingleSetViewController {
             sheet.preferredCornerRadius = 24
         }
         
+        addOwnTranslationViewController.delegate = self
+        
         
         self.present(addOwnTranslationViewController, animated: true)
     }
@@ -48,8 +50,14 @@ extension SingleSetViewController {
             sheet.preferredCornerRadius = 24
         }
         
+        searchViewController.delegate = self 
+        
         
         self.present(searchViewController, animated: true)
     }
 }
+
+
+
+
 

@@ -49,15 +49,13 @@ class SingleSetViewController: UIViewController {
         
         setRepository.subscribeToUpdatesOnTranslations {
             self.updateTranslations()
-            if let translations = self.translations {
-                self.navigationItem.rightBarButtonItems?[1].isHidden = translations.count == 0 ? true : false
-            }
         }
         
         setRepository.subscribeToUpdatesOnSets {
             self.updateTranslations()
         }
         
+        toggleButtons()
         
     }
     
@@ -82,6 +80,12 @@ class SingleSetViewController: UIViewController {
             self.collectionView.reloadData()
         }
 
+    }
+    
+    private func toggleButtons(){
+        if let translations = self.translations {
+            self.navigationItem.rightBarButtonItems?[1].isHidden = translations.count == 0 ? true : false
+        }
     }
 
 }
@@ -128,11 +132,20 @@ extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDa
                 sheet.preferredCornerRadius = 24
             }
             
+            termViewController.delegate = self
+            
             present(termViewController, animated: true, completion: nil)
         }
         
     }
 }
+
+extension SingleSetViewController : PopUpControllerDelegate {
+    func onDismissed() {
+        toggleButtons()
+    }
+}
+
 
     
     
