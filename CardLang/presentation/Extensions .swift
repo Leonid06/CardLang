@@ -18,6 +18,14 @@ extension UIView {
     }
 }
 
+extension UITextView {
+    func adjustUITextViewHeight() {
+        self.translatesAutoresizingMaskIntoConstraints = true
+        self.sizeToFit()
+        self.isScrollEnabled = false
+    }
+}
+
 extension UISearchBar {
     func setPlaceholderColor(_ color: UIColor) {
         let textField = self.value(forKey: "searchField") as? UITextField

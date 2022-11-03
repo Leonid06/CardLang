@@ -19,6 +19,7 @@ struct NibNames {
     static let SearchViewControllerNibName = "SearchViewController"
     static let AddModeViewControllerNibName = "AddModeViewController"
     static let TranslationViewControllerNibName = "TranslationViewController"
+    static let TermViewControllerNibName = "TermViewController"
     
     static let LeftOverlayViewNibName = "LeftOverlayView"
     static let RightOverlayViewNibName = "RightOverlayView"

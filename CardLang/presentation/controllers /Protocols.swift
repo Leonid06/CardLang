@@ -1,0 +1,3 @@
+protocol PopUpControllerDelegate {
+    func onDismissed()
+}

@@ -13,7 +13,7 @@ class SingleSetViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private var translations = List<Translation>()
+    private var translations : List<Translation>?
     
     private let setRepository = SetRepository.shared
     
@@ -25,11 +25,6 @@ class SingleSetViewController: UIViewController {
                 self.translations = translations
             }
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        updateTranslations()
-        
     }
     
     override func viewDidLoad() {
@@ -52,13 +47,16 @@ class SingleSetViewController: UIViewController {
         
         navigationItem.rightBarButtonItems = [buttonItem, playItem]
         
-        
-        
-        
-        
         setRepository.subscribeToUpdatesOnTranslations {
             self.updateTranslations()
         }
+        
+        setRepository.subscribeToUpdatesOnSets {
+            self.updateTranslations()
+        }
+        
+        toggleButtons()
+        
     }
     
     @objc func playButtonPressed(_ sender: Any) {
@@ -69,64 +67,25 @@ class SingleSetViewController: UIViewController {
 
     
     
-    @objc func addButtonPressed(_ sender: Any) {
-        
-        let addModeViewController = AddModeViewController(nibName: NibNames.AddModeViewControllerNibName, bundle: nil)
-        
-        if let set = set {
-            addModeViewController.configure(set)
-        }
-//        let searchViewController = SearchViewController(nibName: NibNames.SearchViewControllerNibName , bundle: nil)
-//        
-//        if let set = set {
-//            searchViewController.configure(set)
-//        }
-        
-        navigationController?.pushViewController(addModeViewController, animated: true)
-    }
-    
-    private func showAlert() {
-       let alert = UIAlertController(title: "Add new word", message: nil, preferredStyle: .alert)
-       
-       alert.addTextField {
-           textField in
-           textField.placeholder = "Enter the word"
-       }
-       
-       
-       let addAction = UIAlertAction(title: "Add", style: .default){
-           action in
-           if let textFields = alert.textFields {
-               if let name = textFields[0].text {
-                   self.cardRepository.fetchTranslations(words: [name], completion: self.onTranslationsFetched)
-               }
-           }
-       }
-       let deleteAction =  UIAlertAction(title: "Cancel", style: .cancel){
-           action in
-           alert.dismiss(animated: true)
-       }
-       alert.addAction(addAction)
-       alert.addAction(deleteAction)
-       
-       present(alert, animated: true)
-   }
-    
-    
     private func onTranslationsFetched(translations : [Translation]){
         print("got \(translations.count) translations")
         if let set = self.set {
-            self.setRepository.addTranslationToSet(set: set, translation: translations[0],completion: self.updateTranslations)
-            
+            self.setRepository.addTranslationToSet(set: set, translation: translations[0], completion: {})
         }
     }
     
     private func updateTranslations(){
-        self.translations = set?.translations ?? List<Translation>()
-        collectionView.reloadData()
-        
-        navigationItem.rightBarButtonItems?[1].isHidden = translations.count == 0 ? true : false
+        DispatchQueue.main.async {
+            self.translations = self.set?.translations ?? List<Translation>()
+            self.collectionView.reloadData()
+        }
 
+    }
+    
+    private func toggleButtons(){
+        if let translations = self.translations {
+            self.navigationItem.rightBarButtonItems?[1].isHidden = translations.count == 0 ? true : false
+        }
     }
 
 }
@@ -136,23 +95,61 @@ class SingleSetViewController: UIViewController {
 extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDataSource  {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(translations.count)
-        return translations.count
+        if let translations = translations {
+            print(translations.count)
+            return translations.count
+        }
+        return 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.WordCollectionViewCellIdentifier, for: indexPath) as! WordCollectionViewCell
         
-    
-        cell.configure(translations[translations.count - 1 - indexPath.row])
-    
+        
+        if let translations = translations {
+            cell.configure(translations[translations.count - 1 - indexPath.row])
+        }
         return cell
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1 
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let translations = translations {
+            let translation = translations[translations.count - 1 - indexPath.row]
+            
+            let termViewController = TermViewController(nibName: NibNames.TermViewControllerNibName, bundle: nil)
+            
+            if let set = self.set {
+                termViewController.configure(translation, set)
+            }
+            
+            if let sheet = termViewController.sheetPresentationController {
+                sheet.detents = [.large(), .medium()]
+                sheet.selectedDetentIdentifier = .large
+                sheet.preferredCornerRadius = 24
+            }
+            
+            termViewController.delegate = self
+            
+            present(termViewController, animated: true, completion: nil)
+        }
+        
+    }
 }
+
+extension SingleSetViewController : PopUpControllerDelegate {
+    func onDismissed() {
+        toggleButtons()
+    }
+}
+
+
+    
+    
+
 
 
 extension SingleSetViewController : UICollectionViewDelegateFlowLayout  {
