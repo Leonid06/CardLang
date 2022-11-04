@@ -43,9 +43,18 @@ class SingleSetViewController: UIViewController {
 
         let playItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(playButtonPressed))
         
+        let editButton = UIButton(type: .custom)
+        
+        editButton.setImage(UIImage(named: "ellipsis"), for:.normal)
         
         
-        navigationItem.rightBarButtonItems = [buttonItem, playItem]
+        editButton.addTarget(self, action: #selector(editButtonPressed), for: .touchUpInside)
+
+        let editItem = UIBarButtonItem(customView: editButton)
+        
+        
+        
+        navigationItem.rightBarButtonItems = [editItem, buttonItem, playItem]
         
         setRepository.subscribeToUpdatesOnTranslations {
             self.updateTranslations()
@@ -56,6 +65,10 @@ class SingleSetViewController: UIViewController {
         }
         
         toggleButtons()
+        
+    }
+    
+    @objc func editButtonPressed(_ sender: Any) {
         
     }
     
