@@ -47,6 +47,9 @@ class SingleSetViewController: UIViewController {
         
         editButton.setImage(UIImage(named: "ellipsis"), for:.normal)
         
+//        editButton.frame = CGRectMake(0, 0, 24, 24)
+        // frame to be added here ... 
+        
         
         editButton.addTarget(self, action: #selector(editButtonPressed), for: .touchUpInside)
 
@@ -54,7 +57,7 @@ class SingleSetViewController: UIViewController {
         
         
         
-        navigationItem.rightBarButtonItems = [editItem, buttonItem, playItem]
+        navigationItem.rightBarButtonItems = [buttonItem, playItem, editItem]
         
         setRepository.subscribeToUpdatesOnTranslations {
             self.updateTranslations()
