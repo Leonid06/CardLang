@@ -158,6 +158,22 @@ class SetRepository {
         return try await task.result.get()
     }
     
+    @MainActor
+    func updateSetName(set : WordSet, name : String, completion: @escaping () -> Void) {
+        Task {
+            do  {
+                if let realm = realmService.getRealm() {
+                    try realm.write {
+                        set.name = name
+                    }
+                    completion()
+                }
+            }catch {
+                print(error)
+            }
+        }
+    }
+    
     func subscribeToUpdatesOnSets(block : @escaping () -> Void){
         Task {
             do {

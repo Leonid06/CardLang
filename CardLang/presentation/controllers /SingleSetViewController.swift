@@ -72,7 +72,18 @@ class SingleSetViewController: UIViewController {
     }
     
     @objc func editButtonPressed(_ sender: Any) {
-        print("edit button was pressed")
+        let editSetViewController = EditSetViewController(nibName: NibNames.EditSetViewControllerNibName, bundle: nil)
+        
+        editSetViewController.configure(set)
+        
+        if let sheet = editSetViewController.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.preferredCornerRadius = 24
+        }
+        
+        editSetViewController.delegate = self 
+        
+        present(editSetViewController, animated: true)
     }
     
     @objc func playButtonPressed(_ sender: Any) {
@@ -159,6 +170,11 @@ extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDa
 extension SingleSetViewController : PopUpControllerDelegate {
     func onDismissed() {
         toggleButtons()
+        
+        if let set = self.set  {
+            title = set.name
+        }
+        
     }
 }
 
