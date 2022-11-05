@@ -31,6 +31,7 @@ extension SingleSetViewController {
         if let sheet = addOwnTranslationViewController.sheetPresentationController {
             sheet.detents = [.large(), .medium()]
             sheet.preferredCornerRadius = 24
+            sheet.prefersGrabberVisible = true
         }
         
         addOwnTranslationViewController.delegate = self
@@ -48,6 +49,7 @@ extension SingleSetViewController {
         if let sheet = searchViewController.sheetPresentationController {
             sheet.detents = [.large(), .medium()]
             sheet.preferredCornerRadius = 24
+            sheet.prefersGrabberVisible = true
         }
         
         searchViewController.delegate = self 

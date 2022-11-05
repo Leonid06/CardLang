@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,61 +19,34 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Title" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6xS-VK-lei" customClass="RSKPlaceholderTextView" customModule="RSKPlaceholderTextView">
-                    <rect key="frame" x="53" y="94" width="287" height="40"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <color key="tintColor" name="buttonColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Jnw-W5-uCm"/>
-                        <constraint firstAttribute="height" constant="40" id="dyN-U2-pxZ"/>
-                        <constraint firstAttribute="width" constant="287" id="gKW-qU-zr1"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="287" id="kcN-fs-r18"/>
-                    </constraints>
-                    <color key="textColor" systemColor="labelColor"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                            <color key="value" systemColor="placeholderTextColor"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </textView>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a set title" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxh-ML-RTv">
-                    <rect key="frame" x="60" y="142" width="299" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a set name" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxh-ML-RTv">
+                    <rect key="frame" x="60" y="209.33333333333334" width="299" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="BuD-BB-70m"/>
                         <constraint firstAttribute="width" constant="299" id="R7h-Py-AfO"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfi-eS-h4e">
+                    <rect key="frame" x="60" y="159" width="46.666666666666657" height="20.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="cxh-ML-RTv" firstAttribute="top" secondItem="6xS-VK-lei" secondAttribute="bottom" constant="8" symbolic="YES" id="9UA-AB-ZIq"/>
-                <constraint firstItem="6xS-VK-lei" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="PHZ-kl-mzB"/>
-                <constraint firstItem="6xS-VK-lei" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="53" id="XSH-ys-O0d"/>
-                <constraint firstItem="cxh-ML-RTv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="vSJ-EU-tpj"/>
+                <constraint firstItem="bfi-eS-h4e" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="2sN-nU-3gj"/>
+                <constraint firstItem="bfi-eS-h4e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="Ugp-Wr-Hph"/>
+                <constraint firstItem="cxh-ML-RTv" firstAttribute="top" secondItem="bfi-eS-h4e" secondAttribute="bottom" constant="30" id="bJS-ge-ksT"/>
+                <constraint firstItem="cxh-ML-RTv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="gyb-1f-ExR"/>
             </constraints>
             <point key="canvasLocation" x="87.786259541984734" y="19.718309859154932"/>
         </view>
     </objects>
-    <designables>
-        <designable name="6xS-VK-lei">
-            <size key="intrinsicContentSize" width="50" height="40"/>
-        </designable>
-    </designables>
     <resources>
-        <namedColor name="buttonColor">
-            <color red="1" green="0.70588235294117652" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="placeholderTextColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

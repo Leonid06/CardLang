@@ -43,18 +43,14 @@ class SingleSetViewController: UIViewController {
 
         let playItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(playButtonPressed))
         
-//        let editButton = UIButton(type: .custom)
-//
-//        editButton.setImage(UIImage(named: "ellipsis.circle"), for: .normal)
-//
-//        editButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-//
+//        let editItem = UIBarButtonItem()
+//        let editButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+//        editButton.setImage(UIImage(named: "ellipsis.circle")?.withRenderingMode(.alwaysTemplate), for: .normal)
+//        editButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(editButtonPressed)))
+                                        
+//        editItem.customView = editButton
         
-//
-//        editButton.addTarget(self, action: #selector(editButtonPressed), for: .touchUpInside)
-
         let editItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editButtonPressed))
-        
         
         
         navigationItem.rightBarButtonItems = [buttonItem, playItem, editItem]
@@ -79,6 +75,7 @@ class SingleSetViewController: UIViewController {
         if let sheet = editSetViewController.sheetPresentationController {
             sheet.detents = [.medium()]
             sheet.preferredCornerRadius = 24
+            sheet.prefersGrabberVisible = true
         }
         
         editSetViewController.delegate = self 
@@ -155,8 +152,9 @@ extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDa
             
             if let sheet = termViewController.sheetPresentationController {
                 sheet.detents = [.large(), .medium()]
-                sheet.selectedDetentIdentifier = .large
+                sheet.selectedDetentIdentifier = .medium
                 sheet.preferredCornerRadius = 24
+                sheet.prefersGrabberVisible = true
             }
             
             termViewController.delegate = self
