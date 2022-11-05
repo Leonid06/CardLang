@@ -43,17 +43,17 @@ class SingleSetViewController: UIViewController {
 
         let playItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(playButtonPressed))
         
-        let editButton = UIButton(type: .custom)
+//        let editButton = UIButton(type: .custom)
+//
+//        editButton.setImage(UIImage(named: "ellipsis.circle"), for: .normal)
+//
+//        editButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+//
         
-        editButton.setImage(UIImage(named: "ellipsis"), for:.normal)
-        
-//        editButton.frame = CGRectMake(0, 0, 24, 24)
-        // frame to be added here ... 
-        
-        
-        editButton.addTarget(self, action: #selector(editButtonPressed), for: .touchUpInside)
+//
+//        editButton.addTarget(self, action: #selector(editButtonPressed), for: .touchUpInside)
 
-        let editItem = UIBarButtonItem(customView: editButton)
+        let editItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editButtonPressed))
         
         
         
@@ -72,7 +72,7 @@ class SingleSetViewController: UIViewController {
     }
     
     @objc func editButtonPressed(_ sender: Any) {
-        
+        print("edit button was pressed")
     }
     
     @objc func playButtonPressed(_ sender: Any) {
