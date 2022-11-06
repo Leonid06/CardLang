@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 class CardView: UIView {
-    
+
     
     @IBOutlet weak var wordLabel: UILabel!
     

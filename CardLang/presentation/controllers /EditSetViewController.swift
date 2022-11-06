@@ -10,8 +10,14 @@ import RSKPlaceholderTextView
 
 class EditSetViewController: UIViewController {
     
+    
+    private let defaultsRepository = DefaultsRepository.shared
+    
     @IBOutlet weak var setNameTextField: UITextField!
     private let setRepository =  SetRepository.shared
+    
+    @IBOutlet weak var definitionButton: UIButton!
+    @IBOutlet weak var termButton: UIButton!
     
     private var set : WordSet?
     
@@ -28,6 +34,11 @@ class EditSetViewController: UIViewController {
             setNameTextField.text = set.name
         }
         
+        let shuffleMode = defaultsRepository.getShuffleMode()
+        
+        definitionButton.isSelected = shuffleMode == .showDefinitions ? true : false
+        termButton.isSelected = shuffleMode == .showTerms ? true : false
+        
         setNameTextField.delegate = self
     }
     
@@ -41,7 +52,18 @@ class EditSetViewController: UIViewController {
         }
     }
     
+    @IBAction func termButtonClicked(_ sender: UIButton) {
+        definitionButton.isSelected = !definitionButton.isSelected
+        
+        defaultsRepository.setShuffleMode(mode: .showTerms)
+        
+    }
     
+    @IBAction func definitionButtonClicked(_ sender: UIButton) {
+        termButton.isSelected = !termButton.isSelected
+        
+        defaultsRepository.setShuffleMode(mode: .showDefinitions)
+    }
     func configure(_ set : WordSet?){
         self.set = set
     }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7CM-9X-Zq5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7CM-9X-Zq5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,7 +18,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EvS-e2-OhJ">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="buttonColor"/>
+                        <color key="tintColor" name="barColor"/>
+                        <color key="barTintColor" name="barColor"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         </textAttributes>
@@ -105,7 +106,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Sets" id="t1B-eB-PoO">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ubr-MQ-T8I">
-                            <color key="tintColor" name="buttonColor"/>
+                            <color key="tintColor" name="barColor"/>
                             <connections>
                                 <action selector="addSetButtonPressed:" destination="aio-Ij-ocT" id="tv0-Vd-hTY"/>
                             </connections>
@@ -119,8 +120,8 @@
     </scenes>
     <resources>
         <image name="list.dash" catalog="system" width="128" height="85"/>
-        <namedColor name="buttonColor">
-            <color red="1" green="0.70588235294117652" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="barColor">
+            <color red="0.77517361111111116" green="0.61964283941810672" blue="0.41497983083108259" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

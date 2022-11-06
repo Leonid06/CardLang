@@ -16,9 +16,9 @@ class CardViewController: UIViewController {
     
     private var skippedTranslations = [Translation]()
     
-    private let cardRepository = CardRepository()
+    private let cardRepository = CardRepository.shared
     
-    
+
     private let cardStack = SwipeCardStack()
     
     var set :  WordSet? {
@@ -92,7 +92,6 @@ extension CardViewController : SwipeCardStackDataSource {
         
         card.setOverlays([.left: leftOverlay, .right: rightOverlay])
         
-        content.wordLabel.text = translation.word
         card.content = content
         card.translation = translation
         

@@ -42,8 +42,10 @@ class TranslationViewController: UIViewController {
     @IBAction func addTermButtonClicked(_ sender: UIButton) {
         if let set = set  {
             if let term = termTextField.text, let meaning = meaningTextField.text {
-                setRepository.addTranslationToSet(set: set, term: term, meaning: meaning){
-                    self.onTermAdded()
+                if(!term.isEmpty && !meaning.isEmpty){
+                    setRepository.addTranslationToSet(set: set, term: term, meaning: meaning){
+                        self.onTermAdded()
+                    }
                 }
             }
         }

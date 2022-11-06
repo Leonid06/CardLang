@@ -26,7 +26,7 @@ class AddTranslationTextField: UITextField {
         borderStyle = .none
 
         layer.borderColor = UIColor.secondaryLabel.cgColor
-        layer.borderWidth = 0.4
+        layer.borderWidth = 0.6
         layer.cornerRadius = 4
     }
 

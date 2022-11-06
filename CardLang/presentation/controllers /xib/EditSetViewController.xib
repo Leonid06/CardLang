@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditSetViewController" customModule="CardLang" customModuleProvider="target">
             <connections>
+                <outlet property="definitionButton" destination="NUl-xy-jgp" id="MqE-hd-att"/>
                 <outlet property="setNameTextField" destination="cxh-ML-RTv" id="LVg-jn-MgJ"/>
+                <outlet property="termButton" destination="u39-VW-i6r" id="hXJ-Wy-wr9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,34 +22,90 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a set name" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxh-ML-RTv">
-                    <rect key="frame" x="60" y="209.33333333333334" width="299" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a set name" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxh-ML-RTv" customClass="AddTranslationTextField" customModule="CardLang" customModuleProvider="target">
+                    <rect key="frame" x="60" y="203" width="289" height="42"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="34" id="BuD-BB-70m"/>
-                        <constraint firstAttribute="width" constant="299" id="R7h-Py-AfO"/>
+                        <constraint firstAttribute="height" constant="42" id="BuD-BB-70m"/>
+                        <constraint firstAttribute="width" constant="289" id="R7h-Py-AfO"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfi-eS-h4e">
-                    <rect key="frame" x="60" y="159" width="46.666666666666657" height="20.333333333333343"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfi-eS-h4e">
+                    <rect key="frame" x="60" y="159" width="85" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                    <color key="textColor" name="editLabelColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card front orientation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahk-9i-82a">
+                    <rect key="frame" x="60" y="290" width="193" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                    <color key="textColor" name="editLabelColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Zpl-7e-GDo">
+                    <rect key="frame" x="60" y="334" width="223" height="42"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u39-VW-i6r">
+                            <rect key="frame" x="0.0" y="0.0" width="99" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="w0s-6B-hUf"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="tinted" title="Term" cornerStyle="medium">
+                                <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="baseForegroundColor" name="buttonForegroundColor"/>
+                                <color key="baseBackgroundColor" name="buttonBackgroundColor"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="termButtonClicked:" destination="-1" eventType="touchUpInside" id="Dyp-qg-Qj0"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NUl-xy-jgp">
+                            <rect key="frame" x="124" y="0.0" width="99" height="42"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="tinted" title="Definition" cornerStyle="medium">
+                                <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="baseForegroundColor" name="buttonForegroundColor"/>
+                                <color key="baseBackgroundColor" name="buttonBackgroundColor"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="definitionButtonClicked:" destination="-1" eventType="touchUpInside" id="Sou-1x-v5X"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="bfi-eS-h4e" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="2sN-nU-3gj"/>
+                <constraint firstItem="ahk-9i-82a" firstAttribute="top" secondItem="cxh-ML-RTv" secondAttribute="bottom" constant="45" id="3me-1I-hw0"/>
+                <constraint firstItem="ahk-9i-82a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="8pp-w7-6XO"/>
                 <constraint firstItem="bfi-eS-h4e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="Ugp-Wr-Hph"/>
-                <constraint firstItem="cxh-ML-RTv" firstAttribute="top" secondItem="bfi-eS-h4e" secondAttribute="bottom" constant="30" id="bJS-ge-ksT"/>
+                <constraint firstItem="Zpl-7e-GDo" firstAttribute="top" secondItem="ahk-9i-82a" secondAttribute="bottom" constant="20" id="Wgb-iZ-7aE"/>
+                <constraint firstItem="Zpl-7e-GDo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="a9W-3P-r9I"/>
+                <constraint firstItem="cxh-ML-RTv" firstAttribute="top" secondItem="bfi-eS-h4e" secondAttribute="bottom" constant="20" id="bJS-ge-ksT"/>
                 <constraint firstItem="cxh-ML-RTv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="gyb-1f-ExR"/>
             </constraints>
             <point key="canvasLocation" x="87.786259541984734" y="19.718309859154932"/>
         </view>
     </objects>
+    <designables>
+        <designable name="cxh-ML-RTv">
+            <size key="intrinsicContentSize" width="-1" height="30"/>
+        </designable>
+    </designables>
     <resources>
+        <namedColor name="buttonBackgroundColor">
+            <color red="0.83137254901960789" green="0.63921568627450975" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="buttonForegroundColor">
+            <color red="0.39417613636363635" green="0.32476748130217231" blue="0.19833076579248371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="editLabelColor">
+            <color red="0.59775489267676774" green="0.5101785964858343" blue="0.46718518176245966" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
