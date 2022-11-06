@@ -19,7 +19,6 @@
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="barColor"/>
-                        <color key="barTintColor" name="barColor"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         </textAttributes>
@@ -71,8 +70,9 @@
                             <constraint firstItem="YeV-ib-4Hi" firstAttribute="trailing" secondItem="n4i-dH-maE" secondAttribute="trailing" id="xmE-W5-FfW"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="YeV-ib-4Hi" id="h0H-vV-6jV"/>
                     </connections>
@@ -121,7 +121,7 @@
     <resources>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <namedColor name="barColor">
-            <color red="0.77517361111111116" green="0.61964283941810672" blue="0.41497983083108259" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.77499997615814209" green="0.62000000476837158" blue="0.41499999165534973" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

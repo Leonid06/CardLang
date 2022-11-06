@@ -43,11 +43,11 @@ class SingleSetViewController: UIViewController {
 
         let playItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(playButtonPressed))
         
-//        let editItem = UIBarButtonItem()
-//        let editButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-//        editButton.setImage(UIImage(named: "ellipsis.circle")?.withRenderingMode(.alwaysTemplate), for: .normal)
-//        editButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(editButtonPressed)))
-                                        
+//        let editButton = UIButton(type: .custom)
+//        editButton.sizeToFit()
+//
+//        let editItem = UIBarButtonItem(title: nil, style: .plain, target: self, action: #selector(editButtonPressed))
+//
 //        editItem.customView = editButton
         
         let editItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editButtonPressed))

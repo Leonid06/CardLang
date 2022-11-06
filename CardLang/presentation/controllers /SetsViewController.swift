@@ -111,7 +111,7 @@ class SetsViewController: UITableViewController {
        }
        
        
-       let addAction = UIAlertAction(title: "Add", style: .default){
+        let addAction = UIAlertAction(title: "Add", style: .default){
            action in
            if let textFields = alert.textFields {
                if let name = textFields[0].text {
