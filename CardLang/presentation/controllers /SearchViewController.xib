@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -26,7 +26,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Type a word" translatesAutoresizingMaskIntoConstraints="NO" id="Ge1-Tw-osX" customClass="TranslationSearchBar" customModule="CardLang" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="55" width="390" height="44"/>
+                    <rect key="frame" x="0.0" y="62" width="390" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="2iv-Qj-0Rb"/>
                         <constraint firstAttribute="width" constant="390" id="y9L-aR-JhR"/>
@@ -43,7 +43,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Ge1-Tw-osX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ans-3D-0Bb"/>
-                <constraint firstItem="Ge1-Tw-osX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="HD8-Qf-966"/>
+                <constraint firstItem="Ge1-Tw-osX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="HD8-Qf-966"/>
                 <constraint firstItem="n6g-tv-Sby" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="XO6-UE-Qry"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="n6g-tv-Sby" secondAttribute="bottom" constant="40" id="dfD-Gd-4Np"/>
                 <constraint firstItem="n6g-tv-Sby" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="fLw-r5-DA1"/>

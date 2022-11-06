@@ -17,6 +17,10 @@
 		B307877528C0F0BA00C88404 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B307877428C0F0BA00C88404 /* CardViewController.xib */; };
 		B30787E828DDBA0B0080EFE4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30787E628DDBA0B0080EFE4 /* SearchViewController.swift */; };
 		B30787E928DDBA0B0080EFE4 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B30787E728DDBA0B0080EFE4 /* SearchViewController.xib */; };
+		B309014C29169728007FDDB5 /* EditSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B309014A29169728007FDDB5 /* EditSetViewController.swift */; };
+		B309014D29169728007FDDB5 /* EditSetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B309014B29169728007FDDB5 /* EditSetViewController.xib */; };
+		B323D7C42917AF0A00C626A8 /* DefaultsRepository .swift in Sources */ = {isa = PBXBuildFile; fileRef = B323D7C32917AF0A00C626A8 /* DefaultsRepository .swift */; };
+		B323D7C62917AFDE00C626A8 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B323D7C52917AFDE00C626A8 /* UserDefaultsKeys.swift */; };
 		B323F8322911434A003CBCD1 /* TermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B323F8302911434A003CBCD1 /* TermViewController.swift */; };
 		B323F8332911434A003CBCD1 /* TermViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B323F8312911434A003CBCD1 /* TermViewController.xib */; };
 		B335BAF328BF466100B9A29F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B335BAF228BF466100B9A29F /* CardView.swift */; };
@@ -78,7 +82,11 @@
 		B307877428C0F0BA00C88404 /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		B30787E628DDBA0B0080EFE4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B30787E728DDBA0B0080EFE4 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchViewController.xib; path = ../SearchViewController.xib; sourceTree = "<group>"; };
+		B309014A29169728007FDDB5 /* EditSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSetViewController.swift; sourceTree = "<group>"; };
+		B309014B29169728007FDDB5 /* EditSetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditSetViewController.xib; sourceTree = "<group>"; };
 		B312A56228E610B100E274C2 /* Keys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Keys.xcconfig; sourceTree = "<group>"; };
+		B323D7C32917AF0A00C626A8 /* DefaultsRepository .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultsRepository .swift"; sourceTree = "<group>"; };
+		B323D7C52917AFDE00C626A8 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		B323F8302911434A003CBCD1 /* TermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermViewController.swift; sourceTree = "<group>"; };
 		B323F8312911434A003CBCD1 /* TermViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermViewController.xib; sourceTree = "<group>"; };
 		B335BAF228BF466100B9A29F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -154,6 +162,7 @@
 			children = (
 				B307877328C0F08A00C88404 /* xib */,
 				B374DC22290D7DEE0091546A /* TranslationViewController.swift */,
+				B309014A29169728007FDDB5 /* EditSetViewController.swift */,
 				B33B20F128BE281000E66FCC /* CardViewController.swift */,
 				B307876F28C0EF7200C88404 /* SetsViewController.swift */,
 				B3EFDFB828C0FF4200FA1183 /* SingleSetViewController.swift */,
@@ -174,6 +183,7 @@
 				B30787E728DDBA0B0080EFE4 /* SearchViewController.xib */,
 				B307877428C0F0BA00C88404 /* CardViewController.xib */,
 				B3061A03290ECEA000C1C6FB /* AddModeViewController.xib */,
+				B309014B29169728007FDDB5 /* EditSetViewController.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -237,6 +247,8 @@
 				B39D5D1528C4E0710088C101 /* SetRepository.swift */,
 				B312A56228E610B100E274C2 /* Keys.xcconfig */,
 				B3483C0528F95D900065648C /* RealmService.swift */,
+				B323D7C32917AF0A00C626A8 /* DefaultsRepository .swift */,
+				B323D7C52917AFDE00C626A8 /* UserDefaultsKeys.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -406,6 +418,7 @@
 				B323F8332911434A003CBCD1 /* TermViewController.xib in Resources */,
 				B374DC25290D7DEE0091546A /* TranslationViewController.xib in Resources */,
 				B33B20FD28BE281100E66FCC /* LaunchScreen.storyboard in Resources */,
+				B309014D29169728007FDDB5 /* EditSetViewController.xib in Resources */,
 				B33B20FA28BE281100E66FCC /* Assets.xcassets in Resources */,
 				B3061A05290ECEA000C1C6FB /* AddModeViewController.xib in Resources */,
 				B3DFAB8928DDBD9A00B84EEC /* SearchTableViewCell.xib in Resources */,
@@ -488,8 +501,11 @@
 				B33B211628BE646200E66FCC /* Translation .swift in Sources */,
 				B3EFDFC028C1104E00FA1183 /* Identifiers.swift in Sources */,
 				B335BAF328BF466100B9A29F /* CardView.swift in Sources */,
+				B323D7C42917AF0A00C626A8 /* DefaultsRepository .swift in Sources */,
+				B309014C29169728007FDDB5 /* EditSetViewController.swift in Sources */,
 				B33B20EE28BE281000E66FCC /* AppDelegate.swift in Sources */,
 				B3EFDFB228C0FCA800FA1183 /* SetsTableViewCell.swift in Sources */,
+				B323D7C62917AFDE00C626A8 /* UserDefaultsKeys.swift in Sources */,
 				B33B211028BE515F00E66FCC /* Constants .swift in Sources */,
 				B366FA71291406A8005BECA2 /* Protocols.swift in Sources */,
 				B374DC24290D7DEE0091546A /* TranslationViewController.swift in Sources */,

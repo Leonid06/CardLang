@@ -11,14 +11,29 @@ import Shuffle_iOS
 
 class TranslationSwipeCard : SwipeCard {
     
-    var translation : Translation?
+    var translation : Translation? {
+        didSet {
+            shuffleMode = defaultsRepository.getShuffleMode()
+            
+            showsWord = shuffleMode == .showTerms ? true : false
+            
+            if let translation = translation {
+                if let content = content as? CardView {
+                    content.wordLabel.text = showsWord ? translation.word : translation.translation
+                }
+            }
+        }
+    }
     
-    private var showsWord = true
+    private let defaultsRepository = DefaultsRepository.shared
+    
+    private var shuffleMode : ShuffleMode?
+    
+    private var showsWord  = true
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
     
     override public init(frame: CGRect) {
         super.init(frame: frame)

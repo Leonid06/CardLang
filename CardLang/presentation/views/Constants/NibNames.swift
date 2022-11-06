@@ -20,6 +20,7 @@ struct NibNames {
     static let AddModeViewControllerNibName = "AddModeViewController"
     static let TranslationViewControllerNibName = "TranslationViewController"
     static let TermViewControllerNibName = "TermViewController"
+    static let EditSetViewControllerNibName = "EditSetViewController"
     
     static let LeftOverlayViewNibName = "LeftOverlayView"
     static let RightOverlayViewNibName = "RightOverlayView"

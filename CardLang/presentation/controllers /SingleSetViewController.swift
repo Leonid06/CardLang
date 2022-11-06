@@ -43,9 +43,17 @@ class SingleSetViewController: UIViewController {
 
         let playItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(playButtonPressed))
         
+//        let editButton = UIButton(type: .custom)
+//        editButton.sizeToFit()
+//
+//        let editItem = UIBarButtonItem(title: nil, style: .plain, target: self, action: #selector(editButtonPressed))
+//
+//        editItem.customView = editButton
+        
+        let editItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editButtonPressed))
         
         
-        navigationItem.rightBarButtonItems = [buttonItem, playItem]
+        navigationItem.rightBarButtonItems = [buttonItem, playItem, editItem]
         
         setRepository.subscribeToUpdatesOnTranslations {
             self.updateTranslations()
@@ -57,6 +65,22 @@ class SingleSetViewController: UIViewController {
         
         toggleButtons()
         
+    }
+    
+    @objc func editButtonPressed(_ sender: Any) {
+        let editSetViewController = EditSetViewController(nibName: NibNames.EditSetViewControllerNibName, bundle: nil)
+        
+        editSetViewController.configure(set)
+        
+        if let sheet = editSetViewController.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.preferredCornerRadius = 24
+            sheet.prefersGrabberVisible = true
+        }
+        
+        editSetViewController.delegate = self 
+        
+        present(editSetViewController, animated: true)
     }
     
     @objc func playButtonPressed(_ sender: Any) {
@@ -128,8 +152,9 @@ extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDa
             
             if let sheet = termViewController.sheetPresentationController {
                 sheet.detents = [.large(), .medium()]
-                sheet.selectedDetentIdentifier = .large
+                sheet.selectedDetentIdentifier = .medium
                 sheet.preferredCornerRadius = 24
+                sheet.prefersGrabberVisible = true
             }
             
             termViewController.delegate = self
@@ -143,6 +168,11 @@ extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDa
 extension SingleSetViewController : PopUpControllerDelegate {
     func onDismissed() {
         toggleButtons()
+        
+        if let set = self.set  {
+            title = set.name
+        }
+        
     }
 }
 
