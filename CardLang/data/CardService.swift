@@ -108,29 +108,37 @@ class CardService {
                 let label = meaning["fl"].stringValue
                 let definitions = meaning["def"][0]["sseq"].arrayValue
                 
+                print("Definitions count", definitions.count)
+                
                 for definition in definitions {
 
                     print(definition)
                     var translation : String
                     
-                    if (label != "adverb"){
-                        translation = definition[0][1]["dt"][0][1].stringValue
-                    }else {
-                        translation = definition[0][1]["dt"][0][1][0][0][1].stringValue
-                    }
+                    let terms = definition.arrayValue
                     
-                    translation = translation.trimmingCharacters(in: .whitespaces)
-                    
-                    while let firstIndex = translation.firstIndex(of: "{"){
-                        if let secondIndex = translation.firstIndex(of: "}"){
-                            translation.removeSubrange(firstIndex ... secondIndex)
+                    for term in terms {
+                        if (label != "adverb"){
+                            translation = term[1]["dt"][0][1].stringValue
+                        }else {
+                            translation = term[0][1]["dt"][0][1][0][0][1].stringValue
+                        }
+                        
+                        translation = translation.trimmingCharacters(in: .whitespaces)
+                        
+                        while let firstIndex = translation.firstIndex(of: "{"){
+                            if let secondIndex = translation.firstIndex(of: "}"){
+                                translation.removeSubrange(firstIndex ... secondIndex)
+                            }
+                        }
+                        
+                        if(!translation.isEmpty){
+                            let user = realmService.getCurrentUser()
+                            translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? ""))
                         }
                     }
                     
-                    if(!translation.isEmpty){
-                        let user = realmService.getCurrentUser()
-                        translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? ""))
-                    }
+                   
                 }
             }
             
@@ -141,9 +149,7 @@ class CardService {
             
 //            print(definitions)
             
-            
-            print(translations)
-            
+
             return translations
         } catch {
             print(error)
