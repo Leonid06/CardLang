@@ -14,12 +14,14 @@ class Translation : Object {
     @Persisted var owner_id : String 
     @Persisted var word : String
     @Persisted var translation : String
+    @Persisted var type : String?
     
     
-    convenience init(word : String, translation: String, ownerId: String){
+    convenience init(word : String, translation: String, ownerId: String, type: String?){
         self.init()
         self.word = word
         self.translation = translation
         self.owner_id = ownerId
+        self.type = type 
     }
 }

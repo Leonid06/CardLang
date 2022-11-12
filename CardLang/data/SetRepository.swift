@@ -117,7 +117,7 @@ class SetRepository {
             do  {
                 if let realm = realmService.getRealm() {
                     let user = realmService.getCurrentUser()
-                    let translation = Translation(word: term, translation: meaning, ownerId: user?.id ?? "")
+                    let translation = Translation(word: term, translation: meaning, ownerId: user?.id ?? "", type: nil)
                     try realm.write {
                         set.translations.append(translation)
                     }
