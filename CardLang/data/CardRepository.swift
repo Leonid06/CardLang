@@ -37,14 +37,18 @@ class CardRepository {
     
     func  fetchMultipleTranslationsForWord(_ word : String, completion: @escaping ([Translation]) -> Void) {
         group.enter()
-        let components = word.components(separatedBy: .whitespacesAndNewlines)
-        let elements  = components.filter { !$0.isEmpty }
+//        let components = word.components(separatedBy: .whitespacesAndNewlines)
+//        let elements  = components.filter { !$0.isEmpty }
         
-        if(elements.count == 1){
-            cardService.getAllTranslationForWord(word, completion: onMultipleTranslationsFetched)
-        }else {
-            group.leave()
-        }
+        let trimmedWord = word.trimmingCharacters(in: .whitespaces)
+        
+        cardService.getAllTranslationForWord(trimmedWord, completion: onMultipleTranslationsFetched)
+        
+//        if(elements.count == 1){
+//
+//        }else {
+//            group.leave()
+//        }
         
         
         group.notify(queue: .main){
