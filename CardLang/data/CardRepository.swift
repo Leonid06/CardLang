@@ -44,12 +44,6 @@ class CardRepository {
         
         cardService.getAllTranslationForWord(trimmedWord, completion: onMultipleTranslationsFetched)
         
-//        if(elements.count == 1){
-//
-//        }else {
-//            group.leave()
-//        }
-        
         
         group.notify(queue: .main){
             print("group did notify main thread")

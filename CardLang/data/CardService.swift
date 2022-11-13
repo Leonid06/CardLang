@@ -118,19 +118,19 @@ class CardService {
                     let terms = definition.arrayValue
                     
                     for term in terms {
-                        if (type != "adverb"){
-                            translation = term[1]["dt"][0][1].stringValue
-                        }else {
+                        translation = term[1]["dt"][0][1].stringValue
+                        if translation.isEmpty {
                             translation = term[0][1]["dt"][0][1][0][0][1].stringValue
                         }
                         
-                        translation = translation.trimmingCharacters(in: .whitespaces)
                         
                         while let firstIndex = translation.firstIndex(of: "{"){
                             if let secondIndex = translation.firstIndex(of: "}"){
                                 translation.removeSubrange(firstIndex ... secondIndex)
                             }
                         }
+                        
+                        translation = translation.trimmingCharacters(in: .whitespaces)
                         
                         if(!translation.isEmpty){
                             let user = realmService.getCurrentUser()
