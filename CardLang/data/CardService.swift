@@ -105,7 +105,7 @@ class CardService {
             let meanings = decodedData.arrayValue
             
             for meaning in meanings {
-                let label = meaning["fl"].stringValue
+                let type = meaning["fl"].stringValue
                 let definitions = meaning["def"][0]["sseq"].arrayValue
                 
                 print("Definitions count", definitions.count)
@@ -118,13 +118,11 @@ class CardService {
                     let terms = definition.arrayValue
                     
                     for term in terms {
-                        if (label != "adverb"){
-                            translation = term[1]["dt"][0][1].stringValue
-                        }else {
+                        translation = term[1]["dt"][0][1].stringValue
+                        if translation.isEmpty {
                             translation = term[0][1]["dt"][0][1][0][0][1].stringValue
                         }
                         
-                        translation = translation.trimmingCharacters(in: .whitespaces)
                         
                         while let firstIndex = translation.firstIndex(of: "{"){
                             if let secondIndex = translation.firstIndex(of: "}"){
@@ -132,9 +130,11 @@ class CardService {
                             }
                         }
                         
+                        translation = translation.trimmingCharacters(in: .whitespaces)
+                        
                         if(!translation.isEmpty){
                             let user = realmService.getCurrentUser()
-                            translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? ""))
+                            translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: type))
                         }
                     }
                     
@@ -184,7 +184,7 @@ class CardService {
             
             let user = realmService.getCurrentUser()
             
-            return Translation(word: word, translation: translation, ownerId: user?.id ?? "")
+            return Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: nil)
         } catch {
             print(error)
             return nil
