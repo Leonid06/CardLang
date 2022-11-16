@@ -15,9 +15,10 @@ class Translation : Object {
     @Persisted var word : String
     @Persisted var translation : String
     @Persisted var type : String?
+    @Persisted var soundPath: String? 
     
     
-    convenience init(word : String, translation: String, ownerId: String, type: String?){
+    convenience init(word : String, translation: String, ownerId: String, type: String?, soundPath: String?){
         self.init()
         self.word = word
         self.translation = translation

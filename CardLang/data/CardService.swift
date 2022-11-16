@@ -15,6 +15,8 @@ class CardService {
     
     private let realmService  = RealmService.shared
     
+    private let soundService = SoundService.shared
+    
     func getTranslationForWord(_ word : String, completion: @escaping (Translation?, Error?) -> Void){
 //        let url = CardService.HEAD_URL + "en/" + word.lowercased()
         let url = CardService.HEAD_URL + word.lowercased() + "?key=" + Constants.API_KEY!
@@ -104,6 +106,8 @@ class CardService {
             
             let meanings = decodedData.arrayValue
             
+            let soundURL = decodedData[0]["vrs"]["prs"][0]["sound"]["audio"].stringValue
+            
             for meaning in meanings {
                 let type = meaning["fl"].stringValue
                 let definitions = meaning["def"][0]["sseq"].arrayValue
@@ -134,7 +138,9 @@ class CardService {
                         
                         if(!translation.isEmpty){
                             let user = realmService.getCurrentUser()
-                            translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: type))
+                            translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: type, soundPath: soundURL))
+                            
+                            soundService.saveSound(soundPath: soundURL)
                         }
                     }
                     
@@ -184,7 +190,7 @@ class CardService {
             
             let user = realmService.getCurrentUser()
             
-            return Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: nil)
+            return Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: nil, soundPath: nil)
         } catch {
             print(error)
             return nil
