@@ -17,23 +17,27 @@ class SoundService {
     
     private let fileManager = FileManager.default
     
+    private var audioPlayer = AVAudioPlayer()
+    
     
     func saveSound(soundPath: String){
         
         let directory = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
         
-        let sourceUrlString = SoundService.HEAD_URL + "\(soundPath.first)/\(soundPath).mp3"
+        let upperBound = soundPath.index(soundPath.startIndex, offsetBy: 0)
         
-        let sourceURL = URL(string: sourceUrlString)
+        let sourceUrl = URL(string: "\(SoundService.HEAD_URL)\(soundPath[...upperBound])/\(soundPath).mp3")
         
         
         let session = URLSession(configuration:  .default)
         
-        if let url = sourceURL {
+        if let url = sourceUrl {
             do {
                 let data = try Data(contentsOf: url)
                 
                 let soundLocalUrl = directory.appendingPathComponent(url.lastPathComponent)
+                
+                print("sound local url:" + soundLocalUrl.absoluteString)
                 try data.write(to: soundLocalUrl)
             }catch {
                 print(error)
@@ -59,7 +63,9 @@ class SoundService {
                 let soundLocalUrl = URL(string: directory.absoluteString + sourceUrl.lastPathComponent)
                 
                 if let soundLocalUrl = soundLocalUrl {
-                    let audioPlayer = try AVAudioPlayer(contentsOf: soundLocalUrl)
+                    print("sound local url:" + soundLocalUrl.absoluteString)
+                    audioPlayer = try AVAudioPlayer(contentsOf: soundLocalUrl)
+                    audioPlayer.prepareToPlay()
                     audioPlayer.play()
                 }
                 
