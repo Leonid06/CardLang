@@ -33,13 +33,14 @@ class TermViewController: UIViewController {
     @IBOutlet weak var termTextView: UITextView!
     @IBOutlet weak var meaningTextView: RSKPlaceholderTextView!
     
-    func configure(_ translation:Translation, _ set: WordSet) {
+    func configure(_ translation: Translation, _ set: WordSet) {
         self.translation = translation
         self.set = set
      }
 
     @IBAction func playSoundButtonClicked(_ sender: UIButton) {
         if let translation = translation {
+            print(translation.soundPath)
             if let soundPath = translation.soundPath  {
                 soundService.playSound(soundPath: soundPath)
             }
@@ -61,15 +62,15 @@ class TermViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        playSoundButton.isHidden = true
+        playSoundButton.isHidden = true
         
         if let translation = translation {
             termTextView.text = translation.word
             meaningTextView.text = translation.translation
             
-//            if let soundPath = translation.soundPath {
-//                playSoundButton.isHidden = false
-//            }
+            if translation.soundPath != nil {
+                playSoundButton.isHidden = false
+            }
         }
         
         termTextView.delegate = self

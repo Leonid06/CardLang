@@ -22,33 +22,49 @@ class SoundService {
         
         let directory = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
         
-        let destinationUrl = directory.appendingPathComponent(soundPath)
+        let sourceUrlString = SoundService.HEAD_URL + "\(soundPath.first)/\(soundPath).mp3"
         
-        let urlString = SoundService.HEAD_URL + "\(soundPath.first)/\(soundPath).mp3"
+        let sourceURL = URL(string: sourceUrlString)
+        
         
         let session = URLSession(configuration:  .default)
         
-        if let url = URL(string: urlString){
-            let task = session.downloadTask(with: url){ localPath, response, error in
-                if let localPath = localPath {
-                    do {
-                        try self.fileManager.moveItem(at: localPath, to: destinationUrl)
-                    }catch{
-                        print(error)
-                    }
-                }
+        if let url = sourceURL {
+            do {
+                let data = try Data(contentsOf: url)
+                
+                let soundLocalUrl = directory.appendingPathComponent(url.lastPathComponent)
+                try data.write(to: soundLocalUrl)
+            }catch {
+                print(error)
             }
-            
-            task.resume()
         }
     }
     
     func playSound(soundPath: String){
         do {
-            if let url = Bundle.main.url(forResource: soundPath, withExtension: "mp3"){
-                let audioPlayer = try AVAudioPlayer(contentsOf: url)
-                audioPlayer.play()
+            
+            
+            let directory = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            
+            
+            let upperBound = soundPath.index(soundPath.startIndex, offsetBy: 0)
+            
+            
+            let sourceUrl = URL(string: "\(SoundService.HEAD_URL)\(soundPath[...upperBound])/\(soundPath).mp3")
+            
+            print(sourceUrl)
+            
+            if let sourceUrl = sourceUrl {
+                let soundLocalUrl = URL(string: directory.absoluteString + sourceUrl.lastPathComponent)
+                
+                if let soundLocalUrl = soundLocalUrl {
+                    let audioPlayer = try AVAudioPlayer(contentsOf: soundLocalUrl)
+                    audioPlayer.play()
+                }
+                
             }
+            
         }catch {
             print(error)
         }

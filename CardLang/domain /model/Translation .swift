@@ -23,6 +23,7 @@ class Translation : Object {
         self.word = word
         self.translation = translation
         self.owner_id = ownerId
-        self.type = type 
+        self.type = type
+        self.soundPath = soundPath
     }
 }

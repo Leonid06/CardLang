@@ -106,7 +106,13 @@ class CardService {
             
             let meanings = decodedData.arrayValue
             
-            let soundURL = decodedData[0]["vrs"]["prs"][0]["sound"]["audio"].stringValue
+            var soundURL = decodedData[0]["vrs"][0]["prs"][0]["sound"]["audio"].stringValue
+            
+            if(soundURL.isEmpty){
+                soundURL = decodedData[0]["hwi"]["prs"][0]["sound"]["audio"].stringValue
+            }
+            
+            print(soundURL)
             
             for meaning in meanings {
                 let type = meaning["fl"].stringValue
@@ -138,6 +144,7 @@ class CardService {
                         
                         if(!translation.isEmpty){
                             let user = realmService.getCurrentUser()
+                            print(soundURL)
                             translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: type, soundPath: soundURL))
                             
                             soundService.saveSound(soundPath: soundURL)

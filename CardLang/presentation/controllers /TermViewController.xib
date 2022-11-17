@@ -80,8 +80,7 @@
                         <color key="baseForegroundColor" name="barColor"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="playSoundButtonClicked:" destination="-1" eventType="touchUpInside" id="UcB-qt-jlM"/>
-                        <action selector="trashButtonClicked:" destination="-1" eventType="touchUpInside" id="uaP-SG-IOd"/>
+                        <action selector="playSoundButtonClicked:" destination="-1" eventType="touchUpInside" id="xuD-wB-ihr"/>
                     </connections>
                 </button>
             </subviews>
