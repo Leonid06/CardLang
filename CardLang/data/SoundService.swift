@@ -26,10 +26,11 @@ class SoundService {
         
         let upperBound = soundPath.index(soundPath.startIndex, offsetBy: 0)
         
-        let sourceUrl = URL(string: "\(SoundService.HEAD_URL)\(soundPath[...upperBound])/\(soundPath).mp3")
+        var sourceUrl : URL? = nil
         
-        
-        let session = URLSession(configuration:  .default)
+        if(soundPath.count > 0){
+            sourceUrl = URL(string: "\(SoundService.HEAD_URL)\(soundPath[...upperBound])/\(soundPath).mp3")
+        }
         
         if let url = sourceUrl {
             do {

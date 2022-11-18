@@ -106,15 +106,15 @@ class CardService {
             
             let meanings = decodedData.arrayValue
             
-            var soundURL = decodedData[0]["vrs"][0]["prs"][0]["sound"]["audio"].stringValue
-            
-            if(soundURL.isEmpty){
-                soundURL = decodedData[0]["hwi"]["prs"][0]["sound"]["audio"].stringValue
-            }
-            
-            print(soundURL)
             
             for meaning in meanings {
+                
+                var soundURL = meaning["vrs"][0]["prs"][0]["sound"]["audio"].stringValue
+                
+                if(soundURL.isEmpty){
+                    soundURL = meaning["hwi"]["prs"][0]["sound"]["audio"].stringValue
+                }
+                
                 let type = meaning["fl"].stringValue
                 let definitions = meaning["def"][0]["sseq"].arrayValue
                 
@@ -145,9 +145,15 @@ class CardService {
                         if(!translation.isEmpty){
                             let user = realmService.getCurrentUser()
                             print(soundURL)
-                            translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: type, soundPath: soundURL))
                             
-                            soundService.saveSound(soundPath: soundURL)
+                            if(!soundURL.isEmpty){
+                                translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: type, soundPath: soundURL))
+                                
+                                soundService.saveSound(soundPath: soundURL)
+                            }else {
+                                translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: type, soundPath: nil))
+                            }
+                            
                         }
                     }
                     
