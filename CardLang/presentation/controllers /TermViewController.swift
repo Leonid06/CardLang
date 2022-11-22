@@ -12,6 +12,8 @@ class TermViewController: UIViewController {
     
     private let setRepository = SetRepository.shared
     
+    private let soundService = SoundService.shared
+    
     var delegate : PopUpControllerDelegate?
     
     
@@ -27,14 +29,23 @@ class TermViewController: UIViewController {
     private var set : WordSet?
     
   
+    @IBOutlet weak var playSoundButton: UIButton!
     @IBOutlet weak var termTextView: UITextView!
     @IBOutlet weak var meaningTextView: RSKPlaceholderTextView!
     
-    func configure(_ translation:Translation, _ set: WordSet) {
+    func configure(_ translation: Translation, _ set: WordSet) {
         self.translation = translation
         self.set = set
      }
 
+    @IBAction func playSoundButtonClicked(_ sender: UIButton) {
+        if let translation = translation {
+            print(translation.soundPath)
+            if let soundPath = translation.soundPath  {
+                soundService.playSound(soundPath: soundPath)
+            }
+        }
+    }
     @IBAction func trashButtonClicked(_ sender: UIButton) {
         if let translation = translation, let set = set {
             updateTerm()
@@ -51,9 +62,15 @@ class TermViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        playSoundButton.isHidden = true
+        
         if let translation = translation {
             termTextView.text = translation.word
             meaningTextView.text = translation.translation
+            
+            if translation.soundPath != nil {
+                playSoundButton.isHidden = false
+            }
         }
         
         termTextView.delegate = self

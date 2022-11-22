@@ -15,6 +15,8 @@ class CardService {
     
     private let realmService  = RealmService.shared
     
+    private let soundService = SoundService.shared
+    
     func getTranslationForWord(_ word : String, completion: @escaping (Translation?, Error?) -> Void){
 //        let url = CardService.HEAD_URL + "en/" + word.lowercased()
         let url = CardService.HEAD_URL + word.lowercased() + "?key=" + Constants.API_KEY!
@@ -60,24 +62,17 @@ class CardService {
         if let url = URL(string: url){
             var request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalCacheData, timeoutInterval: 60)
             
-//            request.addValue(Constants.APP_ID, forHTTPHeaderField: "app_id")
-//            request.addValue(Constants.AUTH_KEY, forHTTPHeaderField: "app_key")
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: request ) { data, response, error in
                 if error != nil {
                     completion(nil, error)
-                    print(error)
                     return
                 } else {
-                    print(response)
-//                    print(data)
+//                    print(response)
                 }
                 
                 if let safeData = data {
                     let translation = self.parseToSingleTranslation(data: safeData)
-//                    print(translation)
-//                    print(safeData)
-//                    print(translation)
                     completion(translation,nil)
                 }
             }
@@ -85,10 +80,19 @@ class CardService {
         }
     }
     
+    private func parseTranslationString(_ string: String) -> String {
+        var translationString = string
+        while let firstIndex = translationString.firstIndex(of: "{"){
+            if let secondIndex = translationString.firstIndex(of: "}"){
+                translationString.removeSubrange(firstIndex ... secondIndex)
+            }
+        }
+        
+        return translationString.trimmingCharacters(in: .whitespaces)
+    }
+    
     private func parseToMultipleTranslations(data : Data?) -> [Translation]? {
         do {
-            
-//            let decodedData = try decoder.decode(WordData.self, from: data ?? Data())
             
             let decodedData =  try JSON(data: data ?? Data())
             
@@ -98,13 +102,29 @@ class CardService {
                 !$0.isLetter
             }
             
-//            print(decodedData)
-            
             var translations = [Translation]()
             
             let meanings = decodedData.arrayValue
             
+            
+            var soundURL : String = ""
+            
             for meaning in meanings {
+                soundURL = meaning["vrs"][0]["prs"][0]["sound"]["audio"].stringValue
+                
+                if(soundURL.isEmpty){
+                    soundURL = meaning["hwi"]["prs"][0]["sound"]["audio"].stringValue
+                    
+                    if(!soundURL.isEmpty){
+                        break 
+                    }
+                }else {
+                    break
+                }
+            }
+            
+            for meaning in meanings {
+                
                 let type = meaning["fl"].stringValue
                 let definitions = meaning["def"][0]["sseq"].arrayValue
                 
@@ -124,31 +144,26 @@ class CardService {
                         }
                         
                         
-                        while let firstIndex = translation.firstIndex(of: "{"){
-                            if let secondIndex = translation.firstIndex(of: "}"){
-                                translation.removeSubrange(firstIndex ... secondIndex)
-                            }
-                        }
-                        
-                        translation = translation.trimmingCharacters(in: .whitespaces)
+                        translation = parseTranslationString(translation)
                         
                         if(!translation.isEmpty){
                             let user = realmService.getCurrentUser()
-                            translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: type))
+                            print(soundURL)
+                            
+                            if(!soundURL.isEmpty){
+                                translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: type, soundPath: soundURL))
+                                
+                                soundService.saveSound(soundPath: soundURL)
+                            }else {
+                                translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: type, soundPath: nil))
+                            }
+                            
                         }
                     }
                     
                    
                 }
             }
-            
-            
-            
-            
-//            print(definitions.count)
-            
-//            print(definitions)
-            
 
             return translations
         } catch {
@@ -184,7 +199,7 @@ class CardService {
             
             let user = realmService.getCurrentUser()
             
-            return Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: nil)
+            return Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: nil, soundPath: nil)
         } catch {
             print(error)
             return nil

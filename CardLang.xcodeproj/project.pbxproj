@@ -47,6 +47,7 @@
 		B385B88028E4611200F86C53 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385B87F28E4611200F86C53 /* Colors.swift */; };
 		B39D5D1428C4DE8C0088C101 /* WordSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D5D1328C4DE8C0088C101 /* WordSet.swift */; };
 		B39D5D1628C4E0710088C101 /* SetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D5D1528C4E0710088C101 /* SetRepository.swift */; };
+		B3D78DEE2923E3A200A4E8E6 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D78DED2923E3A200A4E8E6 /* SoundService.swift */; };
 		B3DFAB8828DDBD9A00B84EEC /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */; };
 		B3DFAB8928DDBD9A00B84EEC /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFAB8728DDBD9A00B84EEC /* SearchTableViewCell.xib */; };
 		B3E86DF028E375D20018AD09 /* LeftOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E86DEF28E375D20018AD09 /* LeftOverlayView.xib */; };
@@ -116,6 +117,7 @@
 		B385B87F28E4611200F86C53 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B39D5D1328C4DE8C0088C101 /* WordSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSet.swift; sourceTree = "<group>"; };
 		B39D5D1528C4E0710088C101 /* SetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepository.swift; sourceTree = "<group>"; };
+		B3D78DED2923E3A200A4E8E6 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
 		B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		B3DFAB8728DDBD9A00B84EEC /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchTableViewCell.xib; path = ../SearchTableViewCell.xib; sourceTree = "<group>"; };
 		B3E86DEF28E375D20018AD09 /* LeftOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftOverlayView.xib; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				B3483C0528F95D900065648C /* RealmService.swift */,
 				B323D7C32917AF0A00C626A8 /* DefaultsRepository .swift */,
 				B323D7C52917AFDE00C626A8 /* UserDefaultsKeys.swift */,
+				B3D78DED2923E3A200A4E8E6 /* SoundService.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				B3483C0628F95D900065648C /* RealmService.swift in Sources */,
 				B33B211628BE646200E66FCC /* Translation .swift in Sources */,
 				B3EFDFC028C1104E00FA1183 /* Identifiers.swift in Sources */,
+				B3D78DEE2923E3A200A4E8E6 /* SoundService.swift in Sources */,
 				B335BAF328BF466100B9A29F /* CardView.swift in Sources */,
 				B323D7C42917AF0A00C626A8 /* DefaultsRepository .swift in Sources */,
 				B309014C29169728007FDDB5 /* EditSetViewController.swift in Sources */,
@@ -711,7 +715,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonid.cardlang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -743,7 +747,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonid.cardlang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
