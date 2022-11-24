@@ -60,7 +60,7 @@ class CardService {
     
     private func performRequest(url : String, completion : @escaping (Translation?, Error?) -> Void){
         if let url = URL(string: url){
-            var request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalCacheData, timeoutInterval: 60)
+            let request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalCacheData, timeoutInterval: 60)
             
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: request ) { data, response, error in
@@ -91,6 +91,17 @@ class CardService {
         return translationString.trimmingCharacters(in: .whitespaces)
     }
     
+    private func parseSoundUrl(meaning : JSON) -> String? {
+        
+        var soundURL = meaning["vrs"][0]["prs"][0]["sound"]["audio"].stringValue
+        
+        if(soundURL.isEmpty){
+            soundURL = meaning["hwi"]["prs"][0]["sound"]["audio"].stringValue
+        }
+        
+        return soundURL
+    }
+    
     private func parseToMultipleTranslations(data : Data?) -> [Translation]? {
         do {
             
@@ -109,21 +120,15 @@ class CardService {
             
             var soundURL : String = ""
             
-            for meaning in meanings {
-                soundURL = meaning["vrs"][0]["prs"][0]["sound"]["audio"].stringValue
-                
-                if(soundURL.isEmpty){
-                    soundURL = meaning["hwi"]["prs"][0]["sound"]["audio"].stringValue
-                    
-                    if(!soundURL.isEmpty){
-                        break 
-                    }
-                }else {
-                    break
-                }
-            }
+            var soundFound = false
             
             for meaning in meanings {
+                if(!soundFound){
+                    if let url = parseSoundUrl(meaning: meaning) {
+                        soundURL = url
+                        soundFound = true
+                    }
+                }
                 
                 let type = meaning["fl"].stringValue
                 let definitions = meaning["def"][0]["sseq"].arrayValue
@@ -152,19 +157,18 @@ class CardService {
                             
                             if(!soundURL.isEmpty){
                                 translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: type, soundPath: soundURL))
-                                
-                                soundService.saveSound(soundPath: soundURL)
                             }else {
                                 translations.append(Translation(word: word, translation: translation, ownerId: user?.id ?? "", type: type, soundPath: nil))
                             }
                             
                         }
                     }
-                    
-                   
                 }
             }
+            
+            soundService.saveSound(soundPath: soundURL)
 
+            print(translations.count)
             return translations
         } catch {
             print(error)

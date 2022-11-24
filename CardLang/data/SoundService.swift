@@ -38,8 +38,12 @@ class SoundService {
                 
                 let soundLocalUrl = directory.appendingPathComponent(url.lastPathComponent)
                 
-                print("sound local url:" + soundLocalUrl.absoluteString)
-                try data.write(to: soundLocalUrl)
+                if (!fileManager.fileExists(atPath: soundLocalUrl.path())){
+                    print("sound local url:" + soundLocalUrl.absoluteString)
+                    try data.write(to: soundLocalUrl)
+                }
+                
+                
             }catch {
                 print(error)
             }
@@ -58,7 +62,6 @@ class SoundService {
             
             let sourceUrl = URL(string: "\(SoundService.HEAD_URL)\(soundPath[...upperBound])/\(soundPath).mp3")
             
-            print(sourceUrl)
             
             if let sourceUrl = sourceUrl {
                 let soundLocalUrl = URL(string: directory.absoluteString + sourceUrl.lastPathComponent)
