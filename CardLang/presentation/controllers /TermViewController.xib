@@ -65,7 +65,7 @@
                         <action selector="playSoundButtonClicked:" destination="-1" eventType="touchUpInside" id="xuD-wB-ihr"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3l-uo-GXm">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3l-uo-GXm">
                     <rect key="frame" x="36" y="143" width="299" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="gYe-5M-DUa"/>
