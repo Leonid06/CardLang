@@ -10,10 +10,9 @@ import UIKit
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var searchBar: UISearchBar!
-    private let setRepository = SetRepository.shared
     
+    private let setRepository = SetRepository.shared
     private let cardRepository = CardRepository.shared
     
     private var set : WordSet?
@@ -78,7 +77,7 @@ extension SearchViewController : UITableViewDelegate , UITableViewDataSource {
 
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 107
     }
     
 }

@@ -32,6 +32,7 @@ class TermViewController: UIViewController {
     @IBOutlet weak var playSoundButton: UIButton!
     @IBOutlet weak var termTextView: UITextView!
     @IBOutlet weak var meaningTextView: RSKPlaceholderTextView!
+    @IBOutlet weak var wordTypeLabel: UILabel!
     
     func configure(_ translation: Translation, _ set: WordSet) {
         self.translation = translation
@@ -68,6 +69,12 @@ class TermViewController: UIViewController {
             termTextView.text = translation.word
             meaningTextView.text = translation.translation
             
+            
+            if let type = translation.type  {
+                wordTypeLabel.text = translation.type
+                adjustFontColor(type: type)
+            }
+            
             if translation.soundPath != nil {
                 playSoundButton.isHidden = false
             }
@@ -100,6 +107,19 @@ class TermViewController: UIViewController {
                 }
                 
             }
+        }
+    }
+    
+    private func adjustFontColor(type : String){
+        switch type {
+        case "adverb":
+            wordTypeLabel.textColor = UIColor.systemPurple
+        case "adjective":
+            wordTypeLabel.textColor = UIColor.systemBlue
+        case "verb":
+            wordTypeLabel.textColor = UIColor.systemPink
+        default:
+            wordTypeLabel.textColor = UIColor.systemGreen
         }
     }
 }
