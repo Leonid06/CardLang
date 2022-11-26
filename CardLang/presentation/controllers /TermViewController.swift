@@ -64,15 +64,18 @@ class TermViewController: UIViewController {
         super.viewDidLoad()
         
         playSoundButton.isHidden = true
+        wordTypeLabel.isHidden = true
         
         if let translation = translation {
             termTextView.text = translation.word
             meaningTextView.text = translation.translation
             
-            
             if let type = translation.type  {
-                wordTypeLabel.text = translation.type
+                wordTypeLabel.text = type
+                wordTypeLabel.isHidden = false
                 adjustFontColor(type: type)
+            }else {
+                wordTypeLabel.setHeight(0)
             }
             
             if translation.soundPath != nil {

@@ -37,6 +37,7 @@
 		B33B211028BE515F00E66FCC /* Constants .swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B210F28BE515F00E66FCC /* Constants .swift */; };
 		B33B211428BE611D00E66FCC /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B211328BE611D00E66FCC /* WordData.swift */; };
 		B33B211628BE646200E66FCC /* Translation .swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B211528BE646200E66FCC /* Translation .swift */; };
+		B33E59072931FCE10017407B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33E59062931FCE10017407B /* UIView.swift */; };
 		B3483C0628F95D900065648C /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3483C0528F95D900065648C /* RealmService.swift */; };
 		B35F629228E6E99F00C5F250 /* CardLangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F629128E6E99F00C5F250 /* CardLangTests.swift */; };
 		B35F629928E6EA3800C5F250 /* CardServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F629828E6EA3800C5F250 /* CardServiceTest.swift */; };
@@ -106,6 +107,7 @@
 		B33B210F28BE515F00E66FCC /* Constants .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants .swift"; sourceTree = "<group>"; };
 		B33B211328BE611D00E66FCC /* WordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
 		B33B211528BE646200E66FCC /* Translation .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Translation .swift"; sourceTree = "<group>"; };
+		B33E59062931FCE10017407B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B3483C0528F95D900065648C /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		B35F628F28E6E99F00C5F250 /* CardLangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardLangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35F629128E6E99F00C5F250 /* CardLangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLangTests.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				B3EEF0DD290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift */,
+				B33E59062931FCE10017407B /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				B33B20F828BE281000E66FCC /* CardLang.xcdatamodeld in Sources */,
 				B3483C0628F95D900065648C /* RealmService.swift in Sources */,
 				B33B211628BE646200E66FCC /* Translation .swift in Sources */,
+				B33E59072931FCE10017407B /* UIView.swift in Sources */,
 				B3EFDFC028C1104E00FA1183 /* Identifiers.swift in Sources */,
 				B3D78DEE2923E3A200A4E8E6 /* SoundService.swift in Sources */,
 				B335BAF328BF466100B9A29F /* CardView.swift in Sources */,

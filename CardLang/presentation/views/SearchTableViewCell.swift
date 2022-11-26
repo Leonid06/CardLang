@@ -20,7 +20,6 @@ class SearchTableViewCell: UITableViewCell {
     
     private func updateUI(){
         translationLabel.text = translation?.translation
-        
         wordTypeLabel.text = translation?.type
         
         if let text = wordTypeLabel.text {
