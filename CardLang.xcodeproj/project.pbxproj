@@ -51,6 +51,7 @@
 		B3D78DEE2923E3A200A4E8E6 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D78DED2923E3A200A4E8E6 /* SoundService.swift */; };
 		B3DFAB8828DDBD9A00B84EEC /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */; };
 		B3DFAB8928DDBD9A00B84EEC /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFAB8728DDBD9A00B84EEC /* SearchTableViewCell.xib */; };
+		B3E475292933E1170049A0F6 /* RussianCardSevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E475282933E1170049A0F6 /* RussianCardSevice.swift */; };
 		B3E86DF028E375D20018AD09 /* LeftOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E86DEF28E375D20018AD09 /* LeftOverlayView.xib */; };
 		B3E86DF228E378DB0018AD09 /* RightOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E86DF128E378DB0018AD09 /* RightOverlayView.xib */; };
 		B3EEF0DE290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEF0DD290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift */; };
@@ -122,6 +123,7 @@
 		B3D78DED2923E3A200A4E8E6 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
 		B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		B3DFAB8728DDBD9A00B84EEC /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchTableViewCell.xib; path = ../SearchTableViewCell.xib; sourceTree = "<group>"; };
+		B3E475282933E1170049A0F6 /* RussianCardSevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RussianCardSevice.swift; sourceTree = "<group>"; };
 		B3E86DEF28E375D20018AD09 /* LeftOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftOverlayView.xib; sourceTree = "<group>"; };
 		B3E86DF128E378DB0018AD09 /* RightOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightOverlayView.xib; sourceTree = "<group>"; };
 		B3EEF0DD290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SingleSetViewcontroller+Navigation.swift"; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				B323D7C32917AF0A00C626A8 /* DefaultsRepository .swift */,
 				B323D7C52917AFDE00C626A8 /* UserDefaultsKeys.swift */,
 				B3D78DED2923E3A200A4E8E6 /* SoundService.swift */,
+				B3E475282933E1170049A0F6 /* RussianCardSevice.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				B307876B28C0969500C88404 /* TranslationSwipeCard.swift in Sources */,
 				B39D5D1628C4E0710088C101 /* SetRepository.swift in Sources */,
 				B3EFDFB928C0FF4200FA1183 /* SingleSetViewController.swift in Sources */,
+				B3E475292933E1170049A0F6 /* RussianCardSevice.swift in Sources */,
 				B3061A04290ECEA000C1C6FB /* AddModeViewController.swift in Sources */,
 				B307876928BF9D8400C88404 /* Extensions .swift in Sources */,
 				B33B210E28BE4F2100E66FCC /* CardService.swift in Sources */,

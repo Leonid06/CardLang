@@ -212,7 +212,6 @@ class CardService {
 }
 
 extension CardService {
-//    private static let HEAD_URL = "https://od-api.oxforddictionaries.com:443/api/v2/entries/"
     private static let HEAD_URL = "https://www.dictionaryapi.com/api/v3/references/learners/json/"
 
 }
