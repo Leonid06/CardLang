@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardViewController" customModule="CardLang" customModuleProvider="target">
             <connections>
+                <outlet property="learnedCountLabel" destination="Pij-5g-8dM" id="BDD-sn-BZR"/>
+                <outlet property="skippedCountLabel" destination="HkN-Wr-UIx" id="Ffw-3j-0Ge"/>
                 <outlet property="view" destination="Qra-Sr-5ja" id="6bL-uK-TDL"/>
             </connections>
         </placeholder>
@@ -18,12 +20,38 @@
         <view contentMode="scaleToFill" id="Qra-Sr-5ja">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkN-Wr-UIx">
+                    <rect key="frame" x="24" y="98" width="15.5" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" name="countColorRed"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pij-5g-8dM">
+                    <rect key="frame" x="374.5" y="98" width="15.5" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" name="countColorGreen"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="Avy-Ud-BCv"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="HkN-Wr-UIx" firstAttribute="top" secondItem="Avy-Ud-BCv" secondAttribute="top" constant="50" id="6YF-gc-xsM"/>
+                <constraint firstItem="Avy-Ud-BCv" firstAttribute="trailing" secondItem="Pij-5g-8dM" secondAttribute="trailing" constant="24" id="KiU-4v-uGi"/>
+                <constraint firstItem="HkN-Wr-UIx" firstAttribute="leading" secondItem="Avy-Ud-BCv" secondAttribute="leading" constant="24" id="XzI-Jb-nbD"/>
+                <constraint firstItem="Pij-5g-8dM" firstAttribute="top" secondItem="Avy-Ud-BCv" secondAttribute="top" constant="50" id="yvG-kO-gsc"/>
+            </constraints>
             <point key="canvasLocation" x="76" y="81"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="countColorGreen">
+            <color red="0.63921568627450975" green="0.8666666666666667" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="countColorRed">
+            <color red="1" green="0.55294117647058827" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
