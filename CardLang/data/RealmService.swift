@@ -124,7 +124,9 @@ class RealmService {
     }
     
     private func instantiateRealm() async throws -> Realm {
+        
         if let user =  getCurrentUser() {
+            
             let realm = try await openSyncedRealm(user: user)
             
             return realm
@@ -141,18 +143,24 @@ class RealmService {
         let config = user.flexibleSyncConfiguration()
         
         
-        let realm = try! await Realm(configuration: config, downloadBeforeOpen: .never)
+        let realm = try! await Realm(configuration: config)
+        
+        print(realm)
         
         let subscriptions = realm.subscriptions
         
-        try await subscriptions.update {
-                if let _ = subscriptions.first(named : "all-sets") {
-                    return
-                }else {
-                    subscriptions.append(QuerySubscription<WordSet>(name: "all-sets"))
-                    subscriptions.append(QuerySubscription<Translation>(name: "all-tranlations"))
-                }
+        if(subscriptions.count == 0){
+            try await subscriptions.update {
+                    if let _ = subscriptions.first(named : "all-sets") {
+                        return
+                    }else {
+                        subscriptions.append(QuerySubscription<WordSet>(name: "all-sets"))
+                        subscriptions.append(QuerySubscription<Translation>(name: "all-tranlations"))
+                    }
+            }
         }
+
+        
         
         return realm
     }

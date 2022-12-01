@@ -30,6 +30,12 @@ class CardViewController: UIViewController {
     }
     
     
+    @IBOutlet weak var learnedCountLabel: UILabel!
+    @IBOutlet weak var skippedCountLabel: UILabel!
+    
+    private var learnedCount = 0
+    private var skippedCount = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateTranslations()
@@ -43,26 +49,12 @@ class CardViewController: UIViewController {
         
         cardStack.translatesAutoresizingMaskIntoConstraints = false
         
-//        cardStack.frame.size.width = 300
-//        cardStack.frame.size.height = 450
-        
         NSLayoutConstraint.activate([
             cardStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             cardStack.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             cardStack.widthAnchor.constraint(equalToConstant: 300),
             cardStack.heightAnchor.constraint(equalToConstant: 450),
         ])
-        
-//        let constraints = [
-//            cardStack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-//            cardStack.trailingAnchor.constraint(equalTo:
-//                view.safeAreaLayoutGuide.trailingAnchor),
-//            cardStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-//            cardStack.bottomAnchor.constraint(equalTo:
-//                view.safeAreaLayoutGuide.bottomAnchor)
-//        ]
-//        
-//        NSLayoutConstraint.activate(constraints)
       }
     
     private func updateTranslations(){
@@ -77,21 +69,13 @@ extension CardViewController : SwipeCardStackDataSource {
         
         card.swipeDirections = [.left, .right]
         
-//        let content = CardView.instantiate(text:  translation.word)
-//        let content = CardView()
         let content = UINib(nibName: NibNames.CardViewNibName, bundle: nil).instantiate(withOwner: nil).first as! CardView
         
         let leftOverlay = UINib(nibName: NibNames.LeftOverlayViewNibName, bundle: nil).instantiate(withOwner: nil).first as! UIView
         
         let rightOverlay = UINib(nibName: NibNames.RightOverlayViewNibName, bundle: nil).instantiate(withOwner: nil).first as! UIView
         
-//        leftOverlay.text = "Don't remember"
-//        leftOverlay.font = leftOverlay.font.withSize(30)
-//        leftOverlay.textColor = UIColor.systemRed
-        
-        
         card.setOverlays([.left: leftOverlay, .right: rightOverlay])
-        
         card.content = content
         card.translation = translation
         
@@ -106,8 +90,15 @@ extension CardViewController : SwipeCardStackDataSource {
 
 extension CardViewController :  SwipeCardStackDelegate {
     func cardStack(_ cardStack: SwipeCardStack, didSwipeCardAt index: Int, with direction: SwipeDirection) {
-        if(direction == SwipeDirection.left){
+        if(direction == .left){
+            skippedCount += 1
+            skippedCountLabel.text = String(skippedCount)
+            
             skippedTranslations.append(translations[index])
+        }
+        if(direction == .right){
+            learnedCount += 1
+            learnedCountLabel.text = String(learnedCount)
         }
     }
     func didSwipeAllCards(_ cardStack: SwipeCardStack) {
@@ -117,9 +108,12 @@ extension CardViewController :  SwipeCardStackDelegate {
         }
         skippedTranslations.removeAll()
         updateTranslations()
+        
+        skippedCount = 0 
+        skippedCountLabel.text = String(skippedCount)
     }
 }
-//callbacks
+
 
 
 

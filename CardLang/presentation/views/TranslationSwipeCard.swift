@@ -57,6 +57,4 @@ class TranslationSwipeCard : SwipeCard {
             }
         }
     }
-    
-    
 }
