@@ -52,6 +52,7 @@
 		B3DFAB8828DDBD9A00B84EEC /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */; };
 		B3DFAB8928DDBD9A00B84EEC /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFAB8728DDBD9A00B84EEC /* SearchTableViewCell.xib */; };
 		B3E4752B293BBB760049A0F6 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E4752A293BBB760049A0F6 /* Folder.swift */; };
+		B3E4752D293BC0210049A0F6 /* FolderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E4752C293BC0210049A0F6 /* FolderRepository.swift */; };
 		B3E86DF028E375D20018AD09 /* LeftOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E86DEF28E375D20018AD09 /* LeftOverlayView.xib */; };
 		B3E86DF228E378DB0018AD09 /* RightOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E86DF128E378DB0018AD09 /* RightOverlayView.xib */; };
 		B3EEF0DE290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEF0DD290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift */; };
@@ -124,6 +125,7 @@
 		B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		B3DFAB8728DDBD9A00B84EEC /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchTableViewCell.xib; path = ../SearchTableViewCell.xib; sourceTree = "<group>"; };
 		B3E4752A293BBB760049A0F6 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		B3E4752C293BC0210049A0F6 /* FolderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRepository.swift; sourceTree = "<group>"; };
 		B3E86DEF28E375D20018AD09 /* LeftOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftOverlayView.xib; sourceTree = "<group>"; };
 		B3E86DF128E378DB0018AD09 /* RightOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightOverlayView.xib; sourceTree = "<group>"; };
 		B3EEF0DD290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SingleSetViewcontroller+Navigation.swift"; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				B323D7C32917AF0A00C626A8 /* DefaultsRepository .swift */,
 				B323D7C52917AFDE00C626A8 /* UserDefaultsKeys.swift */,
 				B3D78DED2923E3A200A4E8E6 /* SoundService.swift */,
+				B3E4752C293BC0210049A0F6 /* FolderRepository.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				B3EFDFC028C1104E00FA1183 /* Identifiers.swift in Sources */,
 				B3D78DEE2923E3A200A4E8E6 /* SoundService.swift in Sources */,
 				B335BAF328BF466100B9A29F /* CardView.swift in Sources */,
+				B3E4752D293BC0210049A0F6 /* FolderRepository.swift in Sources */,
 				B323D7C42917AF0A00C626A8 /* DefaultsRepository .swift in Sources */,
 				B309014C29169728007FDDB5 /* EditSetViewController.swift in Sources */,
 				B33B20EE28BE281000E66FCC /* AppDelegate.swift in Sources */,
