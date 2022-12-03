@@ -249,16 +249,10 @@
 		B33B210528BE296100E66FCC /* data */ = {
 			isa = PBXGroup;
 			children = (
-				B33B210D28BE4F2100E66FCC /* CardService.swift */,
+				B3E4752F293BC42C0049A0F6 /* services */,
+				B3E4752E293BC4100049A0F6 /* repositories */,
 				B33B210F28BE515F00E66FCC /* Constants .swift */,
-				B335BAF628BF4B7700B9A29F /* CardRepository.swift */,
-				B39D5D1528C4E0710088C101 /* SetRepository.swift */,
 				B312A56228E610B100E274C2 /* Keys.xcconfig */,
-				B3483C0528F95D900065648C /* RealmService.swift */,
-				B323D7C32917AF0A00C626A8 /* DefaultsRepository .swift */,
-				B323D7C52917AFDE00C626A8 /* UserDefaultsKeys.swift */,
-				B3D78DED2923E3A200A4E8E6 /* SoundService.swift */,
-				B3E4752C293BC0210049A0F6 /* FolderRepository.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -331,6 +325,28 @@
 				B33E59062931FCE10017407B /* UIView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B3E4752E293BC4100049A0F6 /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B335BAF628BF4B7700B9A29F /* CardRepository.swift */,
+				B39D5D1528C4E0710088C101 /* SetRepository.swift */,
+				B3E4752C293BC0210049A0F6 /* FolderRepository.swift */,
+				B323D7C32917AF0A00C626A8 /* DefaultsRepository .swift */,
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
+		B3E4752F293BC42C0049A0F6 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				B3483C0528F95D900065648C /* RealmService.swift */,
+				B3D78DED2923E3A200A4E8E6 /* SoundService.swift */,
+				B33B210D28BE4F2100E66FCC /* CardService.swift */,
+				B323D7C52917AFDE00C626A8 /* UserDefaultsKeys.swift */,
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 		B3EFDFBE28C1101100FA1183 /* Constants */ = {
