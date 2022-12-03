@@ -51,6 +51,7 @@
 		B3D78DEE2923E3A200A4E8E6 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D78DED2923E3A200A4E8E6 /* SoundService.swift */; };
 		B3DFAB8828DDBD9A00B84EEC /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */; };
 		B3DFAB8928DDBD9A00B84EEC /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFAB8728DDBD9A00B84EEC /* SearchTableViewCell.xib */; };
+		B3E4752B293BBB760049A0F6 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E4752A293BBB760049A0F6 /* Folder.swift */; };
 		B3E86DF028E375D20018AD09 /* LeftOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E86DEF28E375D20018AD09 /* LeftOverlayView.xib */; };
 		B3E86DF228E378DB0018AD09 /* RightOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E86DF128E378DB0018AD09 /* RightOverlayView.xib */; };
 		B3EEF0DE290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEF0DD290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift */; };
@@ -122,6 +123,7 @@
 		B3D78DED2923E3A200A4E8E6 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
 		B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		B3DFAB8728DDBD9A00B84EEC /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchTableViewCell.xib; path = ../SearchTableViewCell.xib; sourceTree = "<group>"; };
+		B3E4752A293BBB760049A0F6 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 		B3E86DEF28E375D20018AD09 /* LeftOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftOverlayView.xib; sourceTree = "<group>"; };
 		B3E86DF128E378DB0018AD09 /* RightOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightOverlayView.xib; sourceTree = "<group>"; };
 		B3EEF0DD290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SingleSetViewcontroller+Navigation.swift"; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				B33B211328BE611D00E66FCC /* WordData.swift */,
 				B33B211528BE646200E66FCC /* Translation .swift */,
 				B39D5D1328C4DE8C0088C101 /* WordSet.swift */,
+				B3E4752A293BBB760049A0F6 /* Folder.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				B307877028C0EF7200C88404 /* SetsViewController.swift in Sources */,
 				B307876728BF8FB000C88404 /* NibNames.swift in Sources */,
 				B3EEF0DE290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift in Sources */,
+				B3E4752B293BBB760049A0F6 /* Folder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

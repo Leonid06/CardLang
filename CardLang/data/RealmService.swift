@@ -156,6 +156,7 @@ class RealmService {
                     }else {
                         subscriptions.append(QuerySubscription<WordSet>(name: "all-sets"))
                         subscriptions.append(QuerySubscription<Translation>(name: "all-tranlations"))
+                        subscriptions.append(QuerySubscription<Folder>(name: "all-folders"))
                     }
             }
         }
