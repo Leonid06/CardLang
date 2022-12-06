@@ -7,10 +7,16 @@
 
 import UIKit
 
+@IBDesignable
 class FolderTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    
+    @IBInspectable
+    var cornerRadius: CGFloat {
+        set { layer.cornerRadius = newValue }
+        get { return layer.cornerRadius}
     }
 }

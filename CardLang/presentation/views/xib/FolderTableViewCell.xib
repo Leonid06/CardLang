@@ -13,35 +13,30 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="FolderTableViewCell" customModule="CardLang" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" translatesAutoresizingMaskIntoConstraints="NO" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" translatesAutoresizingMaskIntoConstraints="NO" id="H2p-sc-9uM" customClass="FolderTableViewCell" customModule="CardLang" customModuleProvider="target">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
-                <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbh-e7-XhI">
-                        <rect key="frame" x="16" y="12" width="22" height="12"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="folder.fill" catalog="system">
-                            <color key="baseForegroundColor" name="barColor"/>
-                        </buttonConfiguration>
-                    </button>
-                </subviews>
                 <constraints>
                     <constraint firstAttribute="height" constant="90" id="16G-hR-m34"/>
                     <constraint firstAttribute="width" constant="320" id="tmV-G3-dHP"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="wordBackgroundColor"/>
             <constraints>
                 <constraint firstItem="H2p-sc-9uM" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="rfI-46-QfP"/>
                 <constraint firstItem="H2p-sc-9uM" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" id="w2W-ws-ild"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="85.496183206106863" y="35.91549295774648"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="folder.fill" catalog="system" width="128" height="96"/>
-        <namedColor name="barColor">
-            <color red="0.77499997615814209" green="0.62000000476837158" blue="0.41499999165534973" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="wordBackgroundColor">
+            <color red="1" green="0.94117647058823528" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
