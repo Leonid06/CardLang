@@ -40,10 +40,16 @@ class CardRepository {
 //        let components = word.components(separatedBy: .whitespacesAndNewlines)
 //        let elements  = components.filter { !$0.isEmpty }
         
-        let trimmedWord = word.trimmingCharacters(in: .whitespaces)
+        let components = word.components(separatedBy: .whitespacesAndNewlines)
         
-        cardService.getAllTranslationForWord(trimmedWord, completion: onMultipleTranslationsFetched)
+        print(components)
         
+        if let trimmedWord = components.first(where: {
+            !$0.isEmpty
+        }){
+            cardService.getAllTranslationForWord(trimmedWord, completion: onMultipleTranslationsFetched)
+        }
+    
         
         group.notify(queue: .main){
             print("group did notify main thread")
