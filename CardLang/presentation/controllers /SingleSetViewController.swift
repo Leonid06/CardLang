@@ -43,13 +43,6 @@ class SingleSetViewController: UIViewController {
 
         let playItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(playButtonPressed))
         
-//        let editButton = UIButton(type: .custom)
-//        editButton.sizeToFit()
-//
-//        let editItem = UIBarButtonItem(title: nil, style: .plain, target: self, action: #selector(editButtonPressed))
-//
-//        editItem.customView = editButton
-        
         let editItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editButtonPressed))
         
         

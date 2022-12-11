@@ -54,11 +54,12 @@
 		B3E4752B293BBB760049A0F6 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E4752A293BBB760049A0F6 /* Folder.swift */; };
 		B3E4752D293BC0210049A0F6 /* FolderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E4752C293BC0210049A0F6 /* FolderRepository.swift */; };
 		B3E47533293D0EC00049A0F6 /* FoldersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E47531293D0EC00049A0F6 /* FoldersViewController.swift */; };
-		B3E47534293D0EC00049A0F6 /* FoldersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E47532293D0EC00049A0F6 /* FoldersViewController.xib */; };
 		B3E47537293D0EE50049A0F6 /* SingleFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E47535293D0EE50049A0F6 /* SingleFolderViewController.swift */; };
 		B3E47538293D0EE50049A0F6 /* SingleFolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E47536293D0EE50049A0F6 /* SingleFolderViewController.xib */; };
 		B3E4753B293D1BA60049A0F6 /* FolderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E47539293D1BA60049A0F6 /* FolderTableViewCell.swift */; };
 		B3E4753C293D1BA60049A0F6 /* FolderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E4753A293D1BA60049A0F6 /* FolderTableViewCell.xib */; };
+		B3E4754129463D010049A0F6 /* AddFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E4753F29463D010049A0F6 /* AddFolderViewController.swift */; };
+		B3E4754229463D010049A0F6 /* AddFolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E4754029463D010049A0F6 /* AddFolderViewController.xib */; };
 		B3E86DF028E375D20018AD09 /* LeftOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E86DEF28E375D20018AD09 /* LeftOverlayView.xib */; };
 		B3E86DF228E378DB0018AD09 /* RightOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E86DF128E378DB0018AD09 /* RightOverlayView.xib */; };
 		B3EEF0DE290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEF0DD290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift */; };
@@ -133,11 +134,12 @@
 		B3E4752A293BBB760049A0F6 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 		B3E4752C293BC0210049A0F6 /* FolderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRepository.swift; sourceTree = "<group>"; };
 		B3E47531293D0EC00049A0F6 /* FoldersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersViewController.swift; sourceTree = "<group>"; };
-		B3E47532293D0EC00049A0F6 /* FoldersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoldersViewController.xib; sourceTree = "<group>"; };
 		B3E47535293D0EE50049A0F6 /* SingleFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFolderViewController.swift; sourceTree = "<group>"; };
 		B3E47536293D0EE50049A0F6 /* SingleFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleFolderViewController.xib; sourceTree = "<group>"; };
 		B3E47539293D1BA60049A0F6 /* FolderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderTableViewCell.swift; sourceTree = "<group>"; };
 		B3E4753A293D1BA60049A0F6 /* FolderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FolderTableViewCell.xib; sourceTree = "<group>"; };
+		B3E4753F29463D010049A0F6 /* AddFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFolderViewController.swift; sourceTree = "<group>"; };
+		B3E4754029463D010049A0F6 /* AddFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFolderViewController.xib; sourceTree = "<group>"; };
 		B3E86DEF28E375D20018AD09 /* LeftOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftOverlayView.xib; sourceTree = "<group>"; };
 		B3E86DF128E378DB0018AD09 /* RightOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightOverlayView.xib; sourceTree = "<group>"; };
 		B3EEF0DD290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SingleSetViewcontroller+Navigation.swift"; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				B3D78DEC291E704400A4E8E6 /* Extensions */,
 				B307877328C0F08A00C88404 /* xib */,
 				B374DC22290D7DEE0091546A /* TranslationViewController.swift */,
+				B3E4753F29463D010049A0F6 /* AddFolderViewController.swift */,
 				B3E47535293D0EE50049A0F6 /* SingleFolderViewController.swift */,
 				B3E47531293D0EC00049A0F6 /* FoldersViewController.swift */,
 				B309014A29169728007FDDB5 /* EditSetViewController.swift */,
@@ -206,8 +209,8 @@
 				B307877428C0F0BA00C88404 /* CardViewController.xib */,
 				B3061A03290ECEA000C1C6FB /* AddModeViewController.xib */,
 				B309014B29169728007FDDB5 /* EditSetViewController.xib */,
-				B3E47532293D0EC00049A0F6 /* FoldersViewController.xib */,
 				B3E47536293D0EE50049A0F6 /* SingleFolderViewController.xib */,
+				B3E4754029463D010049A0F6 /* AddFolderViewController.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -478,12 +481,12 @@
 				B3061A05290ECEA000C1C6FB /* AddModeViewController.xib in Resources */,
 				B3DFAB8928DDBD9A00B84EEC /* SearchTableViewCell.xib in Resources */,
 				B3EFDFB328C0FCA800FA1183 /* SetsTableViewCell.xib in Resources */,
-				B3E47534293D0EC00049A0F6 /* FoldersViewController.xib in Resources */,
 				B335BAF528BF467C00B9A29F /* CardView.xib in Resources */,
 				B307877528C0F0BA00C88404 /* CardViewController.xib in Resources */,
 				B3E86DF228E378DB0018AD09 /* RightOverlayView.xib in Resources */,
 				B3E4753C293D1BA60049A0F6 /* FolderTableViewCell.xib in Resources */,
 				B3E86DF028E375D20018AD09 /* LeftOverlayView.xib in Resources */,
+				B3E4754229463D010049A0F6 /* AddFolderViewController.xib in Resources */,
 				B33B20F528BE281000E66FCC /* Main.storyboard in Resources */,
 				B30787E928DDBA0B0080EFE4 /* SearchViewController.xib in Resources */,
 				B3EFDFBD28C0FF9700FA1183 /* WordCollectionViewCell.xib in Resources */,
@@ -560,6 +563,7 @@
 				B3E4753B293D1BA60049A0F6 /* FolderTableViewCell.swift in Sources */,
 				B33E59072931FCE10017407B /* UIView.swift in Sources */,
 				B3E47537293D0EE50049A0F6 /* SingleFolderViewController.swift in Sources */,
+				B3E4754129463D010049A0F6 /* AddFolderViewController.swift in Sources */,
 				B3EFDFC028C1104E00FA1183 /* Identifiers.swift in Sources */,
 				B3D78DEE2923E3A200A4E8E6 /* SoundService.swift in Sources */,
 				B335BAF328BF466100B9A29F /* CardView.swift in Sources */,

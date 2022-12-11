@@ -92,4 +92,26 @@ class FolderRepository {
         }
     }
     
+    @MainActor
+    func addFolder(name : String, description: String){
+        Task {
+            do {
+                
+                if let realm = realmService.getRealm() {
+                    let user = realmService.getCurrentUser()
+                    let folder = Folder(ownerId: user?.id ?? "", name: name, folderDescription: description)
+
+                    try realm.write {
+                        realm.add(folder, update: Realm.UpdatePolicy.modified)
+                    }
+                }
+                
+                
+            }catch {
+                print(error)
+            }
+            
+        }
+    }
+    
 }

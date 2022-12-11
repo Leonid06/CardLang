@@ -19,4 +19,6 @@ struct Identifies {
     static let DefaultCollectioViewCellIdentifier = "defaultCollectionViewCellIdentifier"
     
     static let SearchTableViewCellIdentifier = "searchTableViewCellIdentifier"
+    
+    static let FolderTableViewCellIdentifier = "folderTableViewCellIdentifier"
 }
