@@ -168,10 +168,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0KI-1B-xIM">
-                                <rect key="frame" x="20" y="99" width="374" height="763"/>
+                                <rect key="frame" x="47" y="92" width="320" height="763"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="ZJ1-zR-02v"/>
+                                    <constraint firstAttribute="width" constant="320" id="ZJ1-zR-02v"/>
                                     <constraint firstAttribute="height" constant="763" id="kly-6I-HMf"/>
                                 </constraints>
                             </tableView>
@@ -179,8 +179,8 @@
                         <viewLayoutGuide key="safeArea" id="7CZ-5b-W6y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0KI-1B-xIM" firstAttribute="leading" secondItem="7CZ-5b-W6y" secondAttribute="leading" constant="20" id="IIL-6k-jha"/>
-                            <constraint firstItem="0KI-1B-xIM" firstAttribute="top" secondItem="JPp-57-Nao" secondAttribute="top" constant="99" id="gwN-Lh-Gk4"/>
+                            <constraint firstItem="0KI-1B-xIM" firstAttribute="leading" secondItem="7CZ-5b-W6y" secondAttribute="leading" constant="47" id="IIL-6k-jha"/>
+                            <constraint firstItem="0KI-1B-xIM" firstAttribute="top" secondItem="JPp-57-Nao" secondAttribute="top" constant="92" id="gwN-Lh-Gk4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Folders" id="fMC-K5-7hu">

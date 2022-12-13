@@ -186,17 +186,18 @@ class RealmService {
         
         let subscriptions = realm.subscriptions
         
-        if(subscriptions.count == 0){
+        if(subscriptions.count < 3){
             try await subscriptions.update {
-                    if let _ = subscriptions.first(named : "all-sets") {
-                        return
-                    }else {
-                        subscriptions.append(QuerySubscription<WordSet>(name: "all-sets"))
-                        subscriptions.append(QuerySubscription<Translation>(name: "all-tranlations"))
-                        subscriptions.append(QuerySubscription<Folder>(name: "all-folders"))
-                    }
+                subscriptions.append(QuerySubscription<Folder>(name: "all-folders"))
             }
         }
+        if(subscriptions.count == 0){
+            try await subscriptions.update {
+                subscriptions.append(QuerySubscription<WordSet>(name: "all-sets"))
+                subscriptions.append(QuerySubscription<Translation>(name: "all-tranlations"))
+            }
+        }
+        
 
         
         

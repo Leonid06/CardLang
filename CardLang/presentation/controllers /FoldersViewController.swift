@@ -19,6 +19,10 @@ class FoldersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.rowHeight = 100
+        
         tableView.register(UINib(nibName: NibNames.FolderTableViewCellNibName , bundle: nil) , forCellReuseIdentifier: Identifies.FolderTableViewCellIdentifier)
         
         
@@ -29,7 +33,7 @@ class FoldersViewController: UIViewController {
     @IBAction func addFolderButtonClicked(_ sender: Any) {
         let addFolderViewController = AddFolderViewController(nibName: NibNames.AddFolderViewControllerNibName, bundle: nil)
         
-        addFolderViewController.modalPresentationStyle = .overCurrentContext
+        addFolderViewController.modalPresentationStyle = .popover
         present(addFolderViewController, animated: true)
     }
     
@@ -48,20 +52,29 @@ class FoldersViewController: UIViewController {
 
 extension FoldersViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
     }
 }
 
 extension FoldersViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let folders = folders {
+            print(folders.count)
             return folders.count
         }
         return 0
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Identifies.FolderTableViewCellIdentifier, for: indexPath) as! FolderTableViewCell
+        
+        if let folders = folders {
+            let folder = folders[folders.count - 1 - indexPath.row]
+            cell.configure(folder)
+        }
         
         return cell
     }

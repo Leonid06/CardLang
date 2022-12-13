@@ -18,7 +18,7 @@ class FolderRepository {
     func getAllFolders() async throws ->  Results<Folder>? {
         let task = Task { () -> Results<Folder>? in
             
-            if let realm =  realmService.getRealm() {
+            if let realm = realmService.getRealm() {
                     return realm.objects(Folder.self)
             }
            
