@@ -13,26 +13,22 @@ class FolderCollectionViewCell: UICollectionViewCell {
     private var folder : Folder?
     
     
+    @IBOutlet weak var setsCountLabel: UILabel!
+ 
     @IBOutlet weak var folderNameLabel: UILabel!
     
     private func setLabel(){
         folderNameLabel.text = folder?.name
         
-//        if let numberOfSets = folder?.sets.count {
-//            setsCountLabel.text = "\(numberOfSets)"
-//        }
+        if let numberOfSets = folder?.sets.count {
+            setsCountLabel.text = "\(numberOfSets) sets"
+        }
         
     }
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        let margins = UIEdgeInsets(top: 5, left: 8, bottom: 5, right: 8)
-        contentView.frame = contentView.frame.inset(by: margins)
     }
     
     

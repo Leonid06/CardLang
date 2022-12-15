@@ -72,7 +72,7 @@ extension FoldersViewController : UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.FolderCollectionViewCellIdentifier, for: indexPath) as! FolderCollectionViewCell
     
             if let folders = folders {
-                let folder = folders[folders.count - 1 - indexPath.row]
+                let folder = folders[folders.count - 1 - indexPath.section]
                 cell.configure(folder)
             }
     
