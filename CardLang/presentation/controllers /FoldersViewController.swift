@@ -9,21 +9,19 @@ import UIKit
 import RealmSwift
 
 class FoldersViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
     
     private let folderRepository = FolderRepository.shared
     
     private var folders  : Results<Folder>?
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.rowHeight = 100
-        
-        tableView.register(UINib(nibName: NibNames.FolderTableViewCellNibName , bundle: nil) , forCellReuseIdentifier: Identifies.FolderTableViewCellIdentifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(UINib(nibName: NibNames.FolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.FolderCollectionViewCellIdentifier)
         
         
         folderRepository.subscribeOnUpdatesOnFolders {
@@ -41,7 +39,7 @@ class FoldersViewController: UIViewController {
         Task {
             do {
                 self.folders = try await self.folderRepository.getAllFolders()
-                self.tableView.reloadData()
+                self.collectionView.reloadData()
             }catch {
                 print(error)
             }
@@ -50,32 +48,51 @@ class FoldersViewController: UIViewController {
 }
 
 
-extension FoldersViewController : UITableViewDelegate {
+extension FoldersViewController : UICollectionViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //TODO
     }
 }
 
-extension FoldersViewController : UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension FoldersViewController : UICollectionViewDataSource {
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         if let folders = folders {
-            print(folders.count)
             return folders.count
         }
         return 0
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        1
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.FolderCollectionViewCellIdentifier, for: indexPath) as! FolderCollectionViewCell
+    
+            if let folders = folders {
+                let folder = folders[folders.count - 1 - indexPath.row]
+                cell.configure(folder)
+            }
+    
+            return cell
+    }
+}
+
+extension FoldersViewController : UICollectionViewDelegateFlowLayout  {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 138, height: 129)
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Identifies.FolderTableViewCellIdentifier, for: indexPath) as! FolderTableViewCell
-        
-        if let folders = folders {
-            let folder = folders[folders.count - 1 - indexPath.row]
-            cell.configure(folder)
-        }
-        
-        return cell
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 20, bottom: 30, right: 40)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
 }

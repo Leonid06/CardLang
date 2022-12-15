@@ -56,8 +56,6 @@
 		B3E47533293D0EC00049A0F6 /* FoldersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E47531293D0EC00049A0F6 /* FoldersViewController.swift */; };
 		B3E47537293D0EE50049A0F6 /* SingleFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E47535293D0EE50049A0F6 /* SingleFolderViewController.swift */; };
 		B3E47538293D0EE50049A0F6 /* SingleFolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E47536293D0EE50049A0F6 /* SingleFolderViewController.xib */; };
-		B3E4753B293D1BA60049A0F6 /* FolderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E47539293D1BA60049A0F6 /* FolderTableViewCell.swift */; };
-		B3E4753C293D1BA60049A0F6 /* FolderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E4753A293D1BA60049A0F6 /* FolderTableViewCell.xib */; };
 		B3E4754129463D010049A0F6 /* AddFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E4753F29463D010049A0F6 /* AddFolderViewController.swift */; };
 		B3E4754229463D010049A0F6 /* AddFolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E4754029463D010049A0F6 /* AddFolderViewController.xib */; };
 		B3E86DF028E375D20018AD09 /* LeftOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E86DEF28E375D20018AD09 /* LeftOverlayView.xib */; };
@@ -69,6 +67,8 @@
 		B3EFDFBC28C0FF9700FA1183 /* WordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */; };
 		B3EFDFBD28C0FF9700FA1183 /* WordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3EFDFBB28C0FF9700FA1183 /* WordCollectionViewCell.xib */; };
 		B3EFDFC028C1104E00FA1183 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFBF28C1104E00FA1183 /* Identifiers.swift */; };
+		B3F9F856294B985000BB1477 /* FolderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F9F854294B985000BB1477 /* FolderCollectionViewCell.swift */; };
+		B3F9F857294B985000BB1477 /* FolderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3F9F855294B985000BB1477 /* FolderCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,8 +136,6 @@
 		B3E47531293D0EC00049A0F6 /* FoldersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersViewController.swift; sourceTree = "<group>"; };
 		B3E47535293D0EE50049A0F6 /* SingleFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFolderViewController.swift; sourceTree = "<group>"; };
 		B3E47536293D0EE50049A0F6 /* SingleFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleFolderViewController.xib; sourceTree = "<group>"; };
-		B3E47539293D1BA60049A0F6 /* FolderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderTableViewCell.swift; sourceTree = "<group>"; };
-		B3E4753A293D1BA60049A0F6 /* FolderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FolderTableViewCell.xib; sourceTree = "<group>"; };
 		B3E4753F29463D010049A0F6 /* AddFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFolderViewController.swift; sourceTree = "<group>"; };
 		B3E4754029463D010049A0F6 /* AddFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFolderViewController.xib; sourceTree = "<group>"; };
 		B3E86DEF28E375D20018AD09 /* LeftOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftOverlayView.xib; sourceTree = "<group>"; };
@@ -149,6 +147,8 @@
 		B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3EFDFBB28C0FF9700FA1183 /* WordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordCollectionViewCell.xib; sourceTree = "<group>"; };
 		B3EFDFBF28C1104E00FA1183 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
+		B3F9F854294B985000BB1477 /* FolderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCollectionViewCell.swift; sourceTree = "<group>"; };
+		B3F9F855294B985000BB1477 /* FolderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FolderCollectionViewCell.xib; sourceTree = "<group>"; };
 		B50E2133FCDC771862577A9D /* Pods-CardLang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.release.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,7 +224,7 @@
 				B335BAF428BF467C00B9A29F /* CardView.xib */,
 				B3E86DEF28E375D20018AD09 /* LeftOverlayView.xib */,
 				B3E86DF128E378DB0018AD09 /* RightOverlayView.xib */,
-				B3E4753A293D1BA60049A0F6 /* FolderTableViewCell.xib */,
+				B3F9F855294B985000BB1477 /* FolderCollectionViewCell.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -302,8 +302,8 @@
 				B3EFDFBE28C1101100FA1183 /* Constants */,
 				B307877628C0F0D300C88404 /* xib */,
 				B335BAF228BF466100B9A29F /* CardView.swift */,
+				B3F9F854294B985000BB1477 /* FolderCollectionViewCell.swift */,
 				B307876A28C0969500C88404 /* TranslationSwipeCard.swift */,
-				B3E47539293D1BA60049A0F6 /* FolderTableViewCell.swift */,
 				B3EFDFB028C0FCA800FA1183 /* SetsTableViewCell.swift */,
 				B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */,
 				B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */,
@@ -484,11 +484,11 @@
 				B335BAF528BF467C00B9A29F /* CardView.xib in Resources */,
 				B307877528C0F0BA00C88404 /* CardViewController.xib in Resources */,
 				B3E86DF228E378DB0018AD09 /* RightOverlayView.xib in Resources */,
-				B3E4753C293D1BA60049A0F6 /* FolderTableViewCell.xib in Resources */,
 				B3E86DF028E375D20018AD09 /* LeftOverlayView.xib in Resources */,
 				B3E4754229463D010049A0F6 /* AddFolderViewController.xib in Resources */,
 				B33B20F528BE281000E66FCC /* Main.storyboard in Resources */,
 				B30787E928DDBA0B0080EFE4 /* SearchViewController.xib in Resources */,
+				B3F9F857294B985000BB1477 /* FolderCollectionViewCell.xib in Resources */,
 				B3EFDFBD28C0FF9700FA1183 /* WordCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,8 +559,8 @@
 				B33B20F828BE281000E66FCC /* CardLang.xcdatamodeld in Sources */,
 				B3483C0628F95D900065648C /* RealmService.swift in Sources */,
 				B33B211628BE646200E66FCC /* Translation .swift in Sources */,
+				B3F9F856294B985000BB1477 /* FolderCollectionViewCell.swift in Sources */,
 				B3E47533293D0EC00049A0F6 /* FoldersViewController.swift in Sources */,
-				B3E4753B293D1BA60049A0F6 /* FolderTableViewCell.swift in Sources */,
 				B33E59072931FCE10017407B /* UIView.swift in Sources */,
 				B3E47537293D0EE50049A0F6 /* SingleFolderViewController.swift in Sources */,
 				B3E4754129463D010049A0F6 /* AddFolderViewController.swift in Sources */,

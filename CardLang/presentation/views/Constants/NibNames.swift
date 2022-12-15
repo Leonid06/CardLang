@@ -13,7 +13,7 @@ struct NibNames {
     static let CardViewNibName = "CardView"
     static let SetsTableViewCellNibName = "SetsTableViewCell"
     static let WordCollectionViewCellNibName = "WordCollectionViewCell"
-    static let FolderTableViewCellNibName = "FolderTableViewCell"
+    static let FolderCollectionViewCellNibName = "FolderCollectionViewCell"
     
     static let CardViewControllerNibName = "CardViewController"
     static let SearchTableViewCellNibName = "SearchTableViewCell"

@@ -1,27 +1,25 @@
 //
-//  FolderTableViewCell.swift
+//  FolderCollectionViewCell.swift
 //  CardLang
 //
-//  Created by Leonid on 04.12.2022.
+//  Created by Leonid on 15.12.2022.
 //
 
 import UIKit
 
 @IBDesignable
-class FolderTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var setsCountLabel: UILabel!
-    @IBOutlet weak var folderNameLabel: UILabel!
+class FolderCollectionViewCell: UICollectionViewCell {
     
     private var folder : Folder?
     
+    @IBOutlet weak var folderNameLabel: UILabel!
     
     private func setLabel(){
         folderNameLabel.text = folder?.name
         
-        if let numberOfSets = folder?.sets.count {
-            setsCountLabel.text = "\(numberOfSets)"
-        }
+//        if let numberOfSets = folder?.sets.count {
+//            setsCountLabel.text = "\(numberOfSets)"
+//        }
         
     }
     

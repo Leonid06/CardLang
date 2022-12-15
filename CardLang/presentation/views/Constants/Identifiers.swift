@@ -20,5 +20,5 @@ struct Identifies {
     
     static let SearchTableViewCellIdentifier = "searchTableViewCellIdentifier"
     
-    static let FolderTableViewCellIdentifier = "folderTableViewCellIdentifier"
+    static let FolderCollectionViewCellIdentifier = "folderCollectionViewCellIdentifier"
 }
