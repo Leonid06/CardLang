@@ -12,6 +12,7 @@ class FolderCollectionViewCell: UICollectionViewCell {
     
     private var folder : Folder?
     
+    
     @IBOutlet weak var folderNameLabel: UILabel!
     
     private func setLabel(){
