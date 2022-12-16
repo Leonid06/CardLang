@@ -1,14 +1,14 @@
 //
-//  AddFolderViewController.swift
+//  CreateFolderViewController.swift
 //  CardLang
 //
-//  Created by Leonid on 11.12.2022.
+//  Created by Leonid on 16.12.2022.
 //
 
 import UIKit
 import RSKPlaceholderTextView
 
-class AddFolderViewController: UIViewController {
+class CreateFolderViewController: UIViewController {
     
     
     private let folderRepository = FolderRepository.shared
@@ -29,7 +29,6 @@ class AddFolderViewController: UIViewController {
             folderRepository.addFolder(name: name, description: folderDescriptionTextView.text ?? "")
         }
         dismiss(animated: true)
-     
     }
     
     @IBAction func cancelButtonClicked(_ sender: UIButton) {
@@ -38,7 +37,7 @@ class AddFolderViewController: UIViewController {
 }
 
 
-extension AddFolderViewController : UITextViewDelegate {
+extension CreateFolderViewController : UITextViewDelegate {
     
     func resizeTextView(_ textView : UITextView){
         let size = CGSize(width: textView.frame.width, height: .infinity)
@@ -57,3 +56,4 @@ extension AddFolderViewController : UITextViewDelegate {
         resizeTextView(folderNameTextView)
     }
 }
+

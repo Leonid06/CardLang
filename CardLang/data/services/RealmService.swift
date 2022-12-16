@@ -188,15 +188,12 @@ class RealmService {
         
         if(subscriptions.count < 3){
             try await subscriptions.update {
-                subscriptions.append(QuerySubscription<Folder>(name: "all-folders"))
+                subscriptions.append(QuerySubscription<Folder>(name: Constants.RealmSubscriptions.FoldersSubscription))
+                subscriptions.append(QuerySubscription<WordSet>(name: Constants.RealmSubscriptions.SetsSubscription))
+                subscriptions.append(QuerySubscription<Translation>(name: Constants.RealmSubscriptions.TranslationsSubscription))
             }
         }
-        if(subscriptions.count == 0){
-            try await subscriptions.update {
-                subscriptions.append(QuerySubscription<WordSet>(name: "all-sets"))
-                subscriptions.append(QuerySubscription<Translation>(name: "all-tranlations"))
-            }
-        }
+        
         
 
         

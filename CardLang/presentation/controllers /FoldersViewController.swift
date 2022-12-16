@@ -29,10 +29,10 @@ class FoldersViewController: UIViewController {
         }
     }
     @IBAction func addFolderButtonClicked(_ sender: Any) {
-        let addFolderViewController = AddFolderViewController(nibName: NibNames.AddFolderViewControllerNibName, bundle: nil)
+        let createFolderViewController = CreateFolderViewController(nibName: NibNames.CreateFolderViewControllerNibName, bundle: nil)
         
-        addFolderViewController.modalPresentationStyle = .popover
-        present(addFolderViewController, animated: true)
+        createFolderViewController.modalPresentationStyle = .overFullScreen
+        present(createFolderViewController, animated: true)
     }
     
     private func updateFolders() {
