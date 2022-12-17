@@ -49,8 +49,16 @@ class FoldersViewController: UIViewController {
 
 
 extension FoldersViewController : UICollectionViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //TODO
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let folders = folders {
+            let folder = folders[folders.count - 1 - indexPath.section]
+            
+            let singleFolderViewController = SingleFolderViewController(nibName: NibNames.SingleFolderViewControllerNibName, bundle: nil)
+            
+            singleFolderViewController.configure(folder)
+            
+            navigationController?.pushViewController(singleFolderViewController, animated: true)
+        }
     }
 }
 

@@ -96,7 +96,6 @@ class SingleSetViewController: UIViewController {
             self.translations = self.set?.translations ?? List<Translation>()
             self.collectionView.reloadData()
         }
-
     }
     
     private func toggleButtons(){
