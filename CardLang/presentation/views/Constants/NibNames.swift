@@ -13,6 +13,8 @@ struct NibNames {
     static let CardViewNibName = "CardView"
     static let SetsTableViewCellNibName = "SetsTableViewCell"
     static let WordCollectionViewCellNibName = "WordCollectionViewCell"
+    static let FolderCollectionViewCellNibName = "FolderCollectionViewCell"
+    static let SingleFolderCollectionViewCellNibName = "SingleFolderCollectionViewCell"
     
     static let CardViewControllerNibName = "CardViewController"
     static let SearchTableViewCellNibName = "SearchTableViewCell"
@@ -21,6 +23,8 @@ struct NibNames {
     static let TranslationViewControllerNibName = "TranslationViewController"
     static let TermViewControllerNibName = "TermViewController"
     static let EditSetViewControllerNibName = "EditSetViewController"
+    static let SingleFolderViewControllerNibName = "SingleFolderViewController"
+    static let CreateFolderViewControllerNibName = "CreateFolderViewController"
     
     static let LeftOverlayViewNibName = "LeftOverlayView"
     static let RightOverlayViewNibName = "RightOverlayView"

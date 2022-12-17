@@ -105,10 +105,10 @@
     </objects>
     <designables>
         <designable name="EJZ-r7-YPF">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
+            <size key="intrinsicContentSize" width="92.666666666666671" height="19.666666666666668"/>
         </designable>
         <designable name="LJI-gE-pak">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
+            <size key="intrinsicContentSize" width="119.33333333333333" height="19.666666666666668"/>
         </designable>
     </designables>
     <resources>
