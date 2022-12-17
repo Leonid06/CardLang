@@ -168,10 +168,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TG7-mP-bFt">
-                                <rect key="frame" x="28.5" y="113" width="357" height="706"/>
+                                <rect key="frame" x="0.0" y="97" width="414" height="706"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="357" id="Bsi-Be-GLp"/>
+                                    <constraint firstAttribute="width" constant="414" id="Bsi-Be-GLp"/>
                                     <constraint firstAttribute="height" constant="706" id="Syd-un-wd8"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cwC-I9-PAb">
@@ -195,8 +195,9 @@
                         <viewLayoutGuide key="safeArea" id="7CZ-5b-W6y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TG7-mP-bFt" firstAttribute="top" secondItem="7CZ-5b-W6y" secondAttribute="top" constant="21" id="eGi-JB-iNO"/>
-                            <constraint firstItem="TG7-mP-bFt" firstAttribute="centerX" secondItem="JPp-57-Nao" secondAttribute="centerX" id="jZW-Y7-6hM"/>
+                            <constraint firstItem="TG7-mP-bFt" firstAttribute="trailing" secondItem="7CZ-5b-W6y" secondAttribute="trailing" id="1fN-VE-Aet"/>
+                            <constraint firstItem="TG7-mP-bFt" firstAttribute="top" secondItem="7CZ-5b-W6y" secondAttribute="top" constant="5" id="eGi-JB-iNO"/>
+                            <constraint firstItem="TG7-mP-bFt" firstAttribute="leading" secondItem="7CZ-5b-W6y" secondAttribute="leading" id="fKY-KE-YML"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Folders" id="fMC-K5-7hu">
