@@ -26,6 +26,9 @@
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         </textAttributes>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BPy-Wc-Axo">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="aio-Ij-ocT" kind="relationship" relationship="rootViewController" id="wTD-ts-nwx"/>
                         <segue destination="2NE-AW-UNj" kind="presentation" id="Oyd-41-LuB"/>
@@ -58,7 +61,7 @@
         <!--Single Set View Controller-->
         <scene sceneID="OMq-3x-0R8">
             <objects>
-                <viewController storyboardIdentifier="SingleSetViewController" modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="2NE-AW-UNj" customClass="SingleSetViewController" customModule="CardLang" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SingleSetViewController" modalPresentationStyle="fullScreen" id="2NE-AW-UNj" customClass="SingleSetViewController" customModule="CardLang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TlE-B9-bVi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

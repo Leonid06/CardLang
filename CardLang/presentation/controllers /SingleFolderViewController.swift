@@ -29,6 +29,10 @@ class SingleFolderViewController: UIViewController {
         setRepository.subscribeToUpdatesOnSets {
             self.updateSets()
         }
+        
+        let addBarButtonItem  = UIBarButtonItem(barButtonSystemItem: .add, target: self,action: nil)
+        
+        navigationItem.rightBarButtonItem = addBarButtonItem
     }
     
     func configure(_ folder: Folder){
