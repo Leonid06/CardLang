@@ -1,69 +1,61 @@
 //
-//  SingleFolderViewController.swift
+//  AddSetToFolderViewController.swift
 //  CardLang
 //
-//  Created by Leonid on 17.12.2022.
+//  Created by Leonid on 18.12.2022.
 //
 
 import UIKit
 import RealmSwift
 
-class SingleFolderViewController: UIViewController {
-
+class AddSetToFolderViewController: UIViewController {
+    
+    private let setRepository  =  SetRepository.shared
+    private let folderRepository = FolderRepository.shared
+    
+    private var sets: Results<WordSet>?
+    private var folder: Folder?
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    private let setRepository = SetRepository.shared
-    
-    private var folder : Folder?
-    
-    private var sets : List<WordSet>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.delegate = self
         collectionView.dataSource = self
+    
         
-        collectionView.register(UINib(nibName: NibNames.SingleFolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier)
         
         setRepository.subscribeToUpdatesOnSets {
             self.updateSets()
         }
         
-        let addBarButtonItem  = UIBarButtonItem(barButtonSystemItem: .add, target: self,action: #selector(onAddBarButtonClicked))
-        
-        navigationItem.rightBarButtonItem = addBarButtonItem
     }
     
     func configure(_ folder: Folder){
-        self.folder = folder 
+        self.folder = folder
     }
-    
     
     private func updateSets(){
         Task {
-            self.sets = folder?.sets ?? List<WordSet>()
+            self.sets = try await setRepository.getUnfolderedSets()
             self.collectionView.reloadData()
         }
     }
-    
-    
-    @objc func onAddBarButtonClicked(_ sender: Any){
-        
-        if let folder = folder {
-            let addSetToFolderViewController = AddSetToFolderViewController(nibName: NibNames.AddSetToFolderViewCOntrollerNibName, bundle: nil)
+}
+
+extension AddSetToFolderViewController : UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let sets = sets, let folder = folder  {
+            let set = sets[sets.count - 1 - indexPath.section]
+            folderRepository.addSetToFolder(set: set, folder: folder){
+                self.dismiss(animated: true)
+            }
             
-            addSetToFolderViewController.configure(folder)
-            
-            addSetToFolderViewController.modalPresentationStyle = .overFullScreen
-            
-            present(addSetToFolderViewController, animated: true)
         }
-        
     }
 }
 
-extension SingleFolderViewController : UICollectionViewDataSource {
+extension AddSetToFolderViewController : UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -71,16 +63,16 @@ extension SingleFolderViewController : UICollectionViewDataSource {
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        if let sets = folder?.sets {
+        if let sets = sets {
             return sets.count
         }
         return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier, for: indexPath) as! SingleFolderCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.AddSetToFolderCollectionViewCellIdentifier, for: indexPath) as! AddSetToFolderCollectionViewCell
     
-        if let sets = folder?.sets {
+        if let sets = sets {
                 let set = sets[sets.count - 1 - indexPath.section]
                 cell.configure(set)
             }
@@ -89,7 +81,7 @@ extension SingleFolderViewController : UICollectionViewDataSource {
     }
 }
 
-extension SingleFolderViewController : UICollectionViewDelegateFlowLayout  {
+extension AddSetToFolderViewController : UICollectionViewDelegateFlowLayout  {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 138, height: 129)
     }

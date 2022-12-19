@@ -25,6 +25,7 @@ struct NibNames {
     static let EditSetViewControllerNibName = "EditSetViewController"
     static let SingleFolderViewControllerNibName = "SingleFolderViewController"
     static let CreateFolderViewControllerNibName = "CreateFolderViewController"
+    static let AddSetToFolderViewCOntrollerNibName = "AddSetToFolderViewController"
     
     static let LeftOverlayViewNibName = "LeftOverlayView"
     static let RightOverlayViewNibName = "RightOverlayView"

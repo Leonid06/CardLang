@@ -15,6 +15,7 @@ struct Identifies {
     static let SearchTableViewCellIdentifier = "searchTableViewCellIdentifier"
     static let FolderCollectionViewCellIdentifier = "folderCollectionViewCellIdentifier"
     static let SingleFolderCollectionViewCellIdentifier = "singleFolderCollectionViewCellIdentifier"
+    static let AddSetToFolderCollectionViewCellIdentifier = "addSetToFolderCollectionViewIdentifier"
     
     static let SingleSetViewControllerSegueIdentifier = "SingleSetViewControllerSegue"
     static let SingleSetViewControllerIdentifier = "SingleSetViewController"
