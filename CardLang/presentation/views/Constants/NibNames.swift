@@ -30,4 +30,6 @@ struct NibNames {
     
     static let LeftOverlayViewNibName = "LeftOverlayView"
     static let RightOverlayViewNibName = "RightOverlayView"
+    
+    static let MainStoryboardName = "Main"
 }

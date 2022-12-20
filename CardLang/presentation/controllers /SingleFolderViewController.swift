@@ -68,30 +68,41 @@ extension SingleFolderViewController : UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        if let sets = sets {
+            return sets.count
+        }
+        return 0
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        if let sets = folder?.sets {
-            if(sets.count % 2 == 0){
-                return sets.count / 2
-            }else{
-                return sets.count / 2 + 1
-            }
-        }
-        return 0
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier, for: indexPath) as! SingleFolderCollectionViewCell
     
         if let sets = folder?.sets {
-            let index = (indexPath.row % 2 + 1) * indexPath.section
-            let set = sets[sets.count - 1 - index]
+            let set = sets[sets.count - 1 - indexPath.row]
                 cell.configure(set)
             }
     
         return cell
+    }
+}
+
+extension SingleFolderViewController : UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let sets = sets {
+            let set = sets[sets.count - 1 - indexPath.row]
+            
+            let mainStoryBoard = UIStoryboard(name: NibNames.MainStoryboardName, bundle: nil)
+            
+            let singleSetViewController = mainStoryBoard.instantiateViewController(withIdentifier: Identifies.SingleSetViewControllerIdentifier) as! SingleSetViewController
+            
+            singleSetViewController.set = set
+            
+            navigationController?.pushViewController(singleSetViewController, animated: true)
+        }
     }
 }
 
@@ -105,7 +116,7 @@ extension SingleFolderViewController : UICollectionViewDelegateFlowLayout  {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 20
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
