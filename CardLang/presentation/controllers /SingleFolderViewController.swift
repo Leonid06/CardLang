@@ -12,7 +12,7 @@ class SingleFolderViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private let setRepository = SetRepository.shared
+    private let folderRepository = FolderRepository.shared
     
     private var folder : Folder?
     
@@ -26,9 +26,10 @@ class SingleFolderViewController: UIViewController {
         
         collectionView.register(UINib(nibName: NibNames.SingleFolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier)
         
-        setRepository.subscribeToUpdatesOnSets {
+        folderRepository.subscribeOnUpdatesOnFolders {
             self.updateSets()
         }
+        
         
         let addBarButtonItem  = UIBarButtonItem(barButtonSystemItem: .add, target: self,action: #selector(onAddBarButtonClicked))
         
@@ -67,12 +68,16 @@ extension SingleFolderViewController : UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         if let sets = folder?.sets {
-            return sets.count
+            if(sets.count % 2 == 0){
+                return sets.count / 2
+            }else{
+                return sets.count / 2 + 1
+            }
         }
         return 0
     }
@@ -81,7 +86,8 @@ extension SingleFolderViewController : UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier, for: indexPath) as! SingleFolderCollectionViewCell
     
         if let sets = folder?.sets {
-                let set = sets[sets.count - 1 - indexPath.section]
+            let index = (indexPath.row % 2 + 1) * indexPath.section
+            let set = sets[sets.count - 1 - index]
                 cell.configure(set)
             }
     

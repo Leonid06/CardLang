@@ -17,9 +17,9 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKU-TS-neS">
-                        <rect key="frame" x="20" y="20" width="75" height="21"/>
+                        <rect key="frame" x="20" y="20" width="78" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <color key="textColor" name="wordLabelColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -35,8 +35,10 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" name="setBackgroundColor"/>
             <constraints>
+                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="310" id="B35-i7-pgg"/>
                 <constraint firstAttribute="height" constant="80" id="KLA-pV-Nod"/>
                 <constraint firstAttribute="width" constant="310" id="UA6-GT-6gK"/>
+                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="fdj-5S-M3m"/>
             </constraints>
             <size key="customSize" width="310" height="80"/>
             <connections>

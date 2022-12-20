@@ -17,12 +17,18 @@ class AddSetToFolderViewController: UIViewController {
     private var folder: Folder?
     @IBOutlet weak var collectionView: UICollectionView!
     
+
+    @IBAction func cancelButtonClicked(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Add set"
         collectionView.delegate = self
         collectionView.dataSource = self
-    
+        
+        collectionView.register(UINib(nibName: NibNames.AddSetToFolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.AddSetToFolderCollectionViewCellIdentifier)
         
         
         setRepository.subscribeToUpdatesOnSets {

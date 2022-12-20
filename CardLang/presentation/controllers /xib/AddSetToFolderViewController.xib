@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,8 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qBc-U8-Ko4">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qBc-U8-Ko4">
+                    <rect key="frame" x="0.0" y="109" width="393" height="792"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GvW-ZF-pcS">
                         <size key="itemSize" width="128" height="128"/>
@@ -29,19 +30,34 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYT-7i-Y0a">
+                    <rect key="frame" x="15" y="59" width="77" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                        <color key="baseForegroundColor" name="barColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="cancelButtonClicked:" destination="-1" eventType="touchUpInside" id="0DP-vY-Hgx"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qBc-U8-Ko4" secondAttribute="bottom" constant="10" id="DtN-fi-TiD"/>
-                <constraint firstItem="qBc-U8-Ko4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="EXi-VT-Lch"/>
+                <constraint firstItem="qBc-U8-Ko4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="EXi-VT-Lch"/>
                 <constraint firstItem="qBc-U8-Ko4" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ZuP-Ep-hlN"/>
+                <constraint firstItem="qYT-7i-Y0a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="cjt-Qn-M31"/>
+                <constraint firstItem="qYT-7i-Y0a" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="rKo-tG-W0A"/>
                 <constraint firstItem="qBc-U8-Ko4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rmN-nD-V9v"/>
             </constraints>
             <point key="canvasLocation" x="139.69465648854961" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
+        <namedColor name="barColor">
+            <color red="0.77499997615814209" green="0.62000000476837158" blue="0.41499999165534973" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

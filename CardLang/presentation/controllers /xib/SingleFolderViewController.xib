@@ -19,8 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AbB-6t-hLI">
-                    <rect key="frame" x="0.0" y="62" width="393" height="748"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AbB-6t-hLI">
+                    <rect key="frame" x="0.0" y="108" width="393" height="736"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JGZ-y2-Adl">
                         <size key="itemSize" width="128" height="128"/>
@@ -33,7 +33,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="AbB-6t-hLI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="3" id="1Cg-ZP-NnW"/>
+                <constraint firstItem="AbB-6t-hLI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="49" id="1Cg-ZP-NnW"/>
                 <constraint firstItem="AbB-6t-hLI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="D4a-gs-G5g"/>
                 <constraint firstItem="AbB-6t-hLI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kLh-i0-oc8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="AbB-6t-hLI" secondAttribute="bottom" constant="8" id="ltC-uM-wx0"/>
