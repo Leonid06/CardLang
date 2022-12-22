@@ -50,6 +50,9 @@
 		B36DB32A294F104C008C7C63 /* AddSetToFolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36DB328294F104C008C7C63 /* AddSetToFolderViewController.xib */; };
 		B36DB32D2950E748008C7C63 /* AddSetToFolderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DB32B2950E748008C7C63 /* AddSetToFolderCollectionViewCell.swift */; };
 		B36DB32E2950E748008C7C63 /* AddSetToFolderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36DB32C2950E748008C7C63 /* AddSetToFolderCollectionViewCell.xib */; };
+		B36DB3302954CBFF008C7C63 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DB32F2954CBFF008C7C63 /* UIViewController.swift */; };
+		B36DB3332954CD83008C7C63 /* EditFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DB3312954CD83008C7C63 /* EditFolderViewController.swift */; };
+		B36DB3342954CD83008C7C63 /* EditFolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36DB3322954CD83008C7C63 /* EditFolderViewController.xib */; };
 		B374DC24290D7DEE0091546A /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374DC22290D7DEE0091546A /* TranslationViewController.swift */; };
 		B374DC25290D7DEE0091546A /* TranslationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B374DC23290D7DEE0091546A /* TranslationViewController.xib */; };
 		B374DC28290DA2830091546A /* AddTranslationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374DC27290DA2830091546A /* AddTranslationTextField.swift */; };
@@ -136,6 +139,9 @@
 		B36DB328294F104C008C7C63 /* AddSetToFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSetToFolderViewController.xib; sourceTree = "<group>"; };
 		B36DB32B2950E748008C7C63 /* AddSetToFolderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSetToFolderCollectionViewCell.swift; sourceTree = "<group>"; };
 		B36DB32C2950E748008C7C63 /* AddSetToFolderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSetToFolderCollectionViewCell.xib; sourceTree = "<group>"; };
+		B36DB32F2954CBFF008C7C63 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		B36DB3312954CD83008C7C63 /* EditFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFolderViewController.swift; sourceTree = "<group>"; };
+		B36DB3322954CD83008C7C63 /* EditFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditFolderViewController.xib; sourceTree = "<group>"; };
 		B374DC22290D7DEE0091546A /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
 		B374DC23290D7DEE0091546A /* TranslationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranslationViewController.xib; sourceTree = "<group>"; };
 		B374DC27290DA2830091546A /* AddTranslationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTranslationTextField.swift; sourceTree = "<group>"; };
@@ -200,6 +206,7 @@
 				B36DB327294F104C008C7C63 /* AddSetToFolderViewController.swift */,
 				B3A6989E294C8E56003BCA10 /* CreateFolderViewController.swift */,
 				B3E47531293D0EC00049A0F6 /* FoldersViewController.swift */,
+				B36DB3312954CD83008C7C63 /* EditFolderViewController.swift */,
 				B309014A29169728007FDDB5 /* EditSetViewController.swift */,
 				B33B20F128BE281000E66FCC /* CardViewController.swift */,
 				B369145C294DFD8A0020011B /* SingleFolderViewController.swift */,
@@ -225,6 +232,7 @@
 				B3A6989F294C8E56003BCA10 /* CreateFolderViewController.xib */,
 				B369145D294DFD8A0020011B /* SingleFolderViewController.xib */,
 				B36DB328294F104C008C7C63 /* AddSetToFolderViewController.xib */,
+				B36DB3322954CD83008C7C63 /* EditFolderViewController.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -362,6 +370,7 @@
 			children = (
 				B3EEF0DD290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift */,
 				B33E59062931FCE10017407B /* UIView.swift */,
+				B36DB32F2954CBFF008C7C63 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -490,6 +499,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B36DB3342954CD83008C7C63 /* EditFolderViewController.xib in Resources */,
 				B323F8332911434A003CBCD1 /* TermViewController.xib in Resources */,
 				B374DC25290D7DEE0091546A /* TranslationViewController.xib in Resources */,
 				B33B20FD28BE281100E66FCC /* LaunchScreen.storyboard in Resources */,
@@ -599,6 +609,7 @@
 				B374DC24290D7DEE0091546A /* TranslationViewController.swift in Sources */,
 				B374DC28290DA2830091546A /* AddTranslationTextField.swift in Sources */,
 				B385B88028E4611200F86C53 /* Colors.swift in Sources */,
+				B36DB3302954CBFF008C7C63 /* UIViewController.swift in Sources */,
 				B3EFDFBC28C0FF9700FA1183 /* WordCollectionViewCell.swift in Sources */,
 				B335BAF728BF4B7700B9A29F /* CardRepository.swift in Sources */,
 				B323F8322911434A003CBCD1 /* TermViewController.swift in Sources */,
@@ -611,6 +622,7 @@
 				B33B211428BE611D00E66FCC /* WordData.swift in Sources */,
 				B307877028C0EF7200C88404 /* SetsViewController.swift in Sources */,
 				B307876728BF8FB000C88404 /* NibNames.swift in Sources */,
+				B36DB3332954CD83008C7C63 /* EditFolderViewController.swift in Sources */,
 				B3EEF0DE290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift in Sources */,
 				B3A698A0294C8E56003BCA10 /* CreateFolderViewController.swift in Sources */,
 				B3E4752B293BBB760049A0F6 /* Folder.swift in Sources */,

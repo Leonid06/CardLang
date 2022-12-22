@@ -43,7 +43,7 @@ class SingleSetViewController: UIViewController {
 
         let playItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(playButtonPressed))
         
-        let editItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editButtonPressed))
+        let editItem = createBarButtonItem(icon: "ellipsis", selector: #selector(editButtonPressed))
         
         
         navigationItem.rightBarButtonItems = [buttonItem, playItem, editItem]

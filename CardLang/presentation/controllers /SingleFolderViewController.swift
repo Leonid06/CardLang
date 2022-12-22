@@ -33,8 +33,12 @@ class SingleFolderViewController: UIViewController {
         
         let addBarButtonItem  = UIBarButtonItem(barButtonSystemItem: .add, target: self,action: #selector(onAddBarButtonClicked))
         
-        navigationItem.rightBarButtonItem = addBarButtonItem
+        let editBarButtonItem = createBarButtonItem(icon: "ellipsis", selector: #selector(onEditBarButtonClicked))
+        
+        navigationItem.rightBarButtonItems = [editBarButtonItem, addBarButtonItem]
+        
     }
+    
     
     func configure(_ folder: Folder){
         self.folder = folder 
@@ -48,6 +52,10 @@ class SingleFolderViewController: UIViewController {
         }
     }
     
+    
+    @objc func onEditBarButtonClicked(_ sender: Any){
+        
+    }
     
     @objc func onAddBarButtonClicked(_ sender: Any){
         
