@@ -200,21 +200,10 @@
 		B307876C28C0EF0900C88404 /* controllers  */ = {
 			isa = PBXGroup;
 			children = (
+				B36DB3362954D184008C7C63 /* Set */,
+				B36DB3352954D179008C7C63 /* Folder */,
 				B3D78DEC291E704400A4E8E6 /* Extensions */,
 				B307877328C0F08A00C88404 /* xib */,
-				B374DC22290D7DEE0091546A /* TranslationViewController.swift */,
-				B36DB327294F104C008C7C63 /* AddSetToFolderViewController.swift */,
-				B3A6989E294C8E56003BCA10 /* CreateFolderViewController.swift */,
-				B3E47531293D0EC00049A0F6 /* FoldersViewController.swift */,
-				B36DB3312954CD83008C7C63 /* EditFolderViewController.swift */,
-				B309014A29169728007FDDB5 /* EditSetViewController.swift */,
-				B33B20F128BE281000E66FCC /* CardViewController.swift */,
-				B369145C294DFD8A0020011B /* SingleFolderViewController.swift */,
-				B307876F28C0EF7200C88404 /* SetsViewController.swift */,
-				B3EFDFB828C0FF4200FA1183 /* SingleSetViewController.swift */,
-				B30787E628DDBA0B0080EFE4 /* SearchViewController.swift */,
-				B3061A02290ECEA000C1C6FB /* AddModeViewController.swift */,
-				B323F8302911434A003CBCD1 /* TermViewController.swift */,
 				B323F8312911434A003CBCD1 /* TermViewController.xib */,
 				B366FA70291406A8005BECA2 /* Protocols.swift */,
 			);
@@ -344,6 +333,33 @@
 				B35F629828E6EA3800C5F250 /* CardServiceTest.swift */,
 			);
 			path = CardLangTests;
+			sourceTree = "<group>";
+		};
+		B36DB3352954D179008C7C63 /* Folder */ = {
+			isa = PBXGroup;
+			children = (
+				B369145C294DFD8A0020011B /* SingleFolderViewController.swift */,
+				B36DB3312954CD83008C7C63 /* EditFolderViewController.swift */,
+				B3E47531293D0EC00049A0F6 /* FoldersViewController.swift */,
+				B3A6989E294C8E56003BCA10 /* CreateFolderViewController.swift */,
+				B36DB327294F104C008C7C63 /* AddSetToFolderViewController.swift */,
+			);
+			path = Folder;
+			sourceTree = "<group>";
+		};
+		B36DB3362954D184008C7C63 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				B30787E628DDBA0B0080EFE4 /* SearchViewController.swift */,
+				B3EFDFB828C0FF4200FA1183 /* SingleSetViewController.swift */,
+				B307876F28C0EF7200C88404 /* SetsViewController.swift */,
+				B33B20F128BE281000E66FCC /* CardViewController.swift */,
+				B374DC22290D7DEE0091546A /* TranslationViewController.swift */,
+				B309014A29169728007FDDB5 /* EditSetViewController.swift */,
+				B3061A02290ECEA000C1C6FB /* AddModeViewController.swift */,
+				B323F8302911434A003CBCD1 /* TermViewController.swift */,
+			);
+			path = Set;
 			sourceTree = "<group>";
 		};
 		B374DC26290DA25B0091546A /* Designables */ = {

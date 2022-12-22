@@ -23,18 +23,15 @@ class AddSetToFolderViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = "Add set"
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        collectionView.register(UINib(nibName: NibNames.AddSetToFolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.AddSetToFolderCollectionViewCellIdentifier)
+        collectionView.register(UINib(nibName: NibNames.SingleFolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier)
         
         
         setRepository.subscribeToUpdatesOnSets {
             self.updateSets()
         }
-        
     }
     
     func configure(_ folder: Folder){
@@ -76,7 +73,7 @@ extension AddSetToFolderViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.AddSetToFolderCollectionViewCellIdentifier, for: indexPath) as! AddSetToFolderCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier, for: indexPath) as! SingleFolderCollectionViewCell
     
         if let sets = sets {
                 let set = sets[sets.count - 1 - indexPath.section]

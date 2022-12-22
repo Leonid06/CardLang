@@ -37,6 +37,8 @@ class SingleFolderViewController: UIViewController {
         
         navigationItem.rightBarButtonItems = [editBarButtonItem, addBarButtonItem]
         
+        title = folder?.name
+        
     }
     
     
