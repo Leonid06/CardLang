@@ -53,6 +53,7 @@
 		B36DB3302954CBFF008C7C63 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DB32F2954CBFF008C7C63 /* UIViewController.swift */; };
 		B36DB3332954CD83008C7C63 /* EditFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DB3312954CD83008C7C63 /* EditFolderViewController.swift */; };
 		B36DB3342954CD83008C7C63 /* EditFolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36DB3322954CD83008C7C63 /* EditFolderViewController.xib */; };
+		B36DB33829585E43008C7C63 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DB33729585E43008C7C63 /* UnderlinedTextField.swift */; };
 		B374DC24290D7DEE0091546A /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374DC22290D7DEE0091546A /* TranslationViewController.swift */; };
 		B374DC25290D7DEE0091546A /* TranslationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B374DC23290D7DEE0091546A /* TranslationViewController.xib */; };
 		B374DC28290DA2830091546A /* AddTranslationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374DC27290DA2830091546A /* AddTranslationTextField.swift */; };
@@ -142,6 +143,7 @@
 		B36DB32F2954CBFF008C7C63 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		B36DB3312954CD83008C7C63 /* EditFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFolderViewController.swift; sourceTree = "<group>"; };
 		B36DB3322954CD83008C7C63 /* EditFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditFolderViewController.xib; sourceTree = "<group>"; };
+		B36DB33729585E43008C7C63 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
 		B374DC22290D7DEE0091546A /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
 		B374DC23290D7DEE0091546A /* TranslationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranslationViewController.xib; sourceTree = "<group>"; };
 		B374DC27290DA2830091546A /* AddTranslationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTranslationTextField.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				B374DC27290DA2830091546A /* AddTranslationTextField.swift */,
+				B36DB33729585E43008C7C63 /* UnderlinedTextField.swift */,
 			);
 			path = Designables;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				B39D5D1428C4DE8C0088C101 /* WordSet.swift in Sources */,
 				B33B20F028BE281000E66FCC /* SceneDelegate.swift in Sources */,
 				B33B211428BE611D00E66FCC /* WordData.swift in Sources */,
+				B36DB33829585E43008C7C63 /* UnderlinedTextField.swift in Sources */,
 				B307877028C0EF7200C88404 /* SetsViewController.swift in Sources */,
 				B307876728BF8FB000C88404 /* NibNames.swift in Sources */,
 				B36DB3332954CD83008C7C63 /* EditFolderViewController.swift in Sources */,

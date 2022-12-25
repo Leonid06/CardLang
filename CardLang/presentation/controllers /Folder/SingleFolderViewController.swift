@@ -27,7 +27,15 @@ class SingleFolderViewController: UIViewController {
         collectionView.register(UINib(nibName: NibNames.SingleFolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier)
         
         folderRepository.subscribeOnUpdatesOnFolders {
-            self.updateSets()
+            if let folder = self.folder {
+                if(!folder.isInvalidated){
+                    self.updateSets()
+                }else{
+                    self.navigationController?.popViewController(animated: true)
+                }
+                
+            }
+            
         }
         
         
@@ -52,11 +60,22 @@ class SingleFolderViewController: UIViewController {
             self.sets = folder?.sets ?? List<WordSet>()
             self.collectionView.reloadData()
         }
+        
+        title = folder?.name
     }
     
     
     @objc func onEditBarButtonClicked(_ sender: Any){
         
+        if let folder = folder {
+            let editFolderViewController = EditFolderViewController(nibName: NibNames.EditFolderViewControllerNibName, bundle: nil)
+            
+            editFolderViewController.modalPresentationStyle = .overFullScreen
+            
+            editFolderViewController.configure(folder)
+            
+            present(editFolderViewController, animated: true)
+        }
     }
     
     @objc func onAddBarButtonClicked(_ sender: Any){

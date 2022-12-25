@@ -93,6 +93,27 @@ class FolderRepository {
     }
     
     @MainActor
+    func modifyFolder(_ folder : Folder, name : String, description: String?, block : @escaping () -> Void){
+        Task{
+            do {
+                if let realm = realmService.getRealm(){
+                    try realm.write {
+                        folder.name = name
+                        if let description = description {
+                            folder.folderDescription = description
+                        }
+                    }
+                }
+                
+            }catch{
+                print(error)
+            }
+            
+            block()
+        }
+    }
+    
+    @MainActor
     func addFolder(name : String, description: String){
         Task {
             do {

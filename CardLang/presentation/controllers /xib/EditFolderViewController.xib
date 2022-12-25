@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditFolderViewController" customModule="CardLang" customModuleProvider="target">
             <connections>
+                <outlet property="descriptionTextField" destination="uld-cA-qCO" id="AEn-WR-Gvc"/>
+                <outlet property="nameTextField" destination="V26-7C-9OJ" id="1YX-oI-AIG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,9 +22,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9b-FK-7II">
-                    <rect key="frame" x="79" y="671" width="234" height="47"/>
+                    <rect key="frame" x="79.666666666666686" y="362" width="234" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="47" id="PTq-SW-cgL"/>
+                        <constraint firstAttribute="height" constant="40" id="PTq-SW-cgL"/>
                         <constraint firstAttribute="width" constant="234" id="ibh-6X-CqD"/>
                     </constraints>
                     <state key="normal" title="Button"/>
@@ -30,6 +32,9 @@
                         <color key="baseForegroundColor" name="wordBackgroundColor"/>
                         <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="deleteButtonClicked:" destination="-1" eventType="touchUpInside" id="36l-QU-ad7"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91K-02-iSP">
                     <rect key="frame" x="15" y="59" width="77" height="35"/>
@@ -37,6 +42,9 @@
                     <buttonConfiguration key="configuration" style="plain" title="Cancel">
                         <color key="baseForegroundColor" name="barColor"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="cancelButtonClicked:" destination="-1" eventType="touchUpInside" id="88h-q2-F3V"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3W-0w-BF1">
                     <rect key="frame" x="312" y="59" width="65" height="35"/>
@@ -44,24 +52,76 @@
                     <buttonConfiguration key="configuration" style="plain" title="Done">
                         <color key="baseForegroundColor" name="barColor"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="doneButtonClicked:" destination="-1" eventType="touchUpInside" id="MzC-Pj-d22"/>
+                    </connections>
                 </button>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter folder name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V26-7C-9OJ" customClass="UnderlinedTextField" customModule="CardLang" customModuleProvider="target">
+                    <rect key="frame" x="54" y="161" width="300" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="5p5-hH-w0N"/>
+                        <constraint firstAttribute="width" constant="300" id="eiF-Vu-Lsf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter folder description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uld-cA-qCO" customClass="UnderlinedTextField" customModule="CardLang" customModuleProvider="target">
+                    <rect key="frame" x="54" y="259" width="300" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="eRT-6K-3rW"/>
+                        <constraint firstAttribute="width" constant="300" id="j5S-gj-Fog"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMa-v5-IzT">
+                    <rect key="frame" x="54" y="209" width="40.333333333333343" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" name="secondaryGreyLabelColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Y1-jY-o7B">
+                    <rect key="frame" x="54.000000000000007" y="307" width="78.666666666666686" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" name="secondaryGreyLabelColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="p3W-0w-BF1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0zc-NK-d6m"/>
                 <constraint firstItem="91K-02-iSP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="23F-cQ-Y8l"/>
-                <constraint firstItem="z9b-FK-7II" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="79" id="8P1-eS-fCF"/>
+                <constraint firstItem="V26-7C-9OJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="54" id="8sn-tc-huI"/>
+                <constraint firstItem="z9b-FK-7II" firstAttribute="top" secondItem="uld-cA-qCO" secondAttribute="bottom" constant="63" id="CqD-XS-I0O"/>
+                <constraint firstItem="tMa-v5-IzT" firstAttribute="top" secondItem="V26-7C-9OJ" secondAttribute="bottom" constant="8" symbolic="YES" id="X13-HB-bBI"/>
+                <constraint firstItem="uld-cA-qCO" firstAttribute="top" secondItem="V26-7C-9OJ" secondAttribute="bottom" constant="58" id="Zk2-b3-wEq"/>
+                <constraint firstItem="uld-cA-qCO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="54" id="cFs-wW-whn"/>
+                <constraint firstItem="tMa-v5-IzT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="54" id="dOh-kM-rFW"/>
+                <constraint firstItem="0Y1-jY-o7B" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="54" id="f8C-8f-ZF7"/>
+                <constraint firstItem="z9b-FK-7II" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kuS-HB-mPf"/>
                 <constraint firstItem="91K-02-iSP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="oNH-3H-ozq"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="z9b-FK-7II" secondAttribute="bottom" constant="100" id="rJI-8b-ial"/>
+                <constraint firstItem="V26-7C-9OJ" firstAttribute="top" secondItem="91K-02-iSP" secondAttribute="bottom" constant="67" id="vyB-K0-hmL"/>
+                <constraint firstItem="0Y1-jY-o7B" firstAttribute="top" secondItem="uld-cA-qCO" secondAttribute="bottom" constant="8" symbolic="YES" id="w7z-iu-4yH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="p3W-0w-BF1" secondAttribute="trailing" constant="16" id="z42-h9-AyL"/>
             </constraints>
             <point key="canvasLocation" x="136.64122137404578" y="20.422535211267608"/>
         </view>
     </objects>
+    <designables>
+        <designable name="V26-7C-9OJ">
+            <size key="intrinsicContentSize" width="139.66666666666666" height="22"/>
+        </designable>
+        <designable name="uld-cA-qCO">
+            <size key="intrinsicContentSize" width="178.33333333333334" height="22"/>
+        </designable>
+    </designables>
     <resources>
         <namedColor name="barColor">
             <color red="0.77499997615814209" green="0.62000000476837158" blue="0.41499999165534973" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="secondaryGreyLabelColor">
+            <color red="0.65490196078431373" green="0.62352941176470589" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="wordBackgroundColor">
             <color red="1" green="0.94117647058823528" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
