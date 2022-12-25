@@ -27,7 +27,7 @@
                     <color key="textColor" name="editLabelColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a term.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJZ-r7-YPF" customClass="AddTranslationTextField" customModule="CardLang" customModuleProvider="target">
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a term.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EJZ-r7-YPF" customClass="UnderlinedTextField" customModule="CardLang" customModuleProvider="target">
                     <rect key="frame" x="18" y="162" width="335" height="44"/>
                     <color key="tintColor" name="buttonColor"/>
                     <constraints>
@@ -51,7 +51,7 @@
                     <color key="textColor" name="editLabelColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a meaning.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LJI-gE-pak" customClass="AddTranslationTextField" customModule="CardLang" customModuleProvider="target">
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a meaning.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LJI-gE-pak" customClass="UnderlinedTextField" customModule="CardLang" customModuleProvider="target">
                     <rect key="frame" x="18" y="270" width="335" height="44"/>
                     <color key="tintColor" name="buttonColor"/>
                     <constraints>

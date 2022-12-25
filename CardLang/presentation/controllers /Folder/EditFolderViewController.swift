@@ -32,15 +32,18 @@ class EditFolderViewController: UIViewController {
     
     @IBAction func doneButtonClicked(_ sender: Any) {
         if let folder = folder, let name = nameTextField.text {
-            if let description = descriptionTextField.text {
-                folderRepository.modifyFolder(folder, name: name , description: description){
-                    self.onFolderUpdated()
-                }
-            }else {
-                folderRepository.modifyFolder(folder, name: name , description: nil){
-                    self.onFolderUpdated()
+            if(!name.isEmpty){
+                if let description = descriptionTextField.text {
+                    folderRepository.modifyFolder(folder, name: name , description: description){
+                        self.onFolderUpdated()
+                    }
+                }else {
+                    folderRepository.modifyFolder(folder, name: name , description: nil){
+                        self.onFolderUpdated()
+                    }
                 }
             }
+           
         }
     }
     @IBAction func cancelButtonClicked(_ sender: Any) {

@@ -11,8 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateFolderViewController" customModule="CardLang" customModuleProvider="target">
             <connections>
-                <outlet property="folderDescriptionTextView" destination="Ai8-2y-qiU" id="DlP-kE-3Bw"/>
-                <outlet property="folderNameTextView" destination="K6U-Iq-Rut" id="Eqd-3O-qB9"/>
+                <outlet property="folderDescriptionTextField" destination="fT7-8T-8CT" id="oIJ-jo-mun"/>
+                <outlet property="folderNameTextField" destination="SVY-0w-sND" id="8Fn-Wa-mRc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,79 +41,71 @@
                         <action selector="addFolderButtonClicked:" destination="-1" eventType="touchUpInside" id="D14-Wj-ddE"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Folder name" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="K6U-Iq-Rut" customClass="RSKPlaceholderTextView" customModule="RSKPlaceholderTextView">
-                    <rect key="frame" x="26" y="118" width="287" height="40"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <color key="tintColor" name="buttonColor"/>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter folder name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SVY-0w-sND" customClass="UnderlinedTextField" customModule="CardLang" customModuleProvider="target">
+                    <rect key="frame" x="46" y="131" width="314" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="287" id="2Ds-hg-X3S"/>
-                        <constraint firstAttribute="height" constant="40" id="Mw3-pa-FIb"/>
+                        <constraint firstAttribute="height" constant="40" id="B3K-AD-gQ5"/>
+                        <constraint firstAttribute="width" constant="314" id="h4U-5D-q0I"/>
                     </constraints>
-                    <color key="textColor" systemColor="labelColor"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter folder name "/>
-                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                            <color key="value" systemColor="placeholderTextColor"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </textView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Folder description " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ai8-2y-qiU" customClass="RSKPlaceholderTextView" customModule="RSKPlaceholderTextView">
-                    <rect key="frame" x="26" y="166" width="315" height="97.333333333333314"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <color key="tintColor" name="buttonColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="97.329999999999998" id="66q-Tx-Dy2"/>
-                        <constraint firstAttribute="width" constant="315" id="WG4-mW-yjA"/>
-                    </constraints>
-                    <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter a meaning"/>
-                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                            <color key="value" systemColor="placeholderTextColor"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </textView>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqb-le-BSJ">
+                    <rect key="frame" x="46" y="179" width="40.333333333333343" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" name="secondaryGreyLabelColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter folder description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fT7-8T-8CT" customClass="UnderlinedTextField" customModule="CardLang" customModuleProvider="target">
+                    <rect key="frame" x="46" y="212" width="314" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="314" id="961-h7-3dg"/>
+                        <constraint firstAttribute="height" constant="40" id="ckR-DE-lBB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNu-3z-uQb">
+                    <rect key="frame" x="46.000000000000007" y="260" width="78.666666666666686" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" name="secondaryGreyLabelColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fT7-8T-8CT" firstAttribute="top" secondItem="pqb-le-BSJ" secondAttribute="bottom" constant="15" id="2Ye-ua-g6p"/>
                 <constraint firstItem="27j-0O-qb0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3SR-bd-Md2"/>
-                <constraint firstItem="Ai8-2y-qiU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="BPq-w3-ngh"/>
-                <constraint firstItem="K6U-Iq-Rut" firstAttribute="top" secondItem="27j-0O-qb0" secondAttribute="bottom" constant="24" id="ZnY-pK-soy"/>
-                <constraint firstItem="K6U-Iq-Rut" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="26" id="k1K-J7-vPN"/>
+                <constraint firstItem="pqb-le-BSJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="46" id="5vz-17-u47"/>
+                <constraint firstItem="fT7-8T-8CT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="46" id="AGU-kL-mCY"/>
+                <constraint firstItem="YNu-3z-uQb" firstAttribute="top" secondItem="fT7-8T-8CT" secondAttribute="bottom" constant="8" symbolic="YES" id="D72-2A-jw9"/>
+                <constraint firstItem="pqb-le-BSJ" firstAttribute="top" secondItem="SVY-0w-sND" secondAttribute="bottom" constant="8" symbolic="YES" id="IfI-ZW-ddX"/>
+                <constraint firstItem="YNu-3z-uQb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="46" id="RyC-R9-So7"/>
+                <constraint firstItem="SVY-0w-sND" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="46" id="dea-8A-Iao"/>
                 <constraint firstItem="GIC-MT-0UW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="oNa-cW-azh"/>
                 <constraint firstItem="27j-0O-qb0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ovY-si-30R"/>
-                <constraint firstItem="Ai8-2y-qiU" firstAttribute="top" secondItem="K6U-Iq-Rut" secondAttribute="bottom" constant="8" symbolic="YES" id="vro-4g-SMK"/>
+                <constraint firstItem="SVY-0w-sND" firstAttribute="top" secondItem="27j-0O-qb0" secondAttribute="bottom" constant="37" id="uCL-Dx-w0z"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GIC-MT-0UW" secondAttribute="trailing" constant="16" id="z5D-1Q-0nV"/>
             </constraints>
-            <point key="canvasLocation" x="42" y="21"/>
+            <point key="canvasLocation" x="41.984732824427482" y="20.422535211267608"/>
         </view>
     </objects>
     <designables>
-        <designable name="Ai8-2y-qiU">
-            <size key="intrinsicContentSize" width="152.33333333333334" height="36.333333333333336"/>
+        <designable name="SVY-0w-sND">
+            <size key="intrinsicContentSize" width="139.66666666666666" height="22"/>
         </designable>
-        <designable name="K6U-Iq-Rut">
-            <size key="intrinsicContentSize" width="123.66666666666667" height="40"/>
+        <designable name="fT7-8T-8CT">
+            <size key="intrinsicContentSize" width="178.33333333333334" height="22"/>
         </designable>
     </designables>
     <resources>
         <namedColor name="barColor">
             <color red="0.77499997615814209" green="0.62000000476837158" blue="0.41499999165534973" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="buttonColor">
-            <color red="1" green="0.70588235294117652" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="secondaryGreyLabelColor">
+            <color red="0.65490196078431373" green="0.62352941176470589" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="placeholderTextColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -49,7 +49,7 @@ class AddSetToFolderViewController: UIViewController {
 extension AddSetToFolderViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let sets = sets, let folder = folder  {
-            let set = sets[sets.count - 1 - indexPath.section]
+            let set = sets[sets.count - 1 - indexPath.row]
             folderRepository.addSetToFolder(set: set, folder: folder){
                 self.dismiss(animated: true)
             }
@@ -62,21 +62,21 @@ extension AddSetToFolderViewController : UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
         if let sets = sets {
             return sets.count
         }
         return 0
     }
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier, for: indexPath) as! SingleFolderCollectionViewCell
     
         if let sets = sets {
-                let set = sets[sets.count - 1 - indexPath.section]
+                let set = sets[sets.count - 1 - indexPath.row]
                 cell.configure(set)
             }
     
@@ -94,7 +94,7 @@ extension AddSetToFolderViewController : UICollectionViewDelegateFlowLayout  {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 20
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
