@@ -15,6 +15,22 @@ class SetRepository {
     private let realmService = RealmService.shared
     
     private var notificationToken =  NotificationToken()
+    
+    
+    @MainActor
+    func getUnfolderedSets() async throws -> Results<WordSet>? {
+        let task = Task { () -> Results<WordSet>? in
+            if let realm = realmService.getRealm() {
+                let sets = realm.objects(WordSet.self)
+                let unfolderedSets = sets.where {
+                    $0.currentFolder.count == 0
+                }
+                return unfolderedSets
+            }
+            return nil
+        }
+        return try await task.result.get()
+    }
 
 
     @MainActor

@@ -42,6 +42,47 @@ class RealmService {
     }
     
     @MainActor
+    func addObserverOnFolders(block: @escaping  () -> Void) async throws {
+        
+        if let _ = self.realm {
+            
+        }else {
+                do {
+                    try await login()
+                    try await self.realm = instantiateRealm()
+                    
+                    print("instantiated realm")
+                    
+                }catch {
+                    print(error)
+                }
+            }
+        
+        
+        let folders = realm?.objects(Folder.self)
+        
+        let token = folders?.observe {
+            changes in
+            
+            switch changes {
+            case .initial:
+                print("notified initial")
+                block()
+            case .update:
+                print("notified")
+                block()
+            case .error(let error):
+                print(error)
+            }
+        }
+        if let token = token {
+            notificationTokens.append(token)
+        }
+    }
+    
+    
+    
+    @MainActor
     func addObserverOnSets(block: @escaping  () -> Void) async throws {
         
         if let _ = self.realm {
@@ -78,10 +119,6 @@ class RealmService {
         if let token = token {
             notificationTokens.append(token)
         }
-        
-            
-            
-        
     }
     
     @MainActor
@@ -149,16 +186,15 @@ class RealmService {
         
         let subscriptions = realm.subscriptions
         
-        if(subscriptions.count == 0){
+        if(subscriptions.count < 3){
             try await subscriptions.update {
-                    if let _ = subscriptions.first(named : "all-sets") {
-                        return
-                    }else {
-                        subscriptions.append(QuerySubscription<WordSet>(name: "all-sets"))
-                        subscriptions.append(QuerySubscription<Translation>(name: "all-tranlations"))
-                    }
+                subscriptions.append(QuerySubscription<Folder>(name: Constants.RealmSubscriptions.FoldersSubscription))
+                subscriptions.append(QuerySubscription<WordSet>(name: Constants.RealmSubscriptions.SetsSubscription))
+                subscriptions.append(QuerySubscription<Translation>(name: Constants.RealmSubscriptions.TranslationsSubscription))
             }
         }
+        
+        
 
         
         

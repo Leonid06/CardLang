@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a set name" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxh-ML-RTv" customClass="AddTranslationTextField" customModule="CardLang" customModuleProvider="target">
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a set name" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cxh-ML-RTv" customClass="UnderlinedTextField" customModule="CardLang" customModuleProvider="target">
                     <rect key="frame" x="25" y="203" width="335" height="42"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="42" id="BuD-BB-70m"/>
@@ -93,7 +93,7 @@
     </objects>
     <designables>
         <designable name="cxh-ML-RTv">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
+            <size key="intrinsicContentSize" width="128" height="22"/>
         </designable>
     </designables>
     <resources>

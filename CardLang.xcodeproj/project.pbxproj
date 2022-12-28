@@ -42,15 +42,32 @@
 		B35F629228E6E99F00C5F250 /* CardLangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F629128E6E99F00C5F250 /* CardLangTests.swift */; };
 		B35F629928E6EA3800C5F250 /* CardServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F629828E6EA3800C5F250 /* CardServiceTest.swift */; };
 		B366FA71291406A8005BECA2 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B366FA70291406A8005BECA2 /* Protocols.swift */; };
+		B369145E294DFD8A0020011B /* SingleFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369145C294DFD8A0020011B /* SingleFolderViewController.swift */; };
+		B369145F294DFD8A0020011B /* SingleFolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B369145D294DFD8A0020011B /* SingleFolderViewController.xib */; };
+		B369146C294E113E0020011B /* SingleFolderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369146A294E113E0020011B /* SingleFolderCollectionViewCell.swift */; };
+		B369146D294E113E0020011B /* SingleFolderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B369146B294E113E0020011B /* SingleFolderCollectionViewCell.xib */; };
+		B36DB329294F104C008C7C63 /* AddSetToFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DB327294F104C008C7C63 /* AddSetToFolderViewController.swift */; };
+		B36DB32A294F104C008C7C63 /* AddSetToFolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36DB328294F104C008C7C63 /* AddSetToFolderViewController.xib */; };
+		B36DB32D2950E748008C7C63 /* AddSetToFolderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DB32B2950E748008C7C63 /* AddSetToFolderCollectionViewCell.swift */; };
+		B36DB32E2950E748008C7C63 /* AddSetToFolderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36DB32C2950E748008C7C63 /* AddSetToFolderCollectionViewCell.xib */; };
+		B36DB3302954CBFF008C7C63 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DB32F2954CBFF008C7C63 /* UIViewController.swift */; };
+		B36DB3332954CD83008C7C63 /* EditFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DB3312954CD83008C7C63 /* EditFolderViewController.swift */; };
+		B36DB3342954CD83008C7C63 /* EditFolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36DB3322954CD83008C7C63 /* EditFolderViewController.xib */; };
+		B36DB33829585E43008C7C63 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DB33729585E43008C7C63 /* UnderlinedTextField.swift */; };
 		B374DC24290D7DEE0091546A /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374DC22290D7DEE0091546A /* TranslationViewController.swift */; };
 		B374DC25290D7DEE0091546A /* TranslationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B374DC23290D7DEE0091546A /* TranslationViewController.xib */; };
 		B374DC28290DA2830091546A /* AddTranslationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374DC27290DA2830091546A /* AddTranslationTextField.swift */; };
 		B385B88028E4611200F86C53 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385B87F28E4611200F86C53 /* Colors.swift */; };
 		B39D5D1428C4DE8C0088C101 /* WordSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D5D1328C4DE8C0088C101 /* WordSet.swift */; };
 		B39D5D1628C4E0710088C101 /* SetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D5D1528C4E0710088C101 /* SetRepository.swift */; };
+		B3A698A0294C8E56003BCA10 /* CreateFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A6989E294C8E56003BCA10 /* CreateFolderViewController.swift */; };
+		B3A698A1294C8E56003BCA10 /* CreateFolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3A6989F294C8E56003BCA10 /* CreateFolderViewController.xib */; };
 		B3D78DEE2923E3A200A4E8E6 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D78DED2923E3A200A4E8E6 /* SoundService.swift */; };
 		B3DFAB8828DDBD9A00B84EEC /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */; };
 		B3DFAB8928DDBD9A00B84EEC /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFAB8728DDBD9A00B84EEC /* SearchTableViewCell.xib */; };
+		B3E4752B293BBB760049A0F6 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E4752A293BBB760049A0F6 /* Folder.swift */; };
+		B3E4752D293BC0210049A0F6 /* FolderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E4752C293BC0210049A0F6 /* FolderRepository.swift */; };
+		B3E47533293D0EC00049A0F6 /* FoldersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E47531293D0EC00049A0F6 /* FoldersViewController.swift */; };
 		B3E86DF028E375D20018AD09 /* LeftOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E86DEF28E375D20018AD09 /* LeftOverlayView.xib */; };
 		B3E86DF228E378DB0018AD09 /* RightOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E86DF128E378DB0018AD09 /* RightOverlayView.xib */; };
 		B3EEF0DE290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EEF0DD290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift */; };
@@ -60,6 +77,8 @@
 		B3EFDFBC28C0FF9700FA1183 /* WordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */; };
 		B3EFDFBD28C0FF9700FA1183 /* WordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3EFDFBB28C0FF9700FA1183 /* WordCollectionViewCell.xib */; };
 		B3EFDFC028C1104E00FA1183 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFBF28C1104E00FA1183 /* Identifiers.swift */; };
+		B3F9F856294B985000BB1477 /* FolderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F9F854294B985000BB1477 /* FolderCollectionViewCell.swift */; };
+		B3F9F857294B985000BB1477 /* FolderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3F9F855294B985000BB1477 /* FolderCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,15 +132,32 @@
 		B35F629128E6E99F00C5F250 /* CardLangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLangTests.swift; sourceTree = "<group>"; };
 		B35F629828E6EA3800C5F250 /* CardServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardServiceTest.swift; sourceTree = "<group>"; };
 		B366FA70291406A8005BECA2 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		B369145C294DFD8A0020011B /* SingleFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFolderViewController.swift; sourceTree = "<group>"; };
+		B369145D294DFD8A0020011B /* SingleFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleFolderViewController.xib; sourceTree = "<group>"; };
+		B369146A294E113E0020011B /* SingleFolderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFolderCollectionViewCell.swift; sourceTree = "<group>"; };
+		B369146B294E113E0020011B /* SingleFolderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleFolderCollectionViewCell.xib; sourceTree = "<group>"; };
+		B36DB327294F104C008C7C63 /* AddSetToFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSetToFolderViewController.swift; sourceTree = "<group>"; };
+		B36DB328294F104C008C7C63 /* AddSetToFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSetToFolderViewController.xib; sourceTree = "<group>"; };
+		B36DB32B2950E748008C7C63 /* AddSetToFolderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSetToFolderCollectionViewCell.swift; sourceTree = "<group>"; };
+		B36DB32C2950E748008C7C63 /* AddSetToFolderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSetToFolderCollectionViewCell.xib; sourceTree = "<group>"; };
+		B36DB32F2954CBFF008C7C63 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		B36DB3312954CD83008C7C63 /* EditFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFolderViewController.swift; sourceTree = "<group>"; };
+		B36DB3322954CD83008C7C63 /* EditFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditFolderViewController.xib; sourceTree = "<group>"; };
+		B36DB33729585E43008C7C63 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
 		B374DC22290D7DEE0091546A /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
 		B374DC23290D7DEE0091546A /* TranslationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranslationViewController.xib; sourceTree = "<group>"; };
 		B374DC27290DA2830091546A /* AddTranslationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTranslationTextField.swift; sourceTree = "<group>"; };
 		B385B87F28E4611200F86C53 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B39D5D1328C4DE8C0088C101 /* WordSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSet.swift; sourceTree = "<group>"; };
 		B39D5D1528C4E0710088C101 /* SetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepository.swift; sourceTree = "<group>"; };
+		B3A6989E294C8E56003BCA10 /* CreateFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFolderViewController.swift; sourceTree = "<group>"; };
+		B3A6989F294C8E56003BCA10 /* CreateFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateFolderViewController.xib; sourceTree = "<group>"; };
 		B3D78DED2923E3A200A4E8E6 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
 		B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		B3DFAB8728DDBD9A00B84EEC /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchTableViewCell.xib; path = ../SearchTableViewCell.xib; sourceTree = "<group>"; };
+		B3E4752A293BBB760049A0F6 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		B3E4752C293BC0210049A0F6 /* FolderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderRepository.swift; sourceTree = "<group>"; };
+		B3E47531293D0EC00049A0F6 /* FoldersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersViewController.swift; sourceTree = "<group>"; };
 		B3E86DEF28E375D20018AD09 /* LeftOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftOverlayView.xib; sourceTree = "<group>"; };
 		B3E86DF128E378DB0018AD09 /* RightOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightOverlayView.xib; sourceTree = "<group>"; };
 		B3EEF0DD290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SingleSetViewcontroller+Navigation.swift"; sourceTree = "<group>"; };
@@ -131,6 +167,8 @@
 		B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3EFDFBB28C0FF9700FA1183 /* WordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordCollectionViewCell.xib; sourceTree = "<group>"; };
 		B3EFDFBF28C1104E00FA1183 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
+		B3F9F854294B985000BB1477 /* FolderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCollectionViewCell.swift; sourceTree = "<group>"; };
+		B3F9F855294B985000BB1477 /* FolderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FolderCollectionViewCell.xib; sourceTree = "<group>"; };
 		B50E2133FCDC771862577A9D /* Pods-CardLang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.release.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,16 +202,10 @@
 		B307876C28C0EF0900C88404 /* controllers  */ = {
 			isa = PBXGroup;
 			children = (
+				B36DB3362954D184008C7C63 /* Set */,
+				B36DB3352954D179008C7C63 /* Folder */,
 				B3D78DEC291E704400A4E8E6 /* Extensions */,
 				B307877328C0F08A00C88404 /* xib */,
-				B374DC22290D7DEE0091546A /* TranslationViewController.swift */,
-				B309014A29169728007FDDB5 /* EditSetViewController.swift */,
-				B33B20F128BE281000E66FCC /* CardViewController.swift */,
-				B307876F28C0EF7200C88404 /* SetsViewController.swift */,
-				B3EFDFB828C0FF4200FA1183 /* SingleSetViewController.swift */,
-				B30787E628DDBA0B0080EFE4 /* SearchViewController.swift */,
-				B3061A02290ECEA000C1C6FB /* AddModeViewController.swift */,
-				B323F8302911434A003CBCD1 /* TermViewController.swift */,
 				B323F8312911434A003CBCD1 /* TermViewController.xib */,
 				B366FA70291406A8005BECA2 /* Protocols.swift */,
 			);
@@ -188,6 +220,10 @@
 				B307877428C0F0BA00C88404 /* CardViewController.xib */,
 				B3061A03290ECEA000C1C6FB /* AddModeViewController.xib */,
 				B309014B29169728007FDDB5 /* EditSetViewController.xib */,
+				B3A6989F294C8E56003BCA10 /* CreateFolderViewController.xib */,
+				B369145D294DFD8A0020011B /* SingleFolderViewController.xib */,
+				B36DB328294F104C008C7C63 /* AddSetToFolderViewController.xib */,
+				B36DB3322954CD83008C7C63 /* EditFolderViewController.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -201,6 +237,9 @@
 				B335BAF428BF467C00B9A29F /* CardView.xib */,
 				B3E86DEF28E375D20018AD09 /* LeftOverlayView.xib */,
 				B3E86DF128E378DB0018AD09 /* RightOverlayView.xib */,
+				B3F9F855294B985000BB1477 /* FolderCollectionViewCell.xib */,
+				B369146B294E113E0020011B /* SingleFolderCollectionViewCell.xib */,
+				B36DB32C2950E748008C7C63 /* AddSetToFolderCollectionViewCell.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -245,15 +284,10 @@
 		B33B210528BE296100E66FCC /* data */ = {
 			isa = PBXGroup;
 			children = (
-				B33B210D28BE4F2100E66FCC /* CardService.swift */,
+				B3E4752F293BC42C0049A0F6 /* services */,
+				B3E4752E293BC4100049A0F6 /* repositories */,
 				B33B210F28BE515F00E66FCC /* Constants .swift */,
-				B335BAF628BF4B7700B9A29F /* CardRepository.swift */,
-				B39D5D1528C4E0710088C101 /* SetRepository.swift */,
 				B312A56228E610B100E274C2 /* Keys.xcconfig */,
-				B3483C0528F95D900065648C /* RealmService.swift */,
-				B323D7C32917AF0A00C626A8 /* DefaultsRepository .swift */,
-				B323D7C52917AFDE00C626A8 /* UserDefaultsKeys.swift */,
-				B3D78DED2923E3A200A4E8E6 /* SoundService.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -283,7 +317,10 @@
 				B3EFDFBE28C1101100FA1183 /* Constants */,
 				B307877628C0F0D300C88404 /* xib */,
 				B335BAF228BF466100B9A29F /* CardView.swift */,
+				B3F9F854294B985000BB1477 /* FolderCollectionViewCell.swift */,
+				B36DB32B2950E748008C7C63 /* AddSetToFolderCollectionViewCell.swift */,
 				B307876A28C0969500C88404 /* TranslationSwipeCard.swift */,
+				B369146A294E113E0020011B /* SingleFolderCollectionViewCell.swift */,
 				B3EFDFB028C0FCA800FA1183 /* SetsTableViewCell.swift */,
 				B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */,
 				B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */,
@@ -300,10 +337,38 @@
 			path = CardLangTests;
 			sourceTree = "<group>";
 		};
+		B36DB3352954D179008C7C63 /* Folder */ = {
+			isa = PBXGroup;
+			children = (
+				B369145C294DFD8A0020011B /* SingleFolderViewController.swift */,
+				B36DB3312954CD83008C7C63 /* EditFolderViewController.swift */,
+				B3E47531293D0EC00049A0F6 /* FoldersViewController.swift */,
+				B3A6989E294C8E56003BCA10 /* CreateFolderViewController.swift */,
+				B36DB327294F104C008C7C63 /* AddSetToFolderViewController.swift */,
+			);
+			path = Folder;
+			sourceTree = "<group>";
+		};
+		B36DB3362954D184008C7C63 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				B30787E628DDBA0B0080EFE4 /* SearchViewController.swift */,
+				B3EFDFB828C0FF4200FA1183 /* SingleSetViewController.swift */,
+				B307876F28C0EF7200C88404 /* SetsViewController.swift */,
+				B33B20F128BE281000E66FCC /* CardViewController.swift */,
+				B374DC22290D7DEE0091546A /* TranslationViewController.swift */,
+				B309014A29169728007FDDB5 /* EditSetViewController.swift */,
+				B3061A02290ECEA000C1C6FB /* AddModeViewController.swift */,
+				B323F8302911434A003CBCD1 /* TermViewController.swift */,
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
 		B374DC26290DA25B0091546A /* Designables */ = {
 			isa = PBXGroup;
 			children = (
 				B374DC27290DA2830091546A /* AddTranslationTextField.swift */,
+				B36DB33729585E43008C7C63 /* UnderlinedTextField.swift */,
 			);
 			path = Designables;
 			sourceTree = "<group>";
@@ -314,6 +379,7 @@
 				B33B211328BE611D00E66FCC /* WordData.swift */,
 				B33B211528BE646200E66FCC /* Translation .swift */,
 				B39D5D1328C4DE8C0088C101 /* WordSet.swift */,
+				B3E4752A293BBB760049A0F6 /* Folder.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -323,8 +389,31 @@
 			children = (
 				B3EEF0DD290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift */,
 				B33E59062931FCE10017407B /* UIView.swift */,
+				B36DB32F2954CBFF008C7C63 /* UIViewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B3E4752E293BC4100049A0F6 /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B335BAF628BF4B7700B9A29F /* CardRepository.swift */,
+				B39D5D1528C4E0710088C101 /* SetRepository.swift */,
+				B3E4752C293BC0210049A0F6 /* FolderRepository.swift */,
+				B323D7C32917AF0A00C626A8 /* DefaultsRepository .swift */,
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
+		B3E4752F293BC42C0049A0F6 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				B3483C0528F95D900065648C /* RealmService.swift */,
+				B3D78DED2923E3A200A4E8E6 /* SoundService.swift */,
+				B33B210D28BE4F2100E66FCC /* CardService.swift */,
+				B323D7C52917AFDE00C626A8 /* UserDefaultsKeys.swift */,
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 		B3EFDFBE28C1101100FA1183 /* Constants */ = {
@@ -429,20 +518,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B36DB3342954CD83008C7C63 /* EditFolderViewController.xib in Resources */,
 				B323F8332911434A003CBCD1 /* TermViewController.xib in Resources */,
 				B374DC25290D7DEE0091546A /* TranslationViewController.xib in Resources */,
 				B33B20FD28BE281100E66FCC /* LaunchScreen.storyboard in Resources */,
 				B309014D29169728007FDDB5 /* EditSetViewController.xib in Resources */,
+				B369146D294E113E0020011B /* SingleFolderCollectionViewCell.xib in Resources */,
 				B33B20FA28BE281100E66FCC /* Assets.xcassets in Resources */,
 				B3061A05290ECEA000C1C6FB /* AddModeViewController.xib in Resources */,
+				B369145F294DFD8A0020011B /* SingleFolderViewController.xib in Resources */,
+				B36DB32E2950E748008C7C63 /* AddSetToFolderCollectionViewCell.xib in Resources */,
 				B3DFAB8928DDBD9A00B84EEC /* SearchTableViewCell.xib in Resources */,
 				B3EFDFB328C0FCA800FA1183 /* SetsTableViewCell.xib in Resources */,
 				B335BAF528BF467C00B9A29F /* CardView.xib in Resources */,
 				B307877528C0F0BA00C88404 /* CardViewController.xib in Resources */,
 				B3E86DF228E378DB0018AD09 /* RightOverlayView.xib in Resources */,
 				B3E86DF028E375D20018AD09 /* LeftOverlayView.xib in Resources */,
+				B3A698A1294C8E56003BCA10 /* CreateFolderViewController.xib in Resources */,
 				B33B20F528BE281000E66FCC /* Main.storyboard in Resources */,
+				B36DB32A294F104C008C7C63 /* AddSetToFolderViewController.xib in Resources */,
 				B30787E928DDBA0B0080EFE4 /* SearchViewController.xib in Resources */,
+				B3F9F857294B985000BB1477 /* FolderCollectionViewCell.xib in Resources */,
 				B3EFDFBD28C0FF9700FA1183 /* WordCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,12 +607,17 @@
 				B307876928BF9D8400C88404 /* Extensions .swift in Sources */,
 				B33B210E28BE4F2100E66FCC /* CardService.swift in Sources */,
 				B33B20F828BE281000E66FCC /* CardLang.xcdatamodeld in Sources */,
+				B36DB32D2950E748008C7C63 /* AddSetToFolderCollectionViewCell.swift in Sources */,
 				B3483C0628F95D900065648C /* RealmService.swift in Sources */,
 				B33B211628BE646200E66FCC /* Translation .swift in Sources */,
+				B3F9F856294B985000BB1477 /* FolderCollectionViewCell.swift in Sources */,
+				B3E47533293D0EC00049A0F6 /* FoldersViewController.swift in Sources */,
 				B33E59072931FCE10017407B /* UIView.swift in Sources */,
 				B3EFDFC028C1104E00FA1183 /* Identifiers.swift in Sources */,
 				B3D78DEE2923E3A200A4E8E6 /* SoundService.swift in Sources */,
 				B335BAF328BF466100B9A29F /* CardView.swift in Sources */,
+				B369146C294E113E0020011B /* SingleFolderCollectionViewCell.swift in Sources */,
+				B3E4752D293BC0210049A0F6 /* FolderRepository.swift in Sources */,
 				B323D7C42917AF0A00C626A8 /* DefaultsRepository .swift in Sources */,
 				B309014C29169728007FDDB5 /* EditSetViewController.swift in Sources */,
 				B33B20EE28BE281000E66FCC /* AppDelegate.swift in Sources */,
@@ -527,17 +628,24 @@
 				B374DC24290D7DEE0091546A /* TranslationViewController.swift in Sources */,
 				B374DC28290DA2830091546A /* AddTranslationTextField.swift in Sources */,
 				B385B88028E4611200F86C53 /* Colors.swift in Sources */,
+				B36DB3302954CBFF008C7C63 /* UIViewController.swift in Sources */,
 				B3EFDFBC28C0FF9700FA1183 /* WordCollectionViewCell.swift in Sources */,
 				B335BAF728BF4B7700B9A29F /* CardRepository.swift in Sources */,
 				B323F8322911434A003CBCD1 /* TermViewController.swift in Sources */,
 				B3DFAB8828DDBD9A00B84EEC /* SearchTableViewCell.swift in Sources */,
+				B369145E294DFD8A0020011B /* SingleFolderViewController.swift in Sources */,
 				B30787E828DDBA0B0080EFE4 /* SearchViewController.swift in Sources */,
+				B36DB329294F104C008C7C63 /* AddSetToFolderViewController.swift in Sources */,
 				B39D5D1428C4DE8C0088C101 /* WordSet.swift in Sources */,
 				B33B20F028BE281000E66FCC /* SceneDelegate.swift in Sources */,
 				B33B211428BE611D00E66FCC /* WordData.swift in Sources */,
+				B36DB33829585E43008C7C63 /* UnderlinedTextField.swift in Sources */,
 				B307877028C0EF7200C88404 /* SetsViewController.swift in Sources */,
 				B307876728BF8FB000C88404 /* NibNames.swift in Sources */,
+				B36DB3332954CD83008C7C63 /* EditFolderViewController.swift in Sources */,
 				B3EEF0DE290FD79C00C9DCE7 /* SingleSetViewcontroller+Navigation.swift in Sources */,
+				B3A698A0294C8E56003BCA10 /* CreateFolderViewController.swift in Sources */,
+				B3E4752B293BBB760049A0F6 /* Folder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

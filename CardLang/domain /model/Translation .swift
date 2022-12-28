@@ -15,7 +15,8 @@ class Translation : Object {
     @Persisted var word : String
     @Persisted var translation : String
     @Persisted var type : String?
-    @Persisted var soundPath: String? 
+    @Persisted var soundPath: String?
+    @Persisted(originProperty: "translations") var currentSet : LinkingObjects<WordSet>
     
     
     convenience init(word : String, translation: String, ownerId: String, type: String?, soundPath: String?){
