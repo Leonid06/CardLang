@@ -313,17 +313,11 @@
 		B33B211728BE754E00E66FCC /* views */ = {
 			isa = PBXGroup;
 			children = (
+				B39ED4C32962F306008C1D23 /* set */,
+				B39ED4C22962F2F3008C1D23 /* folder */,
 				B374DC26290DA25B0091546A /* Designables */,
 				B3EFDFBE28C1101100FA1183 /* Constants */,
 				B307877628C0F0D300C88404 /* xib */,
-				B335BAF228BF466100B9A29F /* CardView.swift */,
-				B3F9F854294B985000BB1477 /* FolderCollectionViewCell.swift */,
-				B36DB32B2950E748008C7C63 /* AddSetToFolderCollectionViewCell.swift */,
-				B307876A28C0969500C88404 /* TranslationSwipeCard.swift */,
-				B369146A294E113E0020011B /* SingleFolderCollectionViewCell.swift */,
-				B3EFDFB028C0FCA800FA1183 /* SetsTableViewCell.swift */,
-				B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */,
-				B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -382,6 +376,28 @@
 				B3E4752A293BBB760049A0F6 /* Folder.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		B39ED4C22962F2F3008C1D23 /* folder */ = {
+			isa = PBXGroup;
+			children = (
+				B36DB32B2950E748008C7C63 /* AddSetToFolderCollectionViewCell.swift */,
+				B3F9F854294B985000BB1477 /* FolderCollectionViewCell.swift */,
+				B369146A294E113E0020011B /* SingleFolderCollectionViewCell.swift */,
+			);
+			path = folder;
+			sourceTree = "<group>";
+		};
+		B39ED4C32962F306008C1D23 /* set */ = {
+			isa = PBXGroup;
+			children = (
+				B335BAF228BF466100B9A29F /* CardView.swift */,
+				B307876A28C0969500C88404 /* TranslationSwipeCard.swift */,
+				B3EFDFB028C0FCA800FA1183 /* SetsTableViewCell.swift */,
+				B3EFDFBA28C0FF9700FA1183 /* WordCollectionViewCell.swift */,
+				B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */,
+			);
+			path = set;
 			sourceTree = "<group>";
 		};
 		B3D78DEC291E704400A4E8E6 /* Extensions */ = {
