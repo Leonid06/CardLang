@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddSetViewController" customModule="CardLang" customModuleProvider="target">
+            <connections>
+                <outlet property="setDescriptionTextField" destination="oGg-I7-KNL" id="Be0-tC-iKX"/>
+                <outlet property="setNameTextField" destination="AWg-xL-KYT" id="eaK-L5-BH7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHg-nK-C0Z">
+                    <rect key="frame" x="16" y="59" width="76.666666666666671" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                        <color key="baseForegroundColor" name="barColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="cancelButtonClicked:" destination="-1" eventType="touchUpInside" id="3pw-hn-38e"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3u-u9-JeY">
+                    <rect key="frame" x="289" y="59" width="74.666666666666686" height="34.333333333333343"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Create">
+                        <color key="baseForegroundColor" name="barColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="createSetButtonClicked:" destination="-1" eventType="touchUpInside" id="Xba-Jz-zbJ"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter set name " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AWg-xL-KYT" customClass="UnderlinedTextField" customModule="CardLang" customModuleProvider="target">
+                    <rect key="frame" x="46" y="131" width="314" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="314" id="tho-sv-H9v"/>
+                        <constraint firstAttribute="height" constant="40" id="ttO-1h-WB4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOz-sD-nCF">
+                    <rect key="frame" x="46" y="179" width="40.333333333333343" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" name="secondaryGreyLabelColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter set description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oGg-I7-KNL" customClass="UnderlinedTextField" customModule="CardLang" customModuleProvider="target">
+                    <rect key="frame" x="46" y="212" width="314" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="aJG-hZ-Lqw"/>
+                        <constraint firstAttribute="width" constant="314" id="qrO-hV-3ss"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OE-yd-jCp">
+                    <rect key="frame" x="46.000000000000007" y="252" width="78.666666666666686" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" name="secondaryGreyLabelColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="oGg-I7-KNL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="46" id="93F-0q-Yoi"/>
+                <constraint firstItem="AWg-xL-KYT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="46" id="E25-eL-wJF"/>
+                <constraint firstItem="c3u-u9-JeY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GLC-G0-JBR"/>
+                <constraint firstItem="vOz-sD-nCF" firstAttribute="top" secondItem="AWg-xL-KYT" secondAttribute="bottom" constant="8" symbolic="YES" id="abA-Y2-RiR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c3u-u9-JeY" secondAttribute="trailing" constant="29.329999999999998" id="b1E-7a-XpN"/>
+                <constraint firstItem="1OE-yd-jCp" firstAttribute="top" secondItem="oGg-I7-KNL" secondAttribute="bottom" id="kPo-jQ-9Qe"/>
+                <constraint firstItem="ZHg-nK-C0Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="oka-3T-mr1"/>
+                <constraint firstItem="AWg-xL-KYT" firstAttribute="top" secondItem="ZHg-nK-C0Z" secondAttribute="bottom" constant="37" id="p3n-Lw-6QJ"/>
+                <constraint firstItem="oGg-I7-KNL" firstAttribute="top" secondItem="vOz-sD-nCF" secondAttribute="bottom" constant="15" id="pWf-vx-sZL"/>
+                <constraint firstItem="vOz-sD-nCF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="46" id="r2b-fE-uzj"/>
+                <constraint firstItem="1OE-yd-jCp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="46" id="ujr-fz-XCN"/>
+                <constraint firstItem="ZHg-nK-C0Z" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xE8-pB-7B8"/>
+            </constraints>
+            <point key="canvasLocation" x="66" y="20"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="AWg-xL-KYT">
+            <size key="intrinsicContentSize" width="119" height="22"/>
+        </designable>
+        <designable name="oGg-I7-KNL">
+            <size key="intrinsicContentSize" width="157.66666666666666" height="22"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="barColor">
+            <color red="0.77499997615814209" green="0.62000000476837158" blue="0.41499999165534973" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="secondaryGreyLabelColor">
+            <color red="0.65490196078431373" green="0.62352941176470589" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

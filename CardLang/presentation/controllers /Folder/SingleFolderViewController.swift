@@ -39,9 +39,11 @@ class SingleFolderViewController: UIViewController {
         }
         
         
-        let addBarButtonItem  = UIBarButtonItem(barButtonSystemItem: .add, target: self,action: #selector(onAddBarButtonClicked))
+        let addBarButtonItem  = createBarButtonItem(icon: "folder.badge.plus", selector: nil
+            ,menu: getAddOptionsMenu())
+
         
-        let editBarButtonItem = createBarButtonItem(icon: "ellipsis", selector: #selector(onEditBarButtonClicked))
+        let editBarButtonItem = createBarButtonItem(icon: "ellipsis.circle", selector: #selector(onEditBarButtonClicked))
         
         navigationItem.rightBarButtonItems = [editBarButtonItem, addBarButtonItem]
         
@@ -76,20 +78,6 @@ class SingleFolderViewController: UIViewController {
             
             present(editFolderViewController, animated: true)
         }
-    }
-    
-    @objc func onAddBarButtonClicked(_ sender: Any){
-        
-        if let folder = folder {
-            let addSetToFolderViewController = AddSetToFolderViewController(nibName: NibNames.AddSetToFolderViewCOntrollerNibName, bundle: nil)
-            
-            addSetToFolderViewController.configure(folder)
-            
-            addSetToFolderViewController.modalPresentationStyle = .overFullScreen
-            
-            present(addSetToFolderViewController, animated: true)
-        }
-        
     }
 }
 
@@ -151,3 +139,44 @@ extension SingleFolderViewController : UICollectionViewDelegateFlowLayout  {
         return 0
     }
 }
+
+extension SingleFolderViewController {
+    func getAddOptionsMenu () -> UIMenu {
+        let menu = UIMenu(title: "", options: .displayInline, children: [
+            UIAction(title: "Add new set", image: UIImage(systemName: "note.text.badge.plus")){ action in
+                self.navigateToAddSetViewController()
+            },
+            UIAction(title: "Add existing set", image: UIImage(systemName: "arrow.right.doc.on.clipboard")){ action in
+                self.navigateToAddSetToFolderViewController()
+            }
+        ])
+        
+        return menu
+    }
+    
+    private func  navigateToAddSetViewController(){
+        if let folder = folder {
+            let addSetViewController = AddSetViewController(nibName: NibNames.AddSetViewControllerNibName, bundle: nil)
+            
+            addSetViewController.configure(folder)
+            addSetViewController.modalPresentationStyle = .overFullScreen
+            
+            present(addSetViewController, animated: true)
+        }
+       
+    }
+
+    private func navigateToAddSetToFolderViewController(){
+        if let folder = folder {
+            let addSetToFolderViewController = AddSetToFolderViewController(nibName: NibNames.AddSetToFolderViewCOntrollerNibName, bundle: nil)
+            
+            addSetToFolderViewController.configure(folder)
+            addSetToFolderViewController.modalPresentationStyle = .overFullScreen
+            
+            present(addSetToFolderViewController, animated: true)
+        }
+        
+    }
+}
+
+

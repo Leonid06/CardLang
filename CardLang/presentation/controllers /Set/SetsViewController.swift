@@ -43,7 +43,12 @@ class SetsViewController: UITableViewController {
     }
     
     @IBAction func addSetButtonPressed(_ sender: UIBarButtonItem) {
-        showAlert()
+//        showAlert()
+        let addSetViewController = AddSetViewController(nibName: NibNames.AddSetViewControllerNibName, bundle: nil)
+        
+        addSetViewController.modalPresentationStyle = .overFullScreen
+        
+        present(addSetViewController, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -99,30 +104,30 @@ class SetsViewController: UITableViewController {
         return cell
     }
     
-    private func showAlert() {
-       let alert = UIAlertController(title: "Add new set", message: nil, preferredStyle: .alert)
-       
-       alert.addTextField {
-           textField in
-           textField.placeholder = "Enter the name"
-       }
-       
-       
-        let addAction = UIAlertAction(title: "Add", style: .default){
-           action in
-           if let textFields = alert.textFields {
-               if let name = textFields[0].text {
-                   self.setRepository.addWordSet(name: name)
-               }
-           }
-       }
-       let deleteAction =  UIAlertAction(title: "Cancel", style: .cancel){
-           action in
-           alert.dismiss(animated: true)
-       }
-       alert.addAction(addAction)
-       alert.addAction(deleteAction)
-       
-       present(alert, animated: true)
-   }
+//    private func showAlert() {
+//       let alert = UIAlertController(title: "Add new set", message: nil, preferredStyle: .alert)
+//
+//       alert.addTextField {
+//           textField in
+//           textField.placeholder = "Enter the name"
+//       }
+//
+//
+//        let addAction = UIAlertAction(title: "Add", style: .default){
+//           action in
+//           if let textFields = alert.textFields {
+//               if let name = textFields[0].text {
+//                   self.setRepository.addWordSet(name: name)
+//               }
+//           }
+//       }
+//       let deleteAction =  UIAlertAction(title: "Cancel", style: .cancel){
+//           action in
+//           alert.dismiss(animated: true)
+//       }
+//       alert.addAction(addAction)
+//       alert.addAction(deleteAction)
+//
+//       present(alert, animated: true)
+//   }
 }

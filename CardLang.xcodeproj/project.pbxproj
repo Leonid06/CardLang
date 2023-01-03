@@ -60,6 +60,8 @@
 		B385B88028E4611200F86C53 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385B87F28E4611200F86C53 /* Colors.swift */; };
 		B39D5D1428C4DE8C0088C101 /* WordSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D5D1328C4DE8C0088C101 /* WordSet.swift */; };
 		B39D5D1628C4E0710088C101 /* SetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D5D1528C4E0710088C101 /* SetRepository.swift */; };
+		B39ED4C82962F43D008C1D23 /* AddSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39ED4C62962F43D008C1D23 /* AddSetViewController.swift */; };
+		B39ED4C92962F43D008C1D23 /* AddSetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B39ED4C72962F43D008C1D23 /* AddSetViewController.xib */; };
 		B3A698A0294C8E56003BCA10 /* CreateFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A6989E294C8E56003BCA10 /* CreateFolderViewController.swift */; };
 		B3A698A1294C8E56003BCA10 /* CreateFolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3A6989F294C8E56003BCA10 /* CreateFolderViewController.xib */; };
 		B3D78DEE2923E3A200A4E8E6 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D78DED2923E3A200A4E8E6 /* SoundService.swift */; };
@@ -150,6 +152,8 @@
 		B385B87F28E4611200F86C53 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B39D5D1328C4DE8C0088C101 /* WordSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSet.swift; sourceTree = "<group>"; };
 		B39D5D1528C4E0710088C101 /* SetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepository.swift; sourceTree = "<group>"; };
+		B39ED4C62962F43D008C1D23 /* AddSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSetViewController.swift; sourceTree = "<group>"; };
+		B39ED4C72962F43D008C1D23 /* AddSetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSetViewController.xib; sourceTree = "<group>"; };
 		B3A6989E294C8E56003BCA10 /* CreateFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFolderViewController.swift; sourceTree = "<group>"; };
 		B3A6989F294C8E56003BCA10 /* CreateFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateFolderViewController.xib; sourceTree = "<group>"; };
 		B3D78DED2923E3A200A4E8E6 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
@@ -224,6 +228,7 @@
 				B369145D294DFD8A0020011B /* SingleFolderViewController.xib */,
 				B36DB328294F104C008C7C63 /* AddSetToFolderViewController.xib */,
 				B36DB3322954CD83008C7C63 /* EditFolderViewController.xib */,
+				B39ED4C72962F43D008C1D23 /* AddSetViewController.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -305,7 +310,6 @@
 			children = (
 				B307876C28C0EF0900C88404 /* controllers  */,
 				B33B211728BE754E00E66FCC /* views */,
-				B307876828BF9D8400C88404 /* Extensions .swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -313,6 +317,7 @@
 		B33B211728BE754E00E66FCC /* views */ = {
 			isa = PBXGroup;
 			children = (
+				B307876828BF9D8400C88404 /* Extensions .swift */,
 				B39ED4C32962F306008C1D23 /* set */,
 				B39ED4C22962F2F3008C1D23 /* folder */,
 				B374DC26290DA25B0091546A /* Designables */,
@@ -347,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				B30787E628DDBA0B0080EFE4 /* SearchViewController.swift */,
+				B39ED4C62962F43D008C1D23 /* AddSetViewController.swift */,
 				B3EFDFB828C0FF4200FA1183 /* SingleSetViewController.swift */,
 				B307876F28C0EF7200C88404 /* SetsViewController.swift */,
 				B33B20F128BE281000E66FCC /* CardViewController.swift */,
@@ -547,6 +553,7 @@
 				B3DFAB8928DDBD9A00B84EEC /* SearchTableViewCell.xib in Resources */,
 				B3EFDFB328C0FCA800FA1183 /* SetsTableViewCell.xib in Resources */,
 				B335BAF528BF467C00B9A29F /* CardView.xib in Resources */,
+				B39ED4C92962F43D008C1D23 /* AddSetViewController.xib in Resources */,
 				B307877528C0F0BA00C88404 /* CardViewController.xib in Resources */,
 				B3E86DF228E378DB0018AD09 /* RightOverlayView.xib in Resources */,
 				B3E86DF028E375D20018AD09 /* LeftOverlayView.xib in Resources */,
@@ -640,6 +647,7 @@
 				B3EFDFB228C0FCA800FA1183 /* SetsTableViewCell.swift in Sources */,
 				B323D7C62917AFDE00C626A8 /* UserDefaultsKeys.swift in Sources */,
 				B33B211028BE515F00E66FCC /* Constants .swift in Sources */,
+				B39ED4C82962F43D008C1D23 /* AddSetViewController.swift in Sources */,
 				B366FA71291406A8005BECA2 /* Protocols.swift in Sources */,
 				B374DC24290D7DEE0091546A /* TranslationViewController.swift in Sources */,
 				B374DC28290DA2830091546A /* AddTranslationTextField.swift in Sources */,
