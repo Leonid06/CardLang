@@ -57,6 +57,7 @@
 		B374DC24290D7DEE0091546A /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374DC22290D7DEE0091546A /* TranslationViewController.swift */; };
 		B374DC25290D7DEE0091546A /* TranslationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B374DC23290D7DEE0091546A /* TranslationViewController.xib */; };
 		B374DC28290DA2830091546A /* AddTranslationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374DC27290DA2830091546A /* AddTranslationTextField.swift */; };
+		B374EF32296496FD002C6A42 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374EF31296496FD002C6A42 /* SearchRepository.swift */; };
 		B385B88028E4611200F86C53 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385B87F28E4611200F86C53 /* Colors.swift */; };
 		B39D5D1428C4DE8C0088C101 /* WordSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D5D1328C4DE8C0088C101 /* WordSet.swift */; };
 		B39D5D1628C4E0710088C101 /* SetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D5D1528C4E0710088C101 /* SetRepository.swift */; };
@@ -149,6 +150,7 @@
 		B374DC22290D7DEE0091546A /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
 		B374DC23290D7DEE0091546A /* TranslationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranslationViewController.xib; sourceTree = "<group>"; };
 		B374DC27290DA2830091546A /* AddTranslationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTranslationTextField.swift; sourceTree = "<group>"; };
+		B374EF31296496FD002C6A42 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
 		B385B87F28E4611200F86C53 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B39D5D1328C4DE8C0088C101 /* WordSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSet.swift; sourceTree = "<group>"; };
 		B39D5D1528C4E0710088C101 /* SetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepository.swift; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 				B39D5D1528C4E0710088C101 /* SetRepository.swift */,
 				B3E4752C293BC0210049A0F6 /* FolderRepository.swift */,
 				B323D7C32917AF0A00C626A8 /* DefaultsRepository .swift */,
+				B374EF31296496FD002C6A42 /* SearchRepository.swift */,
 			);
 			path = repositories;
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 				B3DFAB8828DDBD9A00B84EEC /* SearchTableViewCell.swift in Sources */,
 				B369145E294DFD8A0020011B /* SingleFolderViewController.swift in Sources */,
 				B30787E828DDBA0B0080EFE4 /* SearchViewController.swift in Sources */,
+				B374EF32296496FD002C6A42 /* SearchRepository.swift in Sources */,
 				B36DB329294F104C008C7C63 /* AddSetToFolderViewController.swift in Sources */,
 				B39D5D1428C4DE8C0088C101 /* WordSet.swift in Sources */,
 				B33B20F028BE281000E66FCC /* SceneDelegate.swift in Sources */,
