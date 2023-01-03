@@ -27,7 +27,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNx-7T-Cd4">
-                        <rect key="frame" x="20" y="43" width="98" height="16"/>
+                        <rect key="frame" x="20" y="98" width="98" height="16"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="98" id="eym-OO-Aln"/>
                             <constraint firstAttribute="height" constant="16" id="sDV-mX-fZn"/>
@@ -43,11 +43,11 @@
             <constraints>
                 <constraint firstAttribute="width" constant="138" id="4kx-As-r6Z"/>
                 <constraint firstItem="tz9-uK-p2a" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="7ss-uK-eDk"/>
+                <constraint firstItem="mNx-7T-Cd4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tz9-uK-p2a" secondAttribute="bottom" constant="4" id="EIW-7n-RwA"/>
                 <constraint firstItem="tz9-uK-p2a" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="S7r-K6-BLs"/>
                 <constraint firstItem="mNx-7T-Cd4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="SDK-YI-5pu"/>
                 <constraint firstAttribute="height" constant="129" id="ZpG-NN-y8c"/>
-                <constraint firstItem="mNx-7T-Cd4" firstAttribute="top" secondItem="tz9-uK-p2a" secondAttribute="bottom" constant="2" id="Zt3-kR-TXJ"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mNx-7T-Cd4" secondAttribute="bottom" constant="2" id="akW-uu-fMH"/>
+                <constraint firstAttribute="bottom" secondItem="mNx-7T-Cd4" secondAttribute="bottom" constant="15" id="akW-uu-fMH"/>
             </constraints>
             <size key="customSize" width="138" height="129"/>
             <userDefinedRuntimeAttributes>
