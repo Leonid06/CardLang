@@ -12,15 +12,20 @@ class SetsViewController: UIViewController {
     
     private var sets : Results<WordSet>?
     
+
+    @IBOutlet weak var setsSearchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
     private let setRepository = SetRepository.shared
+    private let searchRepository = SearchRepository.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        setsSearchBar.delegate = self
         
         collectionView.register(UINib(nibName: NibNames.SingleFolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier)
         
@@ -30,17 +35,32 @@ class SetsViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        updateSets()
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        updateSets()
+//    }
 
     
     private func updateSets(){
         
         Task {
             do {
-                self.sets = try await self.setRepository.getAllSets()
-                self.collectionView.reloadData()
+                let query = setsSearchBar.text
+                
+                let oldData = self.sets
+                self.sets = try await self.searchRepository.getAllSetsByQuery(query: query ?? "")
+                
+                print("Sets count: \(self.sets?.count)")
+                
+                
+                if let sets = self.sets {
+                    if let oldData = oldData {
+                        self.collectionView.reloadChanges(from: oldData , to: sets)
+                    }else {
+                        self.collectionView.reloadData()
+                    }
+                    
+                }
+                
             }catch {
                 print(error)
             }
@@ -78,7 +98,7 @@ extension SetsViewController : UICollectionViewDelegate, UICollectionViewDataSou
         
         
         if let sets = sets {
-            let set = sets[sets.count - 1 - indexPath.row]
+            let set = sets[indexPath.row]
             cell.configure(set)
         }
 
@@ -89,7 +109,7 @@ extension SetsViewController : UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let sets = sets {
-            let set = sets[sets.count - 1 - indexPath.row]
+            let set = sets[indexPath.row]
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .horizontal
             
@@ -97,21 +117,6 @@ extension SetsViewController : UICollectionViewDelegate, UICollectionViewDataSou
             singleSetViewController.set = set
             navigationController?.pushViewController(singleSetViewController, animated: true)
         }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let sets = sets {
-            let set = sets[sets.count - 1 - indexPath.row]
-            let layout = UICollectionViewFlowLayout()
-            layout.scrollDirection = .horizontal
-            
-            tableView.deselectRow(at: indexPath, animated: true)
-            
-            let singleSetViewController = self.storyboard?.instantiateViewController(withIdentifier: Identifies.SingleSetViewControllerIdentifier) as! SingleSetViewController
-            singleSetViewController.set = set
-            navigationController?.pushViewController(singleSetViewController, animated: true)
-        }
-       
     }
     
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -144,5 +149,18 @@ extension SetsViewController : UICollectionViewDelegateFlowLayout  {
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 20
+    }
+}
+
+extension SetsViewController : UISearchBarDelegate {
+    
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+//        if let word = searchBar.text {
+//            cardRepository.fetchMultipleTranslationsForWord(word, completion: onDefinitionsFetched)
+//        }
+//        searchBar.endEditing(false)
+//    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        updateSets()
     }
 }

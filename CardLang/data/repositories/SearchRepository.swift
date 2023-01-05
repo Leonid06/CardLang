@@ -25,17 +25,25 @@ import RealmSwift
 class SearchRepository {
     private let realmService = RealmService.shared
     
+    static let shared = SearchRepository()
+    
     
     @MainActor
     func getAllSetsByQuery(query : String)  async throws -> Results<WordSet>? {
         let task = Task { ()-> Results<WordSet>? in 
             if let realm = realmService.getRealm() {
-                return realm.objects(WordSet.self).where {
-                    $0.name.contains(query)
-                }
+                print(query)
+                let filteredSets = realm.objects(WordSet.self).where {
+                    
+                    $0.name.like("*" + query + "*", caseInsensitive: true)
+                }.sorted(byKeyPath: "_id", ascending: false)
+                
+                return filteredSets
             }
             return nil 
         }
-        return try await task.result.get()
+        let result = try await task.result.get()
+        print("Results count: \(result?.count)")
+        return result
     }
 }

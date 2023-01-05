@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1CC24965FF60A0E1CF8A5D5B /* Pods_CardLang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4887755E2BEB62AE3E4C27E5 /* Pods_CardLang.framework */; };
 		B3061A04290ECEA000C1C6FB /* AddModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3061A02290ECEA000C1C6FB /* AddModeViewController.swift */; };
 		B3061A05290ECEA000C1C6FB /* AddModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3061A03290ECEA000C1C6FB /* AddModeViewController.xib */; };
 		B307876728BF8FB000C88404 /* NibNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = B307876628BF8FB000C88404 /* NibNames.swift */; };
@@ -58,6 +57,7 @@
 		B374DC25290D7DEE0091546A /* TranslationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B374DC23290D7DEE0091546A /* TranslationViewController.xib */; };
 		B374DC28290DA2830091546A /* AddTranslationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374DC27290DA2830091546A /* AddTranslationTextField.swift */; };
 		B374EF32296496FD002C6A42 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374EF31296496FD002C6A42 /* SearchRepository.swift */; };
+		B374EF352966C116002C6A42 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B374EF342966C116002C6A42 /* UICollectionView.swift */; };
 		B385B88028E4611200F86C53 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B385B87F28E4611200F86C53 /* Colors.swift */; };
 		B39D5D1428C4DE8C0088C101 /* WordSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D5D1328C4DE8C0088C101 /* WordSet.swift */; };
 		B39D5D1628C4E0710088C101 /* SetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D5D1528C4E0710088C101 /* SetRepository.swift */; };
@@ -82,6 +82,7 @@
 		B3EFDFC028C1104E00FA1183 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EFDFBF28C1104E00FA1183 /* Identifiers.swift */; };
 		B3F9F856294B985000BB1477 /* FolderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F9F854294B985000BB1477 /* FolderCollectionViewCell.swift */; };
 		B3F9F857294B985000BB1477 /* FolderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3F9F855294B985000BB1477 /* FolderCollectionViewCell.xib */; };
+		E48059538357AB1147690FEA /* Pods_CardLang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630D94F2B8C0BA81C0A618E4 /* Pods_CardLang.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,8 +96,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4887755E2BEB62AE3E4C27E5 /* Pods_CardLang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardLang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CC932FDFC9D2C32B954F072 /* Pods-CardLang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.debug.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.debug.xcconfig"; sourceTree = "<group>"; };
+		3C60850EA8758FC904DEA268 /* Pods-CardLang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.debug.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.debug.xcconfig"; sourceTree = "<group>"; };
+		48230B3F4575F642DACA14BD /* Pods-CardLang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.release.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.release.xcconfig"; sourceTree = "<group>"; };
+		630D94F2B8C0BA81C0A618E4 /* Pods_CardLang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardLang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3061A02290ECEA000C1C6FB /* AddModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModeViewController.swift; sourceTree = "<group>"; };
 		B3061A03290ECEA000C1C6FB /* AddModeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddModeViewController.xib; path = ../AddModeViewController.xib; sourceTree = "<group>"; };
 		B307876628BF8FB000C88404 /* NibNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibNames.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		B374DC23290D7DEE0091546A /* TranslationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TranslationViewController.xib; sourceTree = "<group>"; };
 		B374DC27290DA2830091546A /* AddTranslationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTranslationTextField.swift; sourceTree = "<group>"; };
 		B374EF31296496FD002C6A42 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
+		B374EF342966C116002C6A42 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		B385B87F28E4611200F86C53 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B39D5D1328C4DE8C0088C101 /* WordSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSet.swift; sourceTree = "<group>"; };
 		B39D5D1528C4E0710088C101 /* SetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepository.swift; sourceTree = "<group>"; };
@@ -175,7 +178,6 @@
 		B3EFDFBF28C1104E00FA1183 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		B3F9F854294B985000BB1477 /* FolderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3F9F855294B985000BB1477 /* FolderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FolderCollectionViewCell.xib; sourceTree = "<group>"; };
-		B50E2133FCDC771862577A9D /* Pods-CardLang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardLang.release.xcconfig"; path = "Target Support Files/Pods-CardLang/Pods-CardLang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CC24965FF60A0E1CF8A5D5B /* Pods_CardLang.framework in Frameworks */,
+				E48059538357AB1147690FEA /* Pods_CardLang.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,10 +199,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2CC4283924F30F4C028532B1 /* Frameworks */ = {
+		0DFDAF8300443D6FE1F63752 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4887755E2BEB62AE3E4C27E5 /* Pods_CardLang.framework */,
+				630D94F2B8C0BA81C0A618E4 /* Pods_CardLang.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -258,7 +260,7 @@
 				B35F629028E6E99F00C5F250 /* CardLangTests */,
 				B33B20EB28BE281000E66FCC /* Products */,
 				D0629796EC7F89B198126D6F /* Pods */,
-				2CC4283924F30F4C028532B1 /* Frameworks */,
+				0DFDAF8300443D6FE1F63752 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -319,7 +321,7 @@
 		B33B211728BE754E00E66FCC /* views */ = {
 			isa = PBXGroup;
 			children = (
-				B307876828BF9D8400C88404 /* Extensions .swift */,
+				B374EF332966C101002C6A42 /* Extensions */,
 				B39ED4C32962F306008C1D23 /* set */,
 				B39ED4C22962F2F3008C1D23 /* folder */,
 				B374DC26290DA25B0091546A /* Designables */,
@@ -373,6 +375,15 @@
 				B36DB33729585E43008C7C63 /* UnderlinedTextField.swift */,
 			);
 			path = Designables;
+			sourceTree = "<group>";
+		};
+		B374EF332966C101002C6A42 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B307876828BF9D8400C88404 /* Extensions .swift */,
+				B374EF342966C116002C6A42 /* UICollectionView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B39D5D1228C4DE6A0088C101 /* model */ = {
@@ -454,8 +465,8 @@
 		D0629796EC7F89B198126D6F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7CC932FDFC9D2C32B954F072 /* Pods-CardLang.debug.xcconfig */,
-				B50E2133FCDC771862577A9D /* Pods-CardLang.release.xcconfig */,
+				3C60850EA8758FC904DEA268 /* Pods-CardLang.debug.xcconfig */,
+				48230B3F4575F642DACA14BD /* Pods-CardLang.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -467,11 +478,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B33B210128BE281100E66FCC /* Build configuration list for PBXNativeTarget "CardLang" */;
 			buildPhases = (
-				BD67D55767BC4DB31F5597FF /* [CP] Check Pods Manifest.lock */,
+				8CE0333AD0F9A2F929B93D3B /* [CP] Check Pods Manifest.lock */,
 				B33B20E628BE281000E66FCC /* Sources */,
 				B33B20E728BE281000E66FCC /* Frameworks */,
 				B33B20E828BE281000E66FCC /* Resources */,
-				24CC00F2045F1924B6389DF4 /* [CP] Embed Pods Frameworks */,
+				13C8B0DF18D3339D58D1B55E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -579,7 +590,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		24CC00F2045F1924B6389DF4 /* [CP] Embed Pods Frameworks */ = {
+		13C8B0DF18D3339D58D1B55E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -596,7 +607,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CardLang/Pods-CardLang-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BD67D55767BC4DB31F5597FF /* [CP] Check Pods Manifest.lock */ = {
+		8CE0333AD0F9A2F929B93D3B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -625,6 +636,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B374EF352966C116002C6A42 /* UICollectionView.swift in Sources */,
 				B33B20F228BE281000E66FCC /* CardViewController.swift in Sources */,
 				B307876B28C0969500C88404 /* TranslationSwipeCard.swift in Sources */,
 				B39D5D1628C4E0710088C101 /* SetRepository.swift in Sources */,
@@ -834,7 +846,7 @@
 		};
 		B33B210228BE281100E66FCC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CC932FDFC9D2C32B954F072 /* Pods-CardLang.debug.xcconfig */;
+			baseConfigurationReference = 3C60850EA8758FC904DEA268 /* Pods-CardLang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -866,7 +878,7 @@
 		};
 		B33B210328BE281100E66FCC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B50E2133FCDC771862577A9D /* Pods-CardLang.release.xcconfig */;
+			baseConfigurationReference = 48230B3F4575F642DACA14BD /* Pods-CardLang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

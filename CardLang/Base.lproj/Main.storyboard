@@ -47,10 +47,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Guj-Sh-iE2">
-                                <rect key="frame" x="0.0" y="92" width="414" height="753"/>
+                                <rect key="frame" x="0.0" y="156" width="414" height="689"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="753" id="CPa-Ri-3Wd"/>
+                                    <constraint firstAttribute="height" constant="689" id="CPa-Ri-3Wd"/>
                                     <constraint firstAttribute="width" constant="414" id="bZE-Eo-7qf"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mAk-O3-wQo">
@@ -70,12 +70,26 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Type a word" translatesAutoresizingMaskIntoConstraints="NO" id="0NM-HF-bWy" customClass="TranslationSearchBar" customModule="CardLang" customModuleProvider="target">
+                                <rect key="frame" x="20" y="92" width="390" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="15j-BK-4m6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="Wqn-Og-yhB"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="390" id="qQa-xD-qlS"/>
+                                    <constraint firstAttribute="width" constant="390" id="wfF-Pa-4TJ"/>
+                                </constraints>
+                                <color key="tintColor" name="buttonColor"/>
+                                <color key="barTintColor" name="buttonColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f8s-rL-i0v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0NM-HF-bWy" firstAttribute="leading" secondItem="f8s-rL-i0v" secondAttribute="leading" constant="20" id="Gcs-5A-geP"/>
                             <constraint firstItem="Guj-Sh-iE2" firstAttribute="leading" secondItem="f8s-rL-i0v" secondAttribute="leading" id="Q2S-nn-yym"/>
-                            <constraint firstItem="Guj-Sh-iE2" firstAttribute="top" secondItem="f8s-rL-i0v" secondAttribute="top" id="eov-bd-b0e"/>
+                            <constraint firstItem="Guj-Sh-iE2" firstAttribute="top" secondItem="0NM-HF-bWy" secondAttribute="bottom" constant="20" id="RyM-hj-JMH"/>
+                            <constraint firstItem="0NM-HF-bWy" firstAttribute="top" secondItem="f8s-rL-i0v" secondAttribute="top" id="Tr2-DP-QWE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My sets" id="HmT-bf-WOw">
@@ -88,6 +102,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Guj-Sh-iE2" id="RhF-LT-HaZ"/>
+                        <outlet property="setsSearchBar" destination="0NM-HF-bWy" id="LPK-O3-XdD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6u-m0-eoW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -249,6 +264,9 @@
         </namedColor>
         <namedColor name="borderColor">
             <color red="0.70980392156862748" green="0.6588235294117647" blue="0.51764705882352946" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="buttonColor">
+            <color red="1" green="0.70588235294117652" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
