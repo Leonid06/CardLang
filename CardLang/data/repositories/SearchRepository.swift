@@ -41,6 +41,8 @@ class SearchRepository {
                     }
                 }.sorted(byKeyPath: "_id", ascending: false)
                 
+                print(filteredSets)
+                
                 return filteredSets
             }
             return nil 

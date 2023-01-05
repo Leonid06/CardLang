@@ -113,7 +113,7 @@ extension SingleFolderViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier, for: indexPath) as! SingleFolderCollectionViewCell
     
-        if let sets = folder?.sets {
+        if let sets = sets {
             let set = sets[indexPath.row]
                 cell.configure(set)
             }
