@@ -70,13 +70,11 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Type a word" translatesAutoresizingMaskIntoConstraints="NO" id="0NM-HF-bWy" customClass="TranslationSearchBar" customModule="CardLang" customModuleProvider="target">
-                                <rect key="frame" x="20" y="92" width="390" height="44"/>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Type a set name" translatesAutoresizingMaskIntoConstraints="NO" id="0NM-HF-bWy" customClass="TranslationSearchBar" customModule="CardLang" customModuleProvider="target">
+                                <rect key="frame" x="20" y="92" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="15j-BK-4m6"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="Wqn-Og-yhB"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="390" id="qQa-xD-qlS"/>
-                                    <constraint firstAttribute="width" constant="390" id="wfF-Pa-4TJ"/>
+                                    <constraint firstAttribute="width" constant="374" id="wfF-Pa-4TJ"/>
                                 </constraints>
                                 <color key="tintColor" name="buttonColor"/>
                                 <color key="barTintColor" name="buttonColor"/>

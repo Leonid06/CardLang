@@ -34,7 +34,6 @@ class SearchRepository {
             if let realm = realmService.getRealm() {
                 print(query)
                 let filteredSets = realm.objects(WordSet.self).where {
-                    
                     $0.name.like("*" + query + "*", caseInsensitive: true)
                 }.sorted(byKeyPath: "_id", ascending: false)
                 
@@ -43,7 +42,6 @@ class SearchRepository {
             return nil 
         }
         let result = try await task.result.get()
-        print("Results count: \(result?.count)")
         return result
     }
 }
