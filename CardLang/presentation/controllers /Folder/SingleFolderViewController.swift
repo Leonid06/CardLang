@@ -12,11 +12,14 @@ class SingleFolderViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     private let folderRepository = FolderRepository.shared
+    private let seacrhRepository = SearchRepository.shared
     
     private var folder : Folder?
     
-    private var sets : List<WordSet>?
+    private var sets :  Results<WordSet>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +50,8 @@ class SingleFolderViewController: UIViewController {
         
         navigationItem.rightBarButtonItems = [editBarButtonItem, addBarButtonItem]
         
+        searchBar.delegate = self
+        
         title = folder?.name
         
     }
@@ -59,8 +64,18 @@ class SingleFolderViewController: UIViewController {
     
     private func updateSets(){
         Task {
-            self.sets = folder?.sets ?? List<WordSet>()
-            self.collectionView.reloadData()
+            let query = searchBar.text
+            let oldData = self.sets
+            self.sets = try await seacrhRepository.getAllSetsByQuery(query: query ?? "", folder: self.folder)
+            
+            if let sets = self.sets {
+                if let oldData = oldData {
+                    self.collectionView.reloadChanges(from: oldData , to: sets)
+                }else {
+                    self.collectionView.reloadData()
+                }
+            }
+            
         }
         
         title = folder?.name
@@ -99,7 +114,7 @@ extension SingleFolderViewController : UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier, for: indexPath) as! SingleFolderCollectionViewCell
     
         if let sets = folder?.sets {
-            let set = sets[sets.count - 1 - indexPath.row]
+            let set = sets[indexPath.row]
                 cell.configure(set)
             }
     
@@ -110,7 +125,7 @@ extension SingleFolderViewController : UICollectionViewDataSource {
 extension SingleFolderViewController : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let sets = sets {
-            let set = sets[sets.count - 1 - indexPath.row]
+            let set = sets[indexPath.row]
             
             let mainStoryBoard = UIStoryboard(name: NibNames.MainStoryboardName, bundle: nil)
             
@@ -176,6 +191,19 @@ extension SingleFolderViewController {
             present(addSetToFolderViewController, animated: true)
         }
         
+    }
+}
+
+extension SingleFolderViewController : UISearchBarDelegate {
+    
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+//        if let word = searchBar.text {
+//            cardRepository.fetchMultipleTranslationsForWord(word, completion: onDefinitionsFetched)
+//        }
+//        searchBar.endEditing(false)
+//    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        updateSets()
     }
 }
 

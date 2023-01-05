@@ -29,12 +29,16 @@ class SearchRepository {
     
     
     @MainActor
-    func getAllSetsByQuery(query : String)  async throws -> Results<WordSet>? {
+    func getAllSetsByQuery(query : String, folder: Folder? = nil)  async throws -> Results<WordSet>? {
         let task = Task { ()-> Results<WordSet>? in 
             if let realm = realmService.getRealm() {
                 print(query)
                 let filteredSets = realm.objects(WordSet.self).where {
-                    $0.name.like("*" + query + "*", caseInsensitive: true)
+                    if let folder = folder {
+                        return $0.currentFolder == folder &&  $0.name.like("*" + query + "*", caseInsensitive: true)
+                    }else {
+                        return $0.name.like("*" + query + "*", caseInsensitive: true)
+                    }
                 }.sorted(byKeyPath: "_id", ascending: false)
                 
                 return filteredSets
