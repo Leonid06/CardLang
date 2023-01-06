@@ -74,7 +74,6 @@
                                 <rect key="frame" x="20" y="92" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="15j-BK-4m6"/>
-                                    <constraint firstAttribute="width" constant="374" id="wfF-Pa-4TJ"/>
                                 </constraints>
                                 <color key="tintColor" name="buttonColor"/>
                                 <color key="barTintColor" name="buttonColor"/>
@@ -88,6 +87,7 @@
                             <constraint firstItem="Guj-Sh-iE2" firstAttribute="leading" secondItem="f8s-rL-i0v" secondAttribute="leading" id="Q2S-nn-yym"/>
                             <constraint firstItem="Guj-Sh-iE2" firstAttribute="top" secondItem="0NM-HF-bWy" secondAttribute="bottom" constant="20" id="RyM-hj-JMH"/>
                             <constraint firstItem="0NM-HF-bWy" firstAttribute="top" secondItem="f8s-rL-i0v" secondAttribute="top" id="Tr2-DP-QWE"/>
+                            <constraint firstItem="f8s-rL-i0v" firstAttribute="trailing" secondItem="0NM-HF-bWy" secondAttribute="trailing" constant="20" id="ZCG-fq-ptw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My sets" id="HmT-bf-WOw">

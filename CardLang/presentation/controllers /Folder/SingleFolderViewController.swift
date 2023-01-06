@@ -16,6 +16,7 @@ class SingleFolderViewController: UIViewController {
     
     private let folderRepository = FolderRepository.shared
     private let seacrhRepository = SearchRepository.shared
+    private let setRepository = SetRepository.shared
     
     private var folder : Folder?
     
@@ -32,13 +33,11 @@ class SingleFolderViewController: UIViewController {
         folderRepository.subscribeOnUpdatesOnFolders {
             if let folder = self.folder {
                 if(!folder.isInvalidated){
-                    self.updateSets()
+                    self.updateSets(onReturn: true)
                 }else{
                     self.navigationController?.popViewController(animated: true)
                 }
-                
             }
-            
         }
         
         
@@ -56,17 +55,27 @@ class SingleFolderViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        updateSets()
+    }
+    
     
     func configure(_ folder: Folder){
         self.folder = folder 
     }
     
+    private func makeQueryOnSets() async throws {
+        let query = searchBar.text
+        self.sets = try await seacrhRepository.getAllSetsByQuery(query: query ?? "", folder: self.folder)
+    }
     
-    private func updateSets(){
+    
+    private func updateSetsWithTransition(){
         Task {
-            let query = searchBar.text
             let oldData = self.sets
-            self.sets = try await seacrhRepository.getAllSetsByQuery(query: query ?? "", folder: self.folder)
+            
+            try await makeQueryOnSets()
+
             
             if let sets = self.sets {
                 if let oldData = oldData {
@@ -79,6 +88,27 @@ class SingleFolderViewController: UIViewController {
         }
         
         title = folder?.name
+    }
+    
+    private func updateSetsOnReturn(){
+        Task {
+            do {
+                try await makeQueryOnSets()
+                self.collectionView.reloadData()
+            }catch {
+                print(error)
+            }
+        }
+    }
+    
+    private func updateSets(onReturn: Bool = false){
+        if(onReturn){
+            updateSetsOnReturn()
+        }else{
+            updateSetsWithTransition()
+        }
+    
+        
     }
     
     

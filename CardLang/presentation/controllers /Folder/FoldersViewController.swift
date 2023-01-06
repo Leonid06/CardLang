@@ -23,7 +23,9 @@ class FoldersViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: NibNames.FolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.FolderCollectionViewCellIdentifier)
         
-        
+        if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+              flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+           }
         folderRepository.subscribeOnUpdatesOnFolders {
             self.updateFolders()
         }

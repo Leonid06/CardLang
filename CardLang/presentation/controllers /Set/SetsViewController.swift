@@ -31,25 +31,19 @@ class SetsViewController: UIViewController {
         
         
         setRepository.subscribeToUpdatesOnSets {
-            self.updateSets()
+            self.updateSets(onReturn: true)
         }
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
 //        updateSets()
 //    }
-
     
-    private func updateSets(){
-        
+    private func updateSetsWithTransitition(){
         Task {
             do {
-                let query = setsSearchBar.text
-                
                 let oldData = self.sets
-                self.sets = try await self.searchRepository.getAllSetsByQuery(query: query ?? "")
-                
-                print("Sets count: \(self.sets?.count)")
+                try await makeQueryOnSets()
                 
                 
                 if let sets = self.sets {
@@ -65,6 +59,35 @@ class SetsViewController: UIViewController {
                 print(error)
             }
         }
+    }
+    
+    private func makeQueryOnSets() async throws {
+        let query = setsSearchBar.text
+        
+        self.sets = try await self.searchRepository.getAllSetsByQuery(query: query ?? "")
+        
+        print("Sets count: \(self.sets?.count)")
+    }
+    
+    private func updateSetsOnReturn(){
+        Task {
+            do {
+                try await makeQueryOnSets()
+                self.collectionView.reloadData()
+            }catch {
+                print(error)
+            }
+        }
+    }
+
+    
+    private func updateSets(onReturn: Bool = false){
+        if(onReturn){
+            updateSetsOnReturn()
+        }else{
+            updateSetsWithTransitition()
+        }
+    
         
     }
     
