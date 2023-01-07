@@ -52,6 +52,14 @@ class EditSetViewController: UIViewController {
         }
     }
     
+    private func onDeleteOptionChosen(){
+        if let set = set {
+            setRepository.deleteWordSet(set: set)
+            dismiss(animated: true)
+        }
+       
+    }
+    
     @IBAction func termButtonClicked(_ sender: UIButton) {
         definitionButton.isSelected = !definitionButton.isSelected
         
@@ -59,6 +67,9 @@ class EditSetViewController: UIViewController {
         
     }
     
+    @IBAction func deleteSetButtonClicked(_ sender: Any) {
+        self.displayDialog(title: "Confirm", message: "Are you sure you want to delete this set?", firstOptionTitle: "Confirm", secondOptionTitle: "Cancel", firstCompletion: onDeleteOptionChosen, secondCompletion: {})
+    }
     @IBAction func definitionButtonClicked(_ sender: UIButton) {
         termButton.isSelected = !termButton.isSelected
         

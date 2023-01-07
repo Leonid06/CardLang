@@ -75,6 +75,22 @@
                         </button>
                     </subviews>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwt-Jm-qPs">
+                    <rect key="frame" x="25" y="406" width="148" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="148" id="nxD-Ts-klH"/>
+                        <constraint firstAttribute="height" constant="42" id="u2T-P9-Mz5"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Delete set">
+                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
+                        <color key="baseForegroundColor" name="buttonForegroundColor"/>
+                        <color key="baseBackgroundColor" name="countColorRed"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="deleteSetButtonClicked:" destination="-1" eventType="touchUpInside" id="gx7-HY-INJ"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -84,9 +100,11 @@
                 <constraint firstItem="ahk-9i-82a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="8pp-w7-6XO"/>
                 <constraint firstItem="bfi-eS-h4e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Ugp-Wr-Hph"/>
                 <constraint firstItem="Zpl-7e-GDo" firstAttribute="top" secondItem="ahk-9i-82a" secondAttribute="bottom" constant="20" id="Wgb-iZ-7aE"/>
+                <constraint firstItem="vwt-Jm-qPs" firstAttribute="top" secondItem="Zpl-7e-GDo" secondAttribute="bottom" constant="30" id="Y0G-mg-9SL"/>
                 <constraint firstItem="Zpl-7e-GDo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="a9W-3P-r9I"/>
                 <constraint firstItem="cxh-ML-RTv" firstAttribute="top" secondItem="bfi-eS-h4e" secondAttribute="bottom" constant="20" id="bJS-ge-ksT"/>
                 <constraint firstItem="cxh-ML-RTv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="gyb-1f-ExR"/>
+                <constraint firstItem="vwt-Jm-qPs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="rW1-Qj-WUd"/>
             </constraints>
             <point key="canvasLocation" x="87.786259541984734" y="19.718309859154932"/>
         </view>
@@ -102,6 +120,9 @@
         </namedColor>
         <namedColor name="buttonForegroundColor">
             <color red="0.39417613636363635" green="0.32476748130217231" blue="0.19833076579248371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="countColorRed">
+            <color red="1" green="0.55294117647058827" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="editLabelColor">
             <color red="0.59799998998641968" green="0.50999999046325684" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

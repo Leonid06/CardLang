@@ -26,10 +26,10 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Type a word" translatesAutoresizingMaskIntoConstraints="NO" id="Ge1-Tw-osX" customClass="TranslationSearchBar" customModule="CardLang" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="62" width="390" height="44"/>
+                    <rect key="frame" x="18" y="62" width="354" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="2iv-Qj-0Rb"/>
-                        <constraint firstAttribute="width" constant="390" id="y9L-aR-JhR"/>
+                        <constraint firstAttribute="width" constant="354" id="W7C-wa-dj6"/>
                     </constraints>
                     <color key="tintColor" name="buttonColor"/>
                     <color key="barTintColor" name="buttonColor"/>
@@ -42,8 +42,8 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Ge1-Tw-osX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ans-3D-0Bb"/>
                 <constraint firstItem="Ge1-Tw-osX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="HD8-Qf-966"/>
+                <constraint firstItem="Ge1-Tw-osX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WhD-T2-QPT"/>
                 <constraint firstItem="n6g-tv-Sby" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="XO6-UE-Qry"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="n6g-tv-Sby" secondAttribute="bottom" constant="40" id="dfD-Gd-4Np"/>
                 <constraint firstItem="n6g-tv-Sby" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="fLw-r5-DA1"/>

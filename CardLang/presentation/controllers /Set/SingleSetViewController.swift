@@ -52,7 +52,14 @@ class SingleSetViewController: UIViewController {
         }
         
         setRepository.subscribeToUpdatesOnSets {
-            self.updateTranslations()
+            if let set = self.set {
+                if(!set.isInvalidated){
+                    self.updateTranslations()
+                }else{
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+            
         }
         
         toggleButtons()
