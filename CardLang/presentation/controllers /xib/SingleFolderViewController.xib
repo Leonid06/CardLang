@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SingleFolderViewController" customModule="CardLang" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="AbB-6t-hLI" id="ePB-gs-OAs"/>
+                <outlet property="searchBar" destination="F2F-IF-EFf" id="YRY-5f-xPw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,8 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AbB-6t-hLI">
-                    <rect key="frame" x="0.0" y="108" width="393" height="736"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AbB-6t-hLI">
+                    <rect key="frame" x="0.0" y="123" width="393" height="687"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JGZ-y2-Adl">
                         <size key="itemSize" width="128" height="128"/>
@@ -29,12 +31,24 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Type a set name" translatesAutoresizingMaskIntoConstraints="NO" id="F2F-IF-EFf" customClass="TranslationSearchBar" customModule="CardLang" customModuleProvider="target">
+                    <rect key="frame" x="20" y="59" width="353" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="GY9-T0-fFy"/>
+                    </constraints>
+                    <color key="tintColor" name="buttonColor"/>
+                    <color key="barTintColor" name="buttonColor"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="AbB-6t-hLI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="49" id="1Cg-ZP-NnW"/>
+                <constraint firstItem="AbB-6t-hLI" firstAttribute="top" secondItem="F2F-IF-EFf" secondAttribute="bottom" constant="20" id="4FT-mu-65t"/>
+                <constraint firstItem="F2F-IF-EFf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="A6a-Ka-bAv"/>
                 <constraint firstItem="AbB-6t-hLI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="D4a-gs-G5g"/>
+                <constraint firstItem="F2F-IF-EFf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="JGJ-wr-Q4y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F2F-IF-EFf" secondAttribute="trailing" constant="20" id="aDD-CB-gbC"/>
                 <constraint firstItem="AbB-6t-hLI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kLh-i0-oc8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="AbB-6t-hLI" secondAttribute="bottom" constant="8" id="ltC-uM-wx0"/>
             </constraints>
@@ -42,6 +56,9 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="buttonColor">
+            <color red="1" green="0.70588235294117652" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

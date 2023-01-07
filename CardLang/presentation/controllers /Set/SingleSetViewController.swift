@@ -38,12 +38,11 @@ class SingleSetViewController: UIViewController {
         collectionView!.register(WordCollectionViewCell.nib(), forCellWithReuseIdentifier: Identifies.WordCollectionViewCellIdentifier)
         
         
-        let buttonItem  = UIBarButtonItem(barButtonSystemItem: .add, target: self,action: nil)
-        buttonItem.menu = getAddOptionsMenu()
+        let buttonItem  = createBarButtonItem(icon: "plus.square.fill.on.square.fill", selector: nil, menu: getAddOptionsMenu())
 
         let playItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(playButtonPressed))
         
-        let editItem = createBarButtonItem(icon: "ellipsis", selector: #selector(editButtonPressed))
+        let editItem = createBarButtonItem(icon: "ellipsis.circle", selector: #selector(editButtonPressed))
         
         
         navigationItem.rightBarButtonItems = [buttonItem, playItem, editItem]
@@ -53,7 +52,14 @@ class SingleSetViewController: UIViewController {
         }
         
         setRepository.subscribeToUpdatesOnSets {
-            self.updateTranslations()
+            if let set = self.set {
+                if(!set.isInvalidated){
+                    self.updateTranslations()
+                }else{
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+            
         }
         
         toggleButtons()
@@ -187,7 +193,7 @@ extension SingleSetViewController : UICollectionViewDelegateFlowLayout  {
         return 20
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return 0 
     }
 }
 

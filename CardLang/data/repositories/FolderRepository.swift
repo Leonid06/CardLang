@@ -46,6 +46,26 @@ class FolderRepository {
     }
     
     @MainActor
+    func addSetToFolder(setName: String, folder: Folder, completion: @escaping () -> Void){
+        Task {
+            do  {
+                if let realm = realmService.getRealm() {
+                    let user = realmService.getCurrentUser()
+                    let set = WordSet(name: setName, ownerId: user?.id ?? "")
+                    
+                    try realm.write {
+                        realm.add(set)
+                        folder.sets.append(set)
+                    }
+                    completion()
+                }
+            }catch {
+                print(error)
+            }
+        }
+    }
+    
+    @MainActor
     func deleteSetFromFolder(set : WordSet, folder: Folder, completion: @escaping () -> Void){
         Task {
             do  {

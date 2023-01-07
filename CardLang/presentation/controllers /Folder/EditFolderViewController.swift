@@ -23,11 +23,16 @@ class EditFolderViewController: UIViewController {
     private func onFolderUpdated(){
         dismiss(animated: true)
     }
-    @IBAction func deleteButtonClicked(_ sender: Any) {
+    
+    private func onDeleteOptionChosen(){
         if let folder = folder {
             dismiss(animated: true)
             folderRepository.deleteFolder(folder: folder)
         }
+    }
+    @IBAction func deleteButtonClicked(_ sender: Any) {
+        self.displayDialog(title: "Confirm", message: "Are you sure you want to delete this folder?", firstOptionTitle: "Confirm", secondOptionTitle: "Cancel", firstCompletion: onDeleteOptionChosen, secondCompletion: {})
+       
     }
     
     @IBAction func doneButtonClicked(_ sender: Any) {

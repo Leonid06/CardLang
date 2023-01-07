@@ -11,4 +11,5 @@ target 'CardLang' do
   pod 'RealmSwift', '~>10'
   pod 'IQKeyboardManagerSwift'
   pod 'RSKPlaceholderTextView'
+  pod 'Differ'
 end

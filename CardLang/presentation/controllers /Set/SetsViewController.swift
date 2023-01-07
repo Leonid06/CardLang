@@ -8,90 +8,121 @@
 import UIKit
 import RealmSwift
 
-class SetsViewController: UITableViewController {
+class SetsViewController: UIViewController {
     
     private var sets : Results<WordSet>?
     
+
+    @IBOutlet weak var setsSearchBar: UISearchBar!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     private let setRepository = SetRepository.shared
+    private let searchRepository = SearchRepository.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: NibNames.SetsTableViewCellNibName, bundle: nil), forCellReuseIdentifier: Identifies.SetsTableViewCellIdentifier)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        setsSearchBar.delegate = self
+        
+        collectionView.register(UINib(nibName: NibNames.SingleFolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier)
         
         
         setRepository.subscribeToUpdatesOnSets {
-            self.updateSets()
+            self.updateSets(onReturn: true)
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        updateSets()
-    }
-
+//    override func viewWillAppear(_ animated: Bool) {
+//        updateSets()
+//    }
     
-    private func updateSets(){
-        
+    private func updateSetsWithTransitition(){
         Task {
             do {
-                self.sets = try await self.setRepository.getAllSets()
-                self.tableView.reloadData()
+                let oldData = self.sets
+                try await makeQueryOnSets()
+                
+                
+                if let sets = self.sets {
+                    if let oldData = oldData {
+                        self.collectionView.reloadChanges(from: oldData , to: sets)
+                    }else {
+                        self.collectionView.reloadData()
+                    }
+                    
+                }
+                
             }catch {
                 print(error)
             }
         }
+    }
+    
+    private func makeQueryOnSets() async throws {
+        let query = setsSearchBar.text
+        
+        self.sets = try await self.searchRepository.getAllSetsByQuery(query: query ?? "")
+        
+        print("Sets count: \(self.sets?.count)")
+    }
+    
+    private func updateSetsOnReturn(){
+        Task {
+            do {
+                try await makeQueryOnSets()
+                self.collectionView.reloadData()
+            }catch {
+                print(error)
+            }
+        }
+    }
+
+    
+    private func updateSets(onReturn: Bool = false){
+        if(onReturn){
+            updateSetsOnReturn()
+        }else{
+            updateSetsWithTransitition()
+        }
+    
         
     }
     
     @IBAction func addSetButtonPressed(_ sender: UIBarButtonItem) {
-        showAlert()
+//        showAlert()
+        let addSetViewController = AddSetViewController(nibName: NibNames.AddSetViewControllerNibName, bundle: nil)
+        
+        addSetViewController.modalPresentationStyle = .overFullScreen
+        
+        present(addSetViewController, animated: true)
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   
+}
+
+extension SetsViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let sets = sets {
             return sets.count
         }
         return 0
-       
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let sets = sets {
-            let set = sets[sets.count - 1 - indexPath.row]
-            let layout = UICollectionViewFlowLayout()
-            layout.scrollDirection = .horizontal
-            
-            tableView.deselectRow(at: indexPath, animated: true)
-            
-            let singleSetViewController = self.storyboard?.instantiateViewController(withIdentifier: Identifies.SingleSetViewControllerIdentifier) as! SingleSetViewController
-            singleSetViewController.set = set
-            navigationController?.pushViewController(singleSetViewController, animated: true)
-        }
-       
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1 
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 77
-    }
-    
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if(editingStyle == .delete){
-            
-            if let sets = sets {
-                let set = sets[sets.count - 1 - indexPath.row]
-                setRepository.deleteWordSet(set: set)
-                print("word set was deleted")
-            }
-        }
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Identifies.SetsTableViewCellIdentifier, for: indexPath) as! SetsTableViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier, for: indexPath) as! SingleFolderCollectionViewCell
         
         
         if let sets = sets {
-            let set = sets[sets.count - 1 - indexPath.row]
-            cell.nameLabel.text = set.name
-            cell.wordCountLabel.text = String(set.translations.count)
+            let set = sets[indexPath.row]
+            cell.configure(set)
         }
 
         
@@ -99,30 +130,60 @@ class SetsViewController: UITableViewController {
         return cell
     }
     
-    private func showAlert() {
-       let alert = UIAlertController(title: "Add new set", message: nil, preferredStyle: .alert)
-       
-       alert.addTextField {
-           textField in
-           textField.placeholder = "Enter the name"
-       }
-       
-       
-        let addAction = UIAlertAction(title: "Add", style: .default){
-           action in
-           if let textFields = alert.textFields {
-               if let name = textFields[0].text {
-                   self.setRepository.addWordSet(name: name)
-               }
-           }
-       }
-       let deleteAction =  UIAlertAction(title: "Cancel", style: .cancel){
-           action in
-           alert.dismiss(animated: true)
-       }
-       alert.addAction(addAction)
-       alert.addAction(deleteAction)
-       
-       present(alert, animated: true)
-   }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let sets = sets {
+            let set = sets[indexPath.row]
+            let layout = UICollectionViewFlowLayout()
+            layout.scrollDirection = .horizontal
+            
+            let singleSetViewController = self.storyboard?.instantiateViewController(withIdentifier: Identifies.SingleSetViewControllerIdentifier) as! SingleSetViewController
+            singleSetViewController.set = set
+            navigationController?.pushViewController(singleSetViewController, animated: true)
+        }
+    }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 77
+//    }
+    
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if(editingStyle == .delete){
+//
+//            if let sets = sets {
+//                let set = sets[sets.count - 1 - indexPath.row]
+//                setRepository.deleteWordSet(set: set)
+//                print("word set was deleted")
+//            }
+//        }
+//    }
+}
+
+extension SetsViewController : UICollectionViewDelegateFlowLayout  {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 138, height: 129)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 40, bottom: 30, right: 40)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+}
+
+extension SetsViewController : UISearchBarDelegate {
+    
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+//        if let word = searchBar.text {
+//            cardRepository.fetchMultipleTranslationsForWord(word, completion: onDefinitionsFetched)
+//        }
+//        searchBar.endEditing(false)
+//    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        updateSets()
+    }
 }

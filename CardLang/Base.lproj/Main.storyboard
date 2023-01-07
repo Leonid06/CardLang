@@ -30,13 +30,82 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <segue destination="aio-Ij-ocT" kind="relationship" relationship="rootViewController" id="wTD-ts-nwx"/>
                         <segue destination="2NE-AW-UNj" kind="presentation" id="Oyd-41-LuB"/>
+                        <segue destination="mQn-ZS-rpi" kind="relationship" relationship="rootViewController" id="606-sU-5Wc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="usD-Wh-nxD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1439" y="424"/>
+        </scene>
+        <!--My sets-->
+        <scene sceneID="Ufp-HK-VfI">
+            <objects>
+                <viewController id="mQn-ZS-rpi" customClass="SetsViewController" customModule="CardLang" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zgd-Sx-1GX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Guj-Sh-iE2">
+                                <rect key="frame" x="0.0" y="156" width="414" height="689"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="689" id="CPa-Ri-3Wd"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mAk-O3-wQo">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ihx-Kh-QJP">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BQp-oY-sFi">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Type a set name" translatesAutoresizingMaskIntoConstraints="NO" id="0NM-HF-bWy" customClass="TranslationSearchBar" customModule="CardLang" customModuleProvider="target">
+                                <rect key="frame" x="20" y="92" width="374" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="15j-BK-4m6"/>
+                                </constraints>
+                                <color key="tintColor" name="buttonColor"/>
+                                <color key="barTintColor" name="buttonColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f8s-rL-i0v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0NM-HF-bWy" firstAttribute="leading" secondItem="f8s-rL-i0v" secondAttribute="leading" constant="20" id="Gcs-5A-geP"/>
+                            <constraint firstItem="Guj-Sh-iE2" firstAttribute="leading" secondItem="f8s-rL-i0v" secondAttribute="leading" id="Q2S-nn-yym"/>
+                            <constraint firstItem="Guj-Sh-iE2" firstAttribute="trailing" secondItem="f8s-rL-i0v" secondAttribute="trailing" id="R2d-5b-Xay"/>
+                            <constraint firstItem="Guj-Sh-iE2" firstAttribute="top" secondItem="0NM-HF-bWy" secondAttribute="bottom" constant="20" id="RyM-hj-JMH"/>
+                            <constraint firstItem="0NM-HF-bWy" firstAttribute="top" secondItem="f8s-rL-i0v" secondAttribute="top" id="Tr2-DP-QWE"/>
+                            <constraint firstItem="f8s-rL-i0v" firstAttribute="trailing" secondItem="0NM-HF-bWy" secondAttribute="trailing" constant="20" id="ZCG-fq-ptw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My sets" id="HmT-bf-WOw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="CYZ-pG-Si7">
+                            <color key="tintColor" name="barColor"/>
+                            <connections>
+                                <action selector="addSetButtonPressed:" destination="mQn-ZS-rpi" id="Vvy-zf-6zp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="Guj-Sh-iE2" id="RhF-LT-HaZ"/>
+                        <outlet property="setsSearchBar" destination="0NM-HF-bWy" id="LPK-O3-XdD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C6u-m0-eoW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-598.55072463768124" y="450.66964285714283"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="GB0-N5-CHz">
@@ -107,42 +176,6 @@
             </objects>
             <point key="canvasLocation" x="-1213.0434782608697" y="-321.42857142857139"/>
         </scene>
-        <!--Sets-->
-        <scene sceneID="IJD-Op-xi1">
-            <objects>
-                <tableViewController id="aio-Ij-ocT" customClass="SetsViewController" customModule="CardLang" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="4O9-DE-3D0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ADp-xW-Itb">
-                                <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ADp-xW-Itb" id="RFa-yc-1Pb">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="aio-Ij-ocT" id="h1D-BU-Ehn"/>
-                            <outlet property="delegate" destination="aio-Ij-ocT" id="rGO-Hw-HC3"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Sets" id="t1B-eB-PoO">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ubr-MQ-T8I">
-                            <color key="tintColor" name="barColor"/>
-                            <connections>
-                                <action selector="addSetButtonPressed:" destination="aio-Ij-ocT" id="tv0-Vd-hTY"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kNz-lM-c1f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-572" y="542"/>
-        </scene>
         <!--Folders-->
         <scene sceneID="upv-PQ-1Zr">
             <objects>
@@ -175,7 +208,6 @@
                                 <rect key="frame" x="0.0" y="97" width="414" height="706"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="Bsi-Be-GLp"/>
                                     <constraint firstAttribute="height" constant="706" id="Syd-un-wd8"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cwC-I9-PAb">
@@ -229,6 +261,9 @@
         </namedColor>
         <namedColor name="borderColor">
             <color red="0.70980392156862748" green="0.6588235294117647" blue="0.51764705882352946" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="buttonColor">
+            <color red="1" green="0.70588235294117652" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

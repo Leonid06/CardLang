@@ -26,7 +26,6 @@ class CreateFolderViewController: UIViewController {
             if(!name.isEmpty){
                 folderRepository.addFolder(name: name, description: folderDescriptionTextField.text ?? "")
             }
-          
         }
         dismiss(animated: true)
     }
