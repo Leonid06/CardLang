@@ -32,12 +32,9 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Type a set name" translatesAutoresizingMaskIntoConstraints="NO" id="F2F-IF-EFf" customClass="TranslationSearchBar" customModule="CardLang" customModuleProvider="target">
-                    <rect key="frame" x="9" y="59" width="374" height="44"/>
+                    <rect key="frame" x="20" y="59" width="353" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="GY9-T0-fFy"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="kBV-Ah-yyI"/>
-                        <constraint firstAttribute="width" constant="374" id="o8a-s1-oHq"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="xS3-7k-7Oo"/>
                     </constraints>
                     <color key="tintColor" name="buttonColor"/>
                     <color key="barTintColor" name="buttonColor"/>
@@ -50,7 +47,8 @@
                 <constraint firstItem="AbB-6t-hLI" firstAttribute="top" secondItem="F2F-IF-EFf" secondAttribute="bottom" constant="20" id="4FT-mu-65t"/>
                 <constraint firstItem="F2F-IF-EFf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="A6a-Ka-bAv"/>
                 <constraint firstItem="AbB-6t-hLI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="D4a-gs-G5g"/>
-                <constraint firstItem="F2F-IF-EFf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="9" id="VKX-vx-lhs"/>
+                <constraint firstItem="F2F-IF-EFf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="JGJ-wr-Q4y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F2F-IF-EFf" secondAttribute="trailing" constant="20" id="aDD-CB-gbC"/>
                 <constraint firstItem="AbB-6t-hLI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kLh-i0-oc8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="AbB-6t-hLI" secondAttribute="bottom" constant="8" id="ltC-uM-wx0"/>
             </constraints>

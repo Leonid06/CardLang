@@ -186,7 +186,7 @@ extension SingleSetViewController : UICollectionViewDelegateFlowLayout  {
         return 20
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return 0 
     }
 }
 

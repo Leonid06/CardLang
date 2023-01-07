@@ -51,7 +51,6 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="689" id="CPa-Ri-3Wd"/>
-                                    <constraint firstAttribute="width" constant="414" id="bZE-Eo-7qf"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mAk-O3-wQo">
                                     <size key="itemSize" width="128" height="128"/>
@@ -85,6 +84,7 @@
                         <constraints>
                             <constraint firstItem="0NM-HF-bWy" firstAttribute="leading" secondItem="f8s-rL-i0v" secondAttribute="leading" constant="20" id="Gcs-5A-geP"/>
                             <constraint firstItem="Guj-Sh-iE2" firstAttribute="leading" secondItem="f8s-rL-i0v" secondAttribute="leading" id="Q2S-nn-yym"/>
+                            <constraint firstItem="Guj-Sh-iE2" firstAttribute="trailing" secondItem="f8s-rL-i0v" secondAttribute="trailing" id="R2d-5b-Xay"/>
                             <constraint firstItem="Guj-Sh-iE2" firstAttribute="top" secondItem="0NM-HF-bWy" secondAttribute="bottom" constant="20" id="RyM-hj-JMH"/>
                             <constraint firstItem="0NM-HF-bWy" firstAttribute="top" secondItem="f8s-rL-i0v" secondAttribute="top" id="Tr2-DP-QWE"/>
                             <constraint firstItem="f8s-rL-i0v" firstAttribute="trailing" secondItem="0NM-HF-bWy" secondAttribute="trailing" constant="20" id="ZCG-fq-ptw"/>
@@ -208,7 +208,6 @@
                                 <rect key="frame" x="0.0" y="97" width="414" height="706"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="Bsi-Be-GLp"/>
                                     <constraint firstAttribute="height" constant="706" id="Syd-un-wd8"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cwC-I9-PAb">
