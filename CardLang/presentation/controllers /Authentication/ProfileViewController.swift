@@ -8,6 +8,8 @@
 import UIKit
 
 class ProfileViewController: UINavigationController {
+    
+    private let authenticationRepository = AuthenticationRepository.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +17,23 @@ class ProfileViewController: UINavigationController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func logOutButtonClicked(_ sender: Any) {
+        Task {
+            await authenticationRepository.logOut {
+                loggedOut in self.onLoggedOut(loggedOut)
+            }
+        }
+        
+    }
+    
+    private func onLoggedOut(_ loggedOut: Bool){
+        if(loggedOut){
+            if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+                sceneDelegate.checkAuthentication()
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

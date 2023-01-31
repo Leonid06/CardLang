@@ -26,6 +26,38 @@ class RealmService {
         }
     }
     
+    func logOutUser() async -> Bool {
+        do {
+            try await app.currentUser?.logOut()
+            return true 
+        }catch {
+            print(error)
+        }
+        return false
+    }
+    
+    
+    
+    func logInUser(email: String, password: String) async throws -> Bool  {
+        var loggedIn = false
+        app.login(credentials: Credentials.emailPassword(email: email, password: password)){ result in
+            switch result {
+            case .failure(let error):
+                print(error)
+                
+            case .success(let user):
+                print("Successfully logged in by email as \(user)")
+                loggedIn = true
+            }
+        }
+        return loggedIn
+    }
+    
+    
+    func currentUserIsLoggedIn() -> Bool {
+        return app.currentUser?.isLoggedIn ?? false 
+    }
+    
     func getRealm() -> Realm? {
         if let realm = self.realm {
             return realm
@@ -169,6 +201,21 @@ class RealmService {
             return realm
         }
         return try await Realm()
+    }
+    
+    func registerUser(email: String, password: String) async -> Bool  {
+        let client = app.emailPasswordAuth
+        
+        do {
+            try await client.registerUser(email: email, password: password)
+            print("Successfully registered user!")
+            return true
+        }catch {
+            print(error)
+        }
+        
+        return false
+      
     }
     
     private func login() async throws {

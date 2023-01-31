@@ -8,22 +8,39 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    private let authenticationRepository = AuthenticationRepository.shared
 
+    @IBOutlet weak var passwordTextField: UnderlinedTextField!
+    @IBOutlet weak var emailTextField: UnderlinedTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func signUpButtonClicked(_ sender: Any) {
+        let registerViewController = RegisterViewController(nibName: NibNames.RegisterViewControllerNibName, bundle: nil)
+        navigationController?.pushViewController(registerViewController, animated: true)
     }
-    */
-
+    
+    @IBAction func loginButtonClicked(_ sender: Any) {
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            Task {
+                await self.authenticationRepository.logInUser(email: email, password: password){
+                    loggedIn in self.navigateOnLogin(loggedIn: loggedIn)
+                }
+            }
+        }
+    }
+    
+    private func  navigateOnLogin(loggedIn: Bool){
+        if(loggedIn){
+            if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+                sceneDelegate.checkAuthentication()
+            }
+        }
+    }
 }

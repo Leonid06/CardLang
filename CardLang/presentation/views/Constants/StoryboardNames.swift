@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+
+
+class StoryboardNames {
+    static let MainStoryboardName = "Main"
+    static let AuthenticationStoryboardName = "Authentication"
+}

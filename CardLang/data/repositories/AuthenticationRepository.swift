@@ -6,3 +6,62 @@
 //
 
 import Foundation
+
+
+class AuthenticationRepository {
+    static let shared = AuthenticationRepository()
+    private let realmService = RealmService.shared
+    
+    
+  
+    func registerUser(email: String, password: String, completion : @escaping (Bool) -> Void) async {
+        let task = Task { () -> Bool in
+            return await realmService.registerUser(email: email, password: password)
+        }
+        do {
+            let result = try await task.result.get()
+            completion(result)
+        }catch {
+            completion(false)
+        }
+    }
+    
+    func logOut(completion: @escaping (Bool) -> Void) async {
+        let task = Task { () -> Bool in
+            return await realmService.logOutUser()
+        }
+        do {
+            let result = try await task.result.get()
+            completion(result)
+        }catch {
+            completion(false)
+        }
+    }
+    
+
+    func logInUser(email: String, password: String, completion: @escaping (Bool) -> Void) async {
+        let task = Task { () -> Bool in
+            return try await realmService.logInUser(email: email, password: password)
+        }
+        do {
+            let result = try await task.result.get()
+            completion(result)
+        }catch {
+            completion(false)
+        }
+    }
+    
+    @MainActor
+    func checkIfUserIsLoggedIn(completion: @escaping @MainActor (Bool)-> Void) async  {
+        let task = Task { () -> Bool in
+            return realmService.currentUserIsLoggedIn()
+        }
+        do {
+            let result =  try await task.result.get()
+            completion(result)
+        }catch{
+            print(error)
+        }
+        completion(false)
+    }
+}
