@@ -80,7 +80,7 @@ class RealmService {
             
         }else {
                 do {
-                    try await login()
+//                    try await login()
                     try await self.realm = instantiateRealm()
                     
                     print("instantiated realm")
@@ -121,7 +121,7 @@ class RealmService {
             
         }else {
                 do {
-                    try await login()
+//                    try await login()
                     try await self.realm = instantiateRealm()
                     
                     print("instantiated realm")
@@ -160,7 +160,7 @@ class RealmService {
             
         }else {
             do {
-                try await login()
+//                try await login()
                 try await self.realm = instantiateRealm()
                 
             }catch {
