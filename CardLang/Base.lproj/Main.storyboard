@@ -122,7 +122,7 @@
                     <connections>
                         <segue destination="7CM-9X-Zq5" kind="relationship" relationship="viewControllers" id="fec-6e-NWw"/>
                         <segue destination="dwx-6f-JaF" kind="relationship" relationship="viewControllers" id="wf5-96-m9X"/>
-                        <segue destination="VZ4-Tv-v8d" kind="relationship" relationship="viewControllers" id="wOg-TM-K0k"/>
+                        <segue destination="p3e-3C-vav" kind="relationship" relationship="viewControllers" id="lWH-fP-ei7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6P-KA-mI4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -178,6 +178,23 @@
             </objects>
             <point key="canvasLocation" x="-1213.0434782608697" y="-321.42857142857139"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="1IR-lD-I2D">
+            <objects>
+                <navigationController id="p3e-3C-vav" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="zMj-6q-f26"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KCZ-14-bFn">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qsu-A0-di2" kind="relationship" relationship="rootViewController" id="mtj-Ne-ThG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kjp-cB-2VF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3717" y="1521"/>
+        </scene>
         <!--Folders-->
         <scene sceneID="upv-PQ-1Zr">
             <objects>
@@ -228,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OBp-7F-VB1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-984.05797101449286" y="1916.5178571428571"/>
+            <point key="canvasLocation" x="-2770" y="1892"/>
         </scene>
         <!--Folders-->
         <scene sceneID="CeX-dr-5DQ">
@@ -286,32 +303,10 @@
             </objects>
             <point key="canvasLocation" x="-849.27536231884062" y="1256.9196428571429"/>
         </scene>
-        <!--Profile-->
-        <scene sceneID="Jjv-ZM-ukO">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VZ4-Tv-v8d" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" selectedImage="person.crop.circle.fill" catalog="system" id="Dl5-Y4-dGO">
-                        <color key="badgeColor" name="barColor"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="89P-3o-Xyj">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="qsu-A0-di2" kind="relationship" relationship="rootViewController" id="iLC-KE-Lbh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c4s-y5-Nhy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2109" y="1895"/>
-        </scene>
     </scenes>
     <resources>
         <image name="folder.fill" catalog="system" width="128" height="96"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
-        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="barColor">
             <color red="0.77499997615814209" green="0.62000000476837158" blue="0.41499999165534973" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
