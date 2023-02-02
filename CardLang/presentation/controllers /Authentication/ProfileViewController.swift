@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: UINavigationController {
+class ProfileViewController: UIViewController {
     
     private let authenticationRepository = AuthenticationRepository.shared
 
@@ -28,8 +28,10 @@ class ProfileViewController: UINavigationController {
     
     private func onLoggedOut(_ loggedOut: Bool){
         if(loggedOut){
-            if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
-                sceneDelegate.checkAuthentication()
+            Task {
+                if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+                    sceneDelegate.checkAuthentication()
+                }
             }
         }
     }

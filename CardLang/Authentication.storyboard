@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PhM-n9-VlR">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="8xh-Co-nPP">
+            <objects>
+                <navigationController id="PhM-n9-VlR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I78-03-QAc">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="w5u-gt-vGo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k5O-pb-p06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-668" y="9"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -18,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cpg-YK-tvz" customClass="UnderlinedTextField" customModule="CardLang" customModuleProvider="target">
-                                <rect key="frame" x="46" y="158" width="300" height="40"/>
+                                <rect key="frame" x="46" y="202" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Hvc-9S-vTq"/>
                                     <constraint firstAttribute="height" constant="40" id="R24-p5-DOU"/>
@@ -27,13 +43,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2M-cV-oEP">
-                                <rect key="frame" x="46" y="200" width="36.666666666666657" height="18"/>
+                                <rect key="frame" x="46" y="244" width="36.666666666666657" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" name="secondaryGreyLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Okj-b1-kiq" customClass="UnderlinedTextField" customModule="CardLang" customModuleProvider="target">
-                                <rect key="frame" x="46" y="235" width="300" height="40"/>
+                                <rect key="frame" x="46" y="279" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ye1-r3-04S"/>
                                     <constraint firstAttribute="width" constant="300" id="mwP-xv-JVr"/>
@@ -42,7 +58,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-Y8-naK">
-                                <rect key="frame" x="46.000000000000007" y="277" width="78.666666666666686" height="18"/>
+                                <rect key="frame" x="46.000000000000007" y="321" width="78.666666666666686" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="3Md-Qk-9MM"/>
                                     <constraint firstAttribute="width" constant="78.670000000000002" id="odt-cN-gjB"/>
@@ -52,7 +68,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FU-EW-KBa">
-                                <rect key="frame" x="118" y="342" width="156" height="53"/>
+                                <rect key="frame" x="118" y="386" width="156" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="SeF-yU-Xnq"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="53" id="Vzw-Gw-EGL"/>
@@ -69,13 +85,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIB-11-4Nx">
-                                <rect key="frame" x="185" y="419" width="18" height="24"/>
+                                <rect key="frame" x="185" y="463" width="18" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" name="editLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0z-4t-KCb">
-                                <rect key="frame" x="118" y="467" width="156" height="53"/>
+                                <rect key="frame" x="118" y="511" width="156" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="156" id="VE2-kc-YTT"/>
                                     <constraint firstAttribute="height" constant="53" id="ev2-t3-F3l"/>
@@ -114,6 +130,7 @@
                             <constraint firstItem="p0z-4t-KCb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="118" id="wEv-Lw-pwV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cpb-bg-59Z"/>
                     <connections>
                         <outlet property="emailTextField" destination="Cpg-YK-tvz" id="AL5-Y8-L4L"/>
                         <outlet property="passwordTextField" destination="Okj-b1-kiq" id="9R2-XQ-MAW"/>

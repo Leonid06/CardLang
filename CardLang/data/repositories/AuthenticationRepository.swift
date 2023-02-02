@@ -40,15 +40,12 @@ class AuthenticationRepository {
     
 
     func logInUser(email: String, password: String, completion: @escaping (Bool) -> Void) async {
-        let task = Task { () -> Bool in
-            return try await realmService.logInUser(email: email, password: password)
+        Task {
+            try await realmService.logInUser(email: email, password: password){
+                loggedIn in completion(loggedIn)
+            }
         }
-        do {
-            let result = try await task.result.get()
-            completion(result)
-        }catch {
-            completion(false)
-        }
+    
     }
     
     @MainActor

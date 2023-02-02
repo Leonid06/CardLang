@@ -17,7 +17,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     
@@ -38,8 +37,10 @@ class LoginViewController: UIViewController {
     
     private func  navigateOnLogin(loggedIn: Bool){
         if(loggedIn){
-            if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
-                sceneDelegate.checkAuthentication()
+            Task {
+                if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+                    sceneDelegate.checkAuthentication()
+                }
             }
         }
     }

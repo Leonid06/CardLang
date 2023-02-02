@@ -38,19 +38,18 @@ class RealmService {
     
     
     
-    func logInUser(email: String, password: String) async throws -> Bool  {
-        var loggedIn = false
+    func logInUser(email: String, password: String, completion: @escaping (Bool) -> Void) async throws {
         app.login(credentials: Credentials.emailPassword(email: email, password: password)){ result in
             switch result {
             case .failure(let error):
                 print(error)
+                completion(false)
                 
             case .success(let user):
                 print("Successfully logged in by email as \(user)")
-                loggedIn = true
+                completion(true)
             }
         }
-        return loggedIn
     }
     
     
@@ -208,6 +207,13 @@ class RealmService {
         
         do {
             try await client.registerUser(email: email, password: password)
+            try await login()
+            if let anonymousUser = app.currentUser {
+                linkAnonymousUser(anonymousUser, with: Credentials.emailPassword(email: email, password: password))
+                try await anonymousUser.logOut()
+                print(app.currentUser)
+            }
+            
             print("Successfully registered user!")
             return true
         }catch {
@@ -216,6 +222,18 @@ class RealmService {
         
         return false
       
+    }
+    
+    private func linkAnonymousUser(_ user: User, with credentials : Credentials){
+        user.linkUser(credentials: credentials){
+            result in
+            switch result {
+            case .failure(let error):
+                print("Failed to link user: \(error.localizedDescription)")
+            case .success(let user):
+                print("Successfully linked user: \(user)")
+            }
+        }
     }
     
     private func login() async throws {

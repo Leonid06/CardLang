@@ -122,7 +122,7 @@
                     <connections>
                         <segue destination="7CM-9X-Zq5" kind="relationship" relationship="viewControllers" id="fec-6e-NWw"/>
                         <segue destination="dwx-6f-JaF" kind="relationship" relationship="viewControllers" id="wf5-96-m9X"/>
-                        <segue destination="p3e-3C-vav" kind="relationship" relationship="viewControllers" id="lWH-fP-ei7"/>
+                        <segue destination="en6-PU-dpB" kind="relationship" relationship="viewControllers" id="xSo-Uc-SPk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6P-KA-mI4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -179,21 +179,53 @@
             <point key="canvasLocation" x="-1213.0434782608697" y="-321.42857142857139"/>
         </scene>
         <!--Item-->
-        <scene sceneID="1IR-lD-I2D">
+        <scene sceneID="cre-sw-Hj9">
             <objects>
-                <navigationController id="p3e-3C-vav" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zMj-6q-f26"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KCZ-14-bFn">
+                <navigationController id="en6-PU-dpB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="rkt-PM-DrO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v2N-IP-RLg">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="qsu-A0-di2" kind="relationship" relationship="rootViewController" id="mtj-Ne-ThG"/>
+                        <segue destination="55w-wf-zSu" kind="relationship" relationship="rootViewController" id="wGD-9Z-GgC"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kjp-cB-2VF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oiM-wX-U58" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3717" y="1521"/>
+            <point key="canvasLocation" x="-3413" y="1577"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="3fA-Iy-0NU">
+            <objects>
+                <viewController id="55w-wf-zSu" customClass="ProfileViewController" customModule="CardLang" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q1g-JU-k6n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wa-Dj-rsj">
+                                <rect key="frame" x="149" y="426" width="122" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log out">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logOutButtonClicked:" destination="55w-wf-zSu" eventType="touchUpInside" id="Wgg-If-vUH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IAI-cd-Vza"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7wa-Dj-rsj" firstAttribute="leading" secondItem="IAI-cd-Vza" secondAttribute="leading" constant="149" id="1uA-eU-6ej"/>
+                            <constraint firstItem="7wa-Dj-rsj" firstAttribute="top" secondItem="IAI-cd-Vza" secondAttribute="top" constant="334" id="SXU-d7-mL4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xmN-o1-Dii"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bVY-ew-iEA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2565" y="1601"/>
         </scene>
         <!--Folders-->
         <scene sceneID="upv-PQ-1Zr">
@@ -214,38 +246,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PX2-sl-4jl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1704" y="1227"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="FGy-QL-j6c">
-            <objects>
-                <viewController id="qsu-A0-di2" customClass="ProfileViewController" customModule="CardLang" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="glq-7X-2vM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyC-Rv-FVY">
-                                <rect key="frame" x="148" y="425" width="121.5" height="50"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Log out">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="logOutButtonClicked:" destination="qsu-A0-di2" eventType="touchUpInside" id="WOO-2i-G8t"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="TN8-me-UX4"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="UyC-Rv-FVY" firstAttribute="leading" secondItem="TN8-me-UX4" secondAttribute="leading" constant="148" id="3Kr-sP-PBr"/>
-                            <constraint firstItem="UyC-Rv-FVY" firstAttribute="top" secondItem="TN8-me-UX4" secondAttribute="top" constant="333" id="Rdr-xI-FHd"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Profile" id="fWb-By-yuY"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OBp-7F-VB1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2770" y="1892"/>
         </scene>
         <!--Folders-->
         <scene sceneID="CeX-dr-5DQ">
