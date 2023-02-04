@@ -8,11 +8,13 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    @IBOutlet weak var idLabel: UILabel!
     
     private let authenticationRepository = AuthenticationRepository.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchCurrentUserCustomData()
 
         // Do any additional setup after loading the view.
     }
@@ -26,6 +28,14 @@ class ProfileViewController: UIViewController {
         
     }
     
+    private func fetchCurrentUserCustomData(){
+        Task {
+            let email = authenticationRepository.getCurrentUserEmail()
+            idLabel.text = email
+        }
+    }
+    
+
     private func onLoggedOut(_ loggedOut: Bool){
         if(loggedOut){
             Task {

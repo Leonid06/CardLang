@@ -28,7 +28,7 @@
                         <constraint firstAttribute="height" constant="40" id="95A-sO-vsK"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CIA-Jh-9eJ" customClass="UnderlinedTextField" customModule="CardLang" customModuleProvider="target">
                     <rect key="frame" x="46" y="235" width="300" height="40"/>
@@ -37,7 +37,7 @@
                         <constraint firstAttribute="height" constant="40" id="x9W-lP-gLq"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" textContentType="password"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsu-EX-Fi7">
                     <rect key="frame" x="46.000000000000007" y="277" width="78.666666666666686" height="18"/>
@@ -96,7 +96,7 @@
             <size key="intrinsicContentSize" width="118" height="22"/>
         </designable>
         <designable name="cYA-rS-4mE">
-            <size key="intrinsicContentSize" width="85" height="22"/>
+            <size key="intrinsicContentSize" width="85" height="21"/>
         </designable>
     </designables>
     <resources>

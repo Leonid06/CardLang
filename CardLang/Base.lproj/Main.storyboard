@@ -213,19 +213,30 @@
                                     <action selector="logOutButtonClicked:" destination="55w-wf-zSu" eventType="touchUpInside" id="Wgg-If-vUH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="id:fdkfklsdkfldkflkdsfsd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kw-Ik-WqG">
+                                <rect key="frame" x="61" y="344" width="298.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IAI-cd-Vza"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7wa-Dj-rsj" firstAttribute="leading" secondItem="IAI-cd-Vza" secondAttribute="leading" constant="149" id="1uA-eU-6ej"/>
                             <constraint firstItem="7wa-Dj-rsj" firstAttribute="top" secondItem="IAI-cd-Vza" secondAttribute="top" constant="334" id="SXU-d7-mL4"/>
+                            <constraint firstItem="5Kw-Ik-WqG" firstAttribute="top" secondItem="IAI-cd-Vza" secondAttribute="top" constant="254" id="oVJ-zv-117"/>
+                            <constraint firstItem="5Kw-Ik-WqG" firstAttribute="leading" secondItem="IAI-cd-Vza" secondAttribute="leading" constant="109" id="y4x-1V-zLN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xmN-o1-Dii"/>
+                    <connections>
+                        <outlet property="idLabel" destination="5Kw-Ik-WqG" id="lB0-Xa-RAo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVY-ew-iEA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2565" y="1601"/>
+            <point key="canvasLocation" x="-2565.217391304348" y="1600.4464285714284"/>
         </scene>
         <!--Folders-->
         <scene sceneID="upv-PQ-1Zr">

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 
 class AuthenticationRepository {
@@ -36,6 +37,13 @@ class AuthenticationRepository {
         }catch {
             completion(false)
         }
+    }
+    
+    func getCurrentUserEmail() -> String? {
+        if let email = realmService.getCurrentUserEmail() {
+            return email
+        }
+        return nil 
     }
     
 
