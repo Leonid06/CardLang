@@ -30,8 +30,10 @@ class ProfileViewController: UIViewController {
     
     private func fetchCurrentUserCustomData(){
         Task {
-            let email = authenticationRepository.getCurrentUserEmail()
-            idLabel.text = email
+            if let email = authenticationRepository.getCurrentUserEmail(){
+                idLabel.text = "email: \(email)"
+            }
+            
         }
     }
     

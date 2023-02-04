@@ -55,7 +55,7 @@
                                     <constraint firstAttribute="width" constant="300" id="mwP-xv-JVr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-Y8-naK">
                                 <rect key="frame" x="46.000000000000007" y="321" width="78.666666666666686" height="18"/>
@@ -146,7 +146,7 @@
             <size key="intrinsicContentSize" width="85" height="22"/>
         </designable>
         <designable name="Okj-b1-kiq">
-            <size key="intrinsicContentSize" width="118" height="22"/>
+            <size key="intrinsicContentSize" width="118" height="21"/>
         </designable>
     </designables>
     <resources>
