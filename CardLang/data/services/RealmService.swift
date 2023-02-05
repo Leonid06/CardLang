@@ -50,6 +50,7 @@ class RealmService {
                 completion(false)
 
             case .success(let user):
+                print(user.identities)
                 print("Successfully logged in by email as \(user)")
                 completion(true)
                 Task {
@@ -64,7 +65,8 @@ class RealmService {
     
     
     func currentUserIsLoggedIn() -> Bool {
-        return app.currentUser?.isLoggedIn ?? false 
+        return (app.currentUser?.isLoggedIn ?? false && !currentUserIsAnonymous())
+//        return app.currentUser?.isLoggedIn ?? false
     }
     
     func getRealm() -> Realm? {
@@ -173,17 +175,29 @@ class RealmService {
         return try await Realm()
     }
     
+    private func currentUserIsAnonymous() -> Bool {
+        let currentUser = app.currentUser
+        print(currentUser)
+        return currentUser?.identities.allSatisfy {
+            identity in
+            let result = identity.providerType == "anon-user"
+            print(result)
+            return result
+        } ?? false
+    }
+    
     func registerUser(email: String, password: String) async -> Bool  {
         let client = app.emailPasswordAuth
+        print(app.currentUser)
         
         do {
             try await client.registerUser(email: email, password: password)
-//            try await loginAnonymousUser()
-//            if let anonymousUser = app.currentUser {
-//                await linkAnonymousUser(anonymousUser, with: Credentials.emailPassword(email: email, password: password))
-//                print(app.currentUser)
-//            }
-//
+            if currentUserIsAnonymous() {
+                if let anonymousUser = app.currentUser {
+                    let linkedUser = await linkAnonymousUser(anonymousUser, with: Credentials.emailPassword(email: email, password: password))
+                }
+            }
+            
             print("Successfully registered user!")
             return true
         }catch {
@@ -194,21 +208,22 @@ class RealmService {
       
     }
     
-    private func linkAnonymousUser(_ user: User, with credentials : Credentials) async {
-        user.linkUser(credentials: credentials){
-            result in
-            switch result {
-            case .failure(let error):
-                print("Failed to link user: \(error)")
-            case .success(let user):
-                print("Successfully linked user: \(user)")
-            }
+    private func linkAnonymousUser(_ user: User, with credentials : Credentials) async -> User? {
+        do {
+            let linkedUser = try await user.linkUser(credentials: credentials)
+            print("Successfully linked user with id: \(user.id)")
+            return linkedUser
+        }catch {
+            print("Failed to link user \(user)")
+            return nil
         }
+        
         
     }
     
     private func loginAnonymousUser() async throws {
-        try await app.login(credentials: Credentials.anonymous)
+        let user = try await app.login(credentials: Credentials.anonymous)
+        print("Successfully anonymously logged in user with id: \(user.id)")
     }
     
     @MainActor
