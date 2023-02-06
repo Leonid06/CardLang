@@ -44,23 +44,24 @@ class RealmService {
     
     func logInUser(email: String, password: String, completion: @escaping (Bool) -> Void) async throws {
         app.login(credentials: Credentials.emailPassword(email: email, password: password)){ result in
-            switch result {
-            case .failure(let error):
-                print(error)
-                completion(false)
+            Task {
+                switch result {
+                case .failure(let error):
+                    print(error)
+                    completion(false)
 
-            case .success(let user):
-                print(user.identities)
-                print("Successfully logged in by email as \(user)")
-                completion(true)
-                Task {
-                    try await self.realm = self.instantiateRealm()
+                case .success(let user):
+                    print(user.identities)
+                    print("Successfully logged in by email as \(user)")
+                    try await self.realm = self.instantiateRealm {
+                        completion(true)
+                    }
                 }
             }
+           
         }
 //        try await loginAnonymousUser()
 //        completion(true)
-        
     }
     
     
@@ -104,10 +105,11 @@ class RealmService {
                 }
             }
             notificationTokens.append(token)
-        }else {
-            self.realm = try await instantiateRealm()
-            try await addObserverOnFolders(block: block)
         }
+//        else {
+//            self.realm = try await instantiateRealm()
+//            try await addObserverOnFolders(block: block)
+//        }
     }
     
     
@@ -131,10 +133,11 @@ class RealmService {
                 }
             }
             notificationTokens.append(token)
-        }else {
-            self.realm = try await instantiateRealm()
-            try await addObserverOnSets(block: block)
         }
+//        }else {
+//            self.realm = try await instantiateRealm()
+//            try await addObserverOnSets(block: block)
+//        }
     }
     
     @MainActor
@@ -156,20 +159,21 @@ class RealmService {
                 }
             }
             notificationTokens.append(token)
-        }else {
-            self.realm = try await instantiateRealm()
-            try await addObserverOnTranslations(block: block)
         }
+//        }else {
+//            self.realm = try await instantiateRealm()
+//            try await addObserverOnTranslations(block: block)
+//        }
         
     }
     
-    private func instantiateRealm() async throws -> Realm {
+    private func instantiateRealm(completion: @escaping () -> Void) async throws -> Realm {
         
         if let user =  getCurrentUser() {
             print(user.id)
             
             let realm = try await openSyncedRealm(user: user)
-            
+            completion()
             return realm
         }
         return try await Realm()
