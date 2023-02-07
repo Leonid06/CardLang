@@ -69,7 +69,6 @@
 		B3A698A0294C8E56003BCA10 /* CreateFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A6989E294C8E56003BCA10 /* CreateFolderViewController.swift */; };
 		B3A698A1294C8E56003BCA10 /* CreateFolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3A6989F294C8E56003BCA10 /* CreateFolderViewController.xib */; };
 		B3AD47972986BE19007CE7C3 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AD47962986BE19007CE7C3 /* AuthenticationRepository.swift */; };
-		B3AD47992986EA9B007CE7C3 /* AuthenticationNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AD47982986EA9B007CE7C3 /* AuthenticationNavigationController.swift */; };
 		B3D78DEE2923E3A200A4E8E6 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D78DED2923E3A200A4E8E6 /* SoundService.swift */; };
 		B3DFAB8828DDBD9A00B84EEC /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */; };
 		B3DFAB8928DDBD9A00B84EEC /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFAB8728DDBD9A00B84EEC /* SearchTableViewCell.xib */; };
@@ -173,7 +172,6 @@
 		B3A6989E294C8E56003BCA10 /* CreateFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFolderViewController.swift; sourceTree = "<group>"; };
 		B3A6989F294C8E56003BCA10 /* CreateFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateFolderViewController.xib; sourceTree = "<group>"; };
 		B3AD47962986BE19007CE7C3 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
-		B3AD47982986EA9B007CE7C3 /* AuthenticationNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationNavigationController.swift; sourceTree = "<group>"; };
 		B3D78DED2923E3A200A4E8E6 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
 		B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		B3DFAB8728DDBD9A00B84EEC /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchTableViewCell.xib; path = ../SearchTableViewCell.xib; sourceTree = "<group>"; };
@@ -478,7 +476,6 @@
 				B31907DB2989986400F8442B /* ProfileViewController.swift */,
 				B3E7459E2986B6680004929D /* RegisterViewController.swift */,
 				B3E7459A2986B6370004929D /* LoginViewController.swift */,
-				B3AD47982986EA9B007CE7C3 /* AuthenticationNavigationController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -677,7 +674,6 @@
 				B3EFDFB928C0FF4200FA1183 /* SingleSetViewController.swift in Sources */,
 				B3061A04290ECEA000C1C6FB /* AddModeViewController.swift in Sources */,
 				B307876928BF9D8400C88404 /* Extensions .swift in Sources */,
-				B3AD47992986EA9B007CE7C3 /* AuthenticationNavigationController.swift in Sources */,
 				B33B210E28BE4F2100E66FCC /* CardService.swift in Sources */,
 				B33B20F828BE281000E66FCC /* CardLang.xcdatamodeld in Sources */,
 				B31907DA298975EB00F8442B /* StoryboardNames.swift in Sources */,

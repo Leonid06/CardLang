@@ -39,7 +39,6 @@ class SoundService {
                 let soundLocalUrl = directory.appendingPathComponent(url.lastPathComponent)
                 
                 if (!fileManager.fileExists(atPath: soundLocalUrl.path())){
-                    print("sound local url:" + soundLocalUrl.absoluteString)
                     try data.write(to: soundLocalUrl)
                 }
                 
@@ -67,7 +66,6 @@ class SoundService {
                 let soundLocalUrl = URL(string: directory.absoluteString + sourceUrl.lastPathComponent)
                 
                 if let soundLocalUrl = soundLocalUrl {
-                    print("sound local url:" + soundLocalUrl.absoluteString)
                     audioPlayer = try AVAudioPlayer(contentsOf: soundLocalUrl)
                     audioPlayer.prepareToPlay()
                     audioPlayer.play()

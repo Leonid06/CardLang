@@ -41,7 +41,6 @@ class TermViewController: UIViewController {
 
     @IBAction func playSoundButtonClicked(_ sender: UIButton) {
         if let translation = translation {
-            print(translation.soundPath)
             if let soundPath = translation.soundPath  {
                 soundService.playSound(soundPath: soundPath)
             }

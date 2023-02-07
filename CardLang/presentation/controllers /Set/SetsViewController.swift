@@ -35,10 +35,6 @@ class SetsViewController: UIViewController {
         }
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        updateSets()
-//    }
-    
     private func updateSetsWithTransitition(){
         Task {
             do {
@@ -65,8 +61,6 @@ class SetsViewController: UIViewController {
         let query = setsSearchBar.text
         
         self.sets = try await self.searchRepository.getAllSetsByQuery(query: query ?? "")
-        
-        print("Sets count: \(self.sets?.count)")
     }
     
     private func updateSetsOnReturn(){
@@ -92,7 +86,6 @@ class SetsViewController: UIViewController {
     }
     
     @IBAction func addSetButtonPressed(_ sender: UIBarButtonItem) {
-//        showAlert()
         let addSetViewController = AddSetViewController(nibName: NibNames.AddSetViewControllerNibName, bundle: nil)
         
         addSetViewController.modalPresentationStyle = .overFullScreen
@@ -113,7 +106,7 @@ extension SetsViewController : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1 
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -124,9 +117,9 @@ extension SetsViewController : UICollectionViewDelegate, UICollectionViewDataSou
             let set = sets[indexPath.row]
             cell.configure(set)
         }
-
         
-
+        
+        
         return cell
     }
     
@@ -141,21 +134,6 @@ extension SetsViewController : UICollectionViewDelegate, UICollectionViewDataSou
             navigationController?.pushViewController(singleSetViewController, animated: true)
         }
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 77
-//    }
-    
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if(editingStyle == .delete){
-//
-//            if let sets = sets {
-//                let set = sets[sets.count - 1 - indexPath.row]
-//                setRepository.deleteWordSet(set: set)
-//                print("word set was deleted")
-//            }
-//        }
-//    }
 }
 
 extension SetsViewController : UICollectionViewDelegateFlowLayout  {
@@ -176,13 +154,6 @@ extension SetsViewController : UICollectionViewDelegateFlowLayout  {
 }
 
 extension SetsViewController : UISearchBarDelegate {
-    
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
-//        if let word = searchBar.text {
-//            cardRepository.fetchMultipleTranslationsForWord(word, completion: onDefinitionsFetched)
-//        }
-//        searchBar.endEditing(false)
-//    }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         updateSets()
     }

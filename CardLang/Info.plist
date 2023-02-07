@@ -25,5 +25,7 @@
 	<array/>
 	<key>WORD_API_KEY</key>
 	<string>$(WORD_API_KEY)</string>
+	<key>APP_ID</key>
+	<string>$(APP_ID)</string>
 </dict>
 </plist>

@@ -83,7 +83,6 @@ extension CardViewController : SwipeCardStackDataSource {
     }
 
     func numberOfCards(in cardStack: SwipeCardStack) -> Int {
-          print("Number of translations : \(translations.count)")
           return translations.count
     }
 }

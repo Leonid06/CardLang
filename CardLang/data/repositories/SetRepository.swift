@@ -37,7 +37,6 @@ class SetRepository {
     func addWordSet(name : String){
         Task {
             do {
-//                let realm = try await realmService.getRealm()
                 
                 if let realm = realmService.getRealm() {
                     let user = realmService.getCurrentUser()

@@ -91,7 +91,6 @@ class SingleSetViewController: UIViewController {
     
     
     private func onTranslationsFetched(translations : [Translation]){
-        print("got \(translations.count) translations")
         if let set = self.set {
             self.setRepository.addTranslationToSet(set: set, translation: translations[0], completion: {})
         }
@@ -118,7 +117,6 @@ extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let translations = translations {
-            print(translations.count)
             return translations.count
         }
         return 0

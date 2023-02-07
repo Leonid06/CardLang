@@ -14,7 +14,7 @@ class RealmService {
     
     private var notificationTokens = [NotificationToken]()
     
-    private let app = App(id: "cardlang-gyuck")
+    private let app = App(id: Constants.APP_ID!)
     
     private var realm : Realm?
     
@@ -50,9 +50,7 @@ class RealmService {
                     print(error)
                     completion(false)
 
-                case .success(let user):
-                    print(user.identities)
-                    print("Successfully logged in by email as \(user)")
+                case .success(_):
                     try await self.realm = self._instantiateRealm {
                         completion(true)
                     }
@@ -60,14 +58,11 @@ class RealmService {
             }
            
         }
-//        try await loginAnonymousUser()
-//        completion(true)
     }
     
     
     func currentUserIsLoggedIn() -> Bool {
         return (app.currentUser?.isLoggedIn ?? false && !currentUserIsAnonymous())
-//        return app.currentUser?.isLoggedIn ?? false
     }
     
     func getRealm() -> Realm? {
@@ -95,10 +90,8 @@ class RealmService {
                 
                 switch changes {
                 case .initial:
-                    print("notified initial")
                     block()
                 case .update:
-                    print("notified")
                     block()
                 case .error(let error):
                     print(error)
@@ -106,10 +99,6 @@ class RealmService {
             }
             notificationTokens.append(token)
         }
-//        else {
-//            self.realm = try await instantiateRealm()
-//            try await addObserverOnFolders(block: block)
-//        }
     }
     
     
@@ -123,10 +112,8 @@ class RealmService {
                 
                 switch changes {
                 case .initial:
-                    print("notified initial")
                     block()
                 case .update:
-                    print("notified")
                     block()
                 case .error(let error):
                     print(error)
@@ -145,10 +132,8 @@ class RealmService {
                 
                 switch changes {
                 case .initial:
-                    print("notified initial")
                     block()
                 case .update:
-                    print("notified")
                     block()
                 case .error(let error):
                     print(error)
@@ -169,7 +154,6 @@ class RealmService {
     private func _instantiateRealm(completion: @escaping () -> Void) async throws -> Realm {
         
         if let user =  getCurrentUser() {
-            print(user.id)
             
             let realm = try await openSyncedRealm(user: user)
             completion()
@@ -180,7 +164,6 @@ class RealmService {
     
     private func currentUserIsAnonymous() -> Bool {
         let currentUser = app.currentUser
-        print(currentUser)
         return currentUser?.identities.allSatisfy {
             identity in
             let result = identity.providerType == "anon-user"
@@ -191,17 +174,9 @@ class RealmService {
     
     func registerUser(email: String, password: String) async -> Bool  {
         let client = app.emailPasswordAuth
-        print(app.currentUser)
         
         do {
             try await client.registerUser(email: email, password: password)
-//            if currentUserIsAnonymous() {
-//                if let anonymousUser = app.currentUser {
-//                    await linkAnonymousUser(anonymousUser, with: Credentials.emailPassword(email: email, password: password))
-//                }
-//            }
-            
-            print("Successfully registered user!")
             return true
         }catch {
             print(error)
@@ -209,22 +184,6 @@ class RealmService {
         
         return false
       
-    }
-    
-    private func linkAnonymousUser(_ user: User, with credentials : Credentials) async  {
-        do {
-            let linkedUser = try await user.linkUser(credentials: credentials)
-            print("Successfully linked user with id: \(user.id)")
-        }catch {
-            print("Failed to link user \(user)")
-        }
-        
-        
-    }
-    
-    private func loginAnonymousUser() async throws {
-        let user = try await app.login(credentials: Credentials.anonymous)
-        print("Successfully anonymously logged in user with id: \(user.id)")
     }
     
     @MainActor
