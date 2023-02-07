@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         self.setupWindow(with: scene)
-        self.checkAuthentication()
+        self.checkAuthentication(onSceneInitialization: true)
     }
     
     private func goToController(with viewController: UIViewController?) {
@@ -37,9 +37,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
     }
     
-    func checkAuthentication(){
+    func checkAuthentication(onSceneInitialization: Bool = false){
         Task {
-            await authenticationRepository.checkIfUserIsLoggedIn(completion: navigateOnAuthenticationCheck(isAuthenticated:))
+            await authenticationRepository.checkIfUserIsLoggedIn(onSceneInitialization: onSceneInitialization,completion: navigateOnAuthenticationCheck(isAuthenticated:))
         }
     }
     

@@ -55,10 +55,17 @@ class AuthenticationRepository {
         }
     
     }
+    private func checkIfToReinstantiateRealm(onSceneInitialization: Bool) async {
+        let userIsLoggedIn = realmService.currentUserIsLoggedIn()
+        if (userIsLoggedIn && onSceneInitialization) {
+            await realmService.instantiateRealm()
+        }
+    }
     
     @MainActor
-    func checkIfUserIsLoggedIn(completion: @escaping @MainActor (Bool)-> Void) async  {
+    func checkIfUserIsLoggedIn(onSceneInitialization: Bool, completion: @escaping @MainActor (Bool)-> Void) async  {
         let task = Task { () -> Bool in
+            await checkIfToReinstantiateRealm(onSceneInitialization: onSceneInitialization)
             return realmService.currentUserIsLoggedIn()
         }
         do {

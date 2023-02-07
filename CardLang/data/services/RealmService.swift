@@ -53,7 +53,7 @@ class RealmService {
                 case .success(let user):
                     print(user.identities)
                     print("Successfully logged in by email as \(user)")
-                    try await self.realm = self.instantiateRealm {
+                    try await self.realm = self._instantiateRealm {
                         completion(true)
                     }
                 }
@@ -134,10 +134,6 @@ class RealmService {
             }
             notificationTokens.append(token)
         }
-//        }else {
-//            self.realm = try await instantiateRealm()
-//            try await addObserverOnSets(block: block)
-//        }
     }
     
     @MainActor
@@ -160,14 +156,17 @@ class RealmService {
             }
             notificationTokens.append(token)
         }
-//        }else {
-//            self.realm = try await instantiateRealm()
-//            try await addObserverOnTranslations(block: block)
-//        }
+    }
+    func instantiateRealm() async {
+        do{
+            self.realm = try await _instantiateRealm {}
+        }catch {
+            print(error)
+        }
         
     }
     
-    private func instantiateRealm(completion: @escaping () -> Void) async throws -> Realm {
+    private func _instantiateRealm(completion: @escaping () -> Void) async throws -> Realm {
         
         if let user =  getCurrentUser() {
             print(user.id)
@@ -196,11 +195,11 @@ class RealmService {
         
         do {
             try await client.registerUser(email: email, password: password)
-            if currentUserIsAnonymous() {
-                if let anonymousUser = app.currentUser {
-                    let linkedUser = await linkAnonymousUser(anonymousUser, with: Credentials.emailPassword(email: email, password: password))
-                }
-            }
+//            if currentUserIsAnonymous() {
+//                if let anonymousUser = app.currentUser {
+//                    await linkAnonymousUser(anonymousUser, with: Credentials.emailPassword(email: email, password: password))
+//                }
+//            }
             
             print("Successfully registered user!")
             return true
@@ -212,14 +211,12 @@ class RealmService {
       
     }
     
-    private func linkAnonymousUser(_ user: User, with credentials : Credentials) async -> User? {
+    private func linkAnonymousUser(_ user: User, with credentials : Credentials) async  {
         do {
             let linkedUser = try await user.linkUser(credentials: credentials)
             print("Successfully linked user with id: \(user.id)")
-            return linkedUser
         }catch {
             print("Failed to link user \(user)")
-            return nil
         }
         
         
