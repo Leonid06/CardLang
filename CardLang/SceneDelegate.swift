@@ -25,7 +25,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 self.window?.layer.opacity = 0
             } completion: { _ in
                 if let viewController = viewController {
-//                    let navigationController = UINavigationController(rootViewController: viewController)
                     viewController.modalPresentationStyle = .fullScreen
                     self.window?.rootViewController = viewController
                     

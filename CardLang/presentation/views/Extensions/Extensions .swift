@@ -50,32 +50,3 @@ extension UISearchBar {
 }
 
 
-
-//extension String {
-//    static func removeTokens(string : String) -> String {
-//
-//        var temporaryString = string
-//        var isFound = false
-//        var firstIndex : Index = temporaryString.startIndex
-//        var secondIndex : Index = temporaryString.startIndex
-//
-//
-//
-//        for (index, char) in temporaryString.enumerated() {
-//            if !char.isLetter {
-//                if(isFound){
-//                    secondIndex = temporaryString.index(temporaryString.startIndex, offsetBy: index)
-//                    let range = Range(uncheckedBounds: (lower: firstIndex, upper: secondIndex))
-//                    temporaryString.removeSubrange(firstIndex ..< secondIndex)
-//                    isFound = false
-//                }else {
-//                    firstIndex = temporaryString.index(temporaryString.startIndex, offsetBy: index)
-//                    isFound = true
-//                }
-//            }
-//        }
-//
-//        return temporaryString
-//    }
-//}
-

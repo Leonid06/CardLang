@@ -22,13 +22,9 @@ class WordCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         layer.cornerRadius = 10
-//        
-//        let gestureRecognizer = UITapGestureRecognizer(target: self , action: #selector(flip))
-//        self.addGestureRecognizer(gestureRecognizer)
     }
     
     override func prepareForReuse() {
-//        setLabel()
         showsWord = true
     }
     

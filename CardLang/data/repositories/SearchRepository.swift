@@ -8,19 +8,6 @@
 import Foundation
 import RealmSwift
 
-//@MainActor
-//func getAllSets() async throws ->  Results<WordSet>? {
-//    let task = Task { () -> Results<WordSet>? in
-//
-//        if let realm =  realmService.getRealm() {
-//                return realm.objects(WordSet.self)
-//        }
-//
-//        return nil
-//    }
-//    return try await task.result.get()
-//}
-
 
 class SearchRepository {
     private let realmService = RealmService.shared
@@ -40,8 +27,6 @@ class SearchRepository {
                         return $0.name.like("*" + query + "*", caseInsensitive: true)
                     }
                 }.sorted(byKeyPath: "_id", ascending: false)
-                
-                print(filteredSets)
                 
                 return filteredSets
             }

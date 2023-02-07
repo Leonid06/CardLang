@@ -225,13 +225,6 @@ extension SingleFolderViewController {
 }
 
 extension SingleFolderViewController : UISearchBarDelegate {
-    
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
-//        if let word = searchBar.text {
-//            cardRepository.fetchMultipleTranslationsForWord(word, completion: onDefinitionsFetched)
-//        }
-//        searchBar.endEditing(false)
-//    }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         updateSets()
     }

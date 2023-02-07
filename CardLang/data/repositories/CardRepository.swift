@@ -20,25 +20,8 @@ class CardRepository {
     private var translations = [Translation]()
     
     
-    func fetchTranslations(words : [String], completion: @escaping ([Translation]) -> Void){
-        translations.removeAll()
-        
-        for word in words {
-            group.enter()
-            print("word entered group")
-            cardService.getTranslationForWord(word, completion: onTranslationFetched)
-        }
-        
-        group.notify(queue: .main){
-            print("group did notify main thread")
-            completion(self.translations)
-        }
-    }
-    
     func  fetchMultipleTranslationsForWord(_ word : String, completion: @escaping ([Translation]) -> Void) {
         group.enter()
-//        let components = word.components(separatedBy: .whitespacesAndNewlines)
-//        let elements  = components.filter { !$0.isEmpty }
         
         let components = word.components(separatedBy: .whitespacesAndNewlines)
         

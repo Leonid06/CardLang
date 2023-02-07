@@ -10,6 +10,7 @@ import Foundation
 
 struct Constants {
     static let API_KEY = Bundle.main.infoDictionary?["WORD_API_KEY"] as? String
+    static let APP_ID = Bundle.main.infoDictionary?["APP_ID"] as? String
     
     struct RealmSubscriptions {
         static let FoldersSubscription = "folders_subscription"

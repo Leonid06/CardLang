@@ -21,8 +21,6 @@ class AddModeViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func searchTermButtonClicked(_ sender: Any) {
@@ -37,11 +35,7 @@ class AddModeViewController: UIViewController {
             sheet.preferredCornerRadius = 24
         }
         
-//        searchViewController.delegate = self 
-        
         self.present(searchViewController, animated: true)
-        
-//        navigationController?.pushViewController(searchViewController, animated: true)
     }
     
     @IBAction func addOwnTermbuttonClicked(_ sender: Any) {
@@ -55,18 +49,8 @@ class AddModeViewController: UIViewController {
             sheet.detents = [.large(), .medium()]
             sheet.preferredCornerRadius = 24
         }
-        
-//        addOwnTranslationViewController.delegate = self
-        
-        
         self.present(addOwnTranslationViewController, animated: true)
-        
-//        navigationController?.pushViewController(addOwnTranslationViewController, animated: true)
     }
 }
 
-//extension AddModeViewController : PopUpControllerDelegate {
-//    func onDismissed() {
-//        navigationController?.popViewController(animated: true)
-//    }
-//}
+
