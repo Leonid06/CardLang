@@ -38,9 +38,16 @@ class SoundService {
                 
                 let soundLocalUrl = directory.appendingPathComponent(url.lastPathComponent)
                 
-                if (!fileManager.fileExists(atPath: soundLocalUrl.path())){
-                    try data.write(to: soundLocalUrl)
+                if #available(iOS 16.0, *) {
+                    if (!fileManager.fileExists(atPath: soundLocalUrl.path())){
+                        try data.write(to: soundLocalUrl)
+                    }
+                } else {
+                    if (!fileManager.fileExists(atPath: soundLocalUrl.path)){
+                        try data.write(to: soundLocalUrl)
+                    }
                 }
+                
                 
                 
             }catch {

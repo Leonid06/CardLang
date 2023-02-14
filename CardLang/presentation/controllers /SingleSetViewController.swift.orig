@@ -38,48 +38,27 @@ class SingleSetViewController: UIViewController {
         collectionView!.register(WordCollectionViewCell.nib(), forCellWithReuseIdentifier: Identifies.WordCollectionViewCellIdentifier)
         
         
-        let buttonItem  = createBarButtonItem(icon: "plus.square.fill.on.square.fill", selector: nil, menu: getAddOptionsMenu())
+        let buttonItem  = UIBarButtonItem(barButtonSystemItem: .add, target: self,action: nil)
+        buttonItem.menu = getAddOptionsMenu()
 
         let playItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(playButtonPressed))
         
-        let editItem = createBarButtonItem(icon: "ellipsis.circle", selector: #selector(editButtonPressed))
         
         
-        navigationItem.rightBarButtonItems = [buttonItem, playItem, editItem]
+        navigationItem.rightBarButtonItems = [buttonItem, playItem]
         
         setRepository.subscribeToUpdatesOnTranslations {
             self.updateTranslations()
+            if let translations = self.translations {
+                self.navigationItem.rightBarButtonItems?[1].isHidden = translations.count == 0 ? true : false
+            }
         }
         
         setRepository.subscribeToUpdatesOnSets {
-            if let set = self.set {
-                if(!set.isInvalidated){
-                    self.updateTranslations()
-                }else{
-                    self.navigationController?.popViewController(animated: true)
-                }
-            }
-            
+            self.updateTranslations()
         }
         
-        toggleButtons()
         
-    }
-    
-    @objc func editButtonPressed(_ sender: Any) {
-        let editSetViewController = EditSetViewController(nibName: NibNames.EditSetViewControllerNibName, bundle: nil)
-        
-        editSetViewController.configure(set)
-        
-        if let sheet = editSetViewController.sheetPresentationController {
-            sheet.detents = [.medium()]
-            sheet.preferredCornerRadius = 24
-            sheet.prefersGrabberVisible = true
-        }
-        
-        editSetViewController.delegate = self 
-        
-        present(editSetViewController, animated: true)
     }
     
     @objc func playButtonPressed(_ sender: Any) {
@@ -91,23 +70,26 @@ class SingleSetViewController: UIViewController {
     
     
     private func onTranslationsFetched(translations : [Translation]){
+        print("got \(translations.count) translations")
         if let set = self.set {
             self.setRepository.addTranslationToSet(set: set, translation: translations[0], completion: {})
         }
     }
     
     private func updateTranslations(){
+<<<<<<< HEAD
+        self.translations = set?.translations ?? List<Translation>()
+        print("translation count before reloading collection view: ", self.translations.count)
+        collectionView.reloadData()
+        
+        navigationItem.rightBarButtonItems?[1].isHidden = translations.count == 0 ? true : false
+
+=======
         DispatchQueue.main.async {
             self.translations = self.set?.translations ?? List<Translation>()
             self.collectionView.reloadData()
         }
-    }
-    
-    private func toggleButtons(){
-        if let translations = self.translations {
-            let playItem = self.navigationItem.rightBarButtonItems?[1]
-            playItem?.isEnabled = translations.count == 0 ? false : true
-        }
+>>>>>>> delete_fix
     }
 
 }
@@ -118,6 +100,7 @@ extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let translations = translations {
+            print(translations.count)
             return translations.count
         }
         return 0
@@ -149,30 +132,15 @@ extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDa
             
             if let sheet = termViewController.sheetPresentationController {
                 sheet.detents = [.large(), .medium()]
-                sheet.selectedDetentIdentifier = .medium
+                sheet.selectedDetentIdentifier = .large
                 sheet.preferredCornerRadius = 24
-                sheet.prefersGrabberVisible = true
             }
-            
-            termViewController.delegate = self
             
             present(termViewController, animated: true, completion: nil)
         }
         
     }
 }
-
-extension SingleSetViewController : PopUpControllerDelegate {
-    func onDismissed() {
-        toggleButtons()
-        
-        if let set = self.set  {
-            title = set.name
-        }
-        
-    }
-}
-
 
     
     
@@ -185,14 +153,13 @@ extension SingleSetViewController : UICollectionViewDelegateFlowLayout  {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 30, left: 40, bottom: 30, right: 40)
+        return UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30)
     }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0 
+        return 20
     }
 }
 
