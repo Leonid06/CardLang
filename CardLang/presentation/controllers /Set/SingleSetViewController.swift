@@ -105,7 +105,8 @@ class SingleSetViewController: UIViewController {
     
     private func toggleButtons(){
         if let translations = self.translations {
-            self.navigationItem.rightBarButtonItems?[1].isHidden = translations.count == 0 ? true : false
+            let playItem = self.navigationItem.rightBarButtonItems?[1]
+            playItem?.isEnabled = translations.count == 0 ? false : true
         }
     }
 
