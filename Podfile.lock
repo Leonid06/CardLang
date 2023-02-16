@@ -1,6 +1,7 @@
 PODS:
   - CardSlider (0.1.0)
   - Differ (1.4.5)
+  - EmptyStateKit (1.1.0)
   - IQKeyboardManagerSwift (6.5.10)
   - Realm (10.28.2):
     - Realm/Headers (= 10.28.2)
@@ -14,6 +15,7 @@ PODS:
 DEPENDENCIES:
   - CardSlider
   - Differ
+  - EmptyStateKit
   - IQKeyboardManagerSwift
   - RealmSwift (~> 10)
   - RSKPlaceholderTextView
@@ -24,6 +26,7 @@ SPEC REPOS:
   trunk:
     - CardSlider
     - Differ
+    - EmptyStateKit
     - IQKeyboardManagerSwift
     - Realm
     - RealmSwift
@@ -34,6 +37,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   CardSlider: 0a8f5f17f5a76701771794b07fdaeddc512358c8
   Differ: 3b6bd78e2b20cc795d9a86f7641d087524e4273e
+  EmptyStateKit: dc41e9ce5c6089f67a49d063bce73ade9f2ba73f
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   Realm: e617c54ad0f566b3d0f6a2abae7010de05f252ac
   RealmSwift: 8a516a8759d80d52ebcec1ff1076f5f5159f98b2
@@ -41,6 +45,6 @@ SPEC CHECKSUMS:
   Shuffle-iOS: ff33658fb1e5eebd6a4724c156473e63754be9cb
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: dc0e7b9d1fcda6d7683467b1c7a74fcb81a0713d
+PODFILE CHECKSUM: aabe13a59589bb9360cef01f10d4f83556aff8f8
 
 COCOAPODS: 1.11.3

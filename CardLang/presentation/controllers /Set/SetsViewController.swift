@@ -92,7 +92,6 @@ class SetsViewController: UIViewController {
         
         present(addSetViewController, animated: true)
     }
-    
    
 }
 
@@ -100,8 +99,14 @@ extension SetsViewController : UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let sets = sets {
+            if(sets.count == 0){
+                collectionView.emptyState.show(EmptyState.noSets)
+            }else {
+                collectionView.emptyState.hide()
+            }
             return sets.count
         }
+           
         return 0
     }
     
