@@ -41,6 +41,7 @@
 		B33B211628BE646200E66FCC /* Translation .swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B211528BE646200E66FCC /* Translation .swift */; };
 		B33E59072931FCE10017407B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33E59062931FCE10017407B /* UIView.swift */; };
 		B3483C0628F95D900065648C /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3483C0528F95D900065648C /* RealmService.swift */; };
+		B35D09C5299EC8E000D4CA3D /* EmptyStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35D09C4299EC8E000D4CA3D /* EmptyStates.swift */; };
 		B35F629228E6E99F00C5F250 /* CardLangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F629128E6E99F00C5F250 /* CardLangTests.swift */; };
 		B35F629928E6EA3800C5F250 /* CardServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F629828E6EA3800C5F250 /* CardServiceTest.swift */; };
 		B366FA71291406A8005BECA2 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B366FA70291406A8005BECA2 /* Protocols.swift */; };
@@ -143,6 +144,7 @@
 		B33B211528BE646200E66FCC /* Translation .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Translation .swift"; sourceTree = "<group>"; };
 		B33E59062931FCE10017407B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B3483C0528F95D900065648C /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		B35D09C4299EC8E000D4CA3D /* EmptyStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStates.swift; sourceTree = "<group>"; };
 		B35F628F28E6E99F00C5F250 /* CardLangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardLangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35F629128E6E99F00C5F250 /* CardLangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLangTests.swift; sourceTree = "<group>"; };
 		B35F629828E6EA3800C5F250 /* CardServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardServiceTest.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 		B307876C28C0EF0900C88404 /* controllers  */ = {
 			isa = PBXGroup;
 			children = (
+				B35D09C3299EC8C400D4CA3D /* Additional */,
 				B3E7459129867ABE0004929D /* Authentication */,
 				B36DB3362954D184008C7C63 /* Set */,
 				B36DB3352954D179008C7C63 /* Folder */,
@@ -348,6 +351,14 @@
 				B307877628C0F0D300C88404 /* xib */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		B35D09C3299EC8C400D4CA3D /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				B35D09C4299EC8E000D4CA3D /* EmptyStates.swift */,
+			);
+			path = Additional;
 			sourceTree = "<group>";
 		};
 		B35F629028E6E99F00C5F250 /* CardLangTests */ = {
@@ -700,6 +711,7 @@
 				B39ED4C82962F43D008C1D23 /* AddSetViewController.swift in Sources */,
 				B366FA71291406A8005BECA2 /* Protocols.swift in Sources */,
 				B374DC24290D7DEE0091546A /* TranslationViewController.swift in Sources */,
+				B35D09C5299EC8E000D4CA3D /* EmptyStates.swift in Sources */,
 				B374DC28290DA2830091546A /* AddTranslationTextField.swift in Sources */,
 				B3E7459C2986B6370004929D /* LoginViewController.swift in Sources */,
 				B385B88028E4611200F86C53 /* Colors.swift in Sources */,
@@ -817,7 +829,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -872,7 +884,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -905,7 +917,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.2;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonid.cardlang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -937,7 +949,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.2;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonid.cardlang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

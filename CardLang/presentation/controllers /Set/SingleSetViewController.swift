@@ -118,6 +118,11 @@ extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let translations = translations {
+            if(translations.count == 0){
+                collectionView.emptyState.show(EmptyState.noTranslations)
+            }else {
+                collectionView.emptyState.hide()
+            }
             return translations.count
         }
         return 0

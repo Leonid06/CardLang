@@ -73,6 +73,11 @@ extension FoldersViewController : UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         if let folders = folders {
+            if(folders.count == 0){
+                collectionView.emptyState.show(EmptyState.noFolders)
+            }else {
+                collectionView.emptyState.hide()
+            }
             return folders.count
         }
         return 0
