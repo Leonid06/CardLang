@@ -34,17 +34,24 @@ extension UIViewController {
         return buttonBarButton
     }
     
+    
+    func displayAlert(title: String, message: String, dismissButtonTitle: String){
+        let alertController = UIAlertController(title: title, message:message, preferredStyle: .alert)
+              
+        let dismissAlertAction = UIAlertAction(title: dismissButtonTitle, style: .default)
+        alertController.addAction(dismissAlertAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     func displayDialog(title : String, message: String, firstOptionTitle: String, secondOptionTitle: String, firstCompletion: @escaping () -> Void, secondCompletion: @escaping ()-> Void){
         let dialogMessage = UIAlertController(title: title, message:message, preferredStyle: .alert)
               
-        let firstOption = UIAlertAction(title: firstOptionTitle, style: .default, handler: { _ in firstCompletion()
-              })
-        let secondOption = UIAlertAction(title: secondOptionTitle, style: .cancel) { _ in secondCompletion()
-              }
+        let firstOption = UIAlertAction(title: firstOptionTitle, style: .default, handler: { _ in firstCompletion()})
+        let secondOption = UIAlertAction(title: secondOptionTitle, style: .cancel) { _ in secondCompletion()}
               
-              dialogMessage.addAction(firstOption)
-              dialogMessage.addAction(secondOption)
+        dialogMessage.addAction(firstOption)
+        dialogMessage.addAction(secondOption)
               
-              present(dialogMessage, animated: true, completion: nil)
+        present(dialogMessage, animated: true, completion: nil)
     }
 }

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BtO-eS-lnl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -230,13 +231,31 @@
                                     <action selector="logOutButtonClicked:" destination="55w-wf-zSu" eventType="touchUpInside" id="3TP-w3-ObT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s01-rw-WKS">
+                                <rect key="frame" x="58" y="300" width="156" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="BXw-75-9d4"/>
+                                    <constraint firstAttribute="width" constant="156" id="VQD-6R-E4s"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Delete account">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
+                                    <color key="baseForegroundColor" name="buttonForegroundColor"/>
+                                    <color key="baseBackgroundColor" name="countColorRed"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteAccountButtonClicked:" destination="55w-wf-zSu" eventType="touchUpInside" id="Orb-9E-7iW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IAI-cd-Vza"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="s01-rw-WKS" firstAttribute="leading" secondItem="IAI-cd-Vza" secondAttribute="leading" constant="58" id="5dV-On-Z8R"/>
                             <constraint firstItem="49P-Tk-aTN" firstAttribute="top" secondItem="5Kw-Ik-WqG" secondAttribute="bottom" constant="31" id="Prx-M8-Fpi"/>
                             <constraint firstItem="5Kw-Ik-WqG" firstAttribute="top" secondItem="IAI-cd-Vza" secondAttribute="top" constant="75" id="Wy2-kq-fr8"/>
                             <constraint firstItem="49P-Tk-aTN" firstAttribute="leading" secondItem="IAI-cd-Vza" secondAttribute="leading" constant="58" id="max-Ib-qOP"/>
+                            <constraint firstItem="s01-rw-WKS" firstAttribute="top" secondItem="49P-Tk-aTN" secondAttribute="bottom" constant="28" id="uhg-Fa-4oC"/>
                             <constraint firstItem="5Kw-Ik-WqG" firstAttribute="leading" secondItem="IAI-cd-Vza" secondAttribute="leading" constant="58" id="ujL-v4-YdA"/>
                         </constraints>
                     </view>
@@ -344,6 +363,9 @@
         </namedColor>
         <namedColor name="buttonForegroundColor">
             <color red="0.38039215686274508" green="0.28627450980392155" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="countColorRed">
+            <color red="1" green="0.55294117647058827" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
