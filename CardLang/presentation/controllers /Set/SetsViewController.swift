@@ -24,6 +24,7 @@ class SetsViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.emptyState.format = getEmptyStateFormat()
         
         setsSearchBar.delegate = self
         
@@ -35,12 +36,30 @@ class SetsViewController: UIViewController {
         }
     }
     
+    private func setsAreEmpty() -> Bool {
+        return sets?.isEmpty ?? true
+    }
+    
+    private func updateEmptyState(){
+        if(setsSearchBar.text?.isEmpty ?? true){
+            if setsAreEmpty() {
+                collectionView.emptyState.show(EmptyState.noSets)
+                return 
+            }
+        }else {
+            if setsAreEmpty() {
+                collectionView.emptyState.show(EmptyState.noSetsFound)
+                return
+            }
+        }
+        collectionView.emptyState.hide()
+    }
+    
     private func updateSetsWithTransitition(){
         Task {
             do {
                 let oldData = self.sets
                 try await makeQueryOnSets()
-                
                 
                 if let sets = self.sets {
                     if let oldData = oldData {
@@ -48,7 +67,7 @@ class SetsViewController: UIViewController {
                     }else {
                         self.collectionView.reloadData()
                     }
-                    
+                    updateEmptyState()
                 }
                 
             }catch {
@@ -68,6 +87,7 @@ class SetsViewController: UIViewController {
             do {
                 try await makeQueryOnSets()
                 self.collectionView.reloadData()
+                updateEmptyState()
             }catch {
                 print(error)
             }
@@ -75,14 +95,12 @@ class SetsViewController: UIViewController {
     }
 
     
-    private func updateSets(onReturn: Bool = false){
+    private func updateSets(onSearch: Bool = false, onReturn: Bool = false){
         if(onReturn){
             updateSetsOnReturn()
         }else{
             updateSetsWithTransitition()
         }
-    
-        
     }
     
     @IBAction func addSetButtonPressed(_ sender: UIBarButtonItem) {
@@ -99,11 +117,6 @@ extension SetsViewController : UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let sets = sets {
-            if(sets.count == 0){
-                collectionView.emptyState.show(EmptyState.noSets)
-            }else {
-                collectionView.emptyState.hide()
-            }
             return sets.count
         }
            

@@ -15,6 +15,9 @@ enum EmptyState: CustomState {
     case noTranslations
     case noFolders
     case noResults
+    case noTermsFound
+    case noSetsFound
+    case noSetsFoundInFolder
     
     var title : String?  {
         switch self {
@@ -22,6 +25,9 @@ enum EmptyState: CustomState {
         case .noTranslations : return "No terms added to this set yet"
         case .noFolders : return "No folders created yet"
         case .noResults: return "No translations found for this term"
+        case .noSetsFound: return "No sets found by this name"
+        case .noSetsFoundInFolder: return "No sets found by this name in this folder"
+        case .noTermsFound: return "No terms found by this name"
         }
     }
     
@@ -31,6 +37,9 @@ enum EmptyState: CustomState {
         case .noTranslations: return "You don't have any terms created in this set"
         case .noFolders: return "You don't have any folders created"
         case .noResults: return "Try another one"
+        case .noSetsFound: return "Try another name"
+        case .noSetsFoundInFolder: return "Try another name"
+        case .noTermsFound: return "Try another name"
         }
     }
 }

@@ -21,6 +21,7 @@ class FoldersViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.emptyState.format = getEmptyStateFormat()
         collectionView.register(UINib(nibName: NibNames.FolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.FolderCollectionViewCellIdentifier)
         
         if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
@@ -37,11 +38,24 @@ class FoldersViewController: UIViewController {
         present(createFolderViewController, animated: true)
     }
     
+    private func foldersAreEmpty() -> Bool {
+        return folders?.isEmpty ?? true
+    }
+    
+    private func updateEmptyState(){
+        if foldersAreEmpty() {
+            collectionView.emptyState.show(EmptyState.noFolders)
+            return
+        }
+        collectionView.emptyState.hide()
+    }
+    
     private func updateFolders() {
         Task {
             do {
                 self.folders = try await self.folderRepository.getAllFolders()
                 self.collectionView.reloadData()
+                updateEmptyState()
             }catch {
                 print(error)
             }
