@@ -16,7 +16,6 @@ enum EmptyState: CustomState {
     case noFolders
     case noResults
     
-    
     var title : String?  {
         switch self {
         case .noSets : return "No sets created yet"

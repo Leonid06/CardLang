@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import EmptyStateKit
 
 class SearchViewController: UIViewController {
 
@@ -27,6 +28,7 @@ class SearchViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.emptyState.format = getEmptyStateFormat()
         
         tableView.register(UINib(nibName: NibNames.SearchTableViewCellNibName, bundle: nil), forCellReuseIdentifier: Identifies.SearchTableViewCellIdentifier)
         
@@ -34,6 +36,8 @@ class SearchViewController: UIViewController {
         
         searchBar.delegate = self
     }
+    
+    
     
     private func updateData(dataIsEmpty: Bool = false){
         if(dataIsEmpty){

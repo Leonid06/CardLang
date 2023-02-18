@@ -55,4 +55,12 @@ extension UIViewController {
               
         present(dialogMessage, animated: true, completion: nil)
     }
+    
+    func getEmptyStateFormat() -> EmptyStateFormat {
+        var format = EmptyStateFormat()
+        format.titleAttributes = [.font: UIFont(name: "System", size: 17) ?? UIFont(), .foregroundColor : UIColor(named: "wordLabelColor") ?? UIColor()]
+        format.descriptionAttributes = [.font: UIFont(name: "System", size: 15) ?? UIFont(), .foregroundColor : UIColor(named: "secondaryGreyLabelColor") ?? UIColor()]
+        
+        return format
+    }
 }
