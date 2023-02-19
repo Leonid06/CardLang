@@ -13,6 +13,7 @@ class FolderCollectionViewCell: UICollectionViewCell {
     private var folder : Folder?
     
     
+    @IBOutlet weak var cellWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var setsCountLabel: UILabel!
  
     @IBOutlet weak var folderNameLabel: UILabel!
@@ -29,6 +30,10 @@ class FolderCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        let collectionViewWidth = UIScreen.main.bounds.width
+        let cellWitdh = collectionViewWidth - 60
+        cellWidthConstraint.constant = cellWitdh
+        
     }
     
     

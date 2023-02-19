@@ -110,6 +110,12 @@ extension FoldersViewController : UICollectionViewDataSource {
 }
 
 extension FoldersViewController : UICollectionViewDelegateFlowLayout  {
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let height : CGFloat = 100
+//        let width = collectionView.frame.size.width / 2
+//        return CGSize(width: width, height: height)
+//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 30, bottom: 30, right: 30)
