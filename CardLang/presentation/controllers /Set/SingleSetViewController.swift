@@ -32,6 +32,7 @@ class SingleSetViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.emptyState.format = getEmptyStateFormat()
         
         title = set?.name
         
@@ -96,10 +97,23 @@ class SingleSetViewController: UIViewController {
         }
     }
     
+    private func translationsAreEmpty() -> Bool {
+        return translations?.isEmpty ?? true
+    }
+    
+    private func updateEmptyState(){
+        if translationsAreEmpty() {
+            collectionView.emptyState.show(EmptyState.noTranslations)
+            return
+        }
+        collectionView.emptyState.hide()
+    }
+    
     private func updateTranslations(){
         DispatchQueue.main.async {
             self.translations = self.set?.translations ?? List<Translation>()
             self.collectionView.reloadData()
+            self.updateEmptyState()
         }
     }
     

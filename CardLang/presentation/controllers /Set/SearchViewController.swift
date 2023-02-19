@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import EmptyStateKit
 
 class SearchViewController: UIViewController {
 
@@ -27,6 +28,7 @@ class SearchViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.emptyState.format = getEmptyStateFormat()
         
         tableView.register(UINib(nibName: NibNames.SearchTableViewCellNibName, bundle: nil), forCellReuseIdentifier: Identifies.SearchTableViewCellIdentifier)
         
@@ -35,14 +37,25 @@ class SearchViewController: UIViewController {
         searchBar.delegate = self
     }
     
-    private func updateData(){
+    
+    
+    private func updateData(dataIsEmpty: Bool = false){
+        if(dataIsEmpty){
+            tableView.emptyState.show(EmptyState.noResults)
+        }else {
+            tableView.emptyState.hide()
+        }
         tableView.reloadData()
     }
     
     private func onDefinitionsFetched(translations : [Translation]){
         self.translations = translations
-        print(translations.count)
-        updateData()
+        
+        if(self.translations.count == 0){
+            updateData(dataIsEmpty: true)
+        }else {
+            updateData()
+        }
     }
     
     func configure(_ set : WordSet){

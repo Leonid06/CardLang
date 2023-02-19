@@ -27,6 +27,7 @@ class SingleFolderViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.emptyState.format = getEmptyStateFormat()
         
         collectionView.register(UINib(nibName: NibNames.SingleFolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier)
         
@@ -83,6 +84,7 @@ class SingleFolderViewController: UIViewController {
                 }else {
                     self.collectionView.reloadData()
                 }
+                updateEmptyState()
             }
             
         }
@@ -95,6 +97,7 @@ class SingleFolderViewController: UIViewController {
             do {
                 try await makeQueryOnSets()
                 self.collectionView.reloadData()
+                updateEmptyState()
             }catch {
                 print(error)
             }
@@ -109,6 +112,25 @@ class SingleFolderViewController: UIViewController {
         }
     
         
+    }
+    
+    private func setsAreEmpty() -> Bool {
+        return sets?.isEmpty ?? true
+    }
+    
+    private func updateEmptyState(){
+        if(searchBar.text?.isEmpty ?? true){
+            if setsAreEmpty() {
+                collectionView.emptyState.show(EmptyState.noSets)
+                return
+            }
+        }else {
+            if setsAreEmpty() {
+                collectionView.emptyState.show(EmptyState.noSetsFoundInFolder)
+                return
+            }
+        }
+        collectionView.emptyState.hide()
     }
     
     
@@ -131,6 +153,11 @@ extension SingleFolderViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let sets = sets {
+            if(sets.count == 0){
+                collectionView.emptyState.show(EmptyState.noSets)
+            }else {
+                collectionView.emptyState.hide()
+            }
             return sets.count
         }
         return 0

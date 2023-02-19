@@ -42,6 +42,10 @@ class LoginViewController: UIViewController {
                     sceneDelegate.checkAuthentication()
                 }
             }
+        }else {
+            Task {
+                self.displayAlert(title: "Login failed", message: "Error happened", dismissButtonTitle: "OK")
+            }
         }
     }
 }

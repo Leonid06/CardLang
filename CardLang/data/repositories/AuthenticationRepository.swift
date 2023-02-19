@@ -27,6 +27,12 @@ class AuthenticationRepository {
         }
     }
     
+    func deleteCurrentUserAccount(completion: @escaping (Bool) -> Void){
+        Task {
+            await realmService.deleteCurrentUserAccount(completion: completion)
+        }
+    }
+    
     func logOut(completion: @escaping (Bool) -> Void) async {
         let task = Task { () -> Bool in
             return await realmService.logOutUser()

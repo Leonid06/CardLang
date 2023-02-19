@@ -72,6 +72,19 @@ class RealmService {
         return nil 
     }
     
+    func deleteCurrentUserAccount(completion: @escaping (Bool) -> Void) async {
+        if let currentUser = app.currentUser {
+            do {
+              try await currentUser.delete()
+              completion(true)
+            }catch {
+                print(error)
+                completion(false)
+            }
+          
+        }
+    }
+    
     func getCurrentUser() -> User? {
         if let user = app.currentUser {
             return user

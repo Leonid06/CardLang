@@ -30,7 +30,10 @@ class RegisterViewController: UIViewController {
             Task {
                 navigationController?.popToRootViewController(animated: true)
             }
-           
+        }else {
+            Task {
+                self.displayAlert(title: "Registration failed", message: "Error happened", dismissButtonTitle: "OK")
+            }
         }
     }
     override func viewDidLoad() {

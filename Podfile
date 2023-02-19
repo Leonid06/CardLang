@@ -12,4 +12,5 @@ target 'CardLang' do
   pod 'IQKeyboardManagerSwift'
   pod 'RSKPlaceholderTextView'
   pod 'Differ'
+  pod 'EmptyStateKit'
 end
