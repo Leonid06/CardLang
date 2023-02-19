@@ -61,6 +61,8 @@ extension UIViewController {
         format.titleAttributes = [.font: UIFont.systemFont(ofSize: 17), .foregroundColor : UIColor(named: "wordLabelColor") ?? UIColor()]
         format.descriptionAttributes = [.font: UIFont.systemFont(ofSize: 15) , .foregroundColor : UIColor(named: "secondaryGreyLabelColor") ?? UIColor()]
         
+        format.verticalMargin = -100
+        
         return format
     }
 }

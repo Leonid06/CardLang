@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -22,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AbB-6t-hLI">
-                    <rect key="frame" x="0.0" y="123" width="393" height="687"/>
+                    <rect key="frame" x="0.0" y="118" width="393" height="692"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JGZ-y2-Adl">
                         <size key="itemSize" width="128" height="128"/>
@@ -44,7 +45,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="AbB-6t-hLI" firstAttribute="top" secondItem="F2F-IF-EFf" secondAttribute="bottom" constant="20" id="4FT-mu-65t"/>
+                <constraint firstItem="AbB-6t-hLI" firstAttribute="top" secondItem="F2F-IF-EFf" secondAttribute="bottom" constant="15" id="4FT-mu-65t"/>
                 <constraint firstItem="F2F-IF-EFf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="A6a-Ka-bAv"/>
                 <constraint firstItem="AbB-6t-hLI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="D4a-gs-G5g"/>
                 <constraint firstItem="F2F-IF-EFf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="JGJ-wr-Q4y"/>

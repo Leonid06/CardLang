@@ -48,7 +48,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Guj-Sh-iE2">
-                                <rect key="frame" x="0.0" y="156" width="414" height="689"/>
+                                <rect key="frame" x="0.0" y="151" width="414" height="689"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="689" id="CPa-Ri-3Wd"/>
@@ -86,7 +86,7 @@
                             <constraint firstItem="0NM-HF-bWy" firstAttribute="leading" secondItem="f8s-rL-i0v" secondAttribute="leading" constant="20" id="Gcs-5A-geP"/>
                             <constraint firstItem="Guj-Sh-iE2" firstAttribute="leading" secondItem="f8s-rL-i0v" secondAttribute="leading" id="Q2S-nn-yym"/>
                             <constraint firstItem="Guj-Sh-iE2" firstAttribute="trailing" secondItem="f8s-rL-i0v" secondAttribute="trailing" id="R2d-5b-Xay"/>
-                            <constraint firstItem="Guj-Sh-iE2" firstAttribute="top" secondItem="0NM-HF-bWy" secondAttribute="bottom" constant="20" id="RyM-hj-JMH"/>
+                            <constraint firstItem="Guj-Sh-iE2" firstAttribute="top" secondItem="0NM-HF-bWy" secondAttribute="bottom" constant="15" id="RyM-hj-JMH"/>
                             <constraint firstItem="0NM-HF-bWy" firstAttribute="top" secondItem="f8s-rL-i0v" secondAttribute="top" id="Tr2-DP-QWE"/>
                             <constraint firstItem="f8s-rL-i0v" firstAttribute="trailing" secondItem="0NM-HF-bWy" secondAttribute="trailing" constant="20" id="ZCG-fq-ptw"/>
                         </constraints>
@@ -215,11 +215,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49P-Tk-aTN">
-                                <rect key="frame" x="58" y="219" width="156" height="53"/>
+                                <rect key="frame" x="58" y="219" width="156" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="156" id="RpX-Un-gtE"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="53" id="eVx-SG-DJ0"/>
-                                    <constraint firstAttribute="height" constant="53" id="fJj-yR-Z9E"/>
+                                    <constraint firstAttribute="height" constant="42" id="fJj-yR-Z9E"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Log out" cornerStyle="medium">
@@ -232,7 +231,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s01-rw-WKS">
-                                <rect key="frame" x="58" y="300" width="156" height="42"/>
+                                <rect key="frame" x="58" y="289" width="156" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="BXw-75-9d4"/>
                                     <constraint firstAttribute="width" constant="156" id="VQD-6R-E4s"/>
