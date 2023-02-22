@@ -58,10 +58,11 @@ extension UIViewController {
     
     func getEmptyStateFormat() -> EmptyStateFormat {
         var format = EmptyStateFormat()
-        format.titleAttributes = [.font: UIFont.systemFont(ofSize: 17), .foregroundColor : UIColor(named: "wordLabelColor") ?? UIColor()]
+        format.titleAttributes = [.font: UIFont.systemFont(ofSize: 17), .foregroundColor : UIColor.label]
         format.descriptionAttributes = [.font: UIFont.systemFont(ofSize: 15) , .foregroundColor : UIColor(named: "secondaryGreyLabelColor") ?? UIColor()]
         
         format.verticalMargin = -100
+        format.backgroundColor = UIColor.systemBackground
         
         return format
     }
