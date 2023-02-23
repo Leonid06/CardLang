@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import EmptyStateKit
 
 class SetsViewController: UIViewController {
     
@@ -25,6 +26,7 @@ class SetsViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.emptyState.format = getEmptyStateFormat()
+        collectionView.emptyState.delegate = self
         
         setsSearchBar.delegate = self
         
@@ -103,12 +105,16 @@ class SetsViewController: UIViewController {
         }
     }
     
-    @IBAction func addSetButtonPressed(_ sender: UIBarButtonItem) {
+    private func addNewWordSet(){
         let addSetViewController = AddSetViewController(nibName: NibNames.AddSetViewControllerNibName, bundle: nil)
         
         addSetViewController.modalPresentationStyle = .overFullScreen
         
         present(addSetViewController, animated: true)
+    }
+    
+    @IBAction func addSetButtonPressed(_ sender: UIBarButtonItem) {
+        addNewWordSet()
     }
    
 }
@@ -174,5 +180,11 @@ extension SetsViewController : UICollectionViewDelegateFlowLayout  {
 extension SetsViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         updateSets()
+    }
+}
+
+extension SetsViewController : EmptyStateDelegate {
+    func emptyState(emptyState: EmptyStateKit.EmptyState, didPressButton button: UIButton) {
+        addNewWordSet()
     }
 }

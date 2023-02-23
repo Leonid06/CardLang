@@ -42,4 +42,14 @@ enum EmptyState: CustomState {
         case .noTermsFound: return "Try another name"
         }
     }
+    
+    
+    var titleButton: String? {
+        switch self {
+        case .noSets : return "Create set"
+        case .noTranslations: return "Add term"
+        case .noFolders: return "Create folder"
+        default: return nil
+        }
+    }
 }

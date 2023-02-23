@@ -21,7 +21,7 @@ extension SingleSetViewController {
         return menu
     }
     
-    private func navigateToAddController() {
+    func navigateToAddController() {
         let addOwnTranslationViewController = TranslationViewController(nibName: NibNames.TranslationViewControllerNibName, bundle: nil)
         
         if let set = set {

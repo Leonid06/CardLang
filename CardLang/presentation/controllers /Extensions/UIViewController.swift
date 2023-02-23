@@ -63,6 +63,11 @@ extension UIViewController {
         
         format.verticalMargin = -100
         format.backgroundColor = UIColor.systemBackground
+        format.buttonAttributes = [.font: UIFont.systemFont(ofSize: 17, weight: .medium), .foregroundColor: UIColor(named: "buttonForegroundColor") ?? UIColor()]
+        format.buttonColor = UIColor(named: "buttonBackgroundColor") ?? UIColor()
+        format.buttonWidth = 150
+        format.buttonRadius = 10
+        format.buttonTopMargin = 40
         
         return format
     }
