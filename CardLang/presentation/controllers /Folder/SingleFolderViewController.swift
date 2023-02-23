@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import EmptyStateKit
 
 class SingleFolderViewController: UIViewController {
 
@@ -28,6 +29,7 @@ class SingleFolderViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.emptyState.format = getEmptyStateFormat()
+        collectionView.emptyState.delegate = self
         
         collectionView.register(UINib(nibName: NibNames.SingleFolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier)
         
@@ -226,7 +228,7 @@ extension SingleFolderViewController {
         return menu
     }
     
-    private func  navigateToAddSetViewController(){
+    func  navigateToAddSetViewController(){
         if let folder = folder {
             let addSetViewController = AddSetViewController(nibName: NibNames.AddSetViewControllerNibName, bundle: nil)
             
@@ -254,6 +256,12 @@ extension SingleFolderViewController {
 extension SingleFolderViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         updateSets()
+    }
+}
+
+extension SingleFolderViewController : EmptyStateDelegate {
+    func emptyState(emptyState: EmptyStateKit.EmptyState, didPressButton button: UIButton) {
+        navigateToAddSetViewController()
     }
 }
 

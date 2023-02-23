@@ -122,8 +122,8 @@ class CardService {
                     }
                 }
             }
-            
             soundService.saveSound(soundPath: soundURL)
+            
             return translations
         } catch {
             print(error)

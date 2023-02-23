@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import EmptyStateKit
 
 class SingleSetViewController: UIViewController {
     
@@ -33,6 +34,7 @@ class SingleSetViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.emptyState.format = getEmptyStateFormat()
+        collectionView.emptyState.delegate = self 
         
         title = set?.name
         
@@ -208,6 +210,15 @@ extension SingleSetViewController : UICollectionViewDelegateFlowLayout  {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0 
     }
+}
+
+
+extension SingleSetViewController : EmptyStateDelegate {
+    func emptyState(emptyState: EmptyStateKit.EmptyState, didPressButton button: UIButton) {
+        navigateToAddController()
+    }
+    
+    
 }
 
 

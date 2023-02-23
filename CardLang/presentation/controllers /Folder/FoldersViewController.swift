@@ -7,6 +7,7 @@
 
 import UIKit
 import RealmSwift
+import EmptyStateKit
 
 class FoldersViewController: UIViewController {
     
@@ -22,6 +23,7 @@ class FoldersViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.emptyState.format = getEmptyStateFormat()
+        collectionView.emptyState.delegate = self 
         collectionView.register(UINib(nibName: NibNames.FolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.FolderCollectionViewCellIdentifier)
         
         if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
@@ -31,11 +33,15 @@ class FoldersViewController: UIViewController {
             self.updateFolders()
         }
     }
-    @IBAction func addFolderButtonClicked(_ sender: Any) {
+    
+    private func navigateToAddNewFolderController(){
         let createFolderViewController = CreateFolderViewController(nibName: NibNames.CreateFolderViewControllerNibName, bundle: nil)
         
         createFolderViewController.modalPresentationStyle = .overFullScreen
         present(createFolderViewController, animated: true)
+    }
+    @IBAction func addFolderButtonClicked(_ sender: Any) {
+        navigateToAddNewFolderController()
     }
     
     private func foldersAreEmpty() -> Bool {
@@ -110,12 +116,6 @@ extension FoldersViewController : UICollectionViewDataSource {
 }
 
 extension FoldersViewController : UICollectionViewDelegateFlowLayout  {
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let height : CGFloat = 100
-//        let width = collectionView.frame.size.width / 2
-//        return CGSize(width: width, height: height)
-//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 30, bottom: 30, right: 30)
@@ -126,5 +126,11 @@ extension FoldersViewController : UICollectionViewDelegateFlowLayout  {
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+}
+
+extension FoldersViewController :EmptyStateDelegate {
+    func emptyState(emptyState: EmptyStateKit.EmptyState, didPressButton button: UIButton) {
+        navigateToAddNewFolderController()
     }
 }

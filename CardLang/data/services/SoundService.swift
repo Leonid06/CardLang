@@ -20,6 +20,12 @@ class SoundService {
     private var audioPlayer = AVAudioPlayer()
     
     
+    
+    private func pathIsEmpty(localPath: URL) -> Bool {
+        return !fileManager.fileExists(atPath: localPath.absoluteString)
+    }
+    
+    
     func saveSound(soundPath: String){
         
         let directory = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -73,6 +79,9 @@ class SoundService {
                 let soundLocalUrl = URL(string: directory.absoluteString + sourceUrl.lastPathComponent)
                 
                 if let soundLocalUrl = soundLocalUrl {
+                    if(pathIsEmpty(localPath: soundLocalUrl)){
+                        saveSound(soundPath: soundPath)
+                    }
                     audioPlayer = try AVAudioPlayer(contentsOf: soundLocalUrl)
                     audioPlayer.prepareToPlay()
                     audioPlayer.play()
