@@ -16,6 +16,7 @@ class Translation : Object {
     @Persisted var translation : String
     @Persisted var type : String?
     @Persisted var soundPath: String?
+    @Persisted var dateTimeCreated : Date?
     @Persisted(originProperty: "translations") var currentSet : LinkingObjects<WordSet>
     
     

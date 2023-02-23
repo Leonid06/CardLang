@@ -67,6 +67,7 @@
 		B39D5D1628C4E0710088C101 /* SetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D5D1528C4E0710088C101 /* SetRepository.swift */; };
 		B39ED4C82962F43D008C1D23 /* AddSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39ED4C62962F43D008C1D23 /* AddSetViewController.swift */; };
 		B39ED4C92962F43D008C1D23 /* AddSetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B39ED4C72962F43D008C1D23 /* AddSetViewController.xib */; };
+		B3A53EAE29A7F6BF0077ADB3 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A53EAD29A7F6BF0077ADB3 /* HomeRepository.swift */; };
 		B3A698A0294C8E56003BCA10 /* CreateFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A6989E294C8E56003BCA10 /* CreateFolderViewController.swift */; };
 		B3A698A1294C8E56003BCA10 /* CreateFolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3A6989F294C8E56003BCA10 /* CreateFolderViewController.xib */; };
 		B3AD47972986BE19007CE7C3 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AD47962986BE19007CE7C3 /* AuthenticationRepository.swift */; };
@@ -172,6 +173,7 @@
 		B39D5D1528C4E0710088C101 /* SetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepository.swift; sourceTree = "<group>"; };
 		B39ED4C62962F43D008C1D23 /* AddSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSetViewController.swift; sourceTree = "<group>"; };
 		B39ED4C72962F43D008C1D23 /* AddSetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSetViewController.xib; sourceTree = "<group>"; };
+		B3A53EAD29A7F6BF0077ADB3 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		B3A6989E294C8E56003BCA10 /* CreateFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFolderViewController.swift; sourceTree = "<group>"; };
 		B3A6989F294C8E56003BCA10 /* CreateFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateFolderViewController.xib; sourceTree = "<group>"; };
 		B3AD47962986BE19007CE7C3 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
@@ -468,6 +470,7 @@
 				B323D7C32917AF0A00C626A8 /* DefaultsRepository .swift */,
 				B374EF31296496FD002C6A42 /* SearchRepository.swift */,
 				B3AD47962986BE19007CE7C3 /* AuthenticationRepository.swift */,
+				B3A53EAD29A7F6BF0077ADB3 /* HomeRepository.swift */,
 			);
 			path = repositories;
 			sourceTree = "<group>";
@@ -714,6 +717,7 @@
 				B35D09C5299EC8E000D4CA3D /* EmptyStates.swift in Sources */,
 				B374DC28290DA2830091546A /* AddTranslationTextField.swift in Sources */,
 				B3E7459C2986B6370004929D /* LoginViewController.swift in Sources */,
+				B3A53EAE29A7F6BF0077ADB3 /* HomeRepository.swift in Sources */,
 				B385B88028E4611200F86C53 /* Colors.swift in Sources */,
 				B36DB3302954CBFF008C7C63 /* UIViewController.swift in Sources */,
 				B3EFDFBC28C0FF9700FA1183 /* WordCollectionViewCell.swift in Sources */,
@@ -917,7 +921,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonid.cardlang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -949,7 +953,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonid.cardlang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

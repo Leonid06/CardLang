@@ -15,6 +15,10 @@ class WordSet : Object {
     @Persisted(primaryKey: true) var _id : ObjectId
     @Persisted var owner_id : String 
     @Persisted var translations : List<Translation>
+    @Persisted var dateTimeCreated : Date?
+    @Persisted var dateTimeLastVisited: Date?
+    @Persisted var tagName : String?
+    @Persisted var studied : Bool?
     @Persisted(originProperty: "sets") var currentFolder : LinkingObjects<Folder>
     
     convenience init(name : String, ownerId : String){
