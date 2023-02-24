@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Identifies {
+struct Identifiers {
     static let WordCollectionViewCellIdentifier = "wordCollectionViewCellIdentifier"
     static let SetsTableViewCellIdentifier =  "setsTableViewCellIdentifier"
     static let DefaultCollectioViewCellIdentifier = "defaultCollectionViewCellIdentifier"
@@ -20,5 +20,8 @@ struct Identifies {
     static let SingleSetViewControllerSegueIdentifier = "SingleSetViewControllerSegue"
     static let SingleSetViewControllerIdentifier = "SingleSetViewController"
     
-    
+    static let SetHomeCollectionViewCellIdentifier = "SetHomeCollectionViewCellIdentifier"
+    static let FolderHomeCollectionViewCellIdentifier = "FolderHomeCollectionViewCellIdentifier"
+    static let FolderGroupCollectionViewCellIdentifier = "FolderGroupCollectionViewCellIdentifier"
+    static let WordSetGroupCollectionViewCellIdentifier = "WordSetGroupCollectionViewCellIdentifier"
 }

@@ -31,7 +31,7 @@ class SingleFolderViewController: UIViewController {
         collectionView.emptyState.format = getEmptyStateFormat()
         collectionView.emptyState.delegate = self
         
-        collectionView.register(UINib(nibName: NibNames.SingleFolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier)
+        collectionView.register(UINib(nibName: NibNames.SingleFolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifiers.SingleFolderCollectionViewCellIdentifier)
         
         folderRepository.subscribeOnUpdatesOnFolders {
             if let folder = self.folder {
@@ -170,7 +170,7 @@ extension SingleFolderViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier, for: indexPath) as! SingleFolderCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.SingleFolderCollectionViewCellIdentifier, for: indexPath) as! SingleFolderCollectionViewCell
     
         if let sets = sets {
             let set = sets[indexPath.row]
@@ -188,7 +188,7 @@ extension SingleFolderViewController : UICollectionViewDelegate {
             
             let mainStoryBoard = UIStoryboard(name: NibNames.MainStoryboardName, bundle: nil)
             
-            let singleSetViewController = mainStoryBoard.instantiateViewController(withIdentifier: Identifies.SingleSetViewControllerIdentifier) as! SingleSetViewController
+            let singleSetViewController = mainStoryBoard.instantiateViewController(withIdentifier: Identifiers.SingleSetViewControllerIdentifier) as! SingleSetViewController
             
             singleSetViewController.set = set
             

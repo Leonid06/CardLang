@@ -33,6 +33,11 @@ struct NibNames {
     static let RegisterViewControllerNibName = "RegisterViewController"
     static let LoginViewControllerNibName = "LoginViewController"
     
+    static let SetHomeCollectionViewCellNibName = "SetHomeCollectionViewCell"
+    static let FolderHomeCollectionViewCellNibName = "FolderHomeCollectionViewCell"
+    static let FolderGroupCollectionViewCellNibName = "FolderGroupCollectionViewCell"
+    static let WordSetGroupCollectionViewCellNibName = "WordSetGroupCollectionViewCell"
+    
     static let LeftOverlayViewNibName = "LeftOverlayView"
     static let RightOverlayViewNibName = "RightOverlayView"
     

@@ -77,6 +77,10 @@
 		B3C5C67629A8B3B300D027BB /* SetHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3C5C67529A8B3B300D027BB /* SetHomeCollectionViewCell.xib */; };
 		B3C5C67829A8B93D00D027BB /* FolderHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C5C67729A8B93D00D027BB /* FolderHomeCollectionViewCell.swift */; };
 		B3C5C67A29A8B9EF00D027BB /* FolderHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3C5C67929A8B9EF00D027BB /* FolderHomeCollectionViewCell.xib */; };
+		B3C5C67C29A8F85400D027BB /* WordSetGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C5C67B29A8F85400D027BB /* WordSetGroupCollectionViewCell.swift */; };
+		B3C5C68029A8F92400D027BB /* FolderGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C5C67F29A8F92400D027BB /* FolderGroupCollectionViewCell.swift */; };
+		B3C5C68229A8F9AE00D027BB /* WordSetGroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3C5C68129A8F9AE00D027BB /* WordSetGroupCollectionViewCell.xib */; };
+		B3C5C68429A8F9C000D027BB /* FolderGroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3C5C68329A8F9C000D027BB /* FolderGroupCollectionViewCell.xib */; };
 		B3D78DEE2923E3A200A4E8E6 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D78DED2923E3A200A4E8E6 /* SoundService.swift */; };
 		B3DFAB8828DDBD9A00B84EEC /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */; };
 		B3DFAB8928DDBD9A00B84EEC /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3DFAB8728DDBD9A00B84EEC /* SearchTableViewCell.xib */; };
@@ -189,6 +193,10 @@
 		B3C5C67529A8B3B300D027BB /* SetHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetHomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		B3C5C67729A8B93D00D027BB /* FolderHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3C5C67929A8B9EF00D027BB /* FolderHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FolderHomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		B3C5C67B29A8F85400D027BB /* WordSetGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSetGroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		B3C5C67F29A8F92400D027BB /* FolderGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderGroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		B3C5C68129A8F9AE00D027BB /* WordSetGroupCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordSetGroupCollectionViewCell.xib; sourceTree = "<group>"; };
+		B3C5C68329A8F9C000D027BB /* FolderGroupCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FolderGroupCollectionViewCell.xib; sourceTree = "<group>"; };
 		B3D78DED2923E3A200A4E8E6 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
 		B3DFAB8628DDBD9A00B84EEC /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		B3DFAB8728DDBD9A00B84EEC /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchTableViewCell.xib; path = ../SearchTableViewCell.xib; sourceTree = "<group>"; };
@@ -287,6 +295,8 @@
 				B36DB32C2950E748008C7C63 /* AddSetToFolderCollectionViewCell.xib */,
 				B3C5C67529A8B3B300D027BB /* SetHomeCollectionViewCell.xib */,
 				B3C5C67929A8B9EF00D027BB /* FolderHomeCollectionViewCell.xib */,
+				B3C5C68129A8F9AE00D027BB /* WordSetGroupCollectionViewCell.xib */,
+				B3C5C68329A8F9C000D027BB /* FolderGroupCollectionViewCell.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -481,6 +491,8 @@
 			children = (
 				B3C5C67329A8B38400D027BB /* SetHomeCollectionViewCell.swift */,
 				B3C5C67729A8B93D00D027BB /* FolderHomeCollectionViewCell.swift */,
+				B3C5C67B29A8F85400D027BB /* WordSetGroupCollectionViewCell.swift */,
+				B3C5C67F29A8F92400D027BB /* FolderGroupCollectionViewCell.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -641,6 +653,7 @@
 				B33B20FD28BE281100E66FCC /* LaunchScreen.storyboard in Resources */,
 				B309014D29169728007FDDB5 /* EditSetViewController.xib in Resources */,
 				B369146D294E113E0020011B /* SingleFolderCollectionViewCell.xib in Resources */,
+				B3C5C68429A8F9C000D027BB /* FolderGroupCollectionViewCell.xib in Resources */,
 				B33B20FA28BE281100E66FCC /* Assets.xcassets in Resources */,
 				B3061A05290ECEA000C1C6FB /* AddModeViewController.xib in Resources */,
 				B3C5C67A29A8B9EF00D027BB /* FolderHomeCollectionViewCell.xib in Resources */,
@@ -657,6 +670,7 @@
 				B3A698A1294C8E56003BCA10 /* CreateFolderViewController.xib in Resources */,
 				B33B20F528BE281000E66FCC /* Main.storyboard in Resources */,
 				B36DB32A294F104C008C7C63 /* AddSetToFolderViewController.xib in Resources */,
+				B3C5C68229A8F9AE00D027BB /* WordSetGroupCollectionViewCell.xib in Resources */,
 				B30787E928DDBA0B0080EFE4 /* SearchViewController.xib in Resources */,
 				B3C5C67629A8B3B300D027BB /* SetHomeCollectionViewCell.xib in Resources */,
 				B3F9F857294B985000BB1477 /* FolderCollectionViewCell.xib in Resources */,
@@ -727,6 +741,7 @@
 				B3EFDFB928C0FF4200FA1183 /* SingleSetViewController.swift in Sources */,
 				B3061A04290ECEA000C1C6FB /* AddModeViewController.swift in Sources */,
 				B307876928BF9D8400C88404 /* Extensions .swift in Sources */,
+				B3C5C67C29A8F85400D027BB /* WordSetGroupCollectionViewCell.swift in Sources */,
 				B33B210E28BE4F2100E66FCC /* CardService.swift in Sources */,
 				B33B20F828BE281000E66FCC /* CardLang.xcdatamodeld in Sources */,
 				B31907DA298975EB00F8442B /* StoryboardNames.swift in Sources */,
@@ -747,6 +762,7 @@
 				B309014C29169728007FDDB5 /* EditSetViewController.swift in Sources */,
 				B3C5C67829A8B93D00D027BB /* FolderHomeCollectionViewCell.swift in Sources */,
 				B33B20EE28BE281000E66FCC /* AppDelegate.swift in Sources */,
+				B3C5C68029A8F92400D027BB /* FolderGroupCollectionViewCell.swift in Sources */,
 				B3E745A02986B6680004929D /* RegisterViewController.swift in Sources */,
 				B3EFDFB228C0FCA800FA1183 /* SetsTableViewCell.swift in Sources */,
 				B323D7C62917AFDE00C626A8 /* UserDefaultsKeys.swift in Sources */,

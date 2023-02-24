@@ -30,7 +30,7 @@ class SetsViewController: UIViewController {
         
         setsSearchBar.delegate = self
         
-        collectionView.register(UINib(nibName: NibNames.SingleFolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier)
+        collectionView.register(UINib(nibName: NibNames.SingleFolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifiers.SingleFolderCollectionViewCellIdentifier)
         
         
         setRepository.subscribeToUpdatesOnSets {
@@ -134,7 +134,7 @@ extension SetsViewController : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.SingleFolderCollectionViewCellIdentifier, for: indexPath) as! SingleFolderCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.SingleFolderCollectionViewCellIdentifier, for: indexPath) as! SingleFolderCollectionViewCell
         
         
         if let sets = sets {
@@ -153,7 +153,7 @@ extension SetsViewController : UICollectionViewDelegate, UICollectionViewDataSou
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .horizontal
             
-            let singleSetViewController = self.storyboard?.instantiateViewController(withIdentifier: Identifies.SingleSetViewControllerIdentifier) as! SingleSetViewController
+            let singleSetViewController = self.storyboard?.instantiateViewController(withIdentifier: Identifiers.SingleSetViewControllerIdentifier) as! SingleSetViewController
             singleSetViewController.set = set
             navigationController?.pushViewController(singleSetViewController, animated: true)
         }

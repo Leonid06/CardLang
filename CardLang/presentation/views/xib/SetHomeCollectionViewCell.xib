@@ -12,10 +12,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FeQ-b4-zwK" customClass="SetHomeColllectionViewCell" customModule="CardLang" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="230" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="175" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0h5-Yc-p5D">
-                <rect key="frame" x="0.0" y="0.0" width="230" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="175" height="100"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZzE-BF-0EZ">
                         <rect key="frame" x="20" y="69" width="53" height="16"/>
@@ -32,7 +32,7 @@
                 </subviews>
                 <color key="backgroundColor" name="setBackgroundColor"/>
                 <constraints>
-                    <constraint firstAttribute="width" constant="230" id="5V6-iv-EEZ"/>
+                    <constraint firstAttribute="width" constant="175" id="5V6-iv-EEZ"/>
                     <constraint firstItem="wVy-pr-5Jr" firstAttribute="leading" secondItem="0h5-Yc-p5D" secondAttribute="leading" constant="20" id="Civ-od-YqP"/>
                     <constraint firstItem="ZzE-BF-0EZ" firstAttribute="leading" secondItem="0h5-Yc-p5D" secondAttribute="leading" constant="20" id="epl-cC-Vzp"/>
                     <constraint firstItem="wVy-pr-5Jr" firstAttribute="top" secondItem="0h5-Yc-p5D" secondAttribute="top" constant="20" id="m42-g0-yPt"/>
@@ -41,12 +41,12 @@
                     <constraint firstAttribute="bottom" secondItem="ZzE-BF-0EZ" secondAttribute="bottom" constant="15" id="zje-5D-ZzC"/>
                 </constraints>
             </collectionViewCellContentView>
-            <size key="customSize" width="230" height="100"/>
+            <size key="customSize" width="175" height="100"/>
             <connections>
                 <outlet property="setNameLabel" destination="wVy-pr-5Jr" id="q6J-ig-XZL"/>
                 <outlet property="termsCountLabel" destination="ZzE-BF-0EZ" id="WAc-jO-eat"/>
             </connections>
-            <point key="canvasLocation" x="181.67938931297709" y="-127.46478873239437"/>
+            <point key="canvasLocation" x="139.69465648854961" y="-127.46478873239437"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -30,7 +30,7 @@ class SearchViewController: UIViewController {
         tableView.dataSource = self
         tableView.emptyState.format = getEmptyStateFormat()
         
-        tableView.register(UINib(nibName: NibNames.SearchTableViewCellNibName, bundle: nil), forCellReuseIdentifier: Identifies.SearchTableViewCellIdentifier)
+        tableView.register(UINib(nibName: NibNames.SearchTableViewCellNibName, bundle: nil), forCellReuseIdentifier: Identifiers.SearchTableViewCellIdentifier)
         
         title = "Search"
         
@@ -69,7 +69,7 @@ extension SearchViewController : UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Identifies.SearchTableViewCellIdentifier) as! SearchTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.SearchTableViewCellIdentifier) as! SearchTableViewCell
         
         let translation = translations[indexPath.row]
         

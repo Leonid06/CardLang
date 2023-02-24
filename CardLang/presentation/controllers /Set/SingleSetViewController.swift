@@ -38,7 +38,7 @@ class SingleSetViewController: UIViewController {
         
         title = set?.name
         
-        collectionView!.register(WordCollectionViewCell.nib(), forCellWithReuseIdentifier: Identifies.WordCollectionViewCellIdentifier)
+        collectionView!.register(WordCollectionViewCell.nib(), forCellWithReuseIdentifier: Identifiers.WordCollectionViewCellIdentifier)
         
         
         let buttonItem  = createBarButtonItem(icon: "plus.square.fill.on.square.fill", selector: nil, menu: getAddOptionsMenu())
@@ -140,7 +140,7 @@ extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDa
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.WordCollectionViewCellIdentifier, for: indexPath) as! WordCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.WordCollectionViewCellIdentifier, for: indexPath) as! WordCollectionViewCell
         
         
         if let translations = translations {

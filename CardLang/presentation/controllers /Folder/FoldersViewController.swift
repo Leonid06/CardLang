@@ -24,7 +24,7 @@ class FoldersViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.emptyState.format = getEmptyStateFormat()
         collectionView.emptyState.delegate = self 
-        collectionView.register(UINib(nibName: NibNames.FolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifies.FolderCollectionViewCellIdentifier)
+        collectionView.register(UINib(nibName: NibNames.FolderCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifiers.FolderCollectionViewCellIdentifier)
         
         if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
               flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
@@ -104,7 +104,7 @@ extension FoldersViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifies.FolderCollectionViewCellIdentifier, for: indexPath) as! FolderCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.FolderCollectionViewCellIdentifier, for: indexPath) as! FolderCollectionViewCell
     
             if let folders = folders {
                 let folder = folders[folders.count - 1 - indexPath.section]
