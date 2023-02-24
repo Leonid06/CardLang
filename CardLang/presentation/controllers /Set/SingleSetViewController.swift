@@ -217,8 +217,6 @@ extension SingleSetViewController : EmptyStateDelegate {
     func emptyState(emptyState: EmptyStateKit.EmptyState, didPressButton button: UIButton) {
         navigateToAddController()
     }
-    
-    
 }
 
 
