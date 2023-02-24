@@ -25,6 +25,8 @@ class HomeViewController: UIViewController {
         
         recentCollectionView.register(UINib(nibName: NibNames.FolderGroupCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifiers.FolderGroupCollectionViewCellIdentifier)
         recentCollectionView.register(UINib(nibName: NibNames.WordSetGroupCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifiers.WordSetGroupCollectionViewCellIdentifier)
+        recentCollectionView.delegate = self
+        recentCollectionView.dataSource = self 
     }
     
     private func onRecentWordSetsFetched(recentSets: Results<WordSet>?) {
