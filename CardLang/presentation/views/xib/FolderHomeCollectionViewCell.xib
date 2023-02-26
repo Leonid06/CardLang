@@ -44,10 +44,8 @@
             </collectionViewCellContentView>
             <size key="customSize" width="175" height="100"/>
             <connections>
-                <outlet property="folderNameLabel" destination="YVo-me-7dp" id="qxE-IT-uFa"/>
-                <outlet property="setNameLabel" destination="YVo-me-7dp" id="qmz-Zx-f1p"/>
-                <outlet property="setsCountLabel" destination="74O-0C-AII" id="Aw8-Eh-RK7"/>
-                <outlet property="termsCountLabel" destination="74O-0C-AII" id="buP-Go-gEv"/>
+                <outlet property="folderNameLabel" destination="YVo-me-7dp" id="W1t-S2-w1b"/>
+                <outlet property="setsCountLabel" destination="74O-0C-AII" id="a8j-bk-R1c"/>
             </connections>
             <point key="canvasLocation" x="41.984732824427482" y="-151.40845070422537"/>
         </collectionViewCell>

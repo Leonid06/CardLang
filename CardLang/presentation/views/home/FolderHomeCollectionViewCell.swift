@@ -9,7 +9,7 @@ import UIKit
 
 class FolderHomeCollectionViewCell: UICollectionViewCell {
     private var folder : Folder?
-    
+
     @IBOutlet weak var setsCountLabel: UILabel!
     @IBOutlet weak var folderNameLabel: UILabel!
     func configure(_ folder: Folder){

@@ -34,6 +34,7 @@ class HomeViewController: UIViewController {
     private func onRecentWordSetsFetched(recentSets: Results<WordSet>?) {
         self.recentSets = recentSets
         recentCollectionView.reloadSections(IndexSet(integer: 0))
+//        recentCollectionView.reloadData()
     }
     
     private func onRecentFoldersFetched(recentFolders: Results<Folder>?) {
@@ -41,6 +42,7 @@ class HomeViewController: UIViewController {
         if(recentCollectionView.numberOfSections > 1){
             recentCollectionView.reloadSections(IndexSet(integer: 1))
         }
+//        recentCollectionView.reloadData()
     }
 }
 
@@ -81,8 +83,8 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
             if let recentFolders = recentFolders {
                 cell.configure(recentFolders)
             }
-            return cell 
-        default: return UICollectionViewCell()
+            return cell
+        default: return WordSetGroupCollectionViewCell()
         }
     }
     

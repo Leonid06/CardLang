@@ -150,7 +150,7 @@ extension SingleSetViewController : UICollectionViewDelegate, UICollectionViewDa
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1 
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

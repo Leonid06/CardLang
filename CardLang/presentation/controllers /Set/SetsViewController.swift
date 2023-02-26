@@ -142,8 +142,6 @@ extension SetsViewController : UICollectionViewDelegate, UICollectionViewDataSou
             cell.configure(set)
         }
         
-        
-        
         return cell
     }
     
