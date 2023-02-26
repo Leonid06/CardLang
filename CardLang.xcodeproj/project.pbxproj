@@ -49,6 +49,7 @@
 		B369145F294DFD8A0020011B /* SingleFolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B369145D294DFD8A0020011B /* SingleFolderViewController.xib */; };
 		B369146C294E113E0020011B /* SingleFolderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369146A294E113E0020011B /* SingleFolderCollectionViewCell.swift */; };
 		B369146D294E113E0020011B /* SingleFolderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B369146B294E113E0020011B /* SingleFolderCollectionViewCell.xib */; };
+		B36BD75929AB4EE00007B0EE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BD75829AB4EE00007B0EE /* MainTabBarController.swift */; };
 		B36DB329294F104C008C7C63 /* AddSetToFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DB327294F104C008C7C63 /* AddSetToFolderViewController.swift */; };
 		B36DB32A294F104C008C7C63 /* AddSetToFolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36DB328294F104C008C7C63 /* AddSetToFolderViewController.xib */; };
 		B36DB32D2950E748008C7C63 /* AddSetToFolderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DB32B2950E748008C7C63 /* AddSetToFolderCollectionViewCell.swift */; };
@@ -164,6 +165,7 @@
 		B369145D294DFD8A0020011B /* SingleFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleFolderViewController.xib; sourceTree = "<group>"; };
 		B369146A294E113E0020011B /* SingleFolderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFolderCollectionViewCell.swift; sourceTree = "<group>"; };
 		B369146B294E113E0020011B /* SingleFolderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleFolderCollectionViewCell.xib; sourceTree = "<group>"; };
+		B36BD75829AB4EE00007B0EE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		B36DB327294F104C008C7C63 /* AddSetToFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSetToFolderViewController.swift; sourceTree = "<group>"; };
 		B36DB328294F104C008C7C63 /* AddSetToFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSetToFolderViewController.xib; sourceTree = "<group>"; };
 		B36DB32B2950E748008C7C63 /* AddSetToFolderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSetToFolderCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				B35D09C4299EC8E000D4CA3D /* EmptyStates.swift */,
+				B36BD75829AB4EE00007B0EE /* MainTabBarController.swift */,
 			);
 			path = Additional;
 			sourceTree = "<group>";
@@ -772,6 +775,7 @@
 				B374DC24290D7DEE0091546A /* TranslationViewController.swift in Sources */,
 				B35D09C5299EC8E000D4CA3D /* EmptyStates.swift in Sources */,
 				B374DC28290DA2830091546A /* AddTranslationTextField.swift in Sources */,
+				B36BD75929AB4EE00007B0EE /* MainTabBarController.swift in Sources */,
 				B3E7459C2986B6370004929D /* LoginViewController.swift in Sources */,
 				B3A53EAE29A7F6BF0077ADB3 /* HomeRepository.swift in Sources */,
 				B385B88028E4611200F86C53 /* Colors.swift in Sources */,

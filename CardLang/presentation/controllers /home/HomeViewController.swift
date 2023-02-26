@@ -19,14 +19,16 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        homeRepository.getRecentlyVisitedFolders(completion: onRecentFoldersFetched)
-        homeRepository.getRecentlyVisitedWordSets(completion: onRecentWordSetsFetched)
         
+
+        recentCollectionView.delegate = self
+        recentCollectionView.dataSource = self
         
         recentCollectionView.register(UINib(nibName: NibNames.FolderGroupCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifiers.FolderGroupCollectionViewCellIdentifier)
         recentCollectionView.register(UINib(nibName: NibNames.WordSetGroupCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifiers.WordSetGroupCollectionViewCellIdentifier)
-        recentCollectionView.delegate = self
-        recentCollectionView.dataSource = self 
+        
+        homeRepository.getRecentlyVisitedWordSets(completion: onRecentWordSetsFetched)
+        homeRepository.getRecentlyVisitedFolders(completion: onRecentFoldersFetched)
     }
     
     private func onRecentWordSetsFetched(recentSets: Results<WordSet>?) {
@@ -36,7 +38,9 @@ class HomeViewController: UIViewController {
     
     private func onRecentFoldersFetched(recentFolders: Results<Folder>?) {
         self.recentFolders = recentFolders
-        recentCollectionView.reloadSections(IndexSet(integer: 1))
+        if(recentCollectionView.numberOfSections > 1){
+            recentCollectionView.reloadSections(IndexSet(integer: 1))
+        }
     }
 }
 
@@ -60,20 +64,7 @@ extension HomeViewController : UICollectionViewDelegateFlowLayout  {
 extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource  {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            if let recentSets = recentSets {
-                return recentSets.count
-            }
-            return 0
-        case 1:
-            if let recentFolders = recentFolders {
-                return recentFolders.count
-            }
-            return 0
-        default:
-            return 0
-        }
+        return 1 
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

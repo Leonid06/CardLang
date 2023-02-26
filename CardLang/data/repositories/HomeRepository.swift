@@ -21,6 +21,7 @@ class HomeRepository {
                 recentWordSets = realm.objects(WordSet.self)
             }
             completion(recentWordSets)
+            return 
         }
         completion(nil)
     }
