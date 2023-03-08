@@ -25,7 +25,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="393" id="PEm-xY-HCq"/>
-                        <constraint firstAttribute="height" constant="692" id="oBz-MW-qui"/>
+                        <constraint firstAttribute="height" constant="650" id="oBz-MW-qui"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ciQ-V8-rfM">
                         <size key="itemSize" width="128" height="128"/>

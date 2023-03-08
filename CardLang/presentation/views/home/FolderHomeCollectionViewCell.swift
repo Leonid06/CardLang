@@ -7,7 +7,16 @@
 
 import UIKit
 
+
+@IBDesignable
 class FolderHomeCollectionViewCell: UICollectionViewCell {
+    
+    @IBInspectable
+    var cornerRadius: CGFloat {
+        set { layer.cornerRadius = newValue }
+        get { return layer.cornerRadius}
+    }
+    
     private var folder : Folder?
 
     @IBOutlet weak var setsCountLabel: UILabel!

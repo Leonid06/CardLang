@@ -7,7 +7,14 @@
 
 import UIKit
 
+@IBDesignable
 class SetHomeColllectionViewCell: UICollectionViewCell {
+    
+    @IBInspectable
+    var cornerRadius: CGFloat {
+        set { layer.cornerRadius = newValue }
+        get { return layer.cornerRadius}
+    }
     
     private var set : WordSet?
 
@@ -15,7 +22,6 @@ class SetHomeColllectionViewCell: UICollectionViewCell {
     @IBOutlet weak var setNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func configure(_ set: WordSet){

@@ -18,9 +18,9 @@ class FolderGroupCollectionViewCell: UICollectionViewCell {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
-    
     func configure(_ recentFolders : Results<Folder>){
         self.recentFolders = recentFolders
+        collectionView.reloadData()
     }
 }
 
@@ -37,6 +37,8 @@ extension FolderGroupCollectionViewCell: UICollectionViewDelegate, UICollectionV
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.FolderHomeCollectionViewCellIdentifier, for: indexPath) as! FolderHomeCollectionViewCell
             
             cell.configure(recentFolders[indexPath.row])
+            
+            return cell 
         }
         return UICollectionViewCell()
     }

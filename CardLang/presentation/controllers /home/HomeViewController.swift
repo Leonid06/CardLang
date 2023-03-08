@@ -34,15 +34,11 @@ class HomeViewController: UIViewController {
     private func onRecentWordSetsFetched(recentSets: Results<WordSet>?) {
         self.recentSets = recentSets
         recentCollectionView.reloadSections(IndexSet(integer: 0))
-//        recentCollectionView.reloadData()
     }
     
     private func onRecentFoldersFetched(recentFolders: Results<Folder>?) {
         self.recentFolders = recentFolders
-        if(recentCollectionView.numberOfSections > 1){
-            recentCollectionView.reloadSections(IndexSet(integer: 1))
-        }
-//        recentCollectionView.reloadData()
+        recentCollectionView.reloadSections(IndexSet(integer: 1))
     }
 }
 

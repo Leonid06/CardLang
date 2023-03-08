@@ -34,14 +34,19 @@
                 <constraints>
                     <constraint firstAttribute="width" constant="175" id="5V6-iv-EEZ"/>
                     <constraint firstItem="wVy-pr-5Jr" firstAttribute="leading" secondItem="0h5-Yc-p5D" secondAttribute="leading" constant="20" id="Civ-od-YqP"/>
-                    <constraint firstItem="ZzE-BF-0EZ" firstAttribute="leading" secondItem="0h5-Yc-p5D" secondAttribute="leading" constant="20" id="epl-cC-Vzp"/>
+                    <constraint firstAttribute="bottom" secondItem="ZzE-BF-0EZ" secondAttribute="bottom" constant="15" id="DqR-0g-LXu"/>
+                    <constraint firstItem="ZzE-BF-0EZ" firstAttribute="leading" secondItem="0h5-Yc-p5D" secondAttribute="leading" constant="20" symbolic="YES" id="Mo1-Pb-0iS"/>
                     <constraint firstItem="wVy-pr-5Jr" firstAttribute="top" secondItem="0h5-Yc-p5D" secondAttribute="top" constant="20" id="m42-g0-yPt"/>
                     <constraint firstItem="ZzE-BF-0EZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wVy-pr-5Jr" secondAttribute="bottom" constant="4" id="smW-cB-J7i"/>
                     <constraint firstAttribute="height" constant="100" id="xMo-4O-9lu"/>
-                    <constraint firstAttribute="bottom" secondItem="ZzE-BF-0EZ" secondAttribute="bottom" constant="15" id="zje-5D-ZzC"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="175" height="100"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="setNameLabel" destination="wVy-pr-5Jr" id="q6J-ig-XZL"/>
                 <outlet property="termsCountLabel" destination="ZzE-BF-0EZ" id="WAc-jO-eat"/>
