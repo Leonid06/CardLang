@@ -10,6 +10,7 @@ import RealmSwift
 
 class FolderGroupCollectionViewCell: UICollectionViewCell {
     
+
     @IBOutlet weak var collectionView: UICollectionView!
     private var recentFolders : Results<Folder>?
     

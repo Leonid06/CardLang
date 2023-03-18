@@ -34,6 +34,7 @@ class HomeRepository {
                 recentFolders = realm.objects(Folder.self)
             }
             completion(recentFolders)
+            return 
         }
         
         completion(nil)

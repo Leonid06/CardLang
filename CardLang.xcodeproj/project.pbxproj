@@ -41,6 +41,7 @@
 		B33B211628BE646200E66FCC /* Translation .swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B211528BE646200E66FCC /* Translation .swift */; };
 		B33E59072931FCE10017407B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33E59062931FCE10017407B /* UIView.swift */; };
 		B3483C0628F95D900065648C /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3483C0528F95D900065648C /* RealmService.swift */; };
+		B351131C29C62B0700B7AADA /* FolderGroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B351131B29C62B0700B7AADA /* FolderGroupCollectionViewCell.xib */; };
 		B35D09C5299EC8E000D4CA3D /* EmptyStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35D09C4299EC8E000D4CA3D /* EmptyStates.swift */; };
 		B35F629228E6E99F00C5F250 /* CardLangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F629128E6E99F00C5F250 /* CardLangTests.swift */; };
 		B35F629928E6EA3800C5F250 /* CardServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F629828E6EA3800C5F250 /* CardServiceTest.swift */; };
@@ -79,7 +80,6 @@
 		B3C5C67C29A8F85400D027BB /* WordSetGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C5C67B29A8F85400D027BB /* WordSetGroupCollectionViewCell.swift */; };
 		B3C5C68029A8F92400D027BB /* FolderGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C5C67F29A8F92400D027BB /* FolderGroupCollectionViewCell.swift */; };
 		B3C5C68229A8F9AE00D027BB /* WordSetGroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3C5C68129A8F9AE00D027BB /* WordSetGroupCollectionViewCell.xib */; };
-		B3C5C68429A8F9C000D027BB /* FolderGroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3C5C68329A8F9C000D027BB /* FolderGroupCollectionViewCell.xib */; };
 		B3D348D529BA65870008CD2A /* SetHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D348D429BA65870008CD2A /* SetHomeCollectionViewCell.xib */; };
 		B3D348D729BA666C0008CD2A /* FolderHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D348D629BA666C0008CD2A /* FolderHomeCollectionViewCell.xib */; };
 		B3D78DEE2923E3A200A4E8E6 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D78DED2923E3A200A4E8E6 /* SoundService.swift */; };
@@ -156,6 +156,7 @@
 		B33B211528BE646200E66FCC /* Translation .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Translation .swift"; sourceTree = "<group>"; };
 		B33E59062931FCE10017407B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B3483C0528F95D900065648C /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		B351131B29C62B0700B7AADA /* FolderGroupCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FolderGroupCollectionViewCell.xib; sourceTree = "<group>"; };
 		B35D09C4299EC8E000D4CA3D /* EmptyStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStates.swift; sourceTree = "<group>"; };
 		B35F628F28E6E99F00C5F250 /* CardLangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardLangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35F629128E6E99F00C5F250 /* CardLangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLangTests.swift; sourceTree = "<group>"; };
@@ -196,7 +197,6 @@
 		B3C5C67B29A8F85400D027BB /* WordSetGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSetGroupCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3C5C67F29A8F92400D027BB /* FolderGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderGroupCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3C5C68129A8F9AE00D027BB /* WordSetGroupCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordSetGroupCollectionViewCell.xib; sourceTree = "<group>"; };
-		B3C5C68329A8F9C000D027BB /* FolderGroupCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FolderGroupCollectionViewCell.xib; sourceTree = "<group>"; };
 		B3D348D429BA65870008CD2A /* SetHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetHomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		B3D348D629BA666C0008CD2A /* FolderHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FolderHomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		B3D78DED2923E3A200A4E8E6 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
@@ -296,9 +296,9 @@
 				B369146B294E113E0020011B /* SingleFolderCollectionViewCell.xib */,
 				B36DB32C2950E748008C7C63 /* AddSetToFolderCollectionViewCell.xib */,
 				B3C5C68129A8F9AE00D027BB /* WordSetGroupCollectionViewCell.xib */,
-				B3C5C68329A8F9C000D027BB /* FolderGroupCollectionViewCell.xib */,
 				B3D348D429BA65870008CD2A /* SetHomeCollectionViewCell.xib */,
 				B3D348D629BA666C0008CD2A /* FolderHomeCollectionViewCell.xib */,
+				B351131B29C62B0700B7AADA /* FolderGroupCollectionViewCell.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -656,8 +656,8 @@
 				B33B20FD28BE281100E66FCC /* LaunchScreen.storyboard in Resources */,
 				B3D348D729BA666C0008CD2A /* FolderHomeCollectionViewCell.xib in Resources */,
 				B309014D29169728007FDDB5 /* EditSetViewController.xib in Resources */,
+				B351131C29C62B0700B7AADA /* FolderGroupCollectionViewCell.xib in Resources */,
 				B369146D294E113E0020011B /* SingleFolderCollectionViewCell.xib in Resources */,
-				B3C5C68429A8F9C000D027BB /* FolderGroupCollectionViewCell.xib in Resources */,
 				B33B20FA28BE281100E66FCC /* Assets.xcassets in Resources */,
 				B3061A05290ECEA000C1C6FB /* AddModeViewController.xib in Resources */,
 				B369145F294DFD8A0020011B /* SingleFolderViewController.xib in Resources */,

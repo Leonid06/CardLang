@@ -12,43 +12,43 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="HvL-kw-Eea" customClass="FolderHomeCollectionViewCell" customModule="CardLang" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="180" height="100"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeq-f2-piX">
-                <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="180" height="100"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Folder Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTO-Db-3E6">
-                        <rect key="frame" x="16" y="19" width="109" height="20.333333333333329"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Folder Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTO-Db-3E6">
+                        <rect key="frame" x="16" y="19" width="131" height="20.333333333333329"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="109" id="hig-GO-TUk"/>
-                            <constraint firstAttribute="height" constant="20.329999999999998" id="iof-Dv-KHl"/>
+                            <constraint firstAttribute="width" constant="131" id="hig-GO-TUk"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <color key="textColor" name="wordLabelColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYF-Mh-CZ8">
-                        <rect key="frame" x="15.999999999999996" y="59" width="52.666666666666657" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="15 sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYF-Mh-CZ8">
+                        <rect key="frame" x="16" y="59" width="76" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="59q-Y5-suk"/>
-                            <constraint firstAttribute="width" constant="52.670000000000002" id="u8Y-45-X1B"/>
+                            <constraint firstAttribute="width" constant="76" id="u8Y-45-X1B"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" name="secondaryGreyLabelColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" name="setBackgroundColor"/>
+                <color key="backgroundColor" name="wordBackgroundColor"/>
                 <constraints>
-                    <constraint firstItem="rYF-Mh-CZ8" firstAttribute="top" secondItem="GTO-Db-3E6" secondAttribute="bottom" constant="19.670000000000002" id="2Go-YV-rFC"/>
-                    <constraint firstItem="rYF-Mh-CZ8" firstAttribute="leading" secondItem="yeq-f2-piX" secondAttribute="leading" constant="16" id="G10-4S-9Jc"/>
-                    <constraint firstItem="GTO-Db-3E6" firstAttribute="top" secondItem="yeq-f2-piX" secondAttribute="top" constant="19" id="XAW-cI-hgp"/>
+                    <constraint firstItem="rYF-Mh-CZ8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GTO-Db-3E6" secondAttribute="bottom" constant="3" id="Khz-dl-TlM"/>
+                    <constraint firstItem="GTO-Db-3E6" firstAttribute="leading" secondItem="yeq-f2-piX" secondAttribute="leading" constant="16" id="V0Y-Nl-9rv"/>
+                    <constraint firstItem="GTO-Db-3E6" firstAttribute="top" secondItem="yeq-f2-piX" secondAttribute="top" constant="19" id="fjE-zi-qwM"/>
+                    <constraint firstItem="rYF-Mh-CZ8" firstAttribute="leading" secondItem="yeq-f2-piX" secondAttribute="leading" constant="16" id="wKN-5w-uWJ"/>
                 </constraints>
             </collectionViewCellContentView>
             <constraints>
-                <constraint firstAttribute="width" constant="150" id="qmH-v8-QGI"/>
+                <constraint firstAttribute="width" constant="180" id="qmH-v8-QGI"/>
                 <constraint firstAttribute="height" constant="100" id="u5H-03-a2J"/>
             </constraints>
-            <size key="customSize" width="150" height="100"/>
+            <size key="customSize" width="180" height="100"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                     <real key="value" value="10"/>
@@ -58,15 +58,15 @@
                 <outlet property="folderNameLabel" destination="GTO-Db-3E6" id="rLm-f8-2UR"/>
                 <outlet property="setsCountLabel" destination="rYF-Mh-CZ8" id="7yo-ac-db6"/>
             </connections>
-            <point key="canvasLocation" x="-96" y="-2"/>
+            <point key="canvasLocation" x="-80.916030534351137" y="0.0"/>
         </collectionViewCell>
     </objects>
     <resources>
         <namedColor name="secondaryGreyLabelColor">
             <color red="0.65490196078431373" green="0.62352941176470589" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="setBackgroundColor">
-            <color red="1" green="0.87450980392156863" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="wordBackgroundColor">
+            <color red="1" green="0.94117647058823528" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="wordLabelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

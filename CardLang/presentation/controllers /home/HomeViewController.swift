@@ -39,6 +39,7 @@ class HomeViewController: UIViewController {
     private func onRecentFoldersFetched(recentFolders: Results<Folder>?) {
         self.recentFolders = recentFolders
         recentCollectionView.reloadSections(IndexSet(integer: 1))
+
     }
 }
 

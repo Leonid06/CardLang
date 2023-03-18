@@ -20,17 +20,16 @@
                         <rect key="frame" x="16" y="19" width="109" height="20.333333333333329"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="109" id="206-uY-D8d"/>
-                            <constraint firstAttribute="height" constant="20.329999999999998" id="Kl4-gV-ehD"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <color key="textColor" name="wordLabelColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5f-3O-Esk">
-                        <rect key="frame" x="15.999999999999996" y="59" width="52.666666666666657" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="15 terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5f-3O-Esk">
+                        <rect key="frame" x="16" y="59" width="81" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="CbN-AT-OtE"/>
-                            <constraint firstAttribute="width" constant="52.670000000000002" id="VWZ-Or-and"/>
+                            <constraint firstAttribute="width" constant="81" id="VWZ-Or-and"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" name="secondaryGreyLabelColor"/>
@@ -40,7 +39,7 @@
                 <color key="backgroundColor" name="setBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="j5f-3O-Esk" firstAttribute="leading" secondItem="GFv-uk-gOG" secondAttribute="leading" constant="16" id="6nG-gF-cFD"/>
-                    <constraint firstItem="j5f-3O-Esk" firstAttribute="top" secondItem="S9Q-Kc-Kzc" secondAttribute="bottom" constant="19.670000000000002" id="7Vt-4D-Oh2"/>
+                    <constraint firstItem="j5f-3O-Esk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="S9Q-Kc-Kzc" secondAttribute="bottom" constant="3" id="7Vt-4D-Oh2"/>
                     <constraint firstItem="S9Q-Kc-Kzc" firstAttribute="top" secondItem="GFv-uk-gOG" secondAttribute="top" constant="19" id="Q5v-Ax-CUk"/>
                     <constraint firstItem="S9Q-Kc-Kzc" firstAttribute="leading" secondItem="GFv-uk-gOG" secondAttribute="leading" constant="16" id="VXz-bS-RSz"/>
                 </constraints>

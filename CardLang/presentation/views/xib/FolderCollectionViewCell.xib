@@ -31,16 +31,6 @@
                             <imageReference key="image" image="folder.fill" catalog="system" symbolScale="small"/>
                         </state>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OG6-NX-Gg3">
-                        <rect key="frame" x="20" y="40" width="281" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="281" id="E9f-qa-C8T"/>
-                            <constraint firstAttribute="height" constant="21" id="sUf-b2-FXz"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" name="wordLabelColor"/>
-                        <color key="highlightedColor" name="wordLabelColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fJ-HX-wyL">
                         <rect key="frame" x="41" y="11" width="106" height="14"/>
                         <constraints>
@@ -50,6 +40,16 @@
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" name="secondaryGreyLabelColor"/>
                         <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OG6-NX-Gg3">
+                        <rect key="frame" x="20" y="40" width="281" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="281" id="E9f-qa-C8T"/>
+                            <constraint firstAttribute="height" constant="21" id="sUf-b2-FXz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" name="wordLabelColor"/>
+                        <color key="highlightedColor" name="wordLabelColor"/>
                     </label>
                 </subviews>
             </view>

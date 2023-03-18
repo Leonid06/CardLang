@@ -11,20 +11,20 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="mW6-rp-UUh" customClass="FolderGroupCollectionViewCell" customModule="CardLang" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="HWt-GR-6Ds" customClass="FolderGroupCollectionViewCell" customModule="CardLang" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="360" height="150"/>
-            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3Fc-ZG-UWH">
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="D6M-90-91I">
                 <rect key="frame" x="0.0" y="0.0" width="360" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ATI-2s-PvE">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="GpM-NM-NfQ">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="150"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="150" id="KA8-ve-evC"/>
-                            <constraint firstAttribute="width" constant="360" id="e1D-p4-PHH"/>
+                            <constraint firstAttribute="width" constant="360" id="KO7-30-8vu"/>
+                            <constraint firstAttribute="height" constant="150" id="Tr1-G1-LVC"/>
                         </constraints>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="glB-Ep-9Sc">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="x66-PA-Zip">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -33,19 +33,19 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ATI-2s-PvE" firstAttribute="leading" secondItem="3Fc-ZG-UWH" secondAttribute="leading" id="nQA-ek-s9J"/>
-                    <constraint firstItem="ATI-2s-PvE" firstAttribute="top" secondItem="3Fc-ZG-UWH" secondAttribute="top" id="qi4-KJ-VoM"/>
+                    <constraint firstItem="GpM-NM-NfQ" firstAttribute="top" secondItem="D6M-90-91I" secondAttribute="top" id="EhL-R5-l43"/>
+                    <constraint firstItem="GpM-NM-NfQ" firstAttribute="leading" secondItem="D6M-90-91I" secondAttribute="leading" id="udo-em-UsO"/>
                 </constraints>
             </collectionViewCellContentView>
             <constraints>
-                <constraint firstAttribute="height" constant="150" id="Ahh-DQ-sg0"/>
-                <constraint firstAttribute="width" constant="360" id="bBr-7W-eQm"/>
+                <constraint firstAttribute="width" constant="360" id="irs-FH-2Zt"/>
+                <constraint firstAttribute="height" constant="150" id="jOI-ob-rnK"/>
             </constraints>
             <size key="customSize" width="360" height="150"/>
             <connections>
-                <outlet property="collectionView" destination="ATI-2s-PvE" id="2X5-5d-rKh"/>
+                <outlet property="collectionView" destination="GpM-NM-NfQ" id="xCi-tE-JJD"/>
             </connections>
-            <point key="canvasLocation" x="180.15267175572518" y="-30.281690140845072"/>
+            <point key="canvasLocation" x="192.36641221374046" y="176.7605633802817"/>
         </collectionViewCell>
     </objects>
     <resources>
