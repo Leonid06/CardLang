@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="GpM-NM-NfQ">
-                        <rect key="frame" x="0.0" y="0.0" width="360" height="150"/>
+                        <rect key="frame" x="5" y="0.0" width="350" height="150"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="360" id="KO7-30-8vu"/>
+                            <constraint firstAttribute="width" constant="350" id="KO7-30-8vu"/>
                             <constraint firstAttribute="height" constant="150" id="Tr1-G1-LVC"/>
                         </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="x66-PA-Zip">
@@ -34,7 +34,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="GpM-NM-NfQ" firstAttribute="top" secondItem="D6M-90-91I" secondAttribute="top" id="EhL-R5-l43"/>
-                    <constraint firstItem="GpM-NM-NfQ" firstAttribute="leading" secondItem="D6M-90-91I" secondAttribute="leading" id="udo-em-UsO"/>
+                    <constraint firstItem="GpM-NM-NfQ" firstAttribute="leading" secondItem="D6M-90-91I" secondAttribute="leading" constant="5" id="udo-em-UsO"/>
                 </constraints>
             </collectionViewCellContentView>
             <constraints>

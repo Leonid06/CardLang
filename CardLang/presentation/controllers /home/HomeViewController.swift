@@ -27,6 +27,8 @@ class HomeViewController: UIViewController {
         recentCollectionView.register(UINib(nibName: NibNames.FolderGroupCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifiers.FolderGroupCollectionViewCellIdentifier)
         recentCollectionView.register(UINib(nibName: NibNames.WordSetGroupCollectionViewCellNibName, bundle: nil), forCellWithReuseIdentifier: Identifiers.WordSetGroupCollectionViewCellIdentifier)
         
+        recentCollectionView.register(UINib(nibName: NibNames.HomeCollectionReusableViewNibName, bundle: nil), forCellWithReuseIdentifier: Identifiers.HomeCollectionReusableViewIdentifier)
+        
         homeRepository.getRecentlyVisitedWordSets(completion: onRecentWordSetsFetched)
         homeRepository.getRecentlyVisitedFolders(completion: onRecentFoldersFetched)
     }
@@ -87,5 +89,26 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let sectionLabelView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: Identifiers.HomeCollectionReusableViewIdentifier, for: indexPath) as! HomeCollectionReusableView
+        
+        let section = indexPath.section
+        
+        switch section  {
+        case 0 :
+            sectionLabelView.configure("Recent sets")
+        case 1:
+            sectionLabelView.configure("Recent folders")
+        default:
+            break
+        }
+        
+        
+        return sectionLabelView
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 50)
     }
 }

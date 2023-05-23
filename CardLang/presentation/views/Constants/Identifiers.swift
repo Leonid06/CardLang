@@ -24,4 +24,6 @@ struct Identifiers {
     static let FolderHomeCollectionViewCellIdentifier = "FolderHomeCollectionViewCellIdentifier"
     static let FolderGroupCollectionViewCellIdentifier = "FolderGroupCollectionViewCellIdentifier"
     static let WordSetGroupCollectionViewCellIdentifier = "WordSetGroupCollectionViewCellIdentifier"
+    
+    static let HomeCollectionReusableViewIdentifier = "HomeCollectionReusableViewIdentifier"
 }

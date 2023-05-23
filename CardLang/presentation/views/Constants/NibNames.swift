@@ -38,6 +38,8 @@ struct NibNames {
     static let FolderGroupCollectionViewCellNibName = "FolderGroupCollectionViewCell"
     static let WordSetGroupCollectionViewCellNibName = "WordSetGroupCollectionViewCell"
     
+    static let HomeCollectionReusableViewNibName = "HomeCollectionReusableView"
+    
     static let LeftOverlayViewNibName = "LeftOverlayView"
     static let RightOverlayViewNibName = "RightOverlayView"
     

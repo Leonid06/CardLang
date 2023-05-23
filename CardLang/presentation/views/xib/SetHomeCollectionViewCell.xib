@@ -12,9 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="iOs-hL-aPU" customClass="SetHomeColllectionViewCell" customModule="CardLang" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFv-uk-gOG">
-                <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9Q-Kc-Kzc">
                         <rect key="frame" x="16" y="19" width="109" height="20.333333333333329"/>
@@ -25,8 +25,8 @@
                         <color key="textColor" name="wordLabelColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="15 terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5f-3O-Esk">
-                        <rect key="frame" x="16" y="59" width="81" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 terms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5f-3O-Esk">
+                        <rect key="frame" x="16" y="84" width="81" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="CbN-AT-OtE"/>
                             <constraint firstAttribute="width" constant="81" id="VWZ-Or-and"/>
@@ -38,17 +38,20 @@
                 </subviews>
                 <color key="backgroundColor" name="setBackgroundColor"/>
                 <constraints>
+                    <constraint firstAttribute="height" constant="120" id="22Q-eL-cA1"/>
                     <constraint firstItem="j5f-3O-Esk" firstAttribute="leading" secondItem="GFv-uk-gOG" secondAttribute="leading" constant="16" id="6nG-gF-cFD"/>
                     <constraint firstItem="j5f-3O-Esk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="S9Q-Kc-Kzc" secondAttribute="bottom" constant="3" id="7Vt-4D-Oh2"/>
+                    <constraint firstAttribute="bottom" secondItem="j5f-3O-Esk" secondAttribute="bottom" constant="20" symbolic="YES" id="Asi-d3-LBx"/>
                     <constraint firstItem="S9Q-Kc-Kzc" firstAttribute="top" secondItem="GFv-uk-gOG" secondAttribute="top" constant="19" id="Q5v-Ax-CUk"/>
+                    <constraint firstAttribute="width" constant="150" id="U7u-H9-gEC"/>
                     <constraint firstItem="S9Q-Kc-Kzc" firstAttribute="leading" secondItem="GFv-uk-gOG" secondAttribute="leading" constant="16" id="VXz-bS-RSz"/>
                 </constraints>
             </collectionViewCellContentView>
             <constraints>
-                <constraint firstAttribute="height" constant="100" id="MhB-6Q-we9"/>
+                <constraint firstAttribute="height" constant="120" id="MhB-6Q-we9"/>
                 <constraint firstAttribute="width" constant="150" id="oyg-Jn-Ci4"/>
             </constraints>
-            <size key="customSize" width="150" height="100"/>
+            <size key="customSize" width="150" height="120"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                     <real key="value" value="10"/>
@@ -58,7 +61,7 @@
                 <outlet property="setNameLabel" destination="S9Q-Kc-Kzc" id="S59-d4-IpU"/>
                 <outlet property="termsCountLabel" destination="j5f-3O-Esk" id="uwa-1g-V8w"/>
             </connections>
-            <point key="canvasLocation" x="56.488549618320612" y="52.112676056338032"/>
+            <point key="canvasLocation" x="56.488549618320612" y="59.154929577464792"/>
         </collectionViewCell>
     </objects>
     <resources>

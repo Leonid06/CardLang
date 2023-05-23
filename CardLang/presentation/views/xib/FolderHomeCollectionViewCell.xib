@@ -25,7 +25,7 @@
                         <color key="textColor" name="wordLabelColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="15 sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYF-Mh-CZ8">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYF-Mh-CZ8">
                         <rect key="frame" x="16" y="59" width="76" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="59q-Y5-suk"/>
@@ -40,7 +40,10 @@
                 <constraints>
                     <constraint firstItem="rYF-Mh-CZ8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GTO-Db-3E6" secondAttribute="bottom" constant="3" id="Khz-dl-TlM"/>
                     <constraint firstItem="GTO-Db-3E6" firstAttribute="leading" secondItem="yeq-f2-piX" secondAttribute="leading" constant="16" id="V0Y-Nl-9rv"/>
+                    <constraint firstAttribute="bottom" secondItem="rYF-Mh-CZ8" secondAttribute="bottom" constant="25" id="bOY-Gn-GmT"/>
+                    <constraint firstAttribute="height" constant="100" id="dYm-g7-nra"/>
                     <constraint firstItem="GTO-Db-3E6" firstAttribute="top" secondItem="yeq-f2-piX" secondAttribute="top" constant="19" id="fjE-zi-qwM"/>
+                    <constraint firstAttribute="width" constant="180" id="qfZ-YA-oO8"/>
                     <constraint firstItem="rYF-Mh-CZ8" firstAttribute="leading" secondItem="yeq-f2-piX" secondAttribute="leading" constant="16" id="wKN-5w-uWJ"/>
                 </constraints>
             </collectionViewCellContentView>
