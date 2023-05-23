@@ -129,7 +129,6 @@
 		B30787E728DDBA0B0080EFE4 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchViewController.xib; path = ../SearchViewController.xib; sourceTree = "<group>"; };
 		B309014A29169728007FDDB5 /* EditSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSetViewController.swift; sourceTree = "<group>"; };
 		B309014B29169728007FDDB5 /* EditSetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditSetViewController.xib; sourceTree = "<group>"; };
-		B312A56228E610B100E274C2 /* Keys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Keys.xcconfig; sourceTree = "<group>"; };
 		B31907D7298855CA00F8442B /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		B31907D9298975EB00F8442B /* StoryboardNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNames.swift; sourceTree = "<group>"; };
 		B31907DB2989986400F8442B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -182,7 +181,6 @@
 		B37CC25C29C7325F0056A0B8 /* HomeCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionReusableView.swift; sourceTree = "<group>"; };
 		B37CC25D29C7325F0056A0B8 /* HomeCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionReusableView.xib; sourceTree = "<group>"; };
 		B385B87F28E4611200F86C53 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		B3866FEB2992EDB900997668 /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 		B39D5D1328C4DE8C0088C101 /* WordSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSet.swift; sourceTree = "<group>"; };
 		B39D5D1528C4E0710088C101 /* SetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepository.swift; sourceTree = "<group>"; };
 		B39ED4C62962F43D008C1D23 /* AddSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSetViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +191,7 @@
 		B3A6989E294C8E56003BCA10 /* CreateFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFolderViewController.swift; sourceTree = "<group>"; };
 		B3A6989F294C8E56003BCA10 /* CreateFolderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateFolderViewController.xib; sourceTree = "<group>"; };
 		B3AD47962986BE19007CE7C3 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		B3C163C12A1CE37800615196 /* Keys.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Keys.xcconfig; sourceTree = "<group>"; };
 		B3C5C67329A8B38400D027BB /* SetHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3C5C67729A8B93D00D027BB /* FolderHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3C5C67B29A8F85400D027BB /* WordSetGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSetGroupCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -311,7 +310,6 @@
 		B33B20E128BE281000E66FCC = {
 			isa = PBXGroup;
 			children = (
-				B3866FEB2992EDB900997668 /* .gitignore.md */,
 				B33B20EC28BE281000E66FCC /* CardLang */,
 				B35F629028E6E99F00C5F250 /* CardLangTests */,
 				B33B20EB28BE281000E66FCC /* Products */,
@@ -353,7 +351,7 @@
 				B3E4752F293BC42C0049A0F6 /* services */,
 				B3E4752E293BC4100049A0F6 /* repositories */,
 				B33B210F28BE515F00E66FCC /* Constants .swift */,
-				B312A56228E610B100E274C2 /* Keys.xcconfig */,
+				B3C163C12A1CE37800615196 /* Keys.xcconfig */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -852,7 +850,7 @@
 /* Begin XCBuildConfiguration section */
 		B33B20FF28BE281100E66FCC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B312A56228E610B100E274C2 /* Keys.xcconfig */;
+			baseConfigurationReference = B3C163C12A1CE37800615196 /* Keys.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -913,7 +911,6 @@
 		};
 		B33B210028BE281100E66FCC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B312A56228E610B100E274C2 /* Keys.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1032,6 +1029,7 @@
 		};
 		B35F629528E6E99F00C5F250 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3C163C12A1CE37800615196 /* Keys.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
